@@ -1,0 +1,6 @@
+#!/bin/sh
+echo "[💎 RUBY] コードを入力（最後は 'EOF'）"
+rm -f .tmp.rb
+while IFS= read -r line; do [ "$line" = "EOF" ] && break; echo "$line" >> .tmp.rb; done
+if [ -f .tmp.rb ]; then ruby .tmp.rb; fi
+rm -f .tmp.rb

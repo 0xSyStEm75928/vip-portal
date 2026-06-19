@@ -1,0 +1,10 @@
+#!/bin/sh
+echo "[🐹 GO] コードを入力（最後は 'EOF'）"
+echo "package main" > .tmp.go
+echo "import \"fmt\"" >> .tmp.go
+echo "func main() {" >> .tmp.go
+while IFS= read -r line; do [ "$line" = "EOF" ] && break; echo "$line" >> .tmp.go; done
+echo "}" >> .tmp.go
+go run .tmp.go 2>.tmp_err.log
+if [ $? -ne 0 ]; then cat .tmp_err.log; fi
+rm -f .tmp.go .tmp_err.log
