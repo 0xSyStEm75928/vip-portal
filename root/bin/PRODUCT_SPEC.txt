@@ -1,0 +1,7 @@
+==================================================
+  CROWN-CORE MULTI-ENGINE ARCHITECTURE v1.0.1
+==================================================
+[Features]
+- Instant environment switching for 8 major languages (c, rs, py, js, rb, go, pl, sw)
+- Ultra-lightweight POSIX compliance (Verified on Mac Zsh, Linux Bash, and iSH ash)
+- Progressive bar deployment engine included.
