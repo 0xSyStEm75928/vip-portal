@@ -25,7 +25,6 @@ jobs:
         continue-on-error: true
         run: |
           mkdir -p /tmp
-          # バリデーション結果の書き出し（ここを後から実際のコマンドに置き換えます）
           echo "✗ 2 issue(s) found:" > /tmp/validate-output.txt
           echo "" >> /tmp/validate-output.txt
           echo "  • **Banner Image** is missing — go to https://gitcoin.co/generator" >> /tmp/validate-output.txt
@@ -41,7 +40,6 @@ jobs:
             exit 0
           fi
 
-          # jq の存在チェックとインストール
           if ! command -v jq &> /dev/null; then
             sudo apt-get update && sudo apt-get install -y jq
           fi
@@ -55,16 +53,13 @@ jobs:
             CONTENT="⚠️ Validation output not found."
           fi
 
-          # 送信するコメント本文を構築
           BODY=$(printf "%s\n## ❌ Content Validation Issues\n\n\`\`\`\n%s\n\`\`\`" "$MARKER" "$CONTENT")
 
-          # 1. 既存のボットコメントがないか検索
           COMMENTS_URL="https://api.github.com/repos/${REPOSITORY}/issues/${ISSUE_NUMBER}/comments"
           EXISTING_ID=$(curl -s -H "Authorization: token ${GITHUB_TOKEN}" \
             -H "Accept: application/vnd.github.v3+json" \
             "$COMMENTS_URL" | jq -r ".[] | select(.body | contains(\"$MARKER\")) | .id" | head -n 1)
 
-          # 2. 既存コメントがあれば削除
           if [ -n "$EXISTING_ID" ] && [ "$EXISTING_ID" != "null" ]; then
             echo "🗑️ Deleting old comment ID: $EXISTING_ID"
             curl -s -X DELETE -H "Authorization: token ${GITHUB_TOKEN}" \
@@ -72,7 +67,6 @@ jobs:
               "https://api.github.com/repos/${REPOSITORY}/issues/comments/${EXISTING_ID}"
           fi
 
-          # 3. 新規コメントを投稿 (エラーが出てもジョブは落とさない)
           echo "💬 Posting new comment..."
           PAYLOAD=$(jq -n --arg body "$BODY" '{body: $body}')
           curl -s -X POST -H "Authorization: token ${GITHUB_TOKEN}" \
