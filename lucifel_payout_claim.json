@@ -1,7 +1,7 @@
 {
-    "claim_id": "CLAIM-19F6B63E97A",
+    "claim_id": "CLAIM-19F727A54CB",
     "auditor": "666lucifel999",
-    "dest_wallet": "0x666Lucifel999F486950346766699999999999999",
+    "dest_wallet": "0xC44436c0b4Ba4c04755b9f92b086eCEbC319E45f9",
     "source_mamon_router": "0xC44436c0b4Ba4c04755b9f92b086eCEbC319E45f",
     "total_requested_usd": 67300,
     "reference_tx": "0x777777",
