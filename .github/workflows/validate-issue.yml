@@ -1,0 +1,44 @@
+name: Validate and Post Comment
+
+on:
+  workflow_dispatch:
+    inputs:
+      issue_number:
+        description: 'Issue number to validate'
+        required: false
+  issues:
+    types: [opened, edited]
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  validate-and-comment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Create test validation output (example)
+        run: |
+          mkdir -p /tmp
+          echo "### ⚠️ バリデーション結果" > /tmp/validate-output.txt
+          echo "バナー画像が不足しています。https://gitcoin.co/generator で生成してください。" >> /tmp/validate-output.txt
+
+      - name: Install runtime dependency (@octokit/core)
+        run: npm install @octokit/core
+        working-directory: .
+
+      - name: Post validation comment via Node
+        env:
+          ISSUE_NUMBER: ${{ github.event.issue.number || inputs.issue_number }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OUTCOME: ${{ steps.validate.outputs.outcome || 'failure' }}
+          TYPE: case-study
+        run: node scripts/post-validation.js
