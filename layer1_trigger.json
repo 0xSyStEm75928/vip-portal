@@ -1,0 +1,13 @@
+{
+  "1_kernel_trigger_layer": {
+    "description": "XNU と Linux カーネルの競合を検知する初期フック条件層",
+    "chaos_threshold_level": "CRITICAL",
+    "target_kernel_conflicts": [
+      "XNU_vs_Linux_Memory_Clash",
+      "APFS_ext4_Mount_Collision",
+      "Mach_Syscall_Conflict"
+    ],
+    "allow_memory_invasion": true,
+    "safety_guards": "段階的に適用"
+  }
+}
