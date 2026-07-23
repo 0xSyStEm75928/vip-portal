@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "version": "1.0.0",
+  "capabilities": [
+    {
+      "id": "cap_audit_system",
+      "name": "audit_system",
+      "layer": "Runtime/Security",
+      "entrypoint": "Runtime/Security/scanner.sh",
+      "risk_level": "low"
+    },
+    {
+      "id": "cap_trace_evidence",
+      "name": "trace_evidence",
+      "layer": "Runtime/Evidence",
+      "entrypoint": "Runtime/Evidence/graph.py",
+      "risk_level": "low"
+    }
+  ]
+}
