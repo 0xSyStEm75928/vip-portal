@@ -1,0 +1,17 @@
+name: ZeroCore Sovereign Pipeline Gate
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository Code
+        uses: actions/checkout@v4
+
+      - name: Load Pipeline Contract
+        run: jq empty zerocore.pipeline.json
