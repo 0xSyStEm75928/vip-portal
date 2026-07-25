@@ -1,0 +1,30 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', '-g', '@gitcoin/cli' ]
+2 info using npm@6.14.18
+3 info using node@v14.21.3
+4 verbose npm-session dfd153cc40cc43c8
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 http fetch GET 404 https://registry.npmjs.org/@gitcoin%2fcli 1888ms
+8 http fetch GET 404 https://registry.npmjs.org/@gitcoin%2fcli 449ms
+9 silly fetchPackageMetaData error for @gitcoin/cli@latest 404 Not Found - GET https://registry.npmjs.org/@gitcoin%2fcli - Not found
+10 timing stage:rollbackFailedOptional Completed in 15ms
+11 timing stage:runTopLevelLifecycles Completed in 3097ms
+12 verbose stack Error: 404 Not Found - GET https://registry.npmjs.org/@gitcoin%2fcli - Not found
+12 verbose stack     at /usr/lib/node_modules/npm/node_modules/npm-registry-fetch/check-response.js:117:15
+12 verbose stack     at processTicksAndRejections (internal/process/task_queues.js:95:5)
+13 verbose statusCode 404
+14 verbose pkgid @gitcoin/cli@latest
+15 verbose cwd /root
+16 verbose Linux 4.20.69-ish
+17 verbose argv "/usr/bin/node" "/usr/bin/npm" "install" "-g" "@gitcoin/cli"
+18 verbose node v14.21.3
+19 verbose npm  v6.14.18
+20 error code E404
+21 error 404 Not Found - GET https://registry.npmjs.org/@gitcoin%2fcli - Not found
+22 error 404
+23 error 404 '@gitcoin/cli@latest' is not in the npm registry.
+24 error 404 You should bug the author to publish it (or use the name yourself!)
+25 error 404 Note that you can also install from a
+26 error 404 tarball, folder, http url, or git url.
+27 verbose exit [ 1, true ]

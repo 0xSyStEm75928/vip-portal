@@ -1,0 +1,997 @@
+0 info it worked if it ends with ok
+1 verbose cli [
+1 verbose cli   '/usr/bin/node',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'ethers@5.7.2',
+1 verbose cli   'dotenv',
+1 verbose cli   '--no-audit',
+1 verbose cli   '--no-fund',
+1 verbose cli   '--quiet'
+1 verbose cli ]
+2 info using npm@6.14.18
+3 info using node@v14.21.3
+4 verbose npm-session 066c9d8dbb14868d
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 http fetch GET 200 https://registry.npmjs.org/dotenv 440ms (from cache)
+8 http fetch GET 200 https://registry.npmjs.org/ethers 939ms (from cache)
+9 silly pacote tag manifest for dotenv@latest fetched in 1004ms
+10 silly pacote version manifest for ethers@5.7.2 fetched in 1409ms
+11 timing stage:loadCurrentTree Completed in 5020ms
+12 silly install loadIdealTree
+13 silly install cloneCurrentTreeToIdealTree
+14 timing stage:loadIdealTree:cloneCurrentTree Completed in 33ms
+15 silly install loadShrinkwrap
+16 timing stage:loadIdealTree:loadShrinkwrap Completed in 1475ms
+17 silly install loadAllDepsIntoIdealTree
+18 silly resolveWithNewModule dotenv@17.4.2 checking installable status
+19 silly resolveWithNewModule ethers@5.7.2 checking installable status
+20 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2frlp 2145ms (from cache)
+21 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2fabi 2231ms (from cache)
+22 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2fweb 2188ms (from cache)
+23 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2fhash 2130ms (from cache)
+24 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2fsha2 2126ms (from cache)
+25 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2fbasex 2101ms (from cache)
+26 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2fbytes 2067ms (from cache)
+27 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2funits 2084ms (from cache)
+28 http fetch GET 200 https://registry.npmjs.org/@ethersproject%2fbase64 2363ms (from cache)
+29 silly pacote version manifest for @ethersproject/rlp@5.7.0 fetched in 2887ms
+30 silly resolveWithNewModule @ethersproject/rlp@5.7.0 checking installable status
+31 silly pacote version manifest for @ethersproject/web@5.7.1 fetched in 2878ms
+32 silly resolveWithNewModule @ethersproject/web@5.7.1 checking installable status
+33 silly pacote version manifest for @ethersproject/abi@5.7.0 fetched in 2973ms
+34 silly resolveWithNewModule @ethersproject/abi@5.7.0 checking installable status
+35 silly pacote version manifest for @ethersproject/hash@5.7.0 fetched in 2788ms
+36 silly resolveWithNewModule @ethersproject/hash@5.7.0 checking installable status
+37 silly pacote version manifest for @ethersproject/sha2@5.7.0 fetched in 2757ms
+38 silly resolveWithNewModule @ethersproject/sha2@5.7.0 checking installable status
+39 silly pacote version manifest for @ethersproject/basex@5.7.0 fetched in 2716ms
+40 silly resolveWithNewModule @ethersproject/basex@5.7.0 checking installable status
+41 silly pacote version manifest for @ethersproject/bytes@5.7.0 fetched in 2657ms
+42 silly resolveWithNewModule @ethersproject/bytes@5.7.0 checking installable status
+43 silly pacote version manifest for @ethersproject/units@5.7.0 fetched in 2656ms
+44 silly resolveWithNewModule @ethersproject/units@5.7.0 checking installable status
+45 silly pacote version manifest for @ethersproject/base64@5.7.0 fetched in 2840ms
+46 silly resolveWithNewModule @ethersproject/base64@5.7.0 checking installable status
+47 http fetch GET 304 https://registry.npmjs.org/@ethersproject%2fhdnode 5449ms (from cache)
+48 http fetch GET 304 https://registry.npmjs.org/@ethersproject%2fpbkdf2 2942ms (from cache)
+49 silly pacote version manifest for @ethersproject/hdnode@5.7.0 fetched in 5698ms
+50 silly resolveWithNewModule @ethersproject/hdnode@5.7.0 checking installable status
+51 silly pacote version manifest for @ethersproject/pbkdf2@5.7.0 fetched in 3145ms
+52 silly resolveWithNewModule @ethersproject/pbkdf2@5.7.0 checking installable status
+53 http fetch GET 304 https://registry.npmjs.org/@ethersproject%2fsolidity 3364ms (from cache)
+54 http fetch GET 304 https://registry.npmjs.org/@ethersproject%2flogger 3493ms (from cache)
+55 http fetch GET 304 https://registry.npmjs.org/@ethersproject%2fnetworks 3485ms (from cache)
+56 http fetch GET 304 https://registry.npmjs.org/@ethersproject%2fstrings 3536ms (from cache)
+57 http fetch GET 304 https://registry.npmjs.org/@ethersproject%2faddress 3584ms (from cache)
+58 http fetch GET 304 https://registry.npmjs.org/@ethersproject%2fwallet 3641ms (from cache)
+59 http fetch GET 304 https://registry.npmjs.org/@ethersproject%2fbignumber 3534ms (from cache)
+60 http fetch GET 304 https://registry.npmjs.org/@ethersproject%2frandom 3852ms (from cache)
+61 silly pacote version manifest for @ethersproject/solidity@5.7.0 fetched in 3870ms
+62 silly resolveWithNewModule @ethersproject/solidity@5.7.0 checking installable status
+63 silly pacote version manifest for @ethersproject/logger@5.7.0 fetched in 3986ms
+64 silly resolveWithNewModule @ethersproject/logger@5.7.0 checking installable status
+65 silly pacote version manifest for @ethersproject/networks@5.7.1 fetched in 3971ms
+66 silly resolveWithNewModule @ethersproject/networks@5.7.1 checking installable status
+67 silly pacote version manifest for @ethersproject/strings@5.7.0 fetched in 4039ms
+68 silly resolveWithNewModule @ethersproject/strings@5.7.0 checking installable status
+69 silly pacote version manifest for @ethersproject/address@5.7.0 fetched in 4073ms
+70 silly resolveWithNewModule @ethersproject/address@5.7.0 checking installable status
+71 silly pacote version manifest for @ethersproject/wallet@5.7.0 fetched in 4103ms
+72 silly resolveWithNewModule @ethersproject/wallet@5.7.0 checking installable status
+73 silly pacote version manifest for @ethersproject/bignumber@5.7.0 fetched in 3970ms
+74 silly resolveWithNewModule @ethersproject/bignumber@5.7.0 checking installable status
+75 silly pacote version manifest for @ethersproject/random@5.7.0 fetched in 4289ms
+76 silly resolveWithNewModule @ethersproject/random@5.7.0 checking installable status
+77 http fetch GET 304 https://registry.npmjs.org/@ethersproject%2fconstants 2415ms (from cache)
+78 silly pacote version manifest for @ethersproject/constants@5.7.0 fetched in 2769ms
+79 silly resolveWithNewModule @ethersproject/constants@5.7.0 checking installable status
+80 http fetch GET 304 https://registry.npmjs.org/@ethersproject%2fcontracts 2923ms (from cache)
+81 silly pacote version manifest for @ethersproject/contracts@5.7.0 fetched in 3238ms
+82 silly resolveWithNewModule @ethersproject/contracts@5.7.0 checking installable status
+83 http fetch GET 304 https://registry.npmjs.org/@ethersproject%2fkeccak256 2596ms (from cache)
+84 http fetch GET 304 https://registry.npmjs.org/@ethersproject%2fproviders 2693ms (from cache)
+85 silly pacote version manifest for @ethersproject/keccak256@5.7.0 fetched in 2852ms
+86 silly resolveWithNewModule @ethersproject/keccak256@5.7.0 checking installable status
+87 silly pacote version manifest for @ethersproject/providers@5.7.2 fetched in 2910ms
+88 silly resolveWithNewModule @ethersproject/providers@5.7.2 checking installable status
+89 http fetch GET 304 https://registry.npmjs.org/@ethersproject%2fwordlists 2764ms (from cache)
+90 http fetch GET 304 https://registry.npmjs.org/@ethersproject%2fproperties 2821ms (from cache)
+91 http fetch GET 304 https://registry.npmjs.org/@ethersproject%2fjson-wallets 2835ms (from cache)
+92 http fetch GET 304 https://registry.npmjs.org/@ethersproject%2fsigning-key 2888ms (from cache)
+93 http fetch GET 304 https://registry.npmjs.org/@ethersproject%2ftransactions 2979ms (from cache)
+94 http fetch GET 304 https://registry.npmjs.org/@ethersproject%2fabstract-signer 2952ms (from cache)
+95 silly pacote version manifest for @ethersproject/wordlists@5.7.0 fetched in 3188ms
+96 silly resolveWithNewModule @ethersproject/wordlists@5.7.0 checking installable status
+97 silly pacote version manifest for @ethersproject/properties@5.7.0 fetched in 3258ms
+98 silly resolveWithNewModule @ethersproject/properties@5.7.0 checking installable status
+99 silly pacote version manifest for @ethersproject/signing-key@5.7.0 fetched in 3261ms
+100 silly resolveWithNewModule @ethersproject/signing-key@5.7.0 checking installable status
+101 silly pacote version manifest for @ethersproject/json-wallets@5.7.0 fetched in 3263ms
+102 silly resolveWithNewModule @ethersproject/json-wallets@5.7.0 checking installable status
+103 silly pacote version manifest for @ethersproject/transactions@5.7.0 fetched in 3287ms
+104 silly resolveWithNewModule @ethersproject/transactions@5.7.0 checking installable status
+105 silly pacote version manifest for @ethersproject/abstract-signer@5.7.0 fetched in 3246ms
+106 silly resolveWithNewModule @ethersproject/abstract-signer@5.7.0 checking installable status
+107 http fetch GET 304 https://registry.npmjs.org/@ethersproject%2fabstract-provider 1812ms (from cache)
+108 silly pacote version manifest for @ethersproject/abstract-provider@5.7.0 fetched in 1875ms
+109 silly resolveWithNewModule @ethersproject/abstract-provider@5.7.0 checking installable status
+110 http fetch GET 304 https://registry.npmjs.org/bn.js 493ms (from cache)
+111 silly pacote range manifest for bn.js@^5.2.1 fetched in 606ms
+112 silly resolveWithNewModule bn.js@5.2.5 checking installable status
+113 http fetch GET 304 https://registry.npmjs.org/hash.js 620ms (from cache)
+114 http fetch GET 304 https://registry.npmjs.org/elliptic 660ms (from cache)
+115 silly pacote version manifest for hash.js@1.1.7 fetched in 755ms
+116 silly resolveWithNewModule hash.js@1.1.7 checking installable status
+117 silly pacote version manifest for elliptic@6.5.4 fetched in 759ms
+118 silly resolveWithNewModule elliptic@6.5.4 checking installable status
+119 silly pacote range manifest for bn.js@^4.11.9 fetched in 283ms
+120 silly resolveWithNewModule bn.js@4.12.5 checking installable status
+121 http fetch GET 304 https://registry.npmjs.org/brorand 1188ms (from cache)
+122 http fetch GET 304 https://registry.npmjs.org/hmac-drbg 1176ms (from cache)
+123 http fetch GET 304 https://registry.npmjs.org/inherits 1229ms (from cache)
+124 http fetch GET 304 https://registry.npmjs.org/minimalistic-assert 1227ms (from cache)
+125 http fetch GET 304 https://registry.npmjs.org/minimalistic-crypto-utils 1249ms (from cache)
+126 silly pacote range manifest for brorand@^1.1.0 fetched in 1302ms
+127 silly resolveWithNewModule brorand@1.1.0 checking installable status
+128 silly pacote range manifest for hmac-drbg@^1.0.1 fetched in 1302ms
+129 silly resolveWithNewModule hmac-drbg@1.0.1 checking installable status
+130 silly pacote range manifest for inherits@^2.0.4 fetched in 1342ms
+131 silly resolveWithNewModule inherits@2.0.4 checking installable status
+132 silly pacote range manifest for minimalistic-assert@^1.0.1 fetched in 1335ms
+133 silly resolveWithNewModule minimalistic-assert@1.0.1 checking installable status
+134 silly pacote range manifest for minimalistic-crypto-utils@^1.0.1 fetched in 1338ms
+135 silly resolveWithNewModule minimalistic-crypto-utils@1.0.1 checking installable status
+136 http fetch GET 304 https://registry.npmjs.org/aes-js 524ms (from cache)
+137 silly pacote version manifest for aes-js@3.0.0 fetched in 578ms
+138 silly resolveWithNewModule aes-js@3.0.0 checking installable status
+139 http fetch GET 304 https://registry.npmjs.org/scrypt-js 582ms (from cache)
+140 silly pacote version manifest for scrypt-js@3.0.1 fetched in 622ms
+141 silly resolveWithNewModule scrypt-js@3.0.1 checking installable status
+142 http fetch GET 304 https://registry.npmjs.org/bech32 923ms (from cache)
+143 silly pacote version manifest for bech32@1.1.4 fetched in 985ms
+144 silly resolveWithNewModule bech32@1.1.4 checking installable status
+145 http fetch GET 200 https://registry.npmjs.org/ws 1224ms
+146 silly pacote version manifest for ws@7.4.6 fetched in 1399ms
+147 silly resolveWithNewModule ws@7.4.6 checking installable status
+148 timing stage:loadIdealTree:loadAllDepsIntoIdealTree Completed in 21114ms
+149 timing stage:loadIdealTree Completed in 25267ms
+150 silly currentTree saac-devil-bot@1.0.0
+150 silly currentTree +-- agent-base@6.0.2
+150 silly currentTree +-- asynckit@0.4.0
+150 silly currentTree +-- axios@1.18.1
+150 silly currentTree +-- bignumber.js@11.1.5
+150 silly currentTree +-- call-bind-apply-helpers@1.0.2
+150 silly currentTree +-- combined-stream@1.0.8
+150 silly currentTree +-- command-exists@1.2.9
+150 silly currentTree +-- commander@8.3.0
+150 silly currentTree +-- debug@4.4.3
+150 silly currentTree +-- delayed-stream@1.0.0
+150 silly currentTree +-- dunder-proto@1.0.1
+150 silly currentTree +-- es-define-property@1.0.1
+150 silly currentTree +-- es-errors@1.3.0
+150 silly currentTree +-- es-object-atoms@1.1.2
+150 silly currentTree +-- es-set-tostringtag@2.1.0
+150 silly currentTree +-- follow-redirects@1.16.0
+150 silly currentTree +-- form-data@4.0.6
+150 silly currentTree +-- function-bind@1.1.2
+150 silly currentTree +-- get-intrinsic@1.3.0
+150 silly currentTree +-- get-proto@1.0.1
+150 silly currentTree +-- gopd@1.2.0
+150 silly currentTree +-- has-symbols@1.1.0
+150 silly currentTree +-- has-tostringtag@1.0.2
+150 silly currentTree +-- hasown@2.0.4
+150 silly currentTree +-- https-proxy-agent@5.0.1
+150 silly currentTree +-- js-sha3@0.8.0
+150 silly currentTree +-- math-intrinsics@1.1.0
+150 silly currentTree +-- memorystream@0.3.1
+150 silly currentTree +-- mime-db@1.52.0
+150 silly currentTree +-- mime-types@2.1.35
+150 silly currentTree +-- ms@2.1.3
+150 silly currentTree +-- os-tmpdir@1.0.2
+150 silly currentTree +-- proxy-from-env@2.1.0
+150 silly currentTree +-- semver@5.7.2
+150 silly currentTree +-- solc@0.8.20
+150 silly currentTree `-- tmp@0.0.33
+151 silly idealTree saac-devil-bot@1.0.0
+151 silly idealTree +-- @ethersproject/abi@5.7.0
+151 silly idealTree +-- @ethersproject/abstract-provider@5.7.0
+151 silly idealTree +-- @ethersproject/abstract-signer@5.7.0
+151 silly idealTree +-- @ethersproject/address@5.7.0
+151 silly idealTree +-- @ethersproject/base64@5.7.0
+151 silly idealTree +-- @ethersproject/basex@5.7.0
+151 silly idealTree +-- @ethersproject/bignumber@5.7.0
+151 silly idealTree +-- @ethersproject/bytes@5.7.0
+151 silly idealTree +-- @ethersproject/constants@5.7.0
+151 silly idealTree +-- @ethersproject/contracts@5.7.0
+151 silly idealTree +-- @ethersproject/hash@5.7.0
+151 silly idealTree +-- @ethersproject/hdnode@5.7.0
+151 silly idealTree +-- @ethersproject/json-wallets@5.7.0
+151 silly idealTree +-- @ethersproject/keccak256@5.7.0
+151 silly idealTree +-- @ethersproject/logger@5.7.0
+151 silly idealTree +-- @ethersproject/networks@5.7.1
+151 silly idealTree +-- @ethersproject/pbkdf2@5.7.0
+151 silly idealTree +-- @ethersproject/properties@5.7.0
+151 silly idealTree +-- @ethersproject/providers@5.7.2
+151 silly idealTree +-- @ethersproject/random@5.7.0
+151 silly idealTree +-- @ethersproject/rlp@5.7.0
+151 silly idealTree +-- @ethersproject/sha2@5.7.0
+151 silly idealTree +-- @ethersproject/signing-key@5.7.0
+151 silly idealTree +-- @ethersproject/solidity@5.7.0
+151 silly idealTree +-- @ethersproject/strings@5.7.0
+151 silly idealTree +-- @ethersproject/transactions@5.7.0
+151 silly idealTree +-- @ethersproject/units@5.7.0
+151 silly idealTree +-- @ethersproject/wallet@5.7.0
+151 silly idealTree +-- @ethersproject/web@5.7.1
+151 silly idealTree +-- @ethersproject/wordlists@5.7.0
+151 silly idealTree +-- aes-js@3.0.0
+151 silly idealTree +-- agent-base@6.0.2
+151 silly idealTree +-- asynckit@0.4.0
+151 silly idealTree +-- axios@1.18.1
+151 silly idealTree +-- bech32@1.1.4
+151 silly idealTree +-- bignumber.js@11.1.5
+151 silly idealTree +-- bn.js@5.2.5
+151 silly idealTree +-- brorand@1.1.0
+151 silly idealTree +-- call-bind-apply-helpers@1.0.2
+151 silly idealTree +-- combined-stream@1.0.8
+151 silly idealTree +-- command-exists@1.2.9
+151 silly idealTree +-- commander@8.3.0
+151 silly idealTree +-- debug@4.4.3
+151 silly idealTree +-- delayed-stream@1.0.0
+151 silly idealTree +-- dotenv@17.4.2
+151 silly idealTree +-- dunder-proto@1.0.1
+151 silly idealTree +-- elliptic@6.5.4
+151 silly idealTree | `-- bn.js@4.12.5
+151 silly idealTree +-- es-define-property@1.0.1
+151 silly idealTree +-- es-errors@1.3.0
+151 silly idealTree +-- es-object-atoms@1.1.2
+151 silly idealTree +-- es-set-tostringtag@2.1.0
+151 silly idealTree +-- ethers@5.7.2
+151 silly idealTree +-- follow-redirects@1.16.0
+151 silly idealTree +-- form-data@4.0.6
+151 silly idealTree +-- function-bind@1.1.2
+151 silly idealTree +-- get-intrinsic@1.3.0
+151 silly idealTree +-- get-proto@1.0.1
+151 silly idealTree +-- gopd@1.2.0
+151 silly idealTree +-- has-symbols@1.1.0
+151 silly idealTree +-- has-tostringtag@1.0.2
+151 silly idealTree +-- hash.js@1.1.7
+151 silly idealTree +-- hasown@2.0.4
+151 silly idealTree +-- hmac-drbg@1.0.1
+151 silly idealTree +-- https-proxy-agent@5.0.1
+151 silly idealTree +-- inherits@2.0.4
+151 silly idealTree +-- js-sha3@0.8.0
+151 silly idealTree +-- math-intrinsics@1.1.0
+151 silly idealTree +-- memorystream@0.3.1
+151 silly idealTree +-- mime-db@1.52.0
+151 silly idealTree +-- mime-types@2.1.35
+151 silly idealTree +-- minimalistic-assert@1.0.1
+151 silly idealTree +-- minimalistic-crypto-utils@1.0.1
+151 silly idealTree +-- ms@2.1.3
+151 silly idealTree +-- os-tmpdir@1.0.2
+151 silly idealTree +-- proxy-from-env@2.1.0
+151 silly idealTree +-- scrypt-js@3.0.1
+151 silly idealTree +-- semver@5.7.2
+151 silly idealTree +-- solc@0.8.20
+151 silly idealTree +-- tmp@0.0.33
+151 silly idealTree `-- ws@7.4.6
+152 silly install generateActionsToTake
+153 timing stage:generateActionsToTake Completed in 459ms
+154 silly diffTrees action count 45
+155 silly diffTrees add @ethersproject/logger@5.7.0
+156 silly diffTrees add @ethersproject/bytes@5.7.0
+157 silly diffTrees add @ethersproject/base64@5.7.0
+158 silly diffTrees add @ethersproject/keccak256@5.7.0
+159 silly diffTrees add @ethersproject/networks@5.7.1
+160 silly diffTrees add @ethersproject/properties@5.7.0
+161 silly diffTrees add @ethersproject/basex@5.7.0
+162 silly diffTrees add @ethersproject/random@5.7.0
+163 silly diffTrees add @ethersproject/rlp@5.7.0
+164 silly diffTrees add aes-js@3.0.0
+165 silly diffTrees add bech32@1.1.4
+166 silly diffTrees add bn.js@5.2.5
+167 silly diffTrees add @ethersproject/bignumber@5.7.0
+168 silly diffTrees add @ethersproject/address@5.7.0
+169 silly diffTrees add @ethersproject/constants@5.7.0
+170 silly diffTrees add @ethersproject/strings@5.7.0
+171 silly diffTrees add @ethersproject/web@5.7.1
+172 silly diffTrees add brorand@1.1.0
+173 silly diffTrees add bn.js@4.12.5
+174 silly diffTrees add inherits@2.0.4
+175 silly diffTrees add minimalistic-assert@1.0.1
+176 silly diffTrees add hash.js@1.1.7
+177 silly diffTrees add @ethersproject/sha2@5.7.0
+178 silly diffTrees add @ethersproject/pbkdf2@5.7.0
+179 silly diffTrees add minimalistic-crypto-utils@1.0.1
+180 silly diffTrees add hmac-drbg@1.0.1
+181 silly diffTrees add elliptic@6.5.4
+182 silly diffTrees add @ethersproject/signing-key@5.7.0
+183 silly diffTrees add @ethersproject/transactions@5.7.0
+184 silly diffTrees add @ethersproject/abstract-provider@5.7.0
+185 silly diffTrees add @ethersproject/abstract-signer@5.7.0
+186 silly diffTrees add @ethersproject/hash@5.7.0
+187 silly diffTrees add @ethersproject/abi@5.7.0
+188 silly diffTrees add @ethersproject/wordlists@5.7.0
+189 silly diffTrees add @ethersproject/hdnode@5.7.0
+190 silly diffTrees add scrypt-js@3.0.1
+191 silly diffTrees add @ethersproject/json-wallets@5.7.0
+192 silly diffTrees add ws@7.4.6
+193 silly diffTrees add @ethersproject/contracts@5.7.0
+194 silly diffTrees add @ethersproject/providers@5.7.2
+195 silly diffTrees add @ethersproject/solidity@5.7.0
+196 silly diffTrees add @ethersproject/units@5.7.0
+197 silly diffTrees add @ethersproject/wallet@5.7.0
+198 silly diffTrees add dotenv@17.4.2
+199 silly diffTrees add ethers@5.7.2
+200 silly decomposeActions action count 360
+201 silly decomposeActions fetch @ethersproject/logger@5.7.0
+202 silly decomposeActions extract @ethersproject/logger@5.7.0
+203 silly decomposeActions preinstall @ethersproject/logger@5.7.0
+204 silly decomposeActions build @ethersproject/logger@5.7.0
+205 silly decomposeActions install @ethersproject/logger@5.7.0
+206 silly decomposeActions postinstall @ethersproject/logger@5.7.0
+207 silly decomposeActions finalize @ethersproject/logger@5.7.0
+208 silly decomposeActions refresh-package-json @ethersproject/logger@5.7.0
+209 silly decomposeActions fetch @ethersproject/bytes@5.7.0
+210 silly decomposeActions extract @ethersproject/bytes@5.7.0
+211 silly decomposeActions preinstall @ethersproject/bytes@5.7.0
+212 silly decomposeActions build @ethersproject/bytes@5.7.0
+213 silly decomposeActions install @ethersproject/bytes@5.7.0
+214 silly decomposeActions postinstall @ethersproject/bytes@5.7.0
+215 silly decomposeActions finalize @ethersproject/bytes@5.7.0
+216 silly decomposeActions refresh-package-json @ethersproject/bytes@5.7.0
+217 silly decomposeActions fetch @ethersproject/base64@5.7.0
+218 silly decomposeActions extract @ethersproject/base64@5.7.0
+219 silly decomposeActions preinstall @ethersproject/base64@5.7.0
+220 silly decomposeActions build @ethersproject/base64@5.7.0
+221 silly decomposeActions install @ethersproject/base64@5.7.0
+222 silly decomposeActions postinstall @ethersproject/base64@5.7.0
+223 silly decomposeActions finalize @ethersproject/base64@5.7.0
+224 silly decomposeActions refresh-package-json @ethersproject/base64@5.7.0
+225 silly decomposeActions fetch @ethersproject/keccak256@5.7.0
+226 silly decomposeActions extract @ethersproject/keccak256@5.7.0
+227 silly decomposeActions preinstall @ethersproject/keccak256@5.7.0
+228 silly decomposeActions build @ethersproject/keccak256@5.7.0
+229 silly decomposeActions install @ethersproject/keccak256@5.7.0
+230 silly decomposeActions postinstall @ethersproject/keccak256@5.7.0
+231 silly decomposeActions finalize @ethersproject/keccak256@5.7.0
+232 silly decomposeActions refresh-package-json @ethersproject/keccak256@5.7.0
+233 silly decomposeActions fetch @ethersproject/networks@5.7.1
+234 silly decomposeActions extract @ethersproject/networks@5.7.1
+235 silly decomposeActions preinstall @ethersproject/networks@5.7.1
+236 silly decomposeActions build @ethersproject/networks@5.7.1
+237 silly decomposeActions install @ethersproject/networks@5.7.1
+238 silly decomposeActions postinstall @ethersproject/networks@5.7.1
+239 silly decomposeActions finalize @ethersproject/networks@5.7.1
+240 silly decomposeActions refresh-package-json @ethersproject/networks@5.7.1
+241 silly decomposeActions fetch @ethersproject/properties@5.7.0
+242 silly decomposeActions extract @ethersproject/properties@5.7.0
+243 silly decomposeActions preinstall @ethersproject/properties@5.7.0
+244 silly decomposeActions build @ethersproject/properties@5.7.0
+245 silly decomposeActions install @ethersproject/properties@5.7.0
+246 silly decomposeActions postinstall @ethersproject/properties@5.7.0
+247 silly decomposeActions finalize @ethersproject/properties@5.7.0
+248 silly decomposeActions refresh-package-json @ethersproject/properties@5.7.0
+249 silly decomposeActions fetch @ethersproject/basex@5.7.0
+250 silly decomposeActions extract @ethersproject/basex@5.7.0
+251 silly decomposeActions preinstall @ethersproject/basex@5.7.0
+252 silly decomposeActions build @ethersproject/basex@5.7.0
+253 silly decomposeActions install @ethersproject/basex@5.7.0
+254 silly decomposeActions postinstall @ethersproject/basex@5.7.0
+255 silly decomposeActions finalize @ethersproject/basex@5.7.0
+256 silly decomposeActions refresh-package-json @ethersproject/basex@5.7.0
+257 silly decomposeActions fetch @ethersproject/random@5.7.0
+258 silly decomposeActions extract @ethersproject/random@5.7.0
+259 silly decomposeActions preinstall @ethersproject/random@5.7.0
+260 silly decomposeActions build @ethersproject/random@5.7.0
+261 silly decomposeActions install @ethersproject/random@5.7.0
+262 silly decomposeActions postinstall @ethersproject/random@5.7.0
+263 silly decomposeActions finalize @ethersproject/random@5.7.0
+264 silly decomposeActions refresh-package-json @ethersproject/random@5.7.0
+265 silly decomposeActions fetch @ethersproject/rlp@5.7.0
+266 silly decomposeActions extract @ethersproject/rlp@5.7.0
+267 silly decomposeActions preinstall @ethersproject/rlp@5.7.0
+268 silly decomposeActions build @ethersproject/rlp@5.7.0
+269 silly decomposeActions install @ethersproject/rlp@5.7.0
+270 silly decomposeActions postinstall @ethersproject/rlp@5.7.0
+271 silly decomposeActions finalize @ethersproject/rlp@5.7.0
+272 silly decomposeActions refresh-package-json @ethersproject/rlp@5.7.0
+273 silly decomposeActions fetch aes-js@3.0.0
+274 silly decomposeActions extract aes-js@3.0.0
+275 silly decomposeActions preinstall aes-js@3.0.0
+276 silly decomposeActions build aes-js@3.0.0
+277 silly decomposeActions install aes-js@3.0.0
+278 silly decomposeActions postinstall aes-js@3.0.0
+279 silly decomposeActions finalize aes-js@3.0.0
+280 silly decomposeActions refresh-package-json aes-js@3.0.0
+281 silly decomposeActions fetch bech32@1.1.4
+282 silly decomposeActions extract bech32@1.1.4
+283 silly decomposeActions preinstall bech32@1.1.4
+284 silly decomposeActions build bech32@1.1.4
+285 silly decomposeActions install bech32@1.1.4
+286 silly decomposeActions postinstall bech32@1.1.4
+287 silly decomposeActions finalize bech32@1.1.4
+288 silly decomposeActions refresh-package-json bech32@1.1.4
+289 silly decomposeActions fetch bn.js@5.2.5
+290 silly decomposeActions extract bn.js@5.2.5
+291 silly decomposeActions preinstall bn.js@5.2.5
+292 silly decomposeActions build bn.js@5.2.5
+293 silly decomposeActions install bn.js@5.2.5
+294 silly decomposeActions postinstall bn.js@5.2.5
+295 silly decomposeActions finalize bn.js@5.2.5
+296 silly decomposeActions refresh-package-json bn.js@5.2.5
+297 silly decomposeActions fetch @ethersproject/bignumber@5.7.0
+298 silly decomposeActions extract @ethersproject/bignumber@5.7.0
+299 silly decomposeActions preinstall @ethersproject/bignumber@5.7.0
+300 silly decomposeActions build @ethersproject/bignumber@5.7.0
+301 silly decomposeActions install @ethersproject/bignumber@5.7.0
+302 silly decomposeActions postinstall @ethersproject/bignumber@5.7.0
+303 silly decomposeActions finalize @ethersproject/bignumber@5.7.0
+304 silly decomposeActions refresh-package-json @ethersproject/bignumber@5.7.0
+305 silly decomposeActions fetch @ethersproject/address@5.7.0
+306 silly decomposeActions extract @ethersproject/address@5.7.0
+307 silly decomposeActions preinstall @ethersproject/address@5.7.0
+308 silly decomposeActions build @ethersproject/address@5.7.0
+309 silly decomposeActions install @ethersproject/address@5.7.0
+310 silly decomposeActions postinstall @ethersproject/address@5.7.0
+311 silly decomposeActions finalize @ethersproject/address@5.7.0
+312 silly decomposeActions refresh-package-json @ethersproject/address@5.7.0
+313 silly decomposeActions fetch @ethersproject/constants@5.7.0
+314 silly decomposeActions extract @ethersproject/constants@5.7.0
+315 silly decomposeActions preinstall @ethersproject/constants@5.7.0
+316 silly decomposeActions build @ethersproject/constants@5.7.0
+317 silly decomposeActions install @ethersproject/constants@5.7.0
+318 silly decomposeActions postinstall @ethersproject/constants@5.7.0
+319 silly decomposeActions finalize @ethersproject/constants@5.7.0
+320 silly decomposeActions refresh-package-json @ethersproject/constants@5.7.0
+321 silly decomposeActions fetch @ethersproject/strings@5.7.0
+322 silly decomposeActions extract @ethersproject/strings@5.7.0
+323 silly decomposeActions preinstall @ethersproject/strings@5.7.0
+324 silly decomposeActions build @ethersproject/strings@5.7.0
+325 silly decomposeActions install @ethersproject/strings@5.7.0
+326 silly decomposeActions postinstall @ethersproject/strings@5.7.0
+327 silly decomposeActions finalize @ethersproject/strings@5.7.0
+328 silly decomposeActions refresh-package-json @ethersproject/strings@5.7.0
+329 silly decomposeActions fetch @ethersproject/web@5.7.1
+330 silly decomposeActions extract @ethersproject/web@5.7.1
+331 silly decomposeActions preinstall @ethersproject/web@5.7.1
+332 silly decomposeActions build @ethersproject/web@5.7.1
+333 silly decomposeActions install @ethersproject/web@5.7.1
+334 silly decomposeActions postinstall @ethersproject/web@5.7.1
+335 silly decomposeActions finalize @ethersproject/web@5.7.1
+336 silly decomposeActions refresh-package-json @ethersproject/web@5.7.1
+337 silly decomposeActions fetch brorand@1.1.0
+338 silly decomposeActions extract brorand@1.1.0
+339 silly decomposeActions preinstall brorand@1.1.0
+340 silly decomposeActions build brorand@1.1.0
+341 silly decomposeActions install brorand@1.1.0
+342 silly decomposeActions postinstall brorand@1.1.0
+343 silly decomposeActions finalize brorand@1.1.0
+344 silly decomposeActions refresh-package-json brorand@1.1.0
+345 silly decomposeActions fetch bn.js@4.12.5
+346 silly decomposeActions extract bn.js@4.12.5
+347 silly decomposeActions preinstall bn.js@4.12.5
+348 silly decomposeActions build bn.js@4.12.5
+349 silly decomposeActions install bn.js@4.12.5
+350 silly decomposeActions postinstall bn.js@4.12.5
+351 silly decomposeActions finalize bn.js@4.12.5
+352 silly decomposeActions refresh-package-json bn.js@4.12.5
+353 silly decomposeActions fetch inherits@2.0.4
+354 silly decomposeActions extract inherits@2.0.4
+355 silly decomposeActions preinstall inherits@2.0.4
+356 silly decomposeActions build inherits@2.0.4
+357 silly decomposeActions install inherits@2.0.4
+358 silly decomposeActions postinstall inherits@2.0.4
+359 silly decomposeActions finalize inherits@2.0.4
+360 silly decomposeActions refresh-package-json inherits@2.0.4
+361 silly decomposeActions fetch minimalistic-assert@1.0.1
+362 silly decomposeActions extract minimalistic-assert@1.0.1
+363 silly decomposeActions preinstall minimalistic-assert@1.0.1
+364 silly decomposeActions build minimalistic-assert@1.0.1
+365 silly decomposeActions install minimalistic-assert@1.0.1
+366 silly decomposeActions postinstall minimalistic-assert@1.0.1
+367 silly decomposeActions finalize minimalistic-assert@1.0.1
+368 silly decomposeActions refresh-package-json minimalistic-assert@1.0.1
+369 silly decomposeActions fetch hash.js@1.1.7
+370 silly decomposeActions extract hash.js@1.1.7
+371 silly decomposeActions preinstall hash.js@1.1.7
+372 silly decomposeActions build hash.js@1.1.7
+373 silly decomposeActions install hash.js@1.1.7
+374 silly decomposeActions postinstall hash.js@1.1.7
+375 silly decomposeActions finalize hash.js@1.1.7
+376 silly decomposeActions refresh-package-json hash.js@1.1.7
+377 silly decomposeActions fetch @ethersproject/sha2@5.7.0
+378 silly decomposeActions extract @ethersproject/sha2@5.7.0
+379 silly decomposeActions preinstall @ethersproject/sha2@5.7.0
+380 silly decomposeActions build @ethersproject/sha2@5.7.0
+381 silly decomposeActions install @ethersproject/sha2@5.7.0
+382 silly decomposeActions postinstall @ethersproject/sha2@5.7.0
+383 silly decomposeActions finalize @ethersproject/sha2@5.7.0
+384 silly decomposeActions refresh-package-json @ethersproject/sha2@5.7.0
+385 silly decomposeActions fetch @ethersproject/pbkdf2@5.7.0
+386 silly decomposeActions extract @ethersproject/pbkdf2@5.7.0
+387 silly decomposeActions preinstall @ethersproject/pbkdf2@5.7.0
+388 silly decomposeActions build @ethersproject/pbkdf2@5.7.0
+389 silly decomposeActions install @ethersproject/pbkdf2@5.7.0
+390 silly decomposeActions postinstall @ethersproject/pbkdf2@5.7.0
+391 silly decomposeActions finalize @ethersproject/pbkdf2@5.7.0
+392 silly decomposeActions refresh-package-json @ethersproject/pbkdf2@5.7.0
+393 silly decomposeActions fetch minimalistic-crypto-utils@1.0.1
+394 silly decomposeActions extract minimalistic-crypto-utils@1.0.1
+395 silly decomposeActions preinstall minimalistic-crypto-utils@1.0.1
+396 silly decomposeActions build minimalistic-crypto-utils@1.0.1
+397 silly decomposeActions install minimalistic-crypto-utils@1.0.1
+398 silly decomposeActions postinstall minimalistic-crypto-utils@1.0.1
+399 silly decomposeActions finalize minimalistic-crypto-utils@1.0.1
+400 silly decomposeActions refresh-package-json minimalistic-crypto-utils@1.0.1
+401 silly decomposeActions fetch hmac-drbg@1.0.1
+402 silly decomposeActions extract hmac-drbg@1.0.1
+403 silly decomposeActions preinstall hmac-drbg@1.0.1
+404 silly decomposeActions build hmac-drbg@1.0.1
+405 silly decomposeActions install hmac-drbg@1.0.1
+406 silly decomposeActions postinstall hmac-drbg@1.0.1
+407 silly decomposeActions finalize hmac-drbg@1.0.1
+408 silly decomposeActions refresh-package-json hmac-drbg@1.0.1
+409 silly decomposeActions fetch elliptic@6.5.4
+410 silly decomposeActions extract elliptic@6.5.4
+411 silly decomposeActions preinstall elliptic@6.5.4
+412 silly decomposeActions build elliptic@6.5.4
+413 silly decomposeActions install elliptic@6.5.4
+414 silly decomposeActions postinstall elliptic@6.5.4
+415 silly decomposeActions finalize elliptic@6.5.4
+416 silly decomposeActions refresh-package-json elliptic@6.5.4
+417 silly decomposeActions fetch @ethersproject/signing-key@5.7.0
+418 silly decomposeActions extract @ethersproject/signing-key@5.7.0
+419 silly decomposeActions preinstall @ethersproject/signing-key@5.7.0
+420 silly decomposeActions build @ethersproject/signing-key@5.7.0
+421 silly decomposeActions install @ethersproject/signing-key@5.7.0
+422 silly decomposeActions postinstall @ethersproject/signing-key@5.7.0
+423 silly decomposeActions finalize @ethersproject/signing-key@5.7.0
+424 silly decomposeActions refresh-package-json @ethersproject/signing-key@5.7.0
+425 silly decomposeActions fetch @ethersproject/transactions@5.7.0
+426 silly decomposeActions extract @ethersproject/transactions@5.7.0
+427 silly decomposeActions preinstall @ethersproject/transactions@5.7.0
+428 silly decomposeActions build @ethersproject/transactions@5.7.0
+429 silly decomposeActions install @ethersproject/transactions@5.7.0
+430 silly decomposeActions postinstall @ethersproject/transactions@5.7.0
+431 silly decomposeActions finalize @ethersproject/transactions@5.7.0
+432 silly decomposeActions refresh-package-json @ethersproject/transactions@5.7.0
+433 silly decomposeActions fetch @ethersproject/abstract-provider@5.7.0
+434 silly decomposeActions extract @ethersproject/abstract-provider@5.7.0
+435 silly decomposeActions preinstall @ethersproject/abstract-provider@5.7.0
+436 silly decomposeActions build @ethersproject/abstract-provider@5.7.0
+437 silly decomposeActions install @ethersproject/abstract-provider@5.7.0
+438 silly decomposeActions postinstall @ethersproject/abstract-provider@5.7.0
+439 silly decomposeActions finalize @ethersproject/abstract-provider@5.7.0
+440 silly decomposeActions refresh-package-json @ethersproject/abstract-provider@5.7.0
+441 silly decomposeActions fetch @ethersproject/abstract-signer@5.7.0
+442 silly decomposeActions extract @ethersproject/abstract-signer@5.7.0
+443 silly decomposeActions preinstall @ethersproject/abstract-signer@5.7.0
+444 silly decomposeActions build @ethersproject/abstract-signer@5.7.0
+445 silly decomposeActions install @ethersproject/abstract-signer@5.7.0
+446 silly decomposeActions postinstall @ethersproject/abstract-signer@5.7.0
+447 silly decomposeActions finalize @ethersproject/abstract-signer@5.7.0
+448 silly decomposeActions refresh-package-json @ethersproject/abstract-signer@5.7.0
+449 silly decomposeActions fetch @ethersproject/hash@5.7.0
+450 silly decomposeActions extract @ethersproject/hash@5.7.0
+451 silly decomposeActions preinstall @ethersproject/hash@5.7.0
+452 silly decomposeActions build @ethersproject/hash@5.7.0
+453 silly decomposeActions install @ethersproject/hash@5.7.0
+454 silly decomposeActions postinstall @ethersproject/hash@5.7.0
+455 silly decomposeActions finalize @ethersproject/hash@5.7.0
+456 silly decomposeActions refresh-package-json @ethersproject/hash@5.7.0
+457 silly decomposeActions fetch @ethersproject/abi@5.7.0
+458 silly decomposeActions extract @ethersproject/abi@5.7.0
+459 silly decomposeActions preinstall @ethersproject/abi@5.7.0
+460 silly decomposeActions build @ethersproject/abi@5.7.0
+461 silly decomposeActions install @ethersproject/abi@5.7.0
+462 silly decomposeActions postinstall @ethersproject/abi@5.7.0
+463 silly decomposeActions finalize @ethersproject/abi@5.7.0
+464 silly decomposeActions refresh-package-json @ethersproject/abi@5.7.0
+465 silly decomposeActions fetch @ethersproject/wordlists@5.7.0
+466 silly decomposeActions extract @ethersproject/wordlists@5.7.0
+467 silly decomposeActions preinstall @ethersproject/wordlists@5.7.0
+468 silly decomposeActions build @ethersproject/wordlists@5.7.0
+469 silly decomposeActions install @ethersproject/wordlists@5.7.0
+470 silly decomposeActions postinstall @ethersproject/wordlists@5.7.0
+471 silly decomposeActions finalize @ethersproject/wordlists@5.7.0
+472 silly decomposeActions refresh-package-json @ethersproject/wordlists@5.7.0
+473 silly decomposeActions fetch @ethersproject/hdnode@5.7.0
+474 silly decomposeActions extract @ethersproject/hdnode@5.7.0
+475 silly decomposeActions preinstall @ethersproject/hdnode@5.7.0
+476 silly decomposeActions build @ethersproject/hdnode@5.7.0
+477 silly decomposeActions install @ethersproject/hdnode@5.7.0
+478 silly decomposeActions postinstall @ethersproject/hdnode@5.7.0
+479 silly decomposeActions finalize @ethersproject/hdnode@5.7.0
+480 silly decomposeActions refresh-package-json @ethersproject/hdnode@5.7.0
+481 silly decomposeActions fetch scrypt-js@3.0.1
+482 silly decomposeActions extract scrypt-js@3.0.1
+483 silly decomposeActions preinstall scrypt-js@3.0.1
+484 silly decomposeActions build scrypt-js@3.0.1
+485 silly decomposeActions install scrypt-js@3.0.1
+486 silly decomposeActions postinstall scrypt-js@3.0.1
+487 silly decomposeActions finalize scrypt-js@3.0.1
+488 silly decomposeActions refresh-package-json scrypt-js@3.0.1
+489 silly decomposeActions fetch @ethersproject/json-wallets@5.7.0
+490 silly decomposeActions extract @ethersproject/json-wallets@5.7.0
+491 silly decomposeActions preinstall @ethersproject/json-wallets@5.7.0
+492 silly decomposeActions build @ethersproject/json-wallets@5.7.0
+493 silly decomposeActions install @ethersproject/json-wallets@5.7.0
+494 silly decomposeActions postinstall @ethersproject/json-wallets@5.7.0
+495 silly decomposeActions finalize @ethersproject/json-wallets@5.7.0
+496 silly decomposeActions refresh-package-json @ethersproject/json-wallets@5.7.0
+497 silly decomposeActions fetch ws@7.4.6
+498 silly decomposeActions extract ws@7.4.6
+499 silly decomposeActions preinstall ws@7.4.6
+500 silly decomposeActions build ws@7.4.6
+501 silly decomposeActions install ws@7.4.6
+502 silly decomposeActions postinstall ws@7.4.6
+503 silly decomposeActions finalize ws@7.4.6
+504 silly decomposeActions refresh-package-json ws@7.4.6
+505 silly decomposeActions fetch @ethersproject/contracts@5.7.0
+506 silly decomposeActions extract @ethersproject/contracts@5.7.0
+507 silly decomposeActions preinstall @ethersproject/contracts@5.7.0
+508 silly decomposeActions build @ethersproject/contracts@5.7.0
+509 silly decomposeActions install @ethersproject/contracts@5.7.0
+510 silly decomposeActions postinstall @ethersproject/contracts@5.7.0
+511 silly decomposeActions finalize @ethersproject/contracts@5.7.0
+512 silly decomposeActions refresh-package-json @ethersproject/contracts@5.7.0
+513 silly decomposeActions fetch @ethersproject/providers@5.7.2
+514 silly decomposeActions extract @ethersproject/providers@5.7.2
+515 silly decomposeActions preinstall @ethersproject/providers@5.7.2
+516 silly decomposeActions build @ethersproject/providers@5.7.2
+517 silly decomposeActions install @ethersproject/providers@5.7.2
+518 silly decomposeActions postinstall @ethersproject/providers@5.7.2
+519 silly decomposeActions finalize @ethersproject/providers@5.7.2
+520 silly decomposeActions refresh-package-json @ethersproject/providers@5.7.2
+521 silly decomposeActions fetch @ethersproject/solidity@5.7.0
+522 silly decomposeActions extract @ethersproject/solidity@5.7.0
+523 silly decomposeActions preinstall @ethersproject/solidity@5.7.0
+524 silly decomposeActions build @ethersproject/solidity@5.7.0
+525 silly decomposeActions install @ethersproject/solidity@5.7.0
+526 silly decomposeActions postinstall @ethersproject/solidity@5.7.0
+527 silly decomposeActions finalize @ethersproject/solidity@5.7.0
+528 silly decomposeActions refresh-package-json @ethersproject/solidity@5.7.0
+529 silly decomposeActions fetch @ethersproject/units@5.7.0
+530 silly decomposeActions extract @ethersproject/units@5.7.0
+531 silly decomposeActions preinstall @ethersproject/units@5.7.0
+532 silly decomposeActions build @ethersproject/units@5.7.0
+533 silly decomposeActions install @ethersproject/units@5.7.0
+534 silly decomposeActions postinstall @ethersproject/units@5.7.0
+535 silly decomposeActions finalize @ethersproject/units@5.7.0
+536 silly decomposeActions refresh-package-json @ethersproject/units@5.7.0
+537 silly decomposeActions fetch @ethersproject/wallet@5.7.0
+538 silly decomposeActions extract @ethersproject/wallet@5.7.0
+539 silly decomposeActions preinstall @ethersproject/wallet@5.7.0
+540 silly decomposeActions build @ethersproject/wallet@5.7.0
+541 silly decomposeActions install @ethersproject/wallet@5.7.0
+542 silly decomposeActions postinstall @ethersproject/wallet@5.7.0
+543 silly decomposeActions finalize @ethersproject/wallet@5.7.0
+544 silly decomposeActions refresh-package-json @ethersproject/wallet@5.7.0
+545 silly decomposeActions fetch dotenv@17.4.2
+546 silly decomposeActions extract dotenv@17.4.2
+547 silly decomposeActions preinstall dotenv@17.4.2
+548 silly decomposeActions build dotenv@17.4.2
+549 silly decomposeActions install dotenv@17.4.2
+550 silly decomposeActions postinstall dotenv@17.4.2
+551 silly decomposeActions finalize dotenv@17.4.2
+552 silly decomposeActions refresh-package-json dotenv@17.4.2
+553 silly decomposeActions fetch ethers@5.7.2
+554 silly decomposeActions extract ethers@5.7.2
+555 silly decomposeActions preinstall ethers@5.7.2
+556 silly decomposeActions build ethers@5.7.2
+557 silly decomposeActions install ethers@5.7.2
+558 silly decomposeActions postinstall ethers@5.7.2
+559 silly decomposeActions finalize ethers@5.7.2
+560 silly decomposeActions refresh-package-json ethers@5.7.2
+561 silly install executeActions
+562 silly doSerial global-install 360
+563 verbose correctMkdir /root/.npm/_locks correctMkdir not in flight; initializing
+564 verbose lock using /root/.npm/_locks/staging-46ebba5f47575bc1.lock for /root/saac-devil-bot/node_modules/.staging
+565 silly doParallel extract 45
+566 silly extract @ethersproject/logger@5.7.0
+567 silly extract @ethersproject/bytes@5.7.0
+568 silly extract @ethersproject/base64@5.7.0
+569 silly extract @ethersproject/keccak256@5.7.0
+570 silly extract @ethersproject/networks@5.7.1
+571 silly extract @ethersproject/properties@5.7.0
+572 silly extract @ethersproject/basex@5.7.0
+573 silly extract @ethersproject/random@5.7.0
+574 silly extract @ethersproject/rlp@5.7.0
+575 silly extract aes-js@3.0.0
+576 silly extract bech32@1.1.4
+577 silly extract bn.js@5.2.5
+578 silly extract @ethersproject/bignumber@5.7.0
+579 silly extract @ethersproject/address@5.7.0
+580 silly extract @ethersproject/constants@5.7.0
+581 silly extract @ethersproject/strings@5.7.0
+582 silly extract @ethersproject/web@5.7.1
+583 silly extract brorand@1.1.0
+584 silly extract bn.js@4.12.5
+585 silly extract inherits@2.0.4
+586 silly extract minimalistic-assert@1.0.1
+587 silly extract hash.js@1.1.7
+588 silly extract @ethersproject/sha2@5.7.0
+589 silly extract @ethersproject/pbkdf2@5.7.0
+590 silly extract minimalistic-crypto-utils@1.0.1
+591 silly extract hmac-drbg@1.0.1
+592 silly extract elliptic@6.5.4
+593 silly extract @ethersproject/signing-key@5.7.0
+594 silly extract @ethersproject/transactions@5.7.0
+595 silly extract @ethersproject/abstract-provider@5.7.0
+596 silly extract @ethersproject/abstract-signer@5.7.0
+597 silly extract @ethersproject/hash@5.7.0
+598 silly extract @ethersproject/abi@5.7.0
+599 silly extract @ethersproject/wordlists@5.7.0
+600 silly extract @ethersproject/hdnode@5.7.0
+601 silly extract scrypt-js@3.0.1
+602 silly extract @ethersproject/json-wallets@5.7.0
+603 silly extract ws@7.4.6
+604 silly extract @ethersproject/contracts@5.7.0
+605 silly extract @ethersproject/providers@5.7.2
+606 silly extract @ethersproject/solidity@5.7.0
+607 silly extract @ethersproject/units@5.7.0
+608 silly extract @ethersproject/wallet@5.7.0
+609 silly extract dotenv@17.4.2
+610 silly extract ethers@5.7.2
+611 silly tarball trying aes-js@3.0.0 by hash: sha512-H7wUZRn8WpTq9jocdxQ2c8x2sKo9ZVmzfRE13GiNJXfp7NcKYEdvl3vspKjXox6RIG2VtaRe4JFvxG4rqp2Zuw==
+612 silly tarball trying bech32@1.1.4 by hash: sha512-s0IrSOzLlbvX7yp4WBfPITzpAU8sqQcpsmwXDiKwrG4r491vwCO/XpejasRNl0piBMe/DvP4Tz0mIS/X1DPJBQ==
+613 silly tarball trying bn.js@^5.2.1 by hash: sha512-Vq886eXykuP5E6HcKSSStP3bJgrE6In5WKxVUvJ8XGpWWYs2xZHWqUwzCtGgEtBcxyd57KBFDPFoUfNzdaHCNg==
+614 silly tarball trying bn.js@^4.11.9 by hash: sha512-3aRg6/JxfffFD+OlOjOFR3Vo79l39ooBTFucxx+MT3dhCtzn3EmiUPQo+6/OZuI2jbXi3YKgmiTFBgChQMwIRQ==
+615 silly tarball trying @ethersproject/bignumber@5.7.0 by hash: sha512-n1CAdIHRWjSucQO3MC1zPSVgV/6dy/fjL9pMrPP9peL+QxEg9wOsVqwD4+818B6LUEtaXzVHQiuivzRoxPxUGw==
+616 silly tarball trying @ethersproject/address@5.7.0 by hash: sha512-9wYhYt7aghVGo758POM5nqcOMaE168Q6aRLJZwUmiqSrAungkG74gSSeKEIR7ukixesdRZGPgVqme6vmxs1fkA==
+617 silly tarball trying @ethersproject/constants@5.7.0 by hash: sha512-DHI+y5dBNvkpYUMiRQyxRBYBefZkJfo70VUkUAsRjcPs47muV9evftfZ0PJVCXYbAiCgght0DtcF9srFQmIgWA==
+618 silly tarball trying @ethersproject/strings@5.7.0 by hash: sha512-/9nu+lj0YswRNSH0NXYqrh8775XNyEdUQAuf3f+SmOrnVewcJ5SBNAjF7lpgehKi4abvNNXyf+HX86czCdJ8Mg==
+619 silly tarball trying @ethersproject/web@5.7.1 by hash: sha512-Gueu8lSvyjBWL4cYsWsjh6MtMwM0+H4HvqFPZfB6dV8ctbP9zFAO73VG1cMWae0FLPCtz0peKPpZY8/ugJJX2w==
+620 silly tarball trying brorand@^1.1.0 by hash: sha512-cKV8tMCEpQs4hK/ik71d6LrPOnpkpGBR0wzxqr68g2m/LB2GxVYQroAjMJZRVM1Y4BCjCKc3vAamxSzOY2RP+w==
+621 silly tarball trying inherits@^2.0.4 by hash: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
+622 silly tarball trying minimalistic-assert@^1.0.1 by hash: sha512-UtJcAD4yEaGtjPezWuO9wC4nwUnVH/8/Im3yEHQP4b67cXlD/Qr9hdITCU1xDbSEXg2XKNaP8jsReV7vQd00/A==
+623 silly tarball trying hash.js@1.1.7 by hash: sha512-taOaskGt4z4SOANNseOviYDvjEJinIkRgmp7LbKP2YTTmVxWBl87s/uzK9r+44BclBSp2X7K1hqeNfz9JbBeXA==
+624 silly tarball trying @ethersproject/sha2@5.7.0 by hash: sha512-gKlH42riwb3KYp0reLsFTokByAKoJdgFCwI+CCiX/k+Jm2mbNs6oOaCjYQSlI1+XBVejwH2KrmCbMAT/GnRDQw==
+625 silly tarball trying @ethersproject/pbkdf2@5.7.0 by hash: sha512-oR/dBRZR6GTyaofd86DehG72hY6NpAjhabkhxgr3X2FpJtJuodEl2auADWBZfhDHgVCbu3/H/Ocq2uC6dpNjjw==
+626 silly tarball trying minimalistic-crypto-utils@^1.0.1 by hash: sha512-JIYlbt6g8i5jKfJ3xz7rF0LXmv2TkDxBLUkiBeZ7bAx4GnnNMr8xFpGnOxn6GhTEHx3SjRrZEoU+j04prX1ktg==
+627 silly tarball trying hmac-drbg@^1.0.1 by hash: sha512-Tti3gMqLdZfhOQY1Mzf/AanLiqh1WTiJgEj26ZuYQ9fbkLomzGchCws4FyrSd4VkpBfiNhaE1On+lOz894jvXg==
+628 silly tarball trying elliptic@6.5.4 by hash: sha512-iLhC6ULemrljPZb+QutR5TQGB+pdW6KGD5RSegS+8sorOZT+rdQFbsQFJgvN3eRqNALqJer4oQ16YvJHlU8hzQ==
+629 silly tarball trying @ethersproject/signing-key@5.7.0 by hash: sha512-MZdy2nL3wO0u7gkB4nA/pEf8lu1TlFswPNmy8AiYkfKTdO6eXBJyUdmHO/ehm/htHw9K/qF8ujnTyUAD+Ry54Q==
+630 silly tarball trying @ethersproject/transactions@5.7.0 by hash: sha512-kmcNicCp1lp8qanMTC3RIikGgoJ80ztTyvtsFvCYpSCfkjhD0jZ2LOrnbcuxuToLIUYYf+4XwD1rP+B/erDIhQ==
+631 silly tarball trying @ethersproject/abstract-provider@5.7.0 by hash: sha512-R41c9UkchKCpAqStMYUpdunjo3pkEvZC3FAwZn5S5MGbXoMQOHIdHItezTETxAO5bevtMApSyEhn9+CHcDsWBw==
+632 silly tarball trying @ethersproject/abstract-signer@5.7.0 by hash: sha512-a16V8bq1/Cz+TGCkE2OPMTOUDLS3grCpdjoJCYNnVBbdYEMSgKrU0+B90s8b6H+ByYTBZN7a3g76jdIJi7UfKQ==
+633 silly tarball trying @ethersproject/hash@5.7.0 by hash: sha512-qX5WrQfnah1EFnO5zJv1v46a8HW0+E5xuBBDTwMFZLuVTx0tbU2kkx15NqdjxecrLGatQN9FGQKpb1FKdHCt+g==
+634 silly tarball trying @ethersproject/abi@5.7.0 by hash: sha512-351ktp42TiRcYB3H1OP8yajPeAQstMW/yCFokj/AthP9bLHzQFPlOrxOcwYEDkUAICmOHljvN4K39OMTMUa9RA==
+635 silly tarball trying @ethersproject/wordlists@5.7.0 by hash: sha512-S2TFNJNfHWVHNE6cNDjbVlZ6MgE17MIxMbMg2zv3wn+3XSJGosL1m9ZVv3GXCf/2ymSsQ+hRI5IzoMJTG6aoVA==
+636 silly tarball trying @ethersproject/hdnode@5.7.0 by hash: sha512-OmyYo9EENBPPf4ERhR7oj6uAtUAhYGqOnIS+jE5pTXvdKBS99ikzq1E7Iv0ZQZ5V36Lqx1qZLeak0Ra16qpeOg==
+637 silly tarball trying scrypt-js@3.0.1 by hash: sha512-cdwTTnqPu0Hyvf5in5asVdZocVDTNRmR7XEcJuIzMjJeSHybHl7vpB66AzwTaIg6CLSbtjcxc8fqcySfnTkccA==
+638 silly tarball trying @ethersproject/json-wallets@5.7.0 by hash: sha512-8oee5Xgu6+RKgJTkvEMl2wDgSPSAQ9MB/3JYjFV9jlKvcYHUXZC+cQp0njgmxdHkYWn8s6/IqIZYm0YWCjO/0g==
+639 silly tarball trying ws@7.4.6 by hash: sha512-YmhHDO4MzaDLB+M9ym/mDA5z0naX8j7SIlT8f8z+I0VtzsRbekxEutHSme7NPS2qE8StCYQNUnfWdXta/Yu85A==
+640 silly tarball trying @ethersproject/contracts@5.7.0 by hash: sha512-5GJbzEU3X+d33CdfPhcyS+z8MzsTrBGk/sc+G+59+tPa9yFkl6HQ9D6L0QMgNTA9q8dT0XKxxkyp883XsQvbbg==
+641 silly tarball trying @ethersproject/providers@5.7.2 by hash: sha512-g34EWZ1WWAVgr4aptGlVBF8mhl3VWjv+8hoAnzStu8Ah22VHBsuGzP17eb6xDVRzw895G4W7vvx60lFFur/1Rg==
+642 silly tarball trying @ethersproject/solidity@5.7.0 by hash: sha512-HmabMd2Dt/raavyaGukF4XxizWKhKQ24DoLtdNbBmNKUOPqwjsKQSdV9GQtj9CBEea9DlzETlVER1gYeXXBGaA==
+643 silly tarball trying @ethersproject/units@5.7.0 by hash: sha512-pD3xLMy3SJu9kG5xDGI7+xhTEmGXlEqXU4OfNapmfnxLVY4EMSSRp7j1k7eezutBPH7RBN/7QPnwR7hzNlEFeg==
+644 silly tarball trying @ethersproject/wallet@5.7.0 by hash: sha512-MhmXlJXEJFBFVKrDLB4ZdDzxcBxQ3rLyCkhNqVu3CDYvR97E+8r01UgrI+TI99Le+aYm/in/0vp86guJuM7FCA==
+645 silly tarball trying dotenv@latest by hash: sha512-nI4U3TottKAcAD9LLud4Cb7b2QztQMUEfHbvhTH09bqXTxnSie8WnjPALV/WMCrJZ6UV/qHJ6L03OqO3LcdYZw==
+646 silly tarball trying ethers@5.7.2 by hash: sha512-wswUsmWo1aOK8rR7DIKiWSw9DbLWe6x98Jrn8wcTflTVvaXhAMaB5zGAXy0GYQEQp9iO1iSHWVyARQm11zUtyg==
+647 silly tarball trying @ethersproject/logger@5.7.0 by hash: sha512-0odtFdXu/XHtjQXJYA3u9G0G8btm0ND5Cu8M7i5vhEcE8/HmF4Lbdqanwyv4uQTr2tx6b7fQRmgLrsnpQlmnig==
+648 silly tarball trying @ethersproject/bytes@5.7.0 by hash: sha512-nsbxwgFXWh9NyYWo+U8atvmMsSdKJprTcICAkvbBffT75qDocbuggBU0SJiVK2MuTrp0q+xvLkTnGMPK1+uA9A==
+649 silly tarball trying @ethersproject/base64@5.7.0 by hash: sha512-Dr8tcHt2mEbsZr/mwTPIQAf3Ai0Bks/7gTw9dSqk1mQvhW3XvRlmDJr/4n+wg1JmCl16NZue17CDh8xb/vZ0sQ==
+650 silly tarball trying @ethersproject/keccak256@5.7.0 by hash: sha512-2UcPboeL/iW+pSg6vZ6ydF8tCnv3Iu/8tUmLLzWWGzxWKFFqOBQFLo6uLUv6BDrLgCDfN28RJ/wtByx+jZ4KBg==
+651 silly tarball trying @ethersproject/networks@5.7.1 by hash: sha512-n/MufjFYv3yFcUyfhnXotyDlNdFb7onmkSy8aQERi2PjNcnWQ66xXxa3XlS8nCcA8aJKJjIIMNJTC7tu80GwpQ==
+652 silly tarball trying @ethersproject/properties@5.7.0 by hash: sha512-J87jy8suntrAkIZtecpxEPxY//szqr1mlBaYlQ0r4RCaiD2hjheqF9s1LVE8vVuJCXisjIP+JgtK/Do54ej4Sw==
+653 silly tarball trying @ethersproject/basex@5.7.0 by hash: sha512-ywlh43GwZLv2Voc2gQVTKBoVQ1mti3d8HK5aMxsfu/nRDnMmNqaSJ3r3n85HBByT8OpoY96SXM1FogC533T4zw==
+654 silly tarball trying @ethersproject/random@5.7.0 by hash: sha512-19WjScqRA8IIeWclFme75VMXSBvi4e6InrUNuaR4s5pTF2qNhcGdCUwdxUVGtDDqC00sDLCO93jPQoDUH4HVmQ==
+655 silly tarball trying @ethersproject/rlp@5.7.0 by hash: sha512-rBxzX2vK8mVF7b0Tol44t5Tb8gomOHkj5guL+HhzQ1yBh/ydjGnpw6at+X6Iw0Kp3OzzzkcKp8N9r0W4kYSs9w==
+656 silly extract minimalistic-assert@^1.0.1 extracted to /root/saac-devil-bot/node_modules/.staging/minimalistic-assert-7fff8000 (8580ms)
+657 silly extract bech32@1.1.4 extracted to /root/saac-devil-bot/node_modules/.staging/bech32-7fff8000 (8840ms)
+658 silly extract inherits@^2.0.4 extracted to /root/saac-devil-bot/node_modules/.staging/inherits-7fff8000 (8799ms)
+659 silly extract brorand@^1.1.0 extracted to /root/saac-devil-bot/node_modules/.staging/brorand-7fff8000 (9033ms)
+660 silly extract minimalistic-crypto-utils@^1.0.1 extracted to /root/saac-devil-bot/node_modules/.staging/minimalistic-crypto-utils-7fff8000 (9378ms)
+661 silly extract hmac-drbg@^1.0.1 extracted to /root/saac-devil-bot/node_modules/.staging/hmac-drbg-7fff8000 (9938ms)
+662 silly extract bn.js@^5.2.1 extracted to /root/saac-devil-bot/node_modules/.staging/bn.js-7fff8000 (10175ms)
+663 silly extract bn.js@^4.11.9 extracted to /root/saac-devil-bot/node_modules/.staging/bn.js-7fff8000 (10682ms)
+664 silly extract @ethersproject/basex@5.7.0 extracted to /root/saac-devil-bot/node_modules/.staging/@ethersproject/basex-7fff8000 (11685ms)
+665 silly extract @ethersproject/solidity@5.7.0 extracted to /root/saac-devil-bot/node_modules/.staging/@ethersproject/solidity-7fff8000 (11624ms)
+666 silly extract @ethersproject/units@5.7.0 extracted to /root/saac-devil-bot/node_modules/.staging/@ethersproject/units-7fff8000 (11622ms)
+667 silly extract scrypt-js@3.0.1 extracted to /root/saac-devil-bot/node_modules/.staging/scrypt-js-7fff8000 (11772ms)
+668 silly extract @ethersproject/logger@5.7.0 extracted to /root/saac-devil-bot/node_modules/.staging/@ethersproject/logger-7fff8000 (11994ms)
+669 silly extract @ethersproject/keccak256@5.7.0 extracted to /root/saac-devil-bot/node_modules/.staging/@ethersproject/keccak256-7fff8000 (11980ms)
+670 silly extract @ethersproject/properties@5.7.0 extracted to /root/saac-devil-bot/node_modules/.staging/@ethersproject/properties-7fff8000 (11971ms)
+671 silly extract @ethersproject/rlp@5.7.0 extracted to /root/saac-devil-bot/node_modules/.staging/@ethersproject/rlp-7fff8000 (11957ms)
+672 silly extract @ethersproject/address@5.7.0 extracted to /root/saac-devil-bot/node_modules/.staging/@ethersproject/address-7fff8000 (12146ms)
+673 silly extract hash.js@1.1.7 extracted to /root/saac-devil-bot/node_modules/.staging/hash.js-7fff8000 (12196ms)
+674 silly extract @ethersproject/abstract-signer@5.7.0 extracted to /root/saac-devil-bot/node_modules/.staging/@ethersproject/abstract-signer-7fff8000 (12157ms)
+675 silly extract @ethersproject/bytes@5.7.0 extracted to /root/saac-devil-bot/node_modules/.staging/@ethersproject/bytes-7fff8000 (12351ms)
+676 silly extract @ethersproject/abstract-provider@5.7.0 extracted to /root/saac-devil-bot/node_modules/.staging/@ethersproject/abstract-provider-7fff8000 (12242ms)
+677 silly extract @ethersproject/hdnode@5.7.0 extracted to /root/saac-devil-bot/node_modules/.staging/@ethersproject/hdnode-7fff8000 (12220ms)
+678 silly extract ws@7.4.6 extracted to /root/saac-devil-bot/node_modules/.staging/ws-7fff8000 (12321ms)
+679 silly extract @ethersproject/wallet@5.7.0 extracted to /root/saac-devil-bot/node_modules/.staging/@ethersproject/wallet-7fff8000 (12299ms)
+680 silly extract dotenv@latest extracted to /root/saac-devil-bot/node_modules/.staging/dotenv-7fff8000 (12295ms)
+681 silly extract @ethersproject/transactions@5.7.0 extracted to /root/saac-devil-bot/node_modules/.staging/@ethersproject/transactions-7fff8000 (12564ms)
+682 silly extract @ethersproject/base64@5.7.0 extracted to /root/saac-devil-bot/node_modules/.staging/@ethersproject/base64-7fff8000 (13146ms)
+683 silly extract @ethersproject/networks@5.7.1 extracted to /root/saac-devil-bot/node_modules/.staging/@ethersproject/networks-7fff8000 (13285ms)
+684 silly extract elliptic@6.5.4 extracted to /root/saac-devil-bot/node_modules/.staging/elliptic-7fff8000 (13301ms)
+685 silly extract @ethersproject/pbkdf2@5.7.0 extracted to /root/saac-devil-bot/node_modules/.staging/@ethersproject/pbkdf2-7fff8000 (13394ms)
+686 silly extract @ethersproject/contracts@5.7.0 extracted to /root/saac-devil-bot/node_modules/.staging/@ethersproject/contracts-7fff8000 (13417ms)
+687 silly extract @ethersproject/random@5.7.0 extracted to /root/saac-devil-bot/node_modules/.staging/@ethersproject/random-7fff8000 (13977ms)
+688 silly extract @ethersproject/sha2@5.7.0 extracted to /root/saac-devil-bot/node_modules/.staging/@ethersproject/sha2-7fff8000 (14139ms)
+689 silly extract @ethersproject/signing-key@5.7.0 extracted to /root/saac-devil-bot/node_modules/.staging/@ethersproject/signing-key-7fff8000 (14497ms)
+690 silly extract @ethersproject/constants@5.7.0 extracted to /root/saac-devil-bot/node_modules/.staging/@ethersproject/constants-7fff8000 (14787ms)
+691 silly extract @ethersproject/bignumber@5.7.0 extracted to /root/saac-devil-bot/node_modules/.staging/@ethersproject/bignumber-7fff8000 (14929ms)
+692 silly extract @ethersproject/strings@5.7.0 extracted to /root/saac-devil-bot/node_modules/.staging/@ethersproject/strings-7fff8000 (14915ms)
+693 silly extract @ethersproject/web@5.7.1 extracted to /root/saac-devil-bot/node_modules/.staging/@ethersproject/web-7fff8000 (14911ms)
+694 silly extract @ethersproject/json-wallets@5.7.0 extracted to /root/saac-devil-bot/node_modules/.staging/@ethersproject/json-wallets-7fff8000 (15340ms)
+695 silly extract @ethersproject/hash@5.7.0 extracted to /root/saac-devil-bot/node_modules/.staging/@ethersproject/hash-7fff8000 (16742ms)
+696 silly extract @ethersproject/wordlists@5.7.0 extracted to /root/saac-devil-bot/node_modules/.staging/@ethersproject/wordlists-7fff8000 (18364ms)
+697 silly extract aes-js@3.0.0 extracted to /root/saac-devil-bot/node_modules/.staging/aes-js-7fff8000 (18695ms)
+698 silly extract @ethersproject/abi@5.7.0 extracted to /root/saac-devil-bot/node_modules/.staging/@ethersproject/abi-7fff8000 (19133ms)
+699 silly extract @ethersproject/providers@5.7.2 extracted to /root/saac-devil-bot/node_modules/.staging/@ethersproject/providers-7fff8000 (20404ms)
+700 silly extract ethers@5.7.2 extracted to /root/saac-devil-bot/node_modules/.staging/ethers-7fff8000 (22513ms)
+701 timing action:extract Completed in 22826ms
+702 silly doReverseSerial unbuild 360
+703 silly doSerial remove 360
+704 silly doSerial move 360
+705 silly doSerial finalize 360
+706 silly finalize /root/saac-devil-bot/node_modules/@ethersproject/logger
+707 silly finalize /root/saac-devil-bot/node_modules/@ethersproject/bytes
+708 silly finalize /root/saac-devil-bot/node_modules/@ethersproject/base64
+709 silly finalize /root/saac-devil-bot/node_modules/@ethersproject/keccak256
+710 silly finalize /root/saac-devil-bot/node_modules/@ethersproject/networks
+711 silly finalize /root/saac-devil-bot/node_modules/@ethersproject/properties
+712 silly finalize /root/saac-devil-bot/node_modules/@ethersproject/basex
+713 silly finalize /root/saac-devil-bot/node_modules/@ethersproject/random
+714 silly finalize /root/saac-devil-bot/node_modules/@ethersproject/rlp
+715 silly finalize /root/saac-devil-bot/node_modules/aes-js
+716 silly finalize /root/saac-devil-bot/node_modules/bech32
+717 silly finalize /root/saac-devil-bot/node_modules/bn.js
+718 silly finalize /root/saac-devil-bot/node_modules/@ethersproject/bignumber
+719 silly finalize /root/saac-devil-bot/node_modules/@ethersproject/address
+720 silly finalize /root/saac-devil-bot/node_modules/@ethersproject/constants
+721 silly finalize /root/saac-devil-bot/node_modules/@ethersproject/strings
+722 silly finalize /root/saac-devil-bot/node_modules/@ethersproject/web
+723 silly finalize /root/saac-devil-bot/node_modules/brorand
+724 silly finalize /root/saac-devil-bot/node_modules/elliptic/node_modules/bn.js
+725 timing action:finalize Completed in 762ms
+726 verbose unlock done using /root/.npm/_locks/staging-46ebba5f47575bc1.lock for /root/saac-devil-bot/node_modules/.staging
+727 timing stage:rollbackFailedOptional Completed in 21ms
+728 timing stage:runTopLevelLifecycles Completed in 58162ms
+729 silly saveTree saac-devil-bot@1.0.0
+729 silly saveTree +-- axios@1.18.1
+729 silly saveTree | +-- follow-redirects@1.16.0
+729 silly saveTree | +-- form-data@4.0.6
+729 silly saveTree | | +-- asynckit@0.4.0
+729 silly saveTree | | +-- combined-stream@1.0.8
+729 silly saveTree | | | `-- delayed-stream@1.0.0
+729 silly saveTree | | +-- es-set-tostringtag@2.1.0
+729 silly saveTree | | | +-- es-errors@1.3.0
+729 silly saveTree | | | +-- get-intrinsic@1.3.0
+729 silly saveTree | | | | +-- call-bind-apply-helpers@1.0.2
+729 silly saveTree | | | | | `-- function-bind@1.1.2
+729 silly saveTree | | | | +-- es-define-property@1.0.1
+729 silly saveTree | | | | +-- es-object-atoms@1.1.2
+729 silly saveTree | | | | +-- function-bind@1.1.2
+729 silly saveTree | | | | +-- get-proto@1.0.1
+729 silly saveTree | | | | | `-- dunder-proto@1.0.1
+729 silly saveTree | | | | |   `-- gopd@1.2.0
+729 silly saveTree | | | | +-- gopd@1.2.0
+729 silly saveTree | | | | +-- has-symbols@1.1.0
+729 silly saveTree | | | | +-- hasown@2.0.4
+729 silly saveTree | | | | `-- math-intrinsics@1.1.0
+729 silly saveTree | | | +-- has-tostringtag@1.0.2
+729 silly saveTree | | | `-- hasown@2.0.4
+729 silly saveTree | | +-- hasown@2.0.4
+729 silly saveTree | | `-- mime-types@2.1.35
+729 silly saveTree | |   `-- mime-db@1.52.0
+729 silly saveTree | +-- https-proxy-agent@5.0.1
+729 silly saveTree | | +-- agent-base@6.0.2
+729 silly saveTree | | | `-- debug@4.4.3
+729 silly saveTree | | |   `-- ms@2.1.3
+729 silly saveTree | | `-- debug@4.4.3
+729 silly saveTree | `-- proxy-from-env@2.1.0
+729 silly saveTree +-- bignumber.js@11.1.5
+729 silly saveTree +-- dotenv@17.4.2
+729 silly saveTree +-- ethers@5.7.2
+729 silly saveTree | +-- @ethersproject/abi@5.7.0
+729 silly saveTree | | +-- @ethersproject/address@5.7.0
+729 silly saveTree | | | +-- @ethersproject/bignumber@5.7.0
+729 silly saveTree | | | | +-- @ethersproject/bytes@5.7.0
+729 silly saveTree | | | | | `-- @ethersproject/logger@5.7.0
+729 silly saveTree | | | | +-- @ethersproject/logger@5.7.0
+729 silly saveTree | | | | `-- bn.js@5.2.5
+729 silly saveTree | | | +-- @ethersproject/bytes@5.7.0
+729 silly saveTree | | | +-- @ethersproject/keccak256@5.7.0
+729 silly saveTree | | | | `-- js-sha3@0.8.0
+729 silly saveTree | | | +-- @ethersproject/logger@5.7.0
+729 silly saveTree | | | `-- @ethersproject/rlp@5.7.0
+729 silly saveTree | | +-- @ethersproject/bignumber@5.7.0
+729 silly saveTree | | +-- @ethersproject/bytes@5.7.0
+729 silly saveTree | | +-- @ethersproject/constants@5.7.0
+729 silly saveTree | | +-- @ethersproject/hash@5.7.0
+729 silly saveTree | | | +-- @ethersproject/abstract-signer@5.7.0
+729 silly saveTree | | | | +-- @ethersproject/abstract-provider@5.7.0
+729 silly saveTree | | | | | +-- @ethersproject/networks@5.7.1
+729 silly saveTree | | | | | +-- @ethersproject/properties@5.7.0
+729 silly saveTree | | | | | +-- @ethersproject/transactions@5.7.0
+729 silly saveTree | | | | | | `-- @ethersproject/signing-key@5.7.0
+729 silly saveTree | | | | | |   +-- elliptic@6.5.4
+729 silly saveTree | | | | | |   | +-- bn.js@4.12.5
+729 silly saveTree | | | | | |   | +-- brorand@1.1.0
+729 silly saveTree | | | | | |   | +-- hash.js@1.1.7
+729 silly saveTree | | | | | |   | | +-- inherits@2.0.4
+729 silly saveTree | | | | | |   | | `-- minimalistic-assert@1.0.1
+729 silly saveTree | | | | | |   | +-- hmac-drbg@1.0.1
+729 silly saveTree | | | | | |   | | `-- minimalistic-crypto-utils@1.0.1
+729 silly saveTree | | | | | |   | +-- inherits@2.0.4
+729 silly saveTree | | | | | |   | +-- minimalistic-assert@1.0.1
+729 silly saveTree | | | | | |   | `-- minimalistic-crypto-utils@1.0.1
+729 silly saveTree | | | | | |   `-- hash.js@1.1.7
+729 silly saveTree | | | | | `-- @ethersproject/web@5.7.1
+729 silly saveTree | | | | |   +-- @ethersproject/base64@5.7.0
+729 silly saveTree | | | | |   `-- @ethersproject/strings@5.7.0
+729 silly saveTree | | | | `-- @ethersproject/properties@5.7.0
+729 silly saveTree | | | +-- @ethersproject/base64@5.7.0
+729 silly saveTree | | | +-- @ethersproject/properties@5.7.0
+729 silly saveTree | | | `-- @ethersproject/strings@5.7.0
+729 silly saveTree | | +-- @ethersproject/keccak256@5.7.0
+729 silly saveTree | | +-- @ethersproject/logger@5.7.0
+729 silly saveTree | | +-- @ethersproject/properties@5.7.0
+729 silly saveTree | | `-- @ethersproject/strings@5.7.0
+729 silly saveTree | +-- @ethersproject/abstract-provider@5.7.0
+729 silly saveTree | +-- @ethersproject/abstract-signer@5.7.0
+729 silly saveTree | +-- @ethersproject/address@5.7.0
+729 silly saveTree | +-- @ethersproject/base64@5.7.0
+729 silly saveTree | +-- @ethersproject/basex@5.7.0
+729 silly saveTree | +-- @ethersproject/bignumber@5.7.0
+729 silly saveTree | +-- @ethersproject/bytes@5.7.0
+729 silly saveTree | +-- @ethersproject/constants@5.7.0
+729 silly saveTree | +-- @ethersproject/contracts@5.7.0
+729 silly saveTree | +-- @ethersproject/hash@5.7.0
+729 silly saveTree | +-- @ethersproject/hdnode@5.7.0
+729 silly saveTree | | +-- @ethersproject/pbkdf2@5.7.0
+729 silly saveTree | | | `-- @ethersproject/sha2@5.7.0
+729 silly saveTree | | +-- @ethersproject/sha2@5.7.0
+729 silly saveTree | | `-- @ethersproject/wordlists@5.7.0
+729 silly saveTree | +-- @ethersproject/json-wallets@5.7.0
+729 silly saveTree | | +-- @ethersproject/random@5.7.0
+729 silly saveTree | | +-- aes-js@3.0.0
+729 silly saveTree | | `-- scrypt-js@3.0.1
+729 silly saveTree | +-- @ethersproject/keccak256@5.7.0
+729 silly saveTree | +-- @ethersproject/logger@5.7.0
+729 silly saveTree | +-- @ethersproject/networks@5.7.1
+729 silly saveTree | +-- @ethersproject/pbkdf2@5.7.0
+729 silly saveTree | +-- @ethersproject/properties@5.7.0
+729 silly saveTree | +-- @ethersproject/providers@5.7.2
+729 silly saveTree | | +-- bech32@1.1.4
+729 silly saveTree | | `-- ws@7.4.6
+729 silly saveTree | +-- @ethersproject/random@5.7.0
+729 silly saveTree | +-- @ethersproject/rlp@5.7.0
+729 silly saveTree | +-- @ethersproject/sha2@5.7.0
+729 silly saveTree | +-- @ethersproject/signing-key@5.7.0
+729 silly saveTree | +-- @ethersproject/solidity@5.7.0
+729 silly saveTree | +-- @ethersproject/strings@5.7.0
+729 silly saveTree | +-- @ethersproject/transactions@5.7.0
+729 silly saveTree | +-- @ethersproject/units@5.7.0
+729 silly saveTree | +-- @ethersproject/wallet@5.7.0
+729 silly saveTree | +-- @ethersproject/web@5.7.1
+729 silly saveTree | `-- @ethersproject/wordlists@5.7.0
+729 silly saveTree `-- solc@0.8.20
+729 silly saveTree   +-- command-exists@1.2.9
+729 silly saveTree   +-- commander@8.3.0
+729 silly saveTree   +-- memorystream@0.3.1
+729 silly saveTree   +-- semver@5.7.2
+729 silly saveTree   `-- tmp@0.0.33
+729 silly saveTree     `-- os-tmpdir@1.0.2
+730 warn saac-devil-bot@1.0.0 No description
+731 warn saac-devil-bot@1.0.0 No repository field.
+732 verbose stack Error: ENOENT: no such file or directory, rename '/root/saac-devil-bot/node_modules/elliptic/node_modules/bn.js' -> '/root/saac-devil-bot/node_modules/elliptic/node_modules/.bn.js.DELETE'
+733 verbose cwd /root/saac-devil-bot
+734 verbose Linux 4.20.69-ish
+735 verbose argv "/usr/bin/node" "/usr/bin/npm" "install" "ethers@5.7.2" "dotenv" "--no-audit" "--no-fund" "--quiet"
+736 verbose node v14.21.3
+737 verbose npm  v6.14.18
+738 error code ENOENT
+739 error syscall rename
+740 error path /root/saac-devil-bot/node_modules/elliptic/node_modules/bn.js
+741 error dest /root/saac-devil-bot/node_modules/elliptic/node_modules/.bn.js.DELETE
+742 error errno -2
+743 error enoent ENOENT: no such file or directory, rename '/root/saac-devil-bot/node_modules/elliptic/node_modules/bn.js' -> '/root/saac-devil-bot/node_modules/elliptic/node_modules/.bn.js.DELETE'
+744 error enoent This is related to npm not being able to find a file.
+745 verbose exit [ -2, true ]

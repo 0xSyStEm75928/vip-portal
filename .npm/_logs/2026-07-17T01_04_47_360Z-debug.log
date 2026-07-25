@@ -1,0 +1,54 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install' ]
+2 info using npm@6.14.18
+3 info using node@v14.21.3
+4 verbose config Skipping project config: /root/.npmrc. (matches userconfig)
+5 verbose npm-session 2cdfd2eb4bb5041b
+6 silly install runPreinstallTopLevelLifecycles
+7 silly preinstall post-validation@1.0.0
+8 info lifecycle post-validation@1.0.0~preinstall: post-validation@1.0.0
+9 silly install loadCurrentTree
+10 silly install readLocalPackageData
+11 timing stage:loadCurrentTree Completed in 5722ms
+12 silly install loadIdealTree
+13 silly install cloneCurrentTreeToIdealTree
+14 timing stage:loadIdealTree:cloneCurrentTree Completed in 59ms
+15 silly install loadShrinkwrap
+16 timing stage:loadIdealTree:loadShrinkwrap Completed in 2702ms
+17 silly install loadAllDepsIntoIdealTree
+18 http fetch GET 304 https://registry.npmjs.org/@octokit%2fcore 2783ms (from cache)
+19 silly registry:manifest no matching version for @octokit/core@^3.10.0 in the cache. Forcing revalidation.
+20 http fetch GET 200 https://registry.npmjs.org/@octokit%2fcore 1311ms
+21 silly fetchPackageMetaData error for @octokit/core@^3.10.0 No matching version found for @octokit/core@^3.10.0.
+22 silly registry:manifest no matching version for @octokit/core@^3.10.0 in the cache. Forcing revalidation.
+23 http fetch GET 304 https://registry.npmjs.org/@octokit%2fcore 1056ms (from cache)
+24 silly fetchPackageMetaData error for @octokit/core@^3.10.0 No matching version found for @octokit/core@^3.10.0.
+25 timing stage:rollbackFailedOptional Completed in 24ms
+26 timing stage:runTopLevelLifecycles Completed in 16052ms
+27 silly saveTree post-validation@1.0.0
+28 verbose type range
+29 verbose stack @octokit/core: No matching version found for @octokit/core@^3.10.0.
+29 verbose stack     at pickManifest (/usr/lib/node_modules/npm/node_modules/npm-pick-manifest/index.js:122:13)
+29 verbose stack     at /usr/lib/node_modules/npm/node_modules/pacote/lib/fetchers/registry/manifest.js:43:18
+29 verbose stack     at tryCatcher (/usr/lib/node_modules/npm/node_modules/bluebird/js/release/util.js:16:23)
+29 verbose stack     at Promise._settlePromiseFromHandler (/usr/lib/node_modules/npm/node_modules/bluebird/js/release/promise.js:547:31)
+29 verbose stack     at Promise._settlePromise (/usr/lib/node_modules/npm/node_modules/bluebird/js/release/promise.js:604:18)
+29 verbose stack     at Promise._settlePromise0 (/usr/lib/node_modules/npm/node_modules/bluebird/js/release/promise.js:649:10)
+29 verbose stack     at Promise._settlePromises (/usr/lib/node_modules/npm/node_modules/bluebird/js/release/promise.js:729:18)
+29 verbose stack     at _drainQueueStep (/usr/lib/node_modules/npm/node_modules/bluebird/js/release/async.js:93:12)
+29 verbose stack     at _drainQueue (/usr/lib/node_modules/npm/node_modules/bluebird/js/release/async.js:86:9)
+29 verbose stack     at Async._drainQueues (/usr/lib/node_modules/npm/node_modules/bluebird/js/release/async.js:102:5)
+29 verbose stack     at Immediate.Async.drainQueues [as _onImmediate] (/usr/lib/node_modules/npm/node_modules/bluebird/js/release/async.js:15:14)
+29 verbose stack     at processImmediate (internal/timers.js:464:21)
+30 verbose cwd /root
+31 verbose Linux 4.20.69-ish
+32 verbose argv "/usr/bin/node" "/usr/bin/npm" "install"
+33 verbose node v14.21.3
+34 verbose npm  v6.14.18
+35 error code ETARGET
+36 error notarget No matching version found for @octokit/core@^3.10.0.
+37 error notarget In most cases you or one of your dependencies are requesting
+37 error notarget a package version that doesn't exist.
+37 error notarget
+37 error notarget It was specified as a dependency of 'root'
+38 verbose exit [ 1, true ]

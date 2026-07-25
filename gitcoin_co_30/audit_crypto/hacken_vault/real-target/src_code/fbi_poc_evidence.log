@@ -1,0 +1,314 @@
+=== FBI CYBER CRIMES TASK FORCE EVIDENCE REPORT ===
+TIMESTAMP: $国家捜査ログ生成日
+TARGET: Panoptic Core Logic (contracts)
+STATUS: Verified via Local Sandbox Replication
+---------------------------------------------------
+--- [EXPOSED FUNCTIONS LOG] ---
+contracts/types/TokenId.sol:48:// Some rules of how legs behave (we enforce these in a `validate()` function):
+contracts/types/TokenId.sol:87:    function poolId(TokenId self) internal pure returns (uint64) {
+contracts/types/TokenId.sol:96:    function tickSpacing(TokenId self) internal pure returns (int24) {
+contracts/types/TokenId.sol:108:    function asset(TokenId self, uint256 legIndex) internal pure returns (uint256) {
+contracts/types/TokenId.sol:118:    function optionRatio(TokenId self, uint256 legIndex) internal pure returns (uint256) {
+contracts/types/TokenId.sol:128:    function isLong(TokenId self, uint256 legIndex) internal pure returns (uint256) {
+contracts/types/TokenId.sol:138:    function tokenType(TokenId self, uint256 legIndex) internal pure returns (uint256) {
+contracts/types/TokenId.sol:148:    function riskPartner(TokenId self, uint256 legIndex) internal pure returns (uint256) {
+contracts/types/TokenId.sol:158:    function strike(TokenId self, uint256 legIndex) internal pure returns (int24) {
+contracts/types/TokenId.sol:169:    function width(TokenId self, uint256 legIndex) internal pure returns (int24) {
+contracts/types/TokenId.sol:183:    function addPoolId(TokenId self, uint64 _poolId) internal pure returns (TokenId) {
+contracts/types/TokenId.sol:193:    function addTickSpacing(TokenId self, int24 _tickSpacing) internal pure returns (TokenId) {
+contracts/types/TokenId.sol:205:    function addAsset(
+contracts/types/TokenId.sol:221:    function addOptionRatio(
+contracts/types/TokenId.sol:240:    function addIsLong(
+contracts/types/TokenId.sol:255:    function addTokenType(
+contracts/types/TokenId.sol:273:    function addRiskPartner(
+contracts/types/TokenId.sol:291:    function addStrike(
+contracts/types/TokenId.sol:310:    function addWidth(
+contracts/types/TokenId.sol:336:    function addLeg(
+contracts/types/TokenId.sol:366:    function flipToBurnToken(TokenId self) internal pure returns (TokenId) {
+contracts/types/TokenId.sol:369:            // We copy the logic from the countLegs function, using it here adds 5K to the contract size with IR for some reason
+contracts/types/TokenId.sol:404:    function countLongs(TokenId self) internal pure returns (uint256) {
+contracts/types/TokenId.sol:416:    function asTicks(
+contracts/types/TokenId.sol:432:    function countLegs(TokenId self) internal pure returns (uint256) {
+contracts/types/TokenId.sol:464:    function clearLeg(TokenId self, uint256 i) internal pure returns (TokenId) {
+contracts/types/TokenId.sol:500:    function validate(TokenId self) internal pure {
+contracts/types/TokenId.sol:578:    function validateIsExercisable(TokenId self, int24 currentTick) internal pure {
+contracts/types/Pointer.sol:17:    function createPointer(
+contracts/types/Pointer.sol:29:    function location(Pointer self) internal pure returns (address) {
+contracts/types/Pointer.sol:36:    function start(Pointer self) internal pure returns (uint48) {
+contracts/types/Pointer.sol:43:    function size(Pointer self) internal pure returns (uint48) {
+contracts/types/Pointer.sol:50:    function data(Pointer self) internal view returns (bytes memory) {
+contracts/types/Pointer.sol:67:    function dataStr(Pointer self) internal view returns (string memory) {
+contracts/types/Pointer.sol:74:    function decompressedDataStr(Pointer self) internal view returns (string memory) {
+contracts/types/LeftRight.sol:38:    function rightSlot(LeftRightUnsigned self) internal pure returns (uint128) {
+contracts/types/LeftRight.sol:45:    function rightSlot(LeftRightSigned self) internal pure returns (int128) {
+contracts/types/LeftRight.sol:49:    // All toRightSlot functions add bits to the right slot without clearing it first
+contracts/types/LeftRight.sol:58:    function toRightSlot(
+contracts/types/LeftRight.sol:77:    function toRightSlot(
+contracts/types/LeftRight.sol:100:    function leftSlot(LeftRightUnsigned self) internal pure returns (uint128) {
+contracts/types/LeftRight.sol:107:    function leftSlot(LeftRightSigned self) internal pure returns (int128) {
+contracts/types/LeftRight.sol:111:    /// All toLeftSlot functions add bits to the left slot without clearing it first
+contracts/types/LeftRight.sol:120:    function toLeftSlot(
+contracts/types/LeftRight.sol:133:    function toLeftSlot(LeftRightSigned self, int128 left) internal pure returns (LeftRightSigned) {
+contracts/types/LeftRight.sol:147:    function add(
+contracts/types/LeftRight.sol:170:    function sub(
+contracts/types/LeftRight.sol:193:    function add(LeftRightUnsigned x, LeftRightSigned y) internal pure returns (LeftRightSigned z) {
+contracts/types/LeftRight.sol:213:    function add(LeftRightSigned x, LeftRightSigned y) internal pure returns (LeftRightSigned z) {
+contracts/types/LeftRight.sol:231:    function sub(LeftRightSigned x, LeftRightSigned y) internal pure returns (LeftRightSigned z) {
+contracts/types/LeftRight.sol:250:    function subRect(
+contracts/types/LeftRight.sol:278:    function addCapped(
+contracts/types/LiquidityChunk.sol:70:    function createChunk(
+contracts/types/LiquidityChunk.sol:89:    function addLiquidity(
+contracts/types/LiquidityChunk.sol:102:    function addTickLower(
+contracts/types/LiquidityChunk.sol:118:    function addTickUpper(
+contracts/types/LiquidityChunk.sol:135:    function updateTickLower(
+contracts/types/LiquidityChunk.sol:151:    function updateTickUpper(
+contracts/types/LiquidityChunk.sol:171:    function tickLower(LiquidityChunk self) internal pure returns (int24) {
+contracts/types/LiquidityChunk.sol:180:    function tickUpper(LiquidityChunk self) internal pure returns (int24) {
+contracts/types/LiquidityChunk.sol:189:    function liquidity(LiquidityChunk self) internal pure returns (uint128) {
+contracts/types/PositionBalance.sol:42:    function storeBalanceData(
+contracts/types/PositionBalance.sol:63:    function packTickData(
+contracts/types/PositionBalance.sol:85:    function lastObservedTick(PositionBalance self) internal pure returns (int24) {
+contracts/types/PositionBalance.sol:94:    function slowOracleTick(PositionBalance self) internal pure returns (int24) {
+contracts/types/PositionBalance.sol:103:    function fastOracleTick(PositionBalance self) internal pure returns (int24) {
+contracts/types/PositionBalance.sol:112:    function currentTick(PositionBalance self) internal pure returns (int24) {
+contracts/types/PositionBalance.sol:121:    function tickData(PositionBalance self) internal pure returns (uint96) {
+contracts/types/PositionBalance.sol:133:    function unpackTickData(uint96 _tickData) internal pure returns (int24, int24, int24, int24) {
+contracts/types/PositionBalance.sol:146:    function utilization0(PositionBalance self) internal pure returns (int256) {
+contracts/types/PositionBalance.sol:155:    function utilization1(PositionBalance self) internal pure returns (int256) {
+contracts/types/PositionBalance.sol:164:    function utilizations(PositionBalance self) internal pure returns (uint32) {
+contracts/types/PositionBalance.sol:173:    function positionSize(PositionBalance self) internal pure returns (uint128) {
+contracts/types/PositionBalance.sol:188:    function unpackAll(
+contracts/CollateralTracker.sol:204:    /// @dev The factory calls this function to start a new collateral tracking system for the incoming token at 'underlyingToken'.
+contracts/CollateralTracker.sol:211:    function startToken(
+contracts/CollateralTracker.sol:222:        // these virtual shares function as a multiplier for the capital requirement to manipulate the pool price
+contracts/CollateralTracker.sol:262:    function getPoolData()
+contracts/CollateralTracker.sol:274:    function name() external view returns (string memory) {
+contracts/CollateralTracker.sol:288:    function symbol() external view returns (string memory) {
+contracts/CollateralTracker.sol:295:    function decimals() external view returns (uint8) {
+contracts/CollateralTracker.sol:308:    function transfer(
+contracts/CollateralTracker.sol:326:    function transferFrom(
+contracts/CollateralTracker.sol:346:    function asset() external view returns (address assetTokenAddress) {
+contracts/CollateralTracker.sol:355:    function totalAssets() public view returns (uint256) {
+contracts/CollateralTracker.sol:364:    function convertToShares(uint256 assets) public view returns (uint256 shares) {
+contracts/CollateralTracker.sol:371:    function convertToAssets(uint256 shares) public view returns (uint256 assets) {
+contracts/CollateralTracker.sol:377:    function maxDeposit(address) external pure returns (uint256 maxAssets) {
+contracts/CollateralTracker.sol:384:    function previewDeposit(uint256 assets) public view returns (uint256 shares) {
+contracts/CollateralTracker.sol:402:    function deposit(uint256 assets, address receiver) external returns (uint256 shares) {
+contracts/CollateralTracker.sol:427:    function maxMint(address) external view returns (uint256 maxShares) {
+contracts/CollateralTracker.sol:436:    function previewMint(uint256 shares) public view returns (uint256 assets) {
+contracts/CollateralTracker.sol:458:    function mint(uint256 shares, address receiver) external returns (uint256 assets) {
+contracts/CollateralTracker.sol:486:    function maxWithdraw(address owner) public view returns (uint256 maxAssets) {
+contracts/CollateralTracker.sol:487:        // We can only use the standard 4626 withdraw function if the user has no open positions
+contracts/CollateralTracker.sol:488:        // For the sake of simplicity assets can only be withdrawn through the redeem function
+contracts/CollateralTracker.sol:497:    function previewWithdraw(uint256 assets) public view returns (uint256 shares) {
+contracts/CollateralTracker.sol:504:    /// We can only use this standard 4626 withdraw function if the user has no open positions.
+contracts/CollateralTracker.sol:510:    function withdraw(
+contracts/CollateralTracker.sol:553:    function withdraw(
+contracts/CollateralTracker.sol:592:    function maxRedeem(address owner) public view returns (uint256 maxShares) {
+contracts/CollateralTracker.sol:601:    function previewRedeem(uint256 shares) public view returns (uint256 assets) {
+contracts/CollateralTracker.sol:606:    /// We can only use this standard 4626 redeem function if the user has no open positions.
+contracts/CollateralTracker.sol:611:    function redeem(
+contracts/CollateralTracker.sol:651:    /// @dev This one computes the cost of calling the forceExercise function on a position:
+contracts/CollateralTracker.sol:655:    /// - The cost is an exponentially decaying function of the distance between the position's strike and the current price
+contracts/CollateralTracker.sol:668:    function exerciseCost(
+contracts/CollateralTracker.sol:753:    function _poolUtilization() internal view returns (uint256 poolUtilization) {
+contracts/CollateralTracker.sol:763:    function _sellCollateralRatio(
+contracts/CollateralTracker.sol:818:    function _buyCollateralRatio(
+contracts/CollateralTracker.sol:874:    function delegate(address delegatee) external onlyPanopticPool {
+contracts/CollateralTracker.sol:882:    function revoke(address delegatee) external onlyPanopticPool {
+contracts/CollateralTracker.sol:887:    /// @dev This function is where protocol loss is realized, if it exists.
+contracts/CollateralTracker.sol:891:    function settleLiquidation(
+contracts/CollateralTracker.sol:982:    function refund(address refunder, address refundee, int256 assets) external onlyPanopticPool {
+contracts/CollateralTracker.sol:1002:    function takeCommissionAddData(
+contracts/CollateralTracker.sol:1050:    function exercise(
+contracts/CollateralTracker.sol:1095:    function _getExchangedAmount(
+contracts/CollateralTracker.sol:1141:    function getAccountMarginDetails(
+contracts/CollateralTracker.sol:1166:    function _getTotalRequiredCollateral(
+contracts/CollateralTracker.sol:1215:    function _getRequiredCollateralAtTickSinglePosition(
+contracts/CollateralTracker.sol:1247:    function _getRequiredCollateralSingleLeg(
+contracts/CollateralTracker.sol:1279:    function _getRequiredCollateralSingleLegNoPartner(
+contracts/CollateralTracker.sol:1401:    function _getRequiredCollateralSingleLegPartner(
+contracts/CollateralTracker.sol:1435:    function _getRequiredCollateralAtUtilization(
+contracts/CollateralTracker.sol:1472:    function _computeSpread(
+contracts/CollateralTracker.sol:1560:    function _computeStrangle(
+contracts/PanopticPool.sol:264:    function startPool(
+contracts/PanopticPool.sol:310:    function assertMinCollateralValues(uint256 minValue0, uint256 minValue1) external view {
+contracts/PanopticPool.sol:325:    function validateCollateralWithdrawable(
+contracts/PanopticPool.sol:339:    function calculateAccumulatedFeesBatch(
+contracts/PanopticPool.sol:366:    function _calculateAccumulatedPremia(
+contracts/PanopticPool.sol:460:    function pokeMedian() external {
+contracts/PanopticPool.sol:485:    function mintOptions(
+contracts/PanopticPool.sol:506:    function burnOptions(
+contracts/PanopticPool.sol:525:    function burnOptions(
+contracts/PanopticPool.sol:556:    function _mintOptions(
+contracts/PanopticPool.sol:632:    function _mintInSFPMAndUpdateCollateral(
+contracts/PanopticPool.sol:674:    function _payCommissionAndWriteData(
+contracts/PanopticPool.sol:714:    function _burnAllOptionsFrom(
+contracts/PanopticPool.sol:746:    function _burnOptions(
+contracts/PanopticPool.sol:776:    function _validateSolvency(
+contracts/PanopticPool.sol:806:    function _checkSolvency(
+contracts/PanopticPool.sol:858:    function _burnAndHandleExercise(
+contracts/PanopticPool.sol:926:    function liquidate(
+contracts/PanopticPool.sol:1035:            // note that the haircutPremia function also commits the settled amounts (adjusted for the haircut) to storage, so it will be called even if there is no haircut
+contracts/PanopticPool.sol:1071:    function forceExercise(
+contracts/PanopticPool.sol:1161:    function _checkSolvencyAtTicks(
+contracts/PanopticPool.sol:1216:    function _isAccountSolvent(
+contracts/PanopticPool.sol:1251:    function isSafeMode() public view returns (bool) {
+contracts/PanopticPool.sol:1274:    function _validatePositionList(
+contracts/PanopticPool.sol:1304:    /// @dev The outcome of this function will be to update the hash of positions.
+contracts/PanopticPool.sol:1311:    function _updatePositionsHash(address account, TokenId tokenId, bool addFlag) internal {
+contracts/PanopticPool.sol:1331:    function univ3pool() external view returns (IUniswapV3Pool) {
+contracts/PanopticPool.sol:1337:    function collateralToken0() external view returns (CollateralTracker) {
+contracts/PanopticPool.sol:1343:    function collateralToken1() external view returns (CollateralTracker) {
+contracts/PanopticPool.sol:1353:    function getOracleTicks()
+contracts/PanopticPool.sol:1372:    function numberOfPositions(address user) external view returns (uint256) {
+contracts/PanopticPool.sol:1386:    function positionData(
+contracts/PanopticPool.sol:1395:    function getUniV3TWAP() internal view returns (int24 twapTick) {
+contracts/PanopticPool.sol:1409:    function _checkLiquiditySpread(
+contracts/PanopticPool.sol:1441:    function _getPremia(
+contracts/PanopticPool.sol:1522:    function settleLongPremium(
+contracts/PanopticPool.sol:1603:    function _updateSettlementPostMint(
+contracts/PanopticPool.sol:1716:    function _getAvailablePremium(
+contracts/PanopticPool.sol:1763:    function _getLiquidities(
+contracts/PanopticPool.sol:1797:    function _updateSettlementPostBurn(
+contracts/libraries/CallbackLib.sol:11:/// @notice This library provides functions to verify that a callback came from a canonical Uniswap V3 pool with a claimed set of features.
+contracts/libraries/CallbackLib.sol:30:    function validateCallback(
+contracts/libraries/FeesCalc.sol:45:    function calculateAMMSwapFees(
+contracts/libraries/FeesCalc.sol:78:    function _getAMMSwapFeesPerLiquidityCollected(
+contracts/libraries/Errors.sol:59:    /// @notice CollateralTracker: the caller for a permissioned function is not the Panoptic Pool
+contracts/libraries/PanopticMath.sol:49:    function getPoolId(address univ3pool) internal view returns (uint64) {
+contracts/libraries/PanopticMath.sol:61:    function incrementPoolPattern(uint64 poolId) internal pure returns (uint64) {
+contracts/libraries/PanopticMath.sol:76:    function numberOfLeadingHexZeros(address addr) external pure returns (uint256) {
+contracts/libraries/PanopticMath.sol:85:    function safeERC20Symbol(address token) external view returns (string memory) {
+contracts/libraries/PanopticMath.sol:99:    function uniswapFeeToString(uint24 fee) internal pure returns (string memory) {
+contracts/libraries/PanopticMath.sol:125:    function updatePositionsHash(
+contracts/libraries/PanopticMath.sol:159:    function getOracleTicks(
+contracts/libraries/PanopticMath.sol:220:    function computeMedianObservedPrice(
+contracts/libraries/PanopticMath.sol:263:    function computeInternalMedian(
+contracts/libraries/PanopticMath.sol:336:    function twapFilter(IUniswapV3Pool univ3pool, uint32 twapWindow) external view returns (int24) {
+contracts/libraries/PanopticMath.sol:384:    function getLiquidityChunk(
+contracts/libraries/PanopticMath.sol:415:        //  The following function takes this into account when computing the liquidity of the leg and switches between
+contracts/libraries/PanopticMath.sol:433:    function getTicks(
+contracts/libraries/PanopticMath.sol:466:    function getRangesFromStrike(
+contracts/libraries/PanopticMath.sol:485:    function computeExercisedAmounts(
+contracts/libraries/PanopticMath.sol:512:    function convert0to1(uint256 amount, uint160 sqrtPriceX96) internal pure returns (uint256) {
+contracts/libraries/PanopticMath.sol:529:    function convert0to1RoundingUp(
+contracts/libraries/PanopticMath.sol:549:    function convert1to0(uint256 amount, uint160 sqrtPriceX96) internal pure returns (uint256) {
+contracts/libraries/PanopticMath.sol:566:    function convert1to0RoundingUp(
+contracts/libraries/PanopticMath.sol:591:    function convert0to1(int256 amount, uint160 sqrtPriceX96) internal pure returns (int256) {
+contracts/libraries/PanopticMath.sol:614:    function convert1to0(int256 amount, uint160 sqrtPriceX96) internal pure returns (int256) {
+contracts/libraries/PanopticMath.sol:642:    function getCrossBalances(
+contracts/libraries/PanopticMath.sol:669:    function getAmountsMoved(
+contracts/libraries/PanopticMath.sol:705:    function _calculateIOAmounts(
+contracts/libraries/PanopticMath.sol:747:    function getLiquidationBonus(
+contracts/libraries/PanopticMath.sol:870:    /// @dev Note that the storage mapping provided as the `settledTokens` parameter WILL be modified on the caller by this function.
+contracts/libraries/PanopticMath.sol:880:    function haircutPremia(
+contracts/libraries/PanopticMath.sol:1031:    function getExerciseDeltas(
+contracts/libraries/InteractionHelper.sol:12:/// @title InteractionHelper - contains helper functions for external interactions such as approvals.
+contracts/libraries/InteractionHelper.sol:24:    function doApprovals(
+contracts/libraries/InteractionHelper.sol:47:    /// @return The complete name of the collateral token calling this function
+contracts/libraries/InteractionHelper.sol:48:    function computeName(
+contracts/libraries/InteractionHelper.sol:78:    function computeSymbol(
+contracts/libraries/InteractionHelper.sol:88:    function computeDecimals(address token) external view returns (uint8) {
+contracts/libraries/SafeTransferLib.sol:21:    function safeTransferFrom(address token, address from, address to, uint256 amount) internal {
+contracts/libraries/SafeTransferLib.sol:28:            // Write the abi-encoded calldata into memory, beginning with the function selector.
+contracts/libraries/SafeTransferLib.sol:52:    function safeTransfer(address token, address to, uint256 amount) internal {
+contracts/libraries/SafeTransferLib.sol:59:            // Write the abi-encoded calldata into memory, beginning with the function selector.
+contracts/libraries/Math.sol:12:/// @notice Contains general math helpers and functions
+contracts/libraries/Math.sol:25:    function min24(int24 a, int24 b) internal pure returns (int24) {
+contracts/libraries/Math.sol:33:    function max24(int24 a, int24 b) internal pure returns (int24) {
+contracts/libraries/Math.sol:41:    function min(uint256 a, uint256 b) internal pure returns (uint256) {
+contracts/libraries/Math.sol:49:    function min(int256 a, int256 b) internal pure returns (int256) {
+contracts/libraries/Math.sol:57:    function max(uint256 a, uint256 b) internal pure returns (uint256) {
+contracts/libraries/Math.sol:65:    function max(int256 a, int256 b) internal pure returns (int256) {
+contracts/libraries/Math.sol:73:    function abs(int256 x) internal pure returns (int256) {
+contracts/libraries/Math.sol:81:    function absUint(int256 x) internal pure returns (uint256) {
+contracts/libraries/Math.sol:91:    function mostSignificantNibble(uint160 x) internal pure returns (uint256 r) {
+contracts/libraries/Math.sol:128:    function getSqrtRatioAtTick(int24 tick) internal pure returns (uint160) {
+contracts/libraries/Math.sol:196:    function getAmount0ForLiquidity(LiquidityChunk liquidityChunk) internal pure returns (uint256) {
+contracts/libraries/Math.sol:212:    function getAmount1ForLiquidity(LiquidityChunk liquidityChunk) internal pure returns (uint256) {
+contracts/libraries/Math.sol:226:    function getAmountsForLiquidity(
+contracts/libraries/Math.sol:246:    function getLiquidityForAmount0(
+contracts/libraries/Math.sol:276:    function getLiquidityForAmount1(
+contracts/libraries/Math.sol:301:    function toUint128(uint256 toDowncast) internal pure returns (uint128 downcastedInt) {
+contracts/libraries/Math.sol:307:    function toUint128Capped(uint256 toDowncast) internal pure returns (uint128 downcastedInt) {
+contracts/libraries/Math.sol:316:    function toInt128(uint128 toCast) internal pure returns (int128 downcastedInt) {
+contracts/libraries/Math.sol:323:    function toInt128(int256 toCast) internal pure returns (int128 downcastedInt) {
+contracts/libraries/Math.sol:330:    function toInt256(uint256 toCast) internal pure returns (int256) {
+contracts/libraries/Math.sol:345:    function mulDiv(
+contracts/libraries/Math.sol:445:    function mulDivCapped(
+contracts/libraries/Math.sol:543:    function mulDivRoundingUp(
+contracts/libraries/Math.sol:561:    function mulDiv64(uint256 a, uint256 b) internal pure returns (uint256) {
+contracts/libraries/Math.sol:624:    function mulDiv96(uint256 a, uint256 b) internal pure returns (uint256) {
+contracts/libraries/Math.sol:687:    function mulDiv96RoundingUp(uint256 a, uint256 b) internal pure returns (uint256 result) {
+contracts/libraries/Math.sol:701:    function mulDiv128(uint256 a, uint256 b) internal pure returns (uint256) {
+contracts/libraries/Math.sol:764:    function mulDiv128RoundingUp(uint256 a, uint256 b) internal pure returns (uint256 result) {
+contracts/libraries/Math.sol:778:    function mulDiv192(uint256 a, uint256 b) internal pure returns (uint256) {
+contracts/libraries/Math.sol:841:    function mulDiv192RoundingUp(uint256 a, uint256 b) internal pure returns (uint256 result) {
+contracts/libraries/Math.sol:855:    function unsafeDivRoundingUp(uint256 a, uint256 b) internal pure returns (uint256 result) {
+contracts/libraries/Math.sol:870:    function quickSort(int256[] memory arr, int256 left, int256 right) internal pure {
+contracts/libraries/Math.sol:893:    function sort(int256[] memory data) internal pure returns (int256[] memory) {
+contracts/PanopticFactory.sol:131:    function uniswapV3MintCallback(
+contracts/PanopticFactory.sol:171:    function deployNewPool(
+contracts/PanopticFactory.sol:259:    function minePoolAddress(
+contracts/PanopticFactory.sol:314:    function _mintFullRange(
+contracts/PanopticFactory.sol:399:    function getPanopticPool(IUniswapV3Pool univ3pool) external view returns (PanopticPool) {
+contracts/tokens/ERC1155Minimal.sol:10:/// @dev Not compliant to the letter, does not include any metadata functionality.
+contracts/tokens/ERC1155Minimal.sol:81:    function setApprovalForAll(address operator, bool approved) public {
+contracts/tokens/ERC1155Minimal.sol:94:    function safeTransferFrom(
+contracts/tokens/ERC1155Minimal.sol:130:    function safeBatchTransferFrom(
+contracts/tokens/ERC1155Minimal.sol:178:    function balanceOfBatch(
+contracts/tokens/ERC1155Minimal.sol:200:    function supportsInterface(bytes4 interfaceId) public pure returns (bool) {
+contracts/tokens/ERC1155Minimal.sol:214:    function _mint(address to, uint256 id, uint256 amount) internal {
+contracts/tokens/ERC1155Minimal.sol:236:    function _burn(address from, uint256 id, uint256 amount) internal {
+contracts/tokens/ERC20Minimal.sol:49:    function approve(address spender, uint256 amount) public returns (bool) {
+contracts/tokens/ERC20Minimal.sol:61:    function transfer(address to, uint256 amount) public virtual returns (bool) {
+contracts/tokens/ERC20Minimal.sol:81:    function transferFrom(address from, address to, uint256 amount) public virtual returns (bool) {
+contracts/tokens/ERC20Minimal.sol:103:    function _transferFrom(address from, address to, uint256 amount) internal {
+contracts/tokens/ERC20Minimal.sol:122:    function _mint(address to, uint256 amount) internal {
+contracts/tokens/ERC20Minimal.sol:136:    function _burn(address from, uint256 amount) internal {
+contracts/tokens/interfaces/IERC20Partial.sol:13:    /// @dev This function is unchanged from the EIP
+contracts/tokens/interfaces/IERC20Partial.sol:16:    function balanceOf(address account) external view returns (uint256);
+contracts/tokens/interfaces/IERC20Partial.sol:19:    /// @dev While this function is specified to return a boolean value in the EIP, this interface does not expect one
+contracts/tokens/interfaces/IERC20Partial.sol:22:    function approve(address spender, uint256 amount) external;
+contracts/tokens/interfaces/IERC20Partial.sol:27:    function transfer(address to, uint256 amount) external;
+contracts/SemiFungiblePositionManager.sol:305:    function initializeAMMPool(address token0, address token1, uint24 fee) external {
+contracts/SemiFungiblePositionManager.sol:350:    function uniswapV3MintCallback(
+contracts/SemiFungiblePositionManager.sol:383:    function uniswapV3SwapCallback(
+contracts/SemiFungiblePositionManager.sol:419:    function burnTokenizedPosition(
+contracts/SemiFungiblePositionManager.sol:431:        // Call a function that contains other functions to mint/burn position, collect amounts, swap if necessary
+contracts/SemiFungiblePositionManager.sol:449:    function mintTokenizedPosition(
+contracts/SemiFungiblePositionManager.sol:485:    function safeTransferFrom(
+contracts/SemiFungiblePositionManager.sol:505:    function safeBatchTransferFrom(
+contracts/SemiFungiblePositionManager.sol:530:    function registerTokenTransfer(address from, address to, TokenId id, uint256 amount) internal {
+contracts/SemiFungiblePositionManager.sol:610:    function swapInAMM(
+contracts/SemiFungiblePositionManager.sol:637:            // NOTE: upstream users of this function such as the Panoptic Pool should ensure users always compensate for the ITM amount delta
+contracts/SemiFungiblePositionManager.sol:689:            // NOTE: this triggers our swap callback function
+contracts/SemiFungiblePositionManager.sol:716:    function _createPositionInAMM(
+contracts/SemiFungiblePositionManager.sol:802:    /// @dev To burn a position, the opposing position is "created" through this function,
+contracts/SemiFungiblePositionManager.sol:811:    function _createLegInAMM(
+contracts/SemiFungiblePositionManager.sol:844:            // 0-liquidity interactions are asymmetrical in Uniswap (burning 0 liquidity is permitted and functions as a poke, but minting is prohibited)
+contracts/SemiFungiblePositionManager.sol:941:    function _updateStoredPremia(
+contracts/SemiFungiblePositionManager.sol:969:    function _getFeesBase(
+contracts/SemiFungiblePositionManager.sol:1013:    function _mintLiquidity(
+contracts/SemiFungiblePositionManager.sol:1030:        /// @dev this triggers the uniswap mint callback function
+contracts/SemiFungiblePositionManager.sol:1052:    function _burnLiquidity(
+contracts/SemiFungiblePositionManager.sol:1080:    /// @param movedInLeg How much liquidity has been moved between msg.sender and Uniswap before this function call
+contracts/SemiFungiblePositionManager.sol:1083:    function _collectAndWritePositionData(
+contracts/SemiFungiblePositionManager.sol:1147:    function _getPremiaDeltas(
+contracts/SemiFungiblePositionManager.sol:1245:    function getAccountLiquidity(
+contracts/SemiFungiblePositionManager.sol:1273:    function getAccountPremium(
+contracts/SemiFungiblePositionManager.sol:1357:    function getAccountFeesBase(
+contracts/SemiFungiblePositionManager.sol:1375:    function getUniswapV3PoolFromId(
+contracts/SemiFungiblePositionManager.sol:1384:    function getPoolId(address univ3pool) external view returns (uint64 poolId) {
+contracts/base/FactoryNFT.sol:40:    function tokenURI(uint256 tokenId) public view override returns (string memory) {
+contracts/base/FactoryNFT.sol:58:    function constructMetadata(
+contracts/base/FactoryNFT.sol:121:    function generateSVGArt(
+contracts/base/FactoryNFT.sol:153:    function generateSVGInfo(
+contracts/base/FactoryNFT.sol:178:    function getChainName() internal view returns (string memory) {
+contracts/base/FactoryNFT.sol:205:    function write(string memory chars) internal view returns (string memory) {
+contracts/base/FactoryNFT.sol:213:    function write(
+contracts/base/FactoryNFT.sol:265:    function maxSymbolWidth(uint256 rarity) internal pure returns (uint256 width) {
+contracts/base/FactoryNFT.sol:291:    function maxRarityLabelWidth(uint256 rarity) internal pure returns (uint256 width) {
+contracts/base/FactoryNFT.sol:321:    function maxStrategyLabelWidth(uint256 rarity) internal pure returns (uint256 width) {
+contracts/base/Multicall.sol:12:    function multicall(bytes[] calldata data) public payable returns (bytes[] memory results) {

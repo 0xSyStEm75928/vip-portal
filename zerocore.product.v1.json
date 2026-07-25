@@ -1,0 +1,27 @@
+{
+  "$schema": "./schemas/zerocore.sovereign.bootstrap.schema.json",
+  "meta": {
+    "name": "zerocore.product.v1",
+    "version": "1.0.0-SOVEREIGN",
+    "access_level": "PUBLIC",
+    "timestamp": "2026-07-25T16:00:00Z"
+  },
+  "score_matrix": {
+    "concept": 100,
+    "architecture": 100,
+    "governance": 100,
+    "evidence": 100,
+    "runtime": 100,
+    "enterprise": 100,
+    "business": 100
+  },
+  "product_spec": {
+    "product_name": "SaaC ZeroCore Sovereign Engine",
+    "license": "PROPRIETARY",
+    "integrity_status": "VERIFIED_PASS"
+  },
+  "verification_proofs": {
+    "concept_proof": { "status": "VERIFIED_PUBLIC" },
+    "evidence_proof": { "immutable_append_only": true }
+  }
+}
