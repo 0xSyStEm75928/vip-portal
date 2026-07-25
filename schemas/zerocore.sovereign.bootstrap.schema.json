@@ -2,5 +2,20 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "ZeroCoreSovereignBootstrapSchema",
   "type": "object",
-  "required": ["$schema", "meta"]
+  "required": ["$schema", "meta", "score_matrix", "verification_proofs"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "meta": {
+      "type": "object",
+      "required": ["name", "version", "architect", "engine"],
+      "properties": {
+        "name": { "type": "string" },
+        "version": { "type": "string" },
+        "architect": { "type": "string" },
+        "engine": { "type": "string" }
+      }
+    },
+    "score_matrix": { "type": "object" },
+    "verification_proofs": { "type": "object" }
+  }
 }

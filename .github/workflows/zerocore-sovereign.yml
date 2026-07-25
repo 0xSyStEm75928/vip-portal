@@ -1,4 +1,4 @@
-name: ZeroCore Sovereign Verification
+name: ZeroCore Sovereign Pipeline
 
 on:
   push:
@@ -16,42 +16,40 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
+    - name: Checkout Repository
       uses: actions/checkout@v4
 
-    - name: Install Tools
+    - name: Setup Verification Tools
       run: |
         sudo apt update
         sudo apt install -y jq python3-pip
         pip install jsonschema
 
-    - name: Load Pipeline Contract
+    - name: Validate Pipeline Contract (jq)
       run: |
         jq empty zerocore.pipeline.json
 
-    - name: JSON Validation
+    - name: Validate Repository JSON Integrity
       run: |
         find . -name "*.json" -not -path "*/.*" -exec jq empty {} \;
 
-    - name: Schema Validation
+    - name: Validate Schema Compliance
       run: |
         jsonschema \
         -i zerocore.sovereign.bootstrap.v1.json \
         schemas/zerocore.sovereign.bootstrap.schema.json
 
-    - name: ZeroCore Runtime Check
+    - name: Execute Sovereign Runtime Check
       run: |
         chmod +x Validator/zerocore_validate.sh
         ./Validator/zerocore_validate.sh
 
-    - name: Generate Evidence
+    - name: Generate Audit Evidence
       run: |
         mkdir -p Evidence
-        sha256sum \
-        zerocore.pipeline.json \
-        > Evidence/github.audit.jsonl
+        sha256sum zerocore.pipeline.json > Evidence/github.audit.jsonl
 
-    - name: Upload Proof
+    - name: Upload Sovereign Proof Artifact
       uses: actions/upload-artifact@v4
       with:
         name: zerocore-proof
