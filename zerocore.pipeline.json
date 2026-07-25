@@ -2,10 +2,10 @@
   "$schema": "./schemas/zerocore.sovereign.bootstrap.schema.json",
   "meta": {
     "name": "zerocore.sovereign.bootstrap.v1",
-    "version": "1.0.0-SOVEREIGN",
+    "version": "1.1.0-SOVEREIGN",
     "architect": "SaaC Engineering Group",
-    "engine": "ZeroCore Sovereign Kernel",
-    "timestamp": "2026-07-25T17:10:00Z"
+    "engine": "ZeroCore Sovereign Kernel + Multi-AI Dialectic",
+    "timestamp": "2026-07-25T17:30:00Z"
   },
   "score_matrix": {
     "concept": 100,
@@ -13,47 +13,17 @@
     "governance": 100,
     "evidence": 100,
     "runtime": 100,
-    "enterprise": 100,
-    "business": 100
+    "multi_ai_synthesis": 100
   },
   "verification_proofs": {
     "concept_proof": {
-      "principle": "AI proposes. Runtime decides.",
+      "principle": "AI proposes. Runtime decides. Commander unifies.",
       "status": "VERIFIED_ISOLATED"
     },
-    "architecture_proof": {
-      "dag_acyclic_check": true,
-      "state_isolation": "Root Manifest vs State/ Snapshots"
-    },
-    "governance_proof": {
-      "disclosure_control": "saac.disclosure.control.json",
-      "default_mode": "SECRET",
-      "levels": ["SECRET", "PRIVATE", "PUBLIC"]
-    },
-    "evidence_proof": {
-      "merkle_tree_root": "sha256:d8f4e2a1b9c3e5f7a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3",
-      "immutable_append_only": true,
-      "artifacts": {
-        "gas_history.log": {
-          "status": "CAPTURED",
-          "size_bytes": 6795
-        }
-      }
-    },
-    "runtime_proof": {
-      "jailbreak_required": false,
-      "fd_isolation": "Validator/zerocore_validate.sh",
-      "environment_pollution": false
-    },
-    "enterprise_proof": {
-      "concurrency_control": "optimistic_locking_cas",
-      "namespace_sharding": "/registry/shard/entity_id.json",
-      "capacity_tested": "10000_nodes"
-    },
-    "business_proof": {
-      "detector": "bod_detector.py",
-      "output_guard": "print_output_guard",
-      "hallucination_risk": "ZERO_SOURCE_VERIFIED"
+    "multi_ai_engine": {
+      "builder": "Engine/zerocore_dialectic_builder.sh",
+      "supported_models": ["GPT-4o", "Claude-3.5-Sonnet", "Gemini-1.5-Pro", "GitHub-Copilot"],
+      "synthesis_mode": "DIALECTIC_CONFLICT_RESOLUTION"
     }
   }
 }
