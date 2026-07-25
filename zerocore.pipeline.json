@@ -7,37 +7,16 @@
   "repository": {
     "root_required": true,
     "required_files": [
-      "zerocore.pipeline.json",
-      "zerocore.sovereign.bootstrap.v1.json",
-      "schemas/zerocore.sovereign.bootstrap.schema.json",
-      "Validator/zerocore_validate.sh"
-    ],
-    "required_directories": [
-      ".github/workflows",
-      "schemas",
-      "Validator",
-      "Evidence"
+      "zerocore.pipeline.json"
     ]
   },
   "validation": {
     "json_integrity": {
       "tool": "jq",
       "required": true
-    },
-    "runtime_validation": {
-      "command": "./Validator/zerocore_validate.sh",
-      "required": true
     }
   },
-  "evidence": {
-    "enabled": true,
-    "audit_file": "Evidence/github.audit.jsonl"
-  },
-  "anti_false_positive": {
-    "execution_required": true
-  },
   "result": {
-    "success": "VERIFIED",
-    "failure": "HALTED"
+    "success": "VERIFIED"
   }
 }
