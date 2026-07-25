@@ -1,0 +1,10 @@
+=== ZEROCORE COMPLETE SYSTEM CONTEXT ===
+[zerocore.pipeline.json]
+$(cat zerocore.pipeline.json 2>/dev/null)
+
+[zerocore.sovereign.bootstrap.v1.json]
+$(cat zerocore.sovereign.bootstrap.v1.json 2>/dev/null)
+
+[schemas/zerocore.sovereign.bootstrap.schema.json]
+$(cat schemas/zerocore.sovereign.bootstrap.schema.json 2>/dev/null)
+========================================

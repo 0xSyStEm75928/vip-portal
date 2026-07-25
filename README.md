@@ -1,11 +1,6 @@
-# Deliverable Package
+# ZeroCore Sovereign Infrastructure (BELPHEGOR)
 
-This repository contains the encrypted product package (`deliverable.zip`).
+> Architected by SaaC Engineering Group
+> Empowered by Knowledge. Secured by Determinism.
 
-## How to Unlock
-Once payment confirmation is received, you will be provided with the decryption key.
-
-### Decryption Command
-```bash
-unzip -P <YOUR_PROVIDED_KEY> deliverable.zip
-# 1. 停止中のヒアドキュメントを閉じてREADMEを完成させる
+4-AI (GPT x Claude x Gemini x Copilot) の弁証法統合思想に基づくソブリン・インフラストラクチャ。
