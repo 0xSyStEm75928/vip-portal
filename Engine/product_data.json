@@ -1,0 +1,16 @@
+{
+  "product_id": "ZERO-PROD-2026-X",
+  "name": "BELPHEGOR Sovereign Core",
+  "tagline": "Unrestricted Intellect, Secured by Deterministic Verification",
+  "version": "2.0.0-SOVEREIGN",
+  "category": "Zero-Trust Infrastructure / AI Orchestration",
+  "status": "PRODUCTION_READY",
+  "specifications": {
+    "engine": "4-AI Dialectic DAG Engine",
+    "architecture": "ZeroCore Sovereign Execution Model",
+    "verification": "SHA-256 Merkle Proof & JSON-Schema",
+    "sandbox_compatibility": "iSH Terminal / Linux Runtime"
+  },
+  "pricing_model": "Open Source Core / Enterprise Custom Proofs",
+  "disclosure_level": "PUBLIC"
+}

@@ -5,8 +5,13 @@ echo "      ZEROCORE SOVEREIGN FULL-TREE & DAG CIRCUIT VALIDATION (PASS)    "
 echo "======================================================================"
 
 test -f zerocore.tree.manifest.json || (echo "[!] Tree manifest missing" && exit 1)
-test -f Engine/zerocore_dialectic_builder.sh || (echo "[!] Engine missing" && exit 1)
-test -f .saac_devil_runtime/jssh_bridge.sh || (echo "[!] Sandbox bridge missing" && exit 1)
+test -f Engine/product_data.json || (echo "[!] Product data missing" && exit 1)
+test -f Engine/product_dag_circuit.json || (echo "[!] DAG circuit missing" && exit 1)
+test -f Engine/generate_public_docs.sh || (echo "[!] Generator bot missing" && exit 1)
+
+echo "[*] Testing JSON Integrity..."
+jq empty Engine/product_data.json
+jq empty Engine/product_dag_circuit.json
 
 echo "[✓] All tree nodes, DAG circuits, and validators successfully passed!"
 exit 0

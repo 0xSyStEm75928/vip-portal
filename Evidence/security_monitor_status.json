@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-07-25T10:16:42Z",
+  "monitor_status": "SECURE",
+  "system_telemetry": {
+    "runtime_environment": "iSH Sandbox / BusyBox",
+    "status": "HEALTHY"
+  },
+  "threat_detection": {
+    "suspicious_log_events": 0,
+    "status": "NO_ATTACK_DETECTED"
+  }
+}
