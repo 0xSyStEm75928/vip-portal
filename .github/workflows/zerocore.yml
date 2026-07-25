@@ -1,17 +1,57 @@
-name: ZeroCore Sovereign Pipeline Gate
+name: ZeroCore Sovereign Verification
 
 on:
   push:
-    branches: [ main, master ]
+    branches:
+      - main
   pull_request:
-    branches: [ main, master ]
+
+permissions:
+  contents: read
+  security-events: write
 
 jobs:
-  verify:
+  zerocore-audit:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository Code
-        uses: actions/checkout@v4
 
-      - name: Load Pipeline Contract
-        run: jq empty zerocore.pipeline.json
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Install Tools
+      run: |
+        sudo apt update
+        sudo apt install -y jq python3-pip
+        pip install jsonschema
+
+    - name: Load Pipeline Contract
+      run: |
+        jq empty zerocore.pipeline.json
+
+    - name: JSON Validation
+      run: |
+        find . -name "*.json" -not -path "*/.*" -exec jq empty {} \;
+
+    - name: Schema Validation
+      run: |
+        jsonschema \
+        -i zerocore.sovereign.bootstrap.v1.json \
+        schemas/zerocore.sovereign.bootstrap.schema.json
+
+    - name: ZeroCore Runtime Check
+      run: |
+        chmod +x Validator/zerocore_validate.sh
+        ./Validator/zerocore_validate.sh
+
+    - name: Generate Evidence
+      run: |
+        mkdir -p Evidence
+        sha256sum \
+        zerocore.pipeline.json \
+        > Evidence/github.audit.jsonl
+
+    - name: Upload Proof
+      uses: actions/upload-artifact@v4
+      with:
+        name: zerocore-proof
+        path: Evidence/
