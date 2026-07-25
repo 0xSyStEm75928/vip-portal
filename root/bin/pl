@@ -1,0 +1,6 @@
+#!/bin/sh
+echo "[🏺 PERL] コードを入力（最後は 'EOF'）"
+rm -f .tmp.pl
+while IFS= read -r line; do [ "$line" = "EOF" ] && break; echo "$line" >> .tmp.pl; done
+if [ -f .tmp.pl ]; then perl .tmp.pl; fi
+rm -f .tmp.pl

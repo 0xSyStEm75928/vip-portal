@@ -1,0 +1,115 @@
+{
+  "$schema": "./schemas/zerocore.pipeline.schema.json",
+  "meta": {
+    "name": "ZeroCore Sovereign Pipeline Contract",
+    "version": "1.0.0",
+    "purpose": "deterministic_github_validation"
+  },
+  "repository": {
+    "root_required": true,
+    "required_files": [
+      "zerocore.pipeline.json",
+      "zerocore.sovereign.bootstrap.v1.json",
+      "schemas/zerocore.sovereign.bootstrap.schema.json",
+      "Validator/zerocore_validate.sh"
+    ],
+    "required_directories": [
+      ".github/workflows",
+      "schemas",
+      "Validator",
+      "Evidence"
+    ]
+  },
+  "workflow": {
+    "engine": "github_actions",
+    "trigger": {
+      "events": [
+        "push",
+        "pull_request"
+      ],
+      "branches": [
+        "main"
+      ]
+    },
+    "execution_order": [
+      "structure_check",
+      "json_integrity",
+      "schema_validation",
+      "runtime_validation",
+      "evidence_generation"
+    ]
+  },
+  "validation": {
+    "structure_check": {
+      "enabled": true,
+      "required": true
+    },
+    "json_integrity": {
+      "enabled": true,
+      "tool": "jq",
+      "required": true
+    },
+    "schema_validation": {
+      "enabled": true,
+      "tool": "jsonschema",
+      "required": true
+    },
+    "runtime_validation": {
+      "enabled": true,
+      "command": "./Validator/zerocore_validate.sh",
+      "required": true
+    }
+  },
+  "security": {
+    "github_native": {
+      "codeql": {
+        "enabled": true,
+        "mode": "analysis"
+      },
+      "dependabot": {
+        "enabled": true
+      },
+      "secret_scanning": {
+        "enabled": true
+      }
+    }
+  },
+  "evidence": {
+    "enabled": true,
+    "format": "jsonl",
+    "directory": "Evidence",
+    "audit_file": "Evidence/github.audit.jsonl",
+    "hash_algorithm": "SHA256",
+    "artifact_upload": {
+      "enabled": true,
+      "name": "zerocore-proof"
+    }
+  },
+  "anti_false_positive": {
+    "declaration_only": false,
+    "execution_required": true,
+    "command_output_required": true,
+    "artifact_required": true,
+    "failure_default": true
+  },
+  "state_machine": {
+    "initial": "UNVERIFIED",
+    "allowed_transitions": [
+      {
+        "from": "UNVERIFIED",
+        "to": "VERIFIED",
+        "condition": "all_required_checks_pass"
+      },
+      {
+        "from": "UNVERIFIED",
+        "to": "HALTED",
+        "condition": "any_check_failed"
+      }
+    ]
+  },
+  "result": {
+    "success": "VERIFIED",
+    "failure": "HALTED",
+    "manual_override": false
+  }
+}
