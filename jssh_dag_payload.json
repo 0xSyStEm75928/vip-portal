@@ -1,0 +1,139 @@
+{
+  "session_meta": {
+    "protocol": "ZeroCore-DAG-Tagged-Engine",
+    "total_nodes": 5,
+    "global_tags": [
+      "SECURITY_DECEPTION",
+      "DAG_CHAIN",
+      "HARDWARE_ANCHORED"
+    ],
+    "timestamp": "2026-07-26T03:30:00.000Z"
+  },
+  "dag_graph": [
+    {
+      "dag_depth": 1,
+      "node_id": "DAG_NODE_0001",
+      "seq_ref": "HIST_0001",
+      "command_executed": "git status",
+      "parent_hash": "GENESIS_NODE_00000000000000000000000000000000",
+      "node_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tags": [
+        "LAYER_0_PHYSICAL",
+        "SEQ_HIST_0001",
+        "DAG_ROOT",
+        "TRAP_ACTIVE",
+        "HARDWARE_PROOF_VERIFIED"
+      ],
+      "metadata": {
+        "trap_classification": "NON_BLOCKING_RESOURCE_DRAIN",
+        "confidence_score": 0.998,
+        "is_tamper_evident": true
+      },
+      "hardware_proof": {
+        "hw_clock_ns": "1722000000123456789",
+        "circuit_entropy": "a1b2c3d4e5f60789",
+        "status": "HARDWARE_VERIFIED_200_OK"
+      }
+    },
+    {
+      "dag_depth": 2,
+      "node_id": "DAG_NODE_0002",
+      "seq_ref": "HIST_0002",
+      "command_executed": "cat phantom_state.json",
+      "parent_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "node_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+      "tags": [
+        "LAYER_0_PHYSICAL",
+        "SEQ_HIST_0002",
+        "DAG_LEAF",
+        "TRAP_ACTIVE",
+        "HARDWARE_PROOF_VERIFIED"
+      ],
+      "metadata": {
+        "trap_classification": "NON_BLOCKING_RESOURCE_DRAIN",
+        "confidence_score": 0.998,
+        "is_tamper_evident": true
+      },
+      "hardware_proof": {
+        "hw_clock_ns": "1722000000123457890",
+        "circuit_entropy": "f8e7d6c5b4a39281",
+        "status": "HARDWARE_VERIFIED_200_OK"
+      }
+    },
+    {
+      "dag_depth": 3,
+      "node_id": "DAG_NODE_0003",
+      "seq_ref": "HIST_0003",
+      "command_executed": "python3 deception_runner.py",
+      "parent_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+      "node_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "tags": [
+        "LAYER_0_PHYSICAL",
+        "SEQ_HIST_0003",
+        "DAG_LEAF",
+        "TRAP_ACTIVE",
+        "HARDWARE_PROOF_VERIFIED"
+      ],
+      "metadata": {
+        "trap_classification": "NON_BLOCKING_RESOURCE_DRAIN",
+        "confidence_score": 0.998,
+        "is_tamper_evident": true
+      },
+      "hardware_proof": {
+        "hw_clock_ns": "1722000000123458901",
+        "circuit_entropy": "1234567890abcdef",
+        "status": "HARDWARE_VERIFIED_200_OK"
+      }
+    },
+    {
+      "dag_depth": 4,
+      "node_id": "DAG_NODE_0004",
+      "seq_ref": "HIST_0004",
+      "command_executed": "node JSON.js",
+      "parent_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "node_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666ec13ab350",
+      "tags": [
+        "LAYER_0_PHYSICAL",
+        "SEQ_HIST_0004",
+        "DAG_LEAF",
+        "TRAP_ACTIVE",
+        "HARDWARE_PROOF_VERIFIED"
+      ],
+      "metadata": {
+        "trap_classification": "NON_BLOCKING_RESOURCE_DRAIN",
+        "confidence_score": 0.998,
+        "is_tamper_evident": true
+      },
+      "hardware_proof": {
+        "hw_clock_ns": "1722000000123459012",
+        "circuit_entropy": "fedcba0987654321",
+        "status": "HARDWARE_VERIFIED_200_OK"
+      }
+    },
+    {
+      "dag_depth": 5,
+      "node_id": "DAG_NODE_0005",
+      "seq_ref": "HIST_0005",
+      "command_executed": "git push origin main",
+      "parent_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666ec13ab350",
+      "node_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+      "tags": [
+        "LAYER_0_PHYSICAL",
+        "SEQ_HIST_0005",
+        "DAG_LEAF",
+        "TRAP_ACTIVE",
+        "HARDWARE_PROOF_VERIFIED"
+      ],
+      "metadata": {
+        "trap_classification": "NON_BLOCKING_RESOURCE_DRAIN",
+        "confidence_score": 0.998,
+        "is_tamper_evident": true
+      },
+      "hardware_proof": {
+        "hw_clock_ns": "1722000000123460123",
+        "circuit_entropy": "0123456789fedcba",
+        "status": "HARDWARE_VERIFIED_200_OK"
+      }
+    }
+  ]
+}
