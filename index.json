@@ -1,0 +1,15 @@
+{
+  "project": "PANDEMONIUM_MEV_STUDIO",
+  "version": "3.4.0-AUTO",
+  "author": "LuciFeR0x0systeM",
+  "features": [
+    "PROFIT_FILTER_ACTIVE",
+    "AUTO_BOT_SEARCHER",
+    "DAG_STATE_PIPELINE"
+  ],
+  "config": {
+    "mempool_interval_ms": 2800,
+    "min_profit_threshold_wpol": 5.0,
+    "target_contract": "0xf531BAf80C88868157d8a39050C756cb51244931"
+  }
+}
