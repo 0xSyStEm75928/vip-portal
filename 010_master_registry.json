@@ -1,0 +1,19 @@
+{
+  "$schema": "./schemas/master_registry.schema.json",
+  "master_registry": {
+    "version": "1.0.0",
+    "status": "ACTIVE",
+    "documents": [
+      "001_environment.json",
+      "002_target.json",
+      "003_reproduction.json",
+      "004_evidence.json",
+      "005_assessment.json",
+      "006_cwe_mapping.json",
+      "007_risk_matrix.json",
+      "008_execution_log_registry.json",
+      "009_vendor_submission.json"
+    ],
+    "review_state": "UNDER_INVESTIGATION"
+  }
+}

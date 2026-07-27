@@ -1,0 +1,30 @@
+{
+  "$schema": "./schemas/evidence.schema.json",
+  "evidence": [
+    {
+      "id": "EV-001",
+      "type": "terminal_screenshot",
+      "available": true
+    },
+    {
+      "id": "EV-002",
+      "type": "git_history",
+      "available": true
+    },
+    {
+      "id": "EV-003",
+      "type": "repository",
+      "available": true
+    },
+    {
+      "id": "EV-004",
+      "type": "reproducer_source",
+      "available": false
+    },
+    {
+      "id": "EV-005",
+      "type": "independent_reproduction",
+      "available": false
+    }
+  ]
+}

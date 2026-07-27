@@ -1,0 +1,12 @@
+{
+  "network_security_policy": {
+    "bind_address": "127.0.0.1",
+    "public_exposure": false,
+    "allow_external_traffic": false,
+    "air_gap_mode": true,
+    "access_control": {
+      "allowed_interfaces": ["lo", "wg0"],
+      "block_all_inbound": true
+    }
+  }
+}

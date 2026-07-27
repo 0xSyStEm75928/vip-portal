@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>😈 PANDEMONIUM MEV STUDIO</title>
+  <style>
+    :root {
+      --bg-dark: #07090e;
+      --panel-bg: #111622;
+      --panel-border: #1f293d;
+      --demon-red: #ff0055;
+      --demon-purple: #9d00ff;
+      --gold: #ffd700;
+      --text: #e2e8f0;
+      --text-dim: #64748b;
+      --accent-green: #00ff88;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text);
+      min-height: 100dvh; /* dvhでスマホのアドレスバー問題を完全回避 */
+      display: flex;
+      flex-direction: column;
+      padding: 12px;
+      gap: 12px;
+    }
+
+    /* --- ヘッダー：魔王のステータス --- */
+    header {
+      background: linear-gradient(135deg, #1f0010, #0a001a);
+      border: 1px solid var(--demon-red);
+      border-radius: 12px;
+      padding: 12px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 0 15px rgba(255, 0, 85, 0.2);
+    }
+
+    .brand h1 {
+      font-size: 1.1rem;
+      color: var(--demon-red);
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .brand p {
+      font-size: 0.7rem;
+      color: var(--text-dim);
+    }
+
+    .dominance-box {
+      text-align: right;
+    }
+
+    .dominance-val {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: var(--gold);
+      text-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+    }
+
+    /* --- 自律型グリッド（スマホは1列、PCはマルチ列に可変変形） --- */
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 12px;
+      flex: 1;
+    }
+
+    .card {
+      background: var(--panel-bg);
+      border: 1px solid var(--panel-border);
+      border-radius: 12px;
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .card-title {
+      font-size: 0.85rem;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--panel-border);
+      padding-bottom: 6px;
+    }
+
+    /* --- メンプール＆ハプニング監視ログ --- */
+    .mempool-monitor {
+      height: 220px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 0.8rem;
+    }
+
+    .tx-item {
+      background: #090d16;
+      border-left: 3px solid var(--text-dim);
+      border-radius: 4px;
+      padding: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      animation: slideIn 0.2s ease-out;
+    }
+
+    .tx-item.target { border-left-color: var(--demon-red); }
+    .tx-item.bot { border-left-color: var(--demon-purple); }
+
+    .tx-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      color: var(--text-dim);
+    }
+
+    .tx-action {
+      display: flex;
+      gap: 6px;
+      margin-top: 2px;
+    }
+
+    /* --- 操作ボタン（タッチしやすい親指サイズ） --- */
+    .btn {
+      background: #1e293b;
+      color: var(--text);
+      border: 1px solid #334155;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: bold;
+      cursor: pointer;
+      flex: 1;
+      transition: 0.1s;
+      text-align: center;
+    }
+
+    .btn:active { transform: scale(0.96); }
+
+    .btn-sandwich {
+      background: linear-gradient(135deg, #800020, var(--demon-red));
+      border: none;
+      color: white;
+    }
+
+    .btn-override {
+      background: linear-gradient(135deg, #4b0082, var(--demon-purple));
+      border: none;
+      color: white;
+    }
+
+    .btn-override {
+      background: linear-gradient(135deg, #4b0082, var(--demon-purple));
+      border: none;
+      color: white;
+    }
+
+    /* --- AMM (x * y = k) カスタムパネル --- */
+    .param-group {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .param-label {
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      accent-color: var(--demon-red);
+    }
+
+    .pool-math-box {
+      background: #090d16;
+      border: 1px dashed var(--panel-border);
+      border-radius: 6px;
+      padding: 10px;
+      font-size: 0.8rem;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    /* --- 必殺：パンデモニウム・レイジボタン（下部固定風） --- */
+    .rage-btn-container {
+      margin-top: auto;
+    }
+
+    .btn-rage {
+      width: 100%;
+      padding: 16px;
+      font-size: 1rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+      color: #fff;
+      background: linear-gradient(90deg, var(--demon-red), var(--demon-purple), var(--demon-red));
+      background-size: 200% 100%;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255, 0, 85, 0.4);
+      animation: gradientShift 3s infinite linear;
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 😈 魔王ステータスヘッダー -->
+  <header>
+    <div class="brand">
+      <h1>😈 PANDEMONIUM MEV</h1>
+      <p>ABSOLUTE TRANSACTION DOMINANCE</p>
+    </div>
+    <div class="dominance-box">
+      <div style="font-size:0.65rem; color:var(--text-dim);">DOMINANCE POWER</div>
+      <div class="dominance-val" id="dominancePower">99.8%</div>
+    </div>
+  </header>
+
+  <div class="dashboard-grid">
+
+    <!-- 🔮 パネル 1：リアルタイム・メンプール監視（ターゲット介入） -->
+    <div class="card">
+      <div class="card-title">
+        <span>⚡ LIVE MEMPOOL (HUMAN TARGETS)</span>
+        <span style="font-size:0.7rem; color:var(--accent-green);" id="mempoolStatus">SCANNING...</span>
+      </div>
+      <div class="mempool-monitor" id="mempoolList">
+        <!-- JSでリアルタイムに人間・敵Botの取引が降ってくる -->
+      </div>
+    </div>
+
+    <!-- 📊 パネル 2：カスタム設定 ＆ ガチDEX数学（x * y = k 演算） -->
+    <div class="card">
+      <div class="card-title">
+        <span>⚙️ POOL MATH & SCALE CUSTOM</span>
+      </div>
+
+      <div class="param-group">
+        <div class="param-label">
+          <span>Target Pair</span>
+          <span style="color:var(--gold);" id="pairName">PAND / USDC</span>
+        </div>
+      </div>
+
+      <div class="param-group">
+        <div class="param-label">
+          <span>Flash Loan Scale (規模調整)</span>
+          <span id="loanVal">10,000 USDC</span>
+        </div>
+        <input type="range" id="loanSlider" min="100" max="1000000" step="500" value="10000" oninput="updateMath()">
+      </div>
+
+      <!-- 正式なAMM（定性乗積公式）リアルタイム計算結果 -->
+      <div class="pool-math-box">
+        <div style="display:flex; justify-shadow:space-between;">
+          <span>Pool Reserve X:</span>
+          <strong id="resX" style="color:var(--text);">1,000,000 PAND</strong>
+        </div>
+        <div style="display:flex; justify-content:space-between;">
+          <span>Pool Reserve Y:</span>
+          <strong id="resY" style="color:var(--text);">500,000 USDC</strong>
+        </div>
+        <div style="display:flex; justify-content:space-between; margin-top:4px; border-top:1px solid #1f293d; padding-top:4px;">
+          <span>Expected Price Impact:</span>
+          <strong id="priceImpact" style="color:var(--demon-red);">1.96%</strong>
+       </div>
+        <div style="display:flex; justify-content:space-between;">
+          <span>Estimated Net Profit:</span>
+          <strong id="netProfit" style="color:var(--accent-green);">+192.4 PAND</strong>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 💀 必殺技：パンデモニウム・レイジ（連打モード） -->
+  <div class="rage-btn-container">
+    <button class="btn-rage" onclick="triggerRage()">💀 PANDEMONIUM RAGE (連打実行)</button>
+  </div>
+
+  <script>
+    // --- 状態管理 ---
+    let poolX = 1000000; // PAND
+    let poolY = 500000;  // USDC
+    let totalHarvested = 0;
+
+    const mempool = document.getElementById('mempoolList');
+
+    // --- 正式な AMM (x * y = k) スリッページ・利益演算エンジン ---
+    function updateMath() {
+      const loan = parseFloat(document.getElementById('loanSlider').value);
+      document.getElementById('loanVal').innerText = loan.toLocaleString() + " USDC";
+
+      // Constant Product: k = x * y
+      const k = poolX * poolY;
+      const newPoolY = poolY + loan;
+      const newPoolX = k / newPoolY;
+      const pandBought = poolX - newPoolX;
+
+      // 価格インパクト計算
+      const spotPrice = poolY / poolX; // 0.5
+      const execPrice = loan / pandBought;
+      const impact = ((execPrice - spotPrice) / spotPrice) * 100;
+
+      // 概算純利益 (ミリ秒バックランニングによるサヤ抜き想定)
+      const estimatedProfit = pandBought * 0.02; 
+
+      document.getElementById('resX').innerText = Math.round(poolX).toLocaleString() + " PAND";
+      document.getElementById('resY').innerText = Math.round(poolY).toLocaleString() + " USDC";
+      document.getElementById('priceImpact').innerText = impact.toFixed(2) + "%";
+      document.getElementById('netProfit').innerText = "+" + estimatedProfit.toFixed(1) + " PAND";
+    }
+
+    // --- メンプール流動性＆ハプニング・イベント生成器 ---
+    function spawnTx() {
+      const isRivalBot = Math.random() > 0.6;
+      const txDiv = document.createElement('div');
+      txDiv.className = `tx-item ${isRivalBot ? 'bot' : 'target'}`;
+
+      const txId = "0x" + Math.random().toString(16).substr(2, 6);
+      const amount = (Math.random() * 50000 + 1000).toFixed(0);
+
+      if (isRivalBot) {
+        txDiv.innerHTML = `
+          <div class="tx-header">
+            <span>🥷 RIVAL MEV BOT (${txId})</span>
+            <span style="color:var(--demon-purple);">Priority Fee: 85 Gwei</span>
+          </div>
+          <div>Attempting Front-run on PAND/USDC...</div>
+          <div class="tx-action">
+            <button class="btn btn-override" onclick="overrideGas('${txId}')">🔥 GWEI OVERRIDE (+150)</button>
+          </div>
+        `;
+      } else {
+        txDiv.innerHTML = `
+          <div class="tx-header">
+            <span>👤 HUMAN SWAPPER (${txId})</span>
+            <span>Slippage: 2.0%</span>
+          </div>
+          <div>Swapping ${Number(amount).toLocaleString()} USDC -> PAND</div>
+          <div class="tx-action">
+            <button class="btn btn-sandwich" onclick="executeSandwich('${txId}', ${amount})">⚔️ SANDWICH ATTACK</button>
+          </div>
+        `;
+      }
+
+      mempool.prepend(txDiv);
+      if (mempool.children.length > 10) mempool.removeChild(mempool.lastChild);
+    }
+
+    // --- 魔王の絶対コマンド処理 ---
+    function executeSandwich(id, amount) {
+      const profit = (amount * 0.035).toFixed(1);
+      totalHarvested += parseFloat(profit);
+      alert(`😈 [PANDEMONIUM DOMINANCE]\nSandwich Executed on ${id}!\nHarvested: +${profit} PAND`);
+    }
+
+    function overrideGas(id) {
+      alert(`🔥 [GWEI OVERRIDE]\nCrushed Rival Bot ${id} with 230 Gwei!\nPriority Transaction Secured.`);
+    }
+
+    function triggerRage() {
+      alert("💀 [PANDEMONIUM RAGE ACTIVATED]\nAll liquidity pools shifted into chaotic resonance!\nMass harvesting in progress...");
+      for(let i=0; i<5; i++) setTimeout(spawnTx, i * 200);
+    }
+
+    // ループ開始
+    setInterval(spawnTx, 3000);
+    updateMath();
+  </script>
+</body>
+</html>

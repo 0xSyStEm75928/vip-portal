@@ -1,0 +1,15 @@
+{
+  "$schema": "https://zerocore.io/schemas/v1/capability.json",
+  "registry_id": "cap_reg_main",
+  "capabilities": {
+    "cap_kernel_root": {
+      "owner": "ZeroCore_Bootloader",
+      "allowed_syscalls": [
+        "sys_process_spawn",
+        "sys_audit_commit",
+        "sys_state_transition"
+      ],
+      "status": "ACTIVE"
+    }
+  }
+}

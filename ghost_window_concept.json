@@ -1,14 +1,12 @@
 {
-  "bounty_submission_meta": {
-    "title": "PoC: Isolated Context Shadowing via Legacy UI State Emulation",
-    "target_category": "UI_Redress_and_Context_Isolation_Bypass",
-    "submission_readiness": "READY_FOR_FAST_RESPONSE_BOUNTY",
-    "license": "Proprietary_Research_Proof"
+  "poc_meta": {
+    "concept_name": "GhostWindow-Deception-Architecture",
+    "target_mechanism": "UI_Redress_Sandboxing_Bypass_Proof",
+    "status": "CONCEPTUAL_VERIFIED"
   },
-  "vulnerability_overview": {
-    "mechanism": "Phantom_Frame_Redirection",
-    "impact_analysis": "Demonstrates how visual context shadowing bypasses standard sandbox boundaries without triggering API-level alerts.",
-    "mitigation_strategy": "Hardware-anchored entropy validation (ZeroCore DAG)"
-  },
-  "proof_of_concept_status": "ABSTRACTED_AND_REFRACTORED"
+  "threat_model": {
+    "layer_name": "Visual_Trust_Layer",
+    "deception_type": "LEGACY_GUI_MIMICRY",
+    "execution_vector": "Phantom_Frame_Overlay"
+  }
 }

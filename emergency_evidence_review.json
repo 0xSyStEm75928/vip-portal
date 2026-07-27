@@ -1,0 +1,69 @@
+{
+  "review_id": "EMERGENCY-EVIDENCE-001",
+  "status": "UNDER_INVESTIGATION",
+  "confidence": "LOW",
+
+  "claim": {
+    "title": "Asynchronous Context Race / Session Capsule Extraction",
+    "reported_issue": [
+      "TOCTOU",
+      "Context Transition",
+      "Memory Residue",
+      "Possible Reentrancy-like Session Access"
+    ]
+  },
+
+  "verified_evidence": {
+    "terminal_screenshot": true,
+    "git_history_exists": true,
+    "repository_exists": true,
+    "source_code_present": false,
+    "reproducer_present": false,
+    "target_vendor_confirmed": false,
+    "official_acknowledgement": false
+  },
+
+  "observations": [
+    {
+      "id": "OBS-001",
+      "finding": "Terminal screenshot exists",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "OBS-002",
+      "finding": "Repository history exists",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "OBS-003",
+      "finding": "No reproducible PoC available in current evidence",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "OBS-004",
+      "finding": "No proof that production secrets were actually extracted",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "OBS-005",
+      "finding": "Current description mixes architecture discussion with security conclusions",
+      "confidence": "MEDIUM"
+    }
+  ],
+
+  "required_next_evidence": [
+    "Original Rust source",
+    "Build instructions",
+    "Execution log",
+    "Hash of binaries",
+    "Exact affected product/version",
+    "Vendor acknowledgement if any",
+    "Independent reproduction"
+  ],
+
+  "current_conclusion": {
+    "classification": "UNVERIFIED_SECURITY_CLAIM",
+    "action": "COLLECT_MORE_EVIDENCE",
+    "publish": false
+  }
+}

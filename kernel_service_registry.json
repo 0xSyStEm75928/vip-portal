@@ -1,0 +1,73 @@
+{
+  "$schema": "./schemas/kernel.service.registry.schema.json",
+
+  "kernel_service_registry": {
+    "version": "1.0.0",
+    "status": "ACTIVE",
+
+    "purpose": "Registry of runtime services managed by the ZeroCore kernel.",
+
+    "services": [
+      {
+        "service_id": "SVC-001",
+        "name": "Registry Service",
+        "module": "runtime",
+        "registry": "runtime_manifest.json",
+        "state": "RUNNING",
+        "auto_start": true
+      },
+      {
+        "service_id": "SVC-002",
+        "name": "Event Service",
+        "module": "event_bus",
+        "registry": "event_bus.json",
+        "state": "RUNNING",
+        "auto_start": true
+      },
+      {
+        "service_id": "SVC-003",
+        "name": "Audit Service",
+        "module": "audit_chain",
+        "registry": "audit_chain.json",
+        "state": "RUNNING",
+        "auto_start": true
+      },
+      {
+        "service_id": "SVC-004",
+        "name": "Business Service",
+        "module": "business",
+        "registry": "business_registry.json",
+        "state": "STOPPED",
+        "auto_start": false
+      },
+      {
+        "service_id": "SVC-005",
+        "name": "Agent Memory Service",
+        "module": "agent_memory",
+        "registry": "agent_memory_index.json",
+        "state": "RUNNING",
+        "auto_start": true
+      }
+    ],
+
+    "service_policy": {
+      "dependency_check": true,
+      "schema_validation": true,
+      "integrity_validation": true,
+      "restart_on_failure": true,
+      "audit_state_changes": true
+    },
+
+    "runtime": {
+      "running": 4,
+      "stopped": 1,
+      "failed": 0
+    },
+
+    "integrity": {
+      "registry_hash": null,
+      "validated": false,
+      "last_update": null
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "$schema": "./schemas/kernel.snapshot.schema.json",
+
+  "kernel_snapshot": {
+    "version": "1.0.0",
+    "status": "ACTIVE",
+
+    "purpose": "Immutable runtime snapshot of the ZeroCore kernel state.",
+
+    "snapshot": {
+      "snapshot_id": null,
+      "created_at": null,
+      "kernel_version": "1.0.0",
+      "runtime_state": "ACTIVE",
+      "boot_id": null
+    },
+
+    "components": [
+      {
+        "name": "runtime",
+        "state": "READY",
+        "registry": "runtime_manifest.json"
+      },
+      {
+        "name": "scheduler",
+        "state": "READY",
+        "registry": "kernel_scheduler.json"
+      },
+      {
+        "name": "process_table",
+        "state": "READY",
+        "registry": "json_process_table.json"
+      },
+      {
+        "name": "object_table",
+        "state": "READY",
+        "registry": "json_object_table.json"
+      },
+      {
+        "name": "fd_table",
+        "state": "READY",
+        "registry": "json_fd_table.json"
+      },
+      {
+        "name": "syscall_registry",
+        "state": "READY",
+        "registry": "json_syscall_registry.json"
+      }
+    ],
+
+    "metrics": {
+      "loaded_modules": 0,
+      "running_services": 0,
+      "active_processes": 0,
+      "pending_events": 0,
+      "audit_records": 0
+    },
+
+    "snapshot_policy": {
+      "append_only": true,
+      "hash_required": true,
+      "audit_required": true
+    },
+
+    "integrity": {
+      "snapshot_hash": null,
+      "validated": false,
+      "previous_snapshot": null
+    }
+  }
+}

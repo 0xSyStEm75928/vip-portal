@@ -1,0 +1,26 @@
+{
+  "detection": {
+    "normal_gas_gwei": 30,
+    "normal_spread_pct": 0.05,
+    "normal_liquidity_usd": 150000,
+    "thresholds": {
+      "gas_spike_x": 3.0,
+      "spread_spike_x": 3.0,
+      "liquidity_drain_pct": 0.20,
+      "wash_volume_x": 5.0
+    },
+    "mev_protection": {
+      "detect_frontrunning": true,
+      "detect_sandwich": true,
+      "mempool_monitoring_depth": 50
+    }
+  },
+
+  "execution": {
+    "log_file": "arb.log",
+    "log_tail_lines": 20,
+    "tx_wait_confirmations": 1,
+    "sim_mode": false,
+    "console_verbosity": "VERBOSE"
+  }
+}

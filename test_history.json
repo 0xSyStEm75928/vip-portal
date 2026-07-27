@@ -1,0 +1,44 @@
+{
+  "session_meta": {
+    "engine": "ZeroCore-DAG-History-Logger",
+    "total_entries": 5,
+    "generated_at": "2026-07-26T03:25:02.897Z"
+  },
+  "logs": [
+    {
+      "seq_id": "HIST_0001",
+      "step": 1,
+      "command": "git status",
+      "timestamp": "2026-07-26T03:25:02.897Z",
+      "status": "EXECUTED"
+    },
+    {
+      "seq_id": "HIST_0002",
+      "step": 2,
+      "command": "cat phantom_state.json",
+      "timestamp": "2026-07-26T03:25:02.897Z",
+      "status": "EXECUTED"
+    },
+    {
+      "seq_id": "HIST_0003",
+      "step": 3,
+      "command": "python3 deception_runner.py",
+      "timestamp": "2026-07-26T03:25:02.897Z",
+      "status": "EXECUTED"
+    },
+    {
+      "seq_id": "HIST_0004",
+      "step": 4,
+      "command": "node JSON.js",
+      "timestamp": "2026-07-26T03:25:02.897Z",
+      "status": "EXECUTED"
+    },
+    {
+      "seq_id": "HIST_0005",
+      "step": 5,
+      "command": "git push origin main",
+      "timestamp": "2026-07-26T03:25:02.897Z",
+      "status": "EXECUTED"
+    }
+  ]
+}

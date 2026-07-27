@@ -1,0 +1,24 @@
+{
+  "$schema": "./schemas/assessment.schema.json",
+  "assessment": {
+    "review_status": "UNDER_INVESTIGATION",
+    "current_confidence": "LOW",
+    "verified_findings": [
+      "Repository exists",
+      "Terminal execution evidence exists",
+      "Local audit output captured"
+    ],
+    "unverified_claims": [
+      "Production environment affected",
+      "Production secret extraction",
+      "Vendor impact",
+      "Remote exploitability"
+    ],
+    "next_actions": [
+      "Identify exact affected component",
+      "Provide minimal reproducible example",
+      "Verify on clean environment",
+      "Request independent confirmation"
+    ]
+  }
+}

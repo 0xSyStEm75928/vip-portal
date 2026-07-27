@@ -1,0 +1,20 @@
+{
+  "name": "root",
+  "version": "1.0.0",
+  "description": "> Hardware-Anchored Active Defense & DAG-Driven Deception Network",
+  "main": "jssh_dag_core.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0xSyStEm75928/BELPHEGOR_v.old.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/0xSyStEm75928/BELPHEGOR_v.old/issues"
+  },
+  "homepage": "https://github.com/0xSyStEm75928/BELPHEGOR_v.old#readme"
+}

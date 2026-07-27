@@ -1,0 +1,55 @@
+{
+  "$schema": "./schemas/runtime.manifest.schema.json",
+
+  "runtime_manifest": {
+    "version": "1.0.0",
+    "status": "ACTIVE",
+
+    "purpose": "Runtime bootstrap manifest for SaaC / ZeroCore.",
+
+    "boot": {
+      "entry": "registry.index.json",
+      "mode": "offline",
+      "strict_schema": true
+    },
+
+    "load_order": [
+      {
+        "order": 10,
+        "registry": "contract_registry.json"
+      },
+      {
+        "order": 20,
+        "registry": "policy_registry.json"
+      },
+      {
+        "order": 30,
+        "registry": "dependency.graph.json"
+      },
+      {
+        "order": 40,
+        "registry": "event_bus.json"
+      },
+      {
+        "order": 50,
+        "registry": "audit_chain.json"
+      },
+      {
+        "order": 60,
+        "registry": "business_registry.json"
+      }
+    ],
+
+    "runtime": {
+      "allow_hot_reload": true,
+      "verify_schema_before_load": true,
+      "verify_hash_before_load": true,
+      "allow_unknown_registry": false
+    },
+
+    "state": {
+      "boot_completed": false,
+      "last_boot": null
+    }
+  }
+}

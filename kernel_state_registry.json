@@ -1,0 +1,64 @@
+{
+  "$schema": "./schemas/kernel.state.registry.schema.json",
+
+  "kernel_state_registry": {
+    "version": "1.0.0",
+    "status": "ACTIVE",
+
+    "purpose": "Maintain runtime state of the ZeroCore kernel.",
+
+    "kernel": {
+      "name": "ZeroCore",
+      "mode": "registry_native",
+      "boot_state": "INITIALIZING",
+      "runtime_state": "IDLE",
+      "boot_timestamp": null
+    },
+
+    "subsystems": [
+      {
+        "name": "runtime",
+        "registry": "runtime_manifest.json",
+        "state": "READY"
+      },
+      {
+        "name": "contracts",
+        "registry": "contract_registry.json",
+        "state": "READY"
+      },
+      {
+        "name": "events",
+        "registry": "event_bus.json",
+        "state": "READY"
+      },
+      {
+        "name": "audit",
+        "registry": "audit_chain.json",
+        "state": "READY"
+      },
+      {
+        "name": "business",
+        "registry": "business_registry.json",
+        "state": "READY"
+      },
+      {
+        "name": "agent_memory",
+        "registry": "agent_memory_index.json",
+        "state": "READY"
+      }
+    ],
+
+    "runtime_metrics": {
+      "loaded_registries": 0,
+      "active_events": 0,
+      "pending_events": 0,
+      "audit_records": 0
+    },
+
+    "integrity": {
+      "state_hash": null,
+      "verified": false,
+      "last_update": null
+    }
+  }
+}

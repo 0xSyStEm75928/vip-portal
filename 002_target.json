@@ -1,0 +1,15 @@
+{
+  "$schema": "./schemas/target.schema.json",
+  "target": {
+    "id": "TARGET-001",
+    "vendor": "Binance (Unverified)",
+    "component": "UNKNOWN",
+    "repository_confirmed": false,
+    "affected_version": "UNKNOWN",
+    "scope": "UNDER_INVESTIGATION"
+  },
+  "classification": {
+    "type": "Security Review",
+    "confidence": "LOW"
+  }
+}

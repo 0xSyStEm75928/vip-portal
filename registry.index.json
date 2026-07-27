@@ -1,0 +1,46 @@
+{
+  "$schema": "./schemas/registry.index.schema.json",
+
+  "registry_index": {
+    "version": "1.0.0",
+    "status": "ACTIVE",
+
+    "purpose": "Root registry index for SaaC / ZeroCore.",
+
+    "boot_sequence": [
+      "runtime_manifest.json",
+      "contract_registry.json",
+      "policy_registry.json",
+      "dependency.graph.json",
+      "event_bus.json"
+    ],
+
+    "registries": {
+      "runtime": "runtime_manifest.json",
+      "contracts": "contract_registry.json",
+      "policies": "policy_registry.json",
+      "dependencies": "dependency.graph.json",
+      "events": "event_bus.json",
+      "environment": "environment_manifest.json",
+      "reproduction": "reproduction_protocol.json",
+      "timeline": "timeline_of_events.json",
+      "hash_registry": "evidence_hash_registry.json",
+      "vendor_tracker": "vendor_response_tracker.json",
+      "submission": "review_submission_manifest.json",
+      "bundle": "final_evidence_bundle.json"
+    },
+
+    "statistics": {
+      "registry_count": 0,
+      "schema_count": 0,
+      "contract_count": 0,
+      "last_scan": null
+    },
+
+    "integrity": {
+      "validated": false,
+      "index_hash": null,
+      "generated_at": null
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://zerocore.io/schemas/v1/process.json",
+  "table_id": "proc_table_main",
+  "active_processes": [
+    {
+      "pid": 1001,
+      "process_name": "ai_agent_worker",
+      "owner": "ZeroCore_AI",
+      "state": "RUNNING",
+      "allocated_memory": "128MB",
+      "capabilities_held": [
+        "cap_business_write",
+        "cap_audit_commit"
+      ]
+    }
+  ]
+}

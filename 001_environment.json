@@ -1,0 +1,16 @@
+{
+  "$schema": "./schemas/environment.schema.json",
+  "environment": {
+    "id": "ENV-001",
+    "status": "UNDER_REVIEW",
+    "execution": "LOCAL",
+    "platform": "iSH / Linux Shell",
+    "repository": "BELPHEGOR_v.old",
+    "network_connection": "UNKNOWN",
+    "mainnet_verified": false
+  },
+  "metadata": {
+    "created_by": "lucifer0x0system",
+    "version": "1.0.0"
+  }
+}

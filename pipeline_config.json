@@ -1,0 +1,11 @@
+{
+  "stream_test_config": {
+    "mode": "batch_slurp",
+    "input_format": "jsonl",
+    "rules": {
+      "max_delay_ms": 100,
+      "allowed_statuses": ["PASS", "SKIP"]
+    },
+    "output_target": "output_summary.json"
+  }
+}

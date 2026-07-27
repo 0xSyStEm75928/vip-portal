@@ -1,0 +1,62 @@
+{
+  "$schema": "./schemas/vendor.response.tracker.schema.json",
+
+  "vendor_response_tracker": {
+    "version": "1.0.0",
+    "status": "ACTIVE",
+
+    "purpose": "Track communications, requests, and responses during coordinated disclosure.",
+
+    "vendor": {
+      "name": null,
+      "program": null,
+      "case_id": null,
+      "contact_channel": null
+    },
+
+    "communications": [
+      {
+        "message_id": null,
+        "timestamp": null,
+        "direction": "OUTBOUND",
+        "subject": null,
+        "summary": null,
+        "attachments": [],
+        "status": "SENT"
+      }
+    ],
+
+    "requests": [
+      {
+        "request_id": null,
+        "requested_action": null,
+        "requested_at": null,
+        "response_due": null,
+        "fulfilled": false
+      }
+    ],
+
+    "responses": [
+      {
+        "response_id": null,
+        "received_at": null,
+        "classification": null,
+        "summary": null,
+        "requires_follow_up": false
+      }
+    ],
+
+    "evidence_links": {
+      "timeline": "timeline_of_events.json",
+      "hash_registry": "evidence_hash_registry.json",
+      "environment": "environment_manifest.json",
+      "reproduction": "reproduction_protocol.json"
+    },
+
+    "integrity": {
+      "append_only": true,
+      "last_updated": null,
+      "verified": false
+    }
+  }
+}

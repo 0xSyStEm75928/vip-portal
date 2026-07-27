@@ -1,0 +1,58 @@
+{
+  "$schema": "./schemas/json.object.table.schema.json",
+
+  "json_object_table": {
+    "version": "1.0.0",
+    "status": "ACTIVE",
+
+    "purpose": "Registry-native object catalog for ZeroCore.",
+
+    "objects": [
+      {
+        "object_id": "OBJ-000001",
+        "name": "runtime_manifest",
+        "type": "registry",
+        "file": "runtime_manifest.json",
+        "owner": "kernel",
+        "state": "LOADED",
+        "immutable": true
+      },
+      {
+        "object_id": "OBJ-000002",
+        "name": "event_bus",
+        "type": "event",
+        "file": "event_bus.json",
+        "owner": "runtime",
+        "state": "READY",
+        "immutable": false
+      },
+      {
+        "object_id": "OBJ-000003",
+        "name": "audit_chain",
+        "type": "audit",
+        "file": "audit_chain.json",
+        "owner": "audit",
+        "state": "READY",
+        "immutable": true
+      }
+    ],
+
+    "lookup_policy": {
+      "primary_key": "object_id",
+      "allow_alias": true,
+      "strict_registry_reference": true
+    },
+
+    "statistics": {
+      "object_count": 3,
+      "loaded": 3,
+      "failed": 0
+    },
+
+    "integrity": {
+      "table_hash": null,
+      "validated": false,
+      "last_update": null
+    }
+  }
+}

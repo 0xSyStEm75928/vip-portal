@@ -1,0 +1,83 @@
+{
+  "$schema": "./schemas/dependency.graph.schema.json",
+
+  "dependency_graph": {
+    "version": "1.0.0",
+    "status": "ACTIVE",
+
+    "purpose": "Directed dependency graph for SaaC / ZeroCore registries.",
+
+    "nodes": [
+      {
+        "id": "registry.index",
+        "file": "registry.index.json",
+        "type": "root"
+      },
+      {
+        "id": "runtime",
+        "file": "runtime_manifest.json",
+        "type": "runtime"
+      },
+      {
+        "id": "contracts",
+        "file": "contract_registry.json",
+        "type": "registry"
+      },
+      {
+        "id": "policy",
+        "file": "policy_registry.json",
+        "type": "registry"
+      },
+      {
+        "id": "events",
+        "file": "event_bus.json",
+        "type": "event"
+      },
+      {
+        "id": "audit",
+        "file": "audit_chain.json",
+        "type": "audit"
+      }
+    ],
+
+    "edges": [
+      {
+        "from": "registry.index",
+        "to": "runtime",
+        "relationship": "boot"
+      },
+      {
+        "from": "runtime",
+        "to": "contracts",
+        "relationship": "load"
+      },
+      {
+        "from": "runtime",
+        "to": "policy",
+        "relationship": "load"
+      },
+      {
+        "from": "runtime",
+        "to": "events",
+        "relationship": "load"
+      },
+      {
+        "from": "events",
+        "to": "audit",
+        "relationship": "record"
+      }
+    ],
+
+    "validation": {
+      "allow_cycles": false,
+      "require_existing_nodes": true,
+      "strict_order": true
+    },
+
+    "statistics": {
+      "node_count": 0,
+      "edge_count": 0,
+      "graph_hash": null
+    }
+  }
+}
