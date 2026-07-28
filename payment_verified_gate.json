@@ -1,6 +1,6 @@
 {
   "$schema": "./schemas/payment.verified.gate.schema.json",
-  "version": "3.6.0-DEMON-LEGAL-ANON",
+  "version": "3.4.1",
   "deal_metadata": {
     "deal_id": "DEAL_2026_MULTI_TARGET_ANONYMOUS",
     "target_prospects": [
@@ -19,9 +19,9 @@
     "payout_address": "0xF7A353FAF6E6BD4732b0f234C656dBFDE53B0e91"
   },
   "feedback_prompt": {
-    "question_to_client": "SILENT_USER_0x94B、SILENT_USER_0x31C。逃げ道は用意してやった。『暗号署名』による魂の開示か、『血判（NDA）』による法的束縛か。選べ。",
-    "response_from_host": "我々が求めるのは完璧な履行のみ。匿名という闇の盾を与えてやる代わりに、契約に違反した瞬間に法とコードの両面から逃げ場を失うと知れ。意向を示せ。",
-    "status": "AWAITING_DEMONIC_CONTRACT_SELECTION"
+    "question_to_client": "ご提示いただいた要件について確認いたしました。署名データの提出、または事前NDA締結のいずれの形式をご希望かお知らせください。",
+    "response_from_host": "ご要望に合わせて安全な手続きをご案内いたします。ご都合の良い進め方をご選択ください。",
+    "status": "AWAITING_CLIENT_SELECTION"
   },
   "value_anchor": {
     "sovereign_kernel_hash": "0x8F_SOVEREIGN_KERNEL_LOCKED",
