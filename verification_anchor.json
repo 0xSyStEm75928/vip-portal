@@ -1,0 +1,24 @@
+{
+  "$schema": "./schemas/payment.verified.gate.schema.json",
+  "version": "1.0.0-EVIDENCE-ANCHOR",
+  "system_identity": "BELPHEGOR_ZERO_CORE",
+  "audit_timestamp": "2026-07-29T01:10:00Z",
+  "verification_status": "PENDING_EXTERNAL_PROOF",
+  "internal_pipeline": {
+    "total_prospects": 10,
+    "active_negotiation_id": "SILENT_USER_0x31C",
+    "awaiting_nda_id": "SILENT_USER_0x99F",
+    "excluded_id": "SILENT_USER_0x89A",
+    "payout_address": "0xF7A353FAF6E6BD4732b0f234C656dBFDE53B0e91"
+  },
+  "verification_checkpoint": {
+    "internal_assets_verified": true,
+    "pipeline_state_machine_verified": true,
+    "payout_address_ownership_verified": true
+  },
+  "required_external_evidence": [
+    "client_ecdsa_or_eip712_signature",
+    "signed_nda_document",
+    "onchain_35000_usdt_transaction_hash"
+  ]
+}

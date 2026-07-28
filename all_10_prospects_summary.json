@@ -1,0 +1,66 @@
+{
+  "audit_timestamp": "2026-07-28T13:16:00Z",
+  "total_prospects_count": 10,
+  "prospects_list": [
+    {
+      "id": "SILENT_USER_0x31C",
+      "asset": "DAG Circuit",
+      "status": "ACTIVE_NEGOTIATION",
+      "intent": "HIGH"
+    },
+    {
+      "id": "SILENT_USER_0x94B",
+      "asset": "Sovereign Kernel",
+      "status": "AWAITING_SELECTION",
+      "intent": "MEDIUM"
+    },
+    {
+      "id": "SILENT_USER_0x102",
+      "asset": "Quantum Escrow Engine",
+      "status": "SILENT_VIEW",
+      "intent": "HIGH"
+    },
+    {
+      "id": "SILENT_USER_0x205",
+      "asset": "Zero-Knowledge Validator",
+      "status": "IDLE",
+      "intent": "LOW"
+    },
+    {
+      "id": "SILENT_USER_0x419",
+      "asset": "Mempool Hook Module",
+      "status": "SILENT_VIEW",
+      "intent": "MEDIUM"
+    },
+    {
+      "id": "SILENT_USER_0x550",
+      "asset": "Cross-Chain Relayer",
+      "status": "IDLE",
+      "intent": "LOW"
+    },
+    {
+      "id": "SILENT_USER_0x68E",
+      "asset": "Yield Strategy Bot",
+      "status": "SILENT_VIEW",
+      "intent": "HIGH"
+    },
+    {
+      "id": "SILENT_USER_0x77A",
+      "asset": "Flashloan Arbitrage Core",
+      "status": "IDLE",
+      "intent": "MEDIUM"
+    },
+    {
+      "id": "SILENT_USER_0x82B",
+      "asset": "Liquidity Router v2",
+      "status": "SILENT_VIEW",
+      "intent": "LOW"
+    },
+    {
+      "id": "SILENT_USER_0x99F",
+      "asset": "Sovereign Kernel (Enterprise)",
+      "status": "AWAITING_NDA",
+      "intent": "HIGH"
+    }
+  ]
+}
