@@ -1,0 +1,18 @@
+{
+  "$schema": "./schemas/silent.buyer.inspector.schema.json",
+  "inspection_target": {
+    "purpose": "Detect silent high-intent buyers without public reviews",
+    "privacy_level": "LOCAL_PERSONAL_ONLY",
+    "target_assets": ["7-Demons Logic", "Sovereign Kernel", "DAG Circuit"]
+  },
+  "filtering_rules": {
+    "public_review_submitted": false,
+    "min_silent_views": 3,
+    "high_value_target_accessed": true
+  },
+  "scoring_weights": {
+    "silent_access_frequency": 40,
+    "target_asset_relevance": 40,
+    "no_review_penalty_bypass": 20
+  }
+}
