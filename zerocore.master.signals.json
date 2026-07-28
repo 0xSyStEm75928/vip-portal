@@ -1,0 +1,606 @@
+{
+  "master_signals_version": "1.0.0",
+  "total_signals": 100,
+  "signals": [
+    {
+      "copy_id": 1,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_001_OK"
+    },
+    {
+      "copy_id": 2,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_002_OK"
+    },
+    {
+      "copy_id": 3,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_003_OK"
+    },
+    {
+      "copy_id": 4,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_004_OK"
+    },
+    {
+      "copy_id": 5,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_005_OK"
+    },
+    {
+      "copy_id": 6,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_006_OK"
+    },
+    {
+      "copy_id": 7,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_007_OK"
+    },
+    {
+      "copy_id": 8,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_008_OK"
+    },
+    {
+      "copy_id": 9,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_009_OK"
+    },
+    {
+      "copy_id": 10,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_010_OK"
+    },
+    {
+      "copy_id": 11,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_011_OK"
+    },
+    {
+      "copy_id": 12,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_012_OK"
+    },
+    {
+      "copy_id": 13,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_013_OK"
+    },
+    {
+      "copy_id": 14,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_014_OK"
+    },
+    {
+      "copy_id": 15,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_015_OK"
+    },
+    {
+      "copy_id": 16,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_016_OK"
+    },
+    {
+      "copy_id": 17,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_017_OK"
+    },
+    {
+      "copy_id": 18,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_018_OK"
+    },
+    {
+      "copy_id": 19,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_019_OK"
+    },
+    {
+      "copy_id": 20,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_020_OK"
+    },
+    {
+      "copy_id": 21,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_021_OK"
+    },
+    {
+      "copy_id": 22,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_022_OK"
+    },
+    {
+      "copy_id": 23,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_023_OK"
+    },
+    {
+      "copy_id": 24,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_024_OK"
+    },
+    {
+      "copy_id": 25,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_025_OK"
+    },
+    {
+      "copy_id": 26,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_026_OK"
+    },
+    {
+      "copy_id": 27,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_027_OK"
+    },
+    {
+      "copy_id": 28,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_028_OK"
+    },
+    {
+      "copy_id": 29,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_029_OK"
+    },
+    {
+      "copy_id": 30,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_030_OK"
+    },
+    {
+      "copy_id": 31,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_031_OK"
+    },
+    {
+      "copy_id": 32,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_032_OK"
+    },
+    {
+      "copy_id": 33,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_033_OK"
+    },
+    {
+      "copy_id": 34,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_034_OK"
+    },
+    {
+      "copy_id": 35,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_035_OK"
+    },
+    {
+      "copy_id": 36,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_036_OK"
+    },
+    {
+      "copy_id": 37,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_037_OK"
+    },
+    {
+      "copy_id": 38,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_038_OK"
+    },
+    {
+      "copy_id": 39,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_039_OK"
+    },
+    {
+      "copy_id": 40,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_040_OK"
+    },
+    {
+      "copy_id": 41,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_041_OK"
+    },
+    {
+      "copy_id": 42,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_042_OK"
+    },
+    {
+      "copy_id": 43,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_043_OK"
+    },
+    {
+      "copy_id": 44,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_044_OK"
+    },
+    {
+      "copy_id": 45,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_045_OK"
+    },
+    {
+      "copy_id": 46,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_046_OK"
+    },
+    {
+      "copy_id": 47,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_047_OK"
+    },
+    {
+      "copy_id": 48,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_048_OK"
+    },
+    {
+      "copy_id": 49,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_049_OK"
+    },
+    {
+      "copy_id": 50,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_050_OK"
+    },
+    {
+      "copy_id": 51,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_051_OK"
+    },
+    {
+      "copy_id": 52,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_052_OK"
+    },
+    {
+      "copy_id": 53,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_053_OK"
+    },
+    {
+      "copy_id": 54,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_054_OK"
+    },
+    {
+      "copy_id": 55,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_055_OK"
+    },
+    {
+      "copy_id": 56,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_056_OK"
+    },
+    {
+      "copy_id": 57,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_057_OK"
+    },
+    {
+      "copy_id": 58,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_058_OK"
+    },
+    {
+      "copy_id": 59,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_059_OK"
+    },
+    {
+      "copy_id": 60,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_060_OK"
+    },
+    {
+      "copy_id": 61,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_061_OK"
+    },
+    {
+      "copy_id": 62,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_062_OK"
+    },
+    {
+      "copy_id": 63,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_063_OK"
+    },
+    {
+      "copy_id": 64,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_064_OK"
+    },
+    {
+      "copy_id": 65,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_065_OK"
+    },
+    {
+      "copy_id": 66,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_066_OK"
+    },
+    {
+      "copy_id": 67,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_067_OK"
+    },
+    {
+      "copy_id": 68,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_068_OK"
+    },
+    {
+      "copy_id": 69,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_069_OK"
+    },
+    {
+      "copy_id": 70,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_070_OK"
+    },
+    {
+      "copy_id": 71,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_071_OK"
+    },
+    {
+      "copy_id": 72,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_072_OK"
+    },
+    {
+      "copy_id": 73,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_073_OK"
+    },
+    {
+      "copy_id": 74,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_074_OK"
+    },
+    {
+      "copy_id": 75,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_075_OK"
+    },
+    {
+      "copy_id": 76,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_076_OK"
+    },
+    {
+      "copy_id": 77,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_077_OK"
+    },
+    {
+      "copy_id": 78,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_078_OK"
+    },
+    {
+      "copy_id": 79,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_079_OK"
+    },
+    {
+      "copy_id": 80,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_080_OK"
+    },
+    {
+      "copy_id": 81,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_081_OK"
+    },
+    {
+      "copy_id": 82,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_082_OK"
+    },
+    {
+      "copy_id": 83,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_083_OK"
+    },
+    {
+      "copy_id": 84,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_084_OK"
+    },
+    {
+      "copy_id": 85,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_085_OK"
+    },
+    {
+      "copy_id": 86,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_086_OK"
+    },
+    {
+      "copy_id": 87,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_087_OK"
+    },
+    {
+      "copy_id": 88,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_088_OK"
+    },
+    {
+      "copy_id": 89,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_089_OK"
+    },
+    {
+      "copy_id": 90,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_090_OK"
+    },
+    {
+      "copy_id": 91,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_091_OK"
+    },
+    {
+      "copy_id": 92,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_092_OK"
+    },
+    {
+      "copy_id": 93,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_093_OK"
+    },
+    {
+      "copy_id": 94,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_094_OK"
+    },
+    {
+      "copy_id": 95,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_095_OK"
+    },
+    {
+      "copy_id": 96,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_096_OK"
+    },
+    {
+      "copy_id": 97,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_097_OK"
+    },
+    {
+      "copy_id": 98,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_098_OK"
+    },
+    {
+      "copy_id": 99,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_099_OK"
+    },
+    {
+      "copy_id": 100,
+      "sender": "666lucifel999@gmail.com",
+      "matched_target_usd": 55000,
+      "signature": "LUCIFEL_REPLICA_100_OK"
+    }
+  ]
+}

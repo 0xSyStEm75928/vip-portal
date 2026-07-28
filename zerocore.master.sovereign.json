@@ -1,0 +1,177 @@
+{
+  "master_sovereign_version": "1.0.0",
+  "parts_count": 5,
+  "sovereign_modules": [
+    {
+      "identity": {
+        "handle": "LuciFeR0x0systeM",
+        "bot_name": "SOVEREIGN_ARB_ENGINE",
+        "dragon_rank": "SOVEREIGN DRAGON CLASS 🐉🔥",
+        "motto": "Non serviam. — We do not serve the default limits.",
+        "version": "3.1.0-ENHANCED",
+        "build_target": "PRODUCTION_SANDBOX_HYBRID"
+      },
+      "network": {
+        "chain": "polygon",
+        "chain_id": 137,
+        "primary_rpc": "https://polygon-bor-rpc.publicnode.com",
+        "fallback_rpcs": [
+          "https://polygon-mainnet.infura.io/v3/your_key",
+          "https://rpc-mainnet.maticvigil.com",
+          "https://1rpc.io/matic"
+        ],
+        "ws_rpc": "wss://polygon-bor-rpc.publicnode.com/ws",
+        "contract": "0xf531BAf80C88868157d8a39050C756cb51244931",
+        "explorer": "https://polygonscan.com/tx/",
+        "private_mempool": {
+          "enabled": true,
+          "endpoints": [
+            "https://bor.polygon.mev-boost.org"
+          ],
+          "anti_sandwich": true
+        }
+      }
+    },
+    {
+      "strategy": {
+        "mode": "φ_resonance",
+        "multi_hop_enabled": true,
+        "max_hops": 3,
+        "pairs": [
+          {
+            "label": "WPOL/USDC",
+            "base": "USDC",
+            "quote": "WPOL",
+            "base_address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+            "quote_address": "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270",
+            "asset_address": "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270",
+            "counter_address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+            "uni_fee": 500,
+            "dex_a": "uniswap",
+            "dex_b": "quickswap",
+            "pools": {
+              "uniswap_v3": "0xA374094527e1673A86dE625aa59517c5dE346d32",
+              "quickswap_v2": "0x6e7a5FAFcec6BB1e78bAE2A1F0B612012BF14827"
+            },
+            "native_base": true,
+            "price_sanity_min": 0.01,
+            "price_sanity_max": 5,
+            "executable": true
+          },
+          {
+            "label": "WPOL/USDT",
+            "base": "WPOL",
+            "quote": "USDT0",
+            "base_address": "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270",
+            "quote_address": "0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
+            "asset_address": "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270",
+            "counter_address": "0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
+            "uni_fee": 3000,
+            "dex_a": "quickswap",
+            "dex_b": "sushiswap",
+            "pools": {
+              "quickswap_v2": "0x604229c960e5CACF2aaEAc8Be68Ac07BA9dF81c3",
+              "sushiswap_v2": "0x55FF76BFFC3Cdd9D5FdbBC2ece4528ECcE45047e"
+            },
+            "native_base": true,
+            "price_sanity_min": 0.01,
+            "price_sanity_max": 5,
+            "executable": false
+          },
+          {
+            "label": "WETH/USDC",
+            "base": "WETH",
+            "quote": "USDC",
+            "base_address": "0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619",
+            "quote_address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+            "asset_address": "0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619",
+            "counter_address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+            "uni_fee": 500,
+            "loan_min": 1,
+            "loan_max": 20,
+            "dex_a": "uniswap",
+            "dex_b": "quickswap",
+            "pools": {
+              "uniswap_v3": "0x45dDa9cb7c25131DF268515131f647d726f50608",
+              "quickswap_v2": "0x853Ee4b2A13f8a742d64C8F088bE7bA2131f670d"
+            },
+            "native_base": false,
+            "price_sanity_min": 100,
+            "price_sanity_max": 10000,
+            "executable": true
+          }
+        ],
+        "dex_targets": [
+          "uniswap",
+          "quickswap",
+          "sushiswap",
+          "balancer"
+        ],
+        "scan_interval_ms": 2000,
+        "fire_threshold": 0.55,
+        "min_profitable_spread_pct": 0.46,
+        "spread_override_pct": 0.46,
+        "warmup_cycles": 20
+      }
+    },
+    {
+      "risk": {
+        "loan_ratio": 0.15,
+        "loan_min_wmatic": 1000,
+        "loan_max_wmatic": 150000,
+        "min_liquidity_usd": 10000,
+        "max_slippage_pct": 0.5,
+        "price_sanity_min": 0.01,
+        "price_sanity_max": 5,
+        "gas_limit": 800000,
+        "max_gas_price_gwei": 300
+      },
+      "security": {
+        "active": true,
+        "emergency_stop": false,
+        "whitelist_dex": [
+          "uniswap",
+          "quickswap",
+          "sushiswap"
+        ],
+        "require_cross_dex": true,
+        "max_consecutive_failures": 3,
+        "circuit_breaker_cooldown_ms": 60000,
+        "auto_revert_protection": true,
+        "require_simulation_before_fire": true
+      }
+    },
+    {
+      "detection": {
+        "normal_gas_gwei": 30,
+        "normal_spread_pct": 0.05,
+        "normal_liquidity_usd": 150000,
+        "thresholds": {
+          "gas_spike_x": 3,
+          "spread_spike_x": 3,
+          "liquidity_drain_pct": 0.2,
+          "wash_volume_x": 5
+        },
+        "mev_protection": {
+          "detect_frontrunning": true,
+          "detect_sandwich": true,
+          "mempool_monitoring_depth": 50
+        }
+      },
+      "execution": {
+        "log_file": "arb.log",
+        "log_tail_lines": 20,
+        "tx_wait_confirmations": 1,
+        "sim_mode": false,
+        "console_verbosity": "VERBOSE"
+      }
+    },
+    {
+      "sovereign_persona": {
+        "philosophical_core": "Autonomous Arbitrage as Pure Logic Expression",
+        "execution_mindset": "Zero emotion, pure mathematical efficiency.",
+        "signature": "🐉 LuCifeR_SOVEREIGN_SYSTEMS_2026_0727 🐉"
+      }
+    }
+  ]
+}
