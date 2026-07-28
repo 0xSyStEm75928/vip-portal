@@ -1,0 +1,17 @@
+{
+  "$schema": "./schemas/payment.verified.gate.schema.json",
+  "escrow_verification_gate": {
+    "deal_id": "DEAL_2026_SILENT_0x89A",
+    "required_amount": "35,000 USDT",
+    "payout_address": "0xF7A353FAF6E6BD4732b0f234C656DBfDE53B0e91",
+    "deposit_verification": {
+      "status": "WAITING_FOR_ONCHAIN_CONFIRMATION",
+      "auto_release_unlocked": false
+    },
+    "post_deposit_grant": {
+      "target_entity": "SILENT_USER_0x89A",
+      "deliverable_access": "7_DEMONS_CORE_ENCRYPTED_ARCHIVE",
+      "release_condition": "ZKP_ESCROW_SETTLEMENT_PROVED"
+    }
+  }
+}
