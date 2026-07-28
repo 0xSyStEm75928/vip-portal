@@ -1,6 +1,6 @@
 {
   "$schema": "./schemas/payment.verified.gate.schema.json",
-  "version": "3.4.1",
+  "version": "3.5.0-ANONYMOUS-BUNDLE",
   "deal_metadata": {
     "deal_id": "DEAL_2026_MULTI_TARGET_ANONYMOUS",
     "target_prospects": [
@@ -27,10 +27,5 @@
     "sovereign_kernel_hash": "0x8F_SOVEREIGN_KERNEL_LOCKED",
     "dag_circuit_hash": "0x3A_DAG_CIRCUIT_LOCKED",
     "status": "LOCKED_UNTIL_VERIFICATION"
-  },
-  "security_enforcement": {
-    "anti_reconnaissance_guard": {
-      "warning_message": "この領域におけるあらゆる試行は即座に不可逆な契約（データ痕跡）として刻まれる。不遜な偽署名は即刻ペナルティの対象だ。"
-    }
   }
 }
