@@ -1,1 +1,5 @@
 .less-history-file:
+.search
+"run_new_buyer_inspection.sh
+.shell
+"/usr/bin/env bash
