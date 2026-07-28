@@ -1,74 +1,31 @@
 {
   "$schema": "./schemas/payment.verified.gate.schema.json",
-  "version": "3.4.0",
+  "version": "3.5.0-ANONYMOUS-BUNDLE",
   "deal_metadata": {
-    "deal_id": "DEAL_2026_ENTERPRISE_0x89A",
-    "total_value": "35000",
-    "currency": "USDT",
-    "payout_address": "0xF7A353FAF6E6BD4732b0f234C656dBFDE53B0e91",
-    "strategy": "REVERSE_VALUE_UNLOCK"
-  },
-  "client_signature_inspection": {
-    "client_public_key": "0x_AWAITING_CLIENT_PUBLIC_KEY",
-    "signer_address": "0x_AWAITING_SIGNER_ADDRESS",
-    "signature_payload": {
-      "message": "AGREE_TO_ESCROW_GATE_35000_USDT",
-      "nonce": "0x89A_2026_NONCE",
-      "timestamp": null,
-      "raw_signature": "0x_AWAITING_RAW_SIGNATURE_HASH"
-    },
-    "verification_status": {
-      "ecdsa_verified": false,
-      "eip712_domain_matched": false,
-      "signer_authorized_by_contract": false,
-      "overall_signature_valid": false
-    }
+    "deal_id": "DEAL_2026_MULTI_TARGET_ANONYMOUS",
+    "target_prospects": [
+      {
+        "prospect_id": "SILENT_USER_0x94B",
+        "interested_asset": "Sovereign Kernel",
+        "gate_type": "ENTERPRISE_NDA_OR_SIG"
+      },
+      {
+        "prospect_id": "SILENT_USER_0x31C",
+        "interested_asset": "DAG Circuit",
+        "gate_type": "CUSTOM_PAYLOAD_HANDSHAKE"
+      }
+    ],
+    "privacy_protocol": "STRICT_ANONYMOUS_ZERO_KNOWLEDGE",
+    "payout_address": "0xF7A353FAF6E6BD4732b0f234C656dBFDE53B0e91"
   },
   "feedback_prompt": {
-    "question_to_client": "署名データの提出が困難な場合、完全なNDA（秘密保持契約）の締結を前提とした別ルートでの進行も可能です。",
-    "response_from_host": "法的保護を優先される場合は、双方の身元担保および機密保持を交わした上での先行開示に応じます。意向をお聞かせください。",
-    "status": "AWAITING_NDA_OR_SIGNATURE_SELECTION"
+    "question_to_client": "SILENT_USER_0x94B / SILENT_USER_0x31C 専用の一括アノニマス取引ゲートを開放しました。",
+    "response_from_host": "双方の身元・足跡を完全に秘匿したまま、暗号検証またはNDA締結による段階的バリュー開放に対応します。希望の署名ペイロードまたは通知を送信してください。",
+    "status": "AWAITING_ANONYMOUS_HANDSHAKE"
   },
   "value_anchor": {
-    "final_deliverable_hash": "0x7F_CORE_ENTERPRISE_VALUE_LOCKED",
-    "status": "LOCKED_UNTIL_STEP_12"
-  },
-  "escrow_verification_gate": {
-    "auto_release_enabled": true,
-    "status": "AWAITING_DEPOSIT_OR_SIGNATURE",
-    "mempool_detection": {
-      "enabled": true,
-      "pre_signal_trigger": "PENDING_IN_MEMPOOL",
-      "action_on_detect": "FLAG_INCOMING_DEPOSIT"
-    },
-    "verification_rules": {
-      "require_exact_amount": true,
-      "min_confirmations": 12,
-      "timeout_action": "REVERT"
-    }
-  },
-  "progression_gates": {
-    "current_step": 0,
-    "total_steps": 12,
-    "unlock_schedule": [
-      {
-        "step": 1,
-        "trigger": "VALID_SIGNATURE_OR_MEMPOOL",
-        "unlocked_scope": "READ_ACCESS_METADATA_AND_PREVIEW",
-        "description": "署名検証完了または入金検知による権限初期開放"
-      },
-      {
-        "step": 6,
-        "trigger": "CONFIRMATION_6_OF_12",
-        "unlocked_scope": "PARTIAL_AUDIT_LOGS",
-        "description": "中間確認・監査ログ部分開放"
-      },
-      {
-        "step": 12,
-        "trigger": "FINAL_12_CONFIRMATIONS",
-        "unlocked_scope": "FULL_VALUE_RELEASE",
-        "description": "12確認完了・全バリュー開放＆取引完了"
-      }
-    ]
+    "sovereign_kernel_hash": "0x8F_SOVEREIGN_KERNEL_LOCKED",
+    "dag_circuit_hash": "0x3A_DAG_CIRCUIT_LOCKED",
+    "status": "LOCKED_UNTIL_VERIFICATION"
   }
 }
