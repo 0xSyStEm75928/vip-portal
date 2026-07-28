@@ -1,28 +1,16 @@
 {
   "$schema": "./schemas/payment.verified.gate.schema.json",
-  "version": "3.5.0-ANONYMOUS-BUNDLE",
+  "version": "3.5.0-ANONYMOUS-GATE",
   "deal_metadata": {
-    "deal_id": "DEAL_2026_MULTI_TARGET_ANONYMOUS",
-    "target_prospects": [
-      {
-        "prospect_id": "SILENT_USER_0x94B",
-        "interested_asset": "Sovereign Kernel",
-        "gate_type": "ENTERPRISE_NDA_OR_SIG"
-      },
-      {
-        "prospect_id": "SILENT_USER_0x31C",
-        "interested_asset": "DAG Circuit",
-        "gate_type": "CUSTOM_PAYLOAD_HANDSHAKE"
-      }
-    ],
+    "deal_id": "DEAL_2026_ANONYMOUS_VERIFICATION_GATE",
+    "target_scope": "PUBLIC_ANONYMOUS_CLIENTS",
     "privacy_protocol": "STRICT_ANONYMOUS_ZERO_KNOWLEDGE",
     "payout_address": "0xF7A353FAF6E6BD4732b0f234C656dBFDE53B0e91"
   },
   "feedback_prompt": {
-    "question_to_client": "契約は世を治める礎なり。提示されたNDA文書（Trading Bot Setup）を確認し、契約に従い署名または同意の意向を示されよ。",
-    "response_from_host": "ご要望に合わせて安全な手続きをご案内いたします。ご都合の良い進め方をご選択ください。",
-    "status": "AWAITING_CUSTOM_NDA_SIGNATURE",
-    "nda_document_url": "https://github.com/0xSyStEm75928/BELPHEGOR_v.old/blob/main/NDA_AGREEMENT.md"
+    "question_to_client": "本ゲートは匿名アクセス・事前検証（NDAまたは暗号署名）用に設置された公開枠組みです。",
+    "response_from_host": "ご要望に応じた安全な手続き（署名検証またはNDA締結）をご案内いたします。提示資料（NDA_AGREEMENT.md）をご確認の上、必要な操作を行ってください。",
+    "status": "AWAITING_ANONYMOUS_VERIFICATION"
   },
   "value_anchor": {
     "sovereign_kernel_hash": "0x8F_SOVEREIGN_KERNEL_LOCKED",
