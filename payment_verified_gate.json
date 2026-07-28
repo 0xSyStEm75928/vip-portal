@@ -1,6 +1,6 @@
 {
   "$schema": "./schemas/payment.verified.gate.schema.json",
-  "version": "3.5.0-ANONYMOUS-BUNDLE",
+  "version": "3.6.0-DEMON-LEGAL-ANON",
   "deal_metadata": {
     "deal_id": "DEAL_2026_MULTI_TARGET_ANONYMOUS",
     "target_prospects": [
@@ -19,13 +19,18 @@
     "payout_address": "0xF7A353FAF6E6BD4732b0f234C656dBFDE53B0e91"
   },
   "feedback_prompt": {
-    "question_to_client": "SILENT_USER_0x94B / SILENT_USER_0x31C 専用の一括アノニマス取引ゲートを開放しました。",
-    "response_from_host": "双方の身元・足跡を完全に秘匿したまま、暗号検証またはNDA締結による段階的バリュー開放に対応します。希望の署名ペイロードまたは通知を送信してください。",
-    "status": "AWAITING_ANONYMOUS_HANDSHAKE"
+    "question_to_client": "SILENT_USER_0x94B、SILENT_USER_0x31C。逃げ道は用意してやった。『暗号署名』による魂の開示か、『血判（NDA）』による法的束縛か。選べ。",
+    "response_from_host": "我々が求めるのは完璧な履行のみ。匿名という闇の盾を与えてやる代わりに、契約に違反した瞬間に法とコードの両面から逃げ場を失うと知れ。意向を示せ。",
+    "status": "AWAITING_DEMONIC_CONTRACT_SELECTION"
   },
   "value_anchor": {
     "sovereign_kernel_hash": "0x8F_SOVEREIGN_KERNEL_LOCKED",
     "dag_circuit_hash": "0x3A_DAG_CIRCUIT_LOCKED",
     "status": "LOCKED_UNTIL_VERIFICATION"
+  },
+  "security_enforcement": {
+    "anti_reconnaissance_guard": {
+      "warning_message": "この領域におけるあらゆる試行は即座に不可逆な契約（データ痕跡）として刻まれる。不遜な偽署名は即刻ペナルティの対象だ。"
+    }
   }
 }
