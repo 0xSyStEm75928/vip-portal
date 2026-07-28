@@ -2,16 +2,20 @@
   "$schema": "./schemas/payment.verified.gate.schema.json",
   "escrow_verification_gate": {
     "deal_id": "DEAL_2026_SILENT_0x89A",
-    "required_amount": "35,000 USDT",
-    "payout_address": "0xF7A353FAF6E6BD4732b0f234C656DBfDE53B0e91",
-    "deposit_verification": {
-      "status": "WAITING_FOR_ONCHAIN_CONFIRMATION",
-      "auto_release_unlocked": false
+    "required_amount": "35000",
+    "currency": "USDT",
+    "payout_address": "0xF7A353FAF6E6BD4732b0f234C656dBFDE53B0e91",
+    "auto_release_enabled": true,
+    "status": "AWAITING_DEPOSIT",
+    "mempool_detection": {
+      "enabled": true,
+      "pre_signal_trigger": "PENDING_IN_MEMPOOL",
+      "action_on_detect": "FLAG_INCOMING_DEPOSIT"
     },
-    "post_deposit_grant": {
-      "target_entity": "SILENT_USER_0x89A",
-      "deliverable_access": "7_DEMONS_CORE_ENCRYPTED_ARCHIVE",
-      "release_condition": "ZKP_ESCROW_SETTLEMENT_PROVED"
+    "verification_rules": {
+      "require_exact_amount": true,
+      "min_confirmations": 12,
+      "timeout_action": "REVERT"
     }
   }
 }
