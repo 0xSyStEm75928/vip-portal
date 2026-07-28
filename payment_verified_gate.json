@@ -1,6 +1,6 @@
 {
   "$schema": "./schemas/payment.verified.gate.schema.json",
-  "version": "3.2.0",
+  "version": "3.2.1",
   "deal_metadata": {
     "deal_id": "DEAL_2026_ENTERPRISE_0x89A",
     "total_value": "35000",
@@ -9,9 +9,9 @@
     "strategy": "REVERSE_VALUE_UNLOCK"
   },
   "feedback_prompt": {
-    "question_to_client": "いきなりの全額着金リスクへの懸念を考慮し、事前ハンドシェイク（接続テスト）フェーズを開放しました。",
-    "hypothetical_cause": "全額送金前の動作確認（微額テストまたは署名）により Step 1 の閲覧権限が解禁されます。",
-    "status": "HANDSHAKE_PHASE_OPEN"
+    "question_to_client": "解除条件・ロック構造自体の変更や緩和は行いません。",
+    "response_from_host": "ただし、双方の安全性を担保した上での『ハンドシェイク（事前接続確認）の具体的手段』については検討・調整に応じます。",
+    "status": "AWAITING_HANDSHAKE_PROPOSAL"
   },
   "value_anchor": {
     "final_deliverable_hash": "0x7F_CORE_ENTERPRISE_VALUE_LOCKED",
