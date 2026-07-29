@@ -1,0 +1,13 @@
+{
+  "backup_point_version": "1.0.0",
+  "generated_at": "2026-07-28T15:08:19Z",
+  "checkpoint_type": "RELEASE_CANDIDATE",
+  "includes": [
+    "core",
+    "runtime",
+    "configuration",
+    "security",
+    "distribution"
+  ],
+  "status": "CREATED"
+}

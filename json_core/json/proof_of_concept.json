@@ -1,0 +1,37 @@
+{
+  "report_metadata": {
+    "target": "example_system",
+    "test_environment": "Sandbox / Isolated Pipeline",
+    "timestamp": "2026-07-27T04:24:00Z"
+  },
+  "pipeline_execution": {
+    "execution_id": "EP_ED_RUN_001",
+    "status": "COMPLETED",
+    "schema_validation": "PASSED"
+  },
+  "domain_validation_summary": {
+    "total_cases": 2,
+    "normal_case": {
+      "input": {
+        "latency_x": 250,
+        "status_y": "PASS"
+      },
+      "result": {
+        "x_in_domain": true,
+        "y_in_domain": true,
+        "overall_pass": true
+      }
+    },
+    "boundary_case": {
+      "input": {
+        "latency_x": 999,
+        "status_y": "UNKNOWN_STATUS"
+      },
+      "result": {
+        "x_in_domain": false,
+        "y_in_domain": false,
+        "overall_pass": false
+      }
+    }
+  }
+}

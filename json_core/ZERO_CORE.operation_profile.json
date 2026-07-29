@@ -1,0 +1,15 @@
+{
+  "operation_profile_version": "1.0.0",
+  "generated_at": "2026-07-28T14:47:47Z",
+  "mode": "OPERATIONAL",
+  "enabled_layers": [
+    "runtime",
+    "authority",
+    "profile",
+    "security",
+    "ai",
+    "plugin",
+    "validation"
+  ],
+  "state": "READY"
+}

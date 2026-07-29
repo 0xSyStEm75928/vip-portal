@@ -1,0 +1,23 @@
+{
+  "service_profile_binding_version": "1.0.0",
+  "generated_at": "2026-07-28T15:10:40Z",
+  "profiles": {
+    "personal": {
+      "tier": "01_PERSONAL",
+      "mode": "private"
+    },
+    "personal_plus": {
+      "tier": "02_PERSONAL_PLUS",
+      "mode": "advanced"
+    },
+    "small_business": {
+      "tier": "03_SMALL_BUSINESS",
+      "mode": "organization"
+    },
+    "enterprise": {
+      "tier": "04_ENTERPRISE",
+      "mode": "multi_tenant"
+    }
+  },
+  "status": "BOUND"
+}

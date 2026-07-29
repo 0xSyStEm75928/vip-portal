@@ -1,0 +1,162 @@
+{
+  "next_phase_protocol": {
+    "execution_status": "MONITORING_RESPONSE",
+    "target_platform": "HackerOne / Coinbase Security",
+    "action_items": [
+      {
+        "step": 1,
+        "task": "Triage_Status_Check",
+        "description": "提出済みレポートのステータス変更（New -> Triaged / Needs More Info）を監視"
+      },
+      {
+        "step": 2,
+        "task": "Signal_Management",
+        "description": "トライアル数（残り4回）の保持および有効な概念実証（PoC）によるSignalスコア（>= 1.0）の安定化"
+      },
+      {
+        "step": 3,
+        "task": "Target_Pivot",
+        "description": "401/403応答を回避し、200 OKが取れるBOLA / IDOR / Mass Assignmentロジックへのシフト"
+      }
+    ],
+    "verification_pipeline": {
+      "cui_recon": "httpx / chaos-db によるアクティブターゲット抽出",
+      "gui_triage": "gowitness による視覚的アクティブ判定ギャラリー構築",
+      "payload_focus": "GhostWindow (UI Redress) & Business Logic Bypass"
+    }
+  }
+}
+{
+  "readiness_check": {
+    "target_scope": {
+      "status": "UNCONFIRMED",
+      "question": "検証対象（Target Domain/Scope）は公式のバグバウンティ対象（In-Scope）として確定していますか？"
+    },
+    "proof_of_concept": {
+      "status": "PENDING_VERIFICATION",
+      "question": "認可迂回または状態変更（HTTP 200 OK等の成功レスポンス）を再現・確認できていますか？"
+    },
+    "report_strategy": {
+      "status": "IN_PROGRESS",
+      "question": "提出時に添付するCVSS評価および実証手順（Steps to Reproduce）の記述準備は完了していますか？"
+    }
+  }
+}
+{
+  "hackerone_ineligible_criteria_reference": {
+    "source": "HackerOne Core Policy - Major Ineligible Findings",
+    "critical_exclusions": [
+      {
+        "category": "Theoretical / Non-Impact UI Redress",
+        "clause": "Clickjacking on pages without sensitive actions",
+        "implication": "Must demonstrate actual state-changing operations (e.g., account takeover, unauthorized transfer) to be eligible."
+      },
+      {
+        "category": "Configuration Best Practices",
+        "clause": "Missing CSP headers, SSL/TLS flaws, missing HttpOnly flags",
+        "implication": "Informational/N/A unless directly chained with a high-impact vulnerability."
+      },
+      {
+        "category": "Unauthenticated/Unverified Scenarios",
+        "clause": "Self-XSS, theoretical race conditions, software version disclosure",
+        "implication": "Automatically closed as N/A without a functional PoC achieving 200 OK or state change."
+      }
+    ],
+    "actionable_takeaway": "Focus strictly on business logic bypasses (BOLA/IDOR/Mass Assignment) and high-impact UI Redress with clear impact proofs."
+  }
+}
+{
+  "logic_shift_phase": {
+    "coinbase_status": "SUBMITTED_AWAITING_REVIEW",
+    "next_logic_strategy": {
+      "focus": "Business Logic & Authorization Flaws (BOLA/IDOR/Mass Assignment)",
+      "target_profile": "OKG (OKX) / Web3 API Endpoints",
+      "action": "Pivot from purely visual UI redress to state-changing API parameter manipulation with 200 OK responses."
+    }
+  }
+}
+{
+  "target_pivot_telegram_wallet": {
+    "program_name": "Wallet on Telegram (HackerOne)",
+    "scope_url": "t.me/wallet",
+    "mandatory_header": "X-HackerOne-Research: [YOUR_H1_USERNAME]",
+    "focus_vectors": [
+      "Telegram WebApp initData Signature Bypass (BOLA/IDOR)",
+      "TON Space Recovery Email Parameter Tampering",
+      "Transaction / Swap Logic Flaws (Parameter Injection)"
+    ]
+  }
+}
+{
+  "stream_calculation_config": {
+    "execution_type": "jq_stream_indexed",
+    "target_pipeline": "Decision_Tree_Validation",
+    "command_reference": "cat input.json | jq -s -f pipeline_stream_calculator.jq",
+    "purpose": "Safe trace calculation of inputs and state transitions without payload execution"
+  }
+}
+{
+  "local_stream_test_result": {
+    "execution_status": "SUCCESS",
+    "script_ref": "test_stream.sh",
+    "total_records": 4,
+    "summary": {
+      "passed_count": 3,
+      "flagged_count": 1
+    },
+    "detected_anomalies": [
+      {
+        "id": 103,
+        "step": "validation",
+        "status": "FLAGGED",
+        "delay_ms": 300,
+        "note": "Latency threshold exceeded (>100ms)"
+      }
+    ]
+  }
+}
+{
+  "metrics_engine_config": {
+    "module": "metrics_calculator.py",
+    "focus": "Real-time stream metrics & statistical latency analysis (P95/P99)",
+    "remembered_future_modules": [
+      "2: Multi-thread Parallel Processing",
+      "3: Dynamic Anomaly Detection & Auto Classification"
+    ]
+  }
+}
+{
+  "stream_metrics_execution_result": {
+    "status": "SUCCESS",
+    "engine": "metrics_calculator.py (Standard Lib Native)",
+    "computed_metrics": {
+      "total_records": 4,
+      "avg_latency_ms": 91.25,
+      "max_latency_ms": 300,
+      "p95_ms": 261.75,
+      "p99_ms": 292.35,
+      "flagged_count": 1
+    }
+  }
+}
+{
+  "strict_calculator_test_result": {
+    "status": "SUCCESS",
+    "engine": "strict_override_calculator.py",
+    "total_lines": 4,
+    "valid_records": 2,
+    "rejected_records": 2,
+    "reasons_handled": [
+      "INVALID_STATUS_VALUE",
+      "TYPE_MISMATCH_STRING_ID"
+    ],
+    "verification": "PASSED_STRICT_SCHEMA_ENFORCEMENT"
+  }
+}
+{
+  "zeroday_course_definition": {
+    "concept": "Lucifuge-Style High Density Payload & Time Gap Capture",
+    "definition": "Structuring transient execution delays and overstuffed parameters that mimic valid 'PASS' responses into a verifiable zero-day attack vector.",
+    "bounty_reporting_strategy": "Present raw calculations, standard-compliant logs, and tree-branching evidence to prove logic failure prior to patch."
+  }
+}

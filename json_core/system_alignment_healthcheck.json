@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-07-29T10:09:15.488509+00:00",
+  "source": "json_core/system_alignment_bundle.json",
+  "checks": [
+    {
+      "layer": "LOWER_LAYER",
+      "exists": true
+    },
+    {
+      "layer": "MIDDLE_LAYER",
+      "exists": true
+    },
+    {
+      "layer": "UPPER_LAYER",
+      "exists": true
+    }
+  ],
+  "dag": {
+    "acyclic": true,
+    "rebuildable": true
+  },
+  "status": "HEALTHY",
+  "next": "WAIT_FOR_EVENT"
+}

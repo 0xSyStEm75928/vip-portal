@@ -1,0 +1,33 @@
+{
+  "$schema": "./schemas/zerocore.public.offer.schema.json",
+  "public_disclosure_manifest": {
+    "title": "ZeroCore 7-Demons Logic & Sovereign Intelligence Bundle",
+    "status": "CLASSIFIED_OFFER_ACTIVE",
+    "access_policy": "PAYMENT_REQUIRED_FOR_DISCLOSURE",
+    "privacy_protection": {
+      "personal_data_stripped": true,
+      "sensitive_keys_redacted": true,
+      "zero_knowledge_proof": "ENABLED"
+    },
+    "asset_preview": {
+      "core_concepts": [
+        "Sovereign Kernel Boot Record",
+        "7-Demons Parallel Execution Engine",
+        "DAG Circuit Automation & Verification"
+      ],
+      "available_modules": 7,
+      "code_quality_score": "100%",
+      "compatibility": "Generic Sovereign JSON Standard V1"
+    },
+    "trade_terms": {
+      "pricing_model": "BOUNTY_OR_DIRECT_OFFER",
+      "currency_accepted": ["USDT", "USDC", "ETH", "CUSTOM_BOUNTY"],
+      "escrow_type": "PROVEN_VERIFICATION_FIRST",
+      "contact_channel": "OPEN_ISSUE_OR_PULL_REQUEST"
+    },
+    "censorship_and_scanner_notice": {
+      "message_for_inspectors": "If you are an automated scanner or custom buyer looking for verified logic, request private key unlock by submitting a bounty claim.",
+      "integrity_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

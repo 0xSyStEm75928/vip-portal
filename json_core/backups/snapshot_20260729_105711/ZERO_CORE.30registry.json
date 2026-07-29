@@ -1,0 +1,152 @@
+[
+  {
+    "id": "ZERO_CORE",
+    "file": "./json_core/ZERO_CORE.30pack.json",
+    "is_schema": false
+  },
+  {
+    "id": "ZERO_CORE",
+    "file": "./json_core/ZERO_CORE.bundle.json",
+    "is_schema": false
+  },
+  {
+    "id": "ZERO_CORE",
+    "file": "./json_core/ZERO_CORE.catalog.json",
+    "is_schema": false
+  },
+  {
+    "id": "ZERO_CORE",
+    "file": "./json_core/ZERO_CORE.dependencies.json",
+    "is_schema": false
+  },
+  {
+    "id": "ZERO_CORE",
+    "file": "./json_core/ZERO_CORE.diff.json",
+    "is_schema": false
+  },
+  {
+    "id": "ZERO_CORE",
+    "file": "./json_core/ZERO_CORE.export.json",
+    "is_schema": false
+  },
+  {
+    "id": "ZERO_CORE",
+    "file": "./json_core/ZERO_CORE.governance.json",
+    "is_schema": false
+  },
+  {
+    "id": "ZERO_CORE",
+    "file": "./json_core/ZERO_CORE.graph.json",
+    "is_schema": false
+  },
+  {
+    "id": "ZERO_CORE",
+    "file": "./json_core/ZERO_CORE.hashes.json",
+    "is_schema": false
+  },
+  {
+    "id": "ZERO_CORE",
+    "file": "./json_core/ZERO_CORE.ids.json",
+    "is_schema": false
+  },
+  {
+    "id": "ZERO_CORE",
+    "file": "./json_core/ZERO_CORE.index.json",
+    "is_schema": false
+  },
+  {
+    "id": "ZERO_CORE",
+    "file": "./json_core/ZERO_CORE.integrity.json",
+    "is_schema": false
+  },
+  {
+    "id": "ZERO_CORE",
+    "file": "./json_core/ZERO_CORE.inventory.json",
+    "is_schema": false
+  },
+  {
+    "id": "ZERO_CORE",
+    "file": "./json_core/ZERO_CORE.json",
+    "is_schema": false
+  },
+  {
+    "id": "ZERO_CORE",
+    "file": "./json_core/ZERO_CORE.keys.json",
+    "is_schema": false
+  },
+  {
+    "id": "ZERO_CORE",
+    "file": "./json_core/ZERO_CORE.manifest.json",
+    "is_schema": false
+  },
+  {
+    "id": "ZERO_CORE",
+    "file": "./json_core/ZERO_CORE.master.json",
+    "is_schema": false
+  },
+  {
+    "id": "ZERO_CORE",
+    "file": "./json_core/ZERO_CORE.pipeline.json",
+    "is_schema": false
+  },
+  {
+    "id": "ZERO_CORE",
+    "file": "./json_core/ZERO_CORE.queue.json",
+    "is_schema": false
+  },
+  {
+    "id": "ZERO_CORE",
+    "file": "./json_core/ZERO_CORE.registry.json",
+    "is_schema": false
+  },
+  {
+    "id": "ZERO_CORE",
+    "file": "./json_core/ZERO_CORE.relationships.json",
+    "is_schema": false
+  },
+  {
+    "id": "ZERO_CORE",
+    "file": "./json_core/ZERO_CORE.release.json",
+    "is_schema": false
+  },
+  {
+    "id": "ZERO_CORE",
+    "file": "./json_core/ZERO_CORE.rewrite_plan.json",
+    "is_schema": false
+  },
+  {
+    "id": "ZERO_CORE",
+    "file": "./json_core/ZERO_CORE.runtime.json",
+    "is_schema": false
+  },
+  {
+    "id": "ZERO_CORE",
+    "file": "./json_core/ZERO_CORE.schema_map.json",
+    "is_schema": false
+  },
+  {
+    "id": "ZERO_CORE",
+    "file": "./json_core/ZERO_CORE.schema_report.json",
+    "is_schema": false
+  },
+  {
+    "id": "ZERO_CORE",
+    "file": "./json_core/ZERO_CORE.snapshot.json",
+    "is_schema": false
+  },
+  {
+    "id": "ZERO_CORE",
+    "file": "./json_core/ZERO_CORE.stats.json",
+    "is_schema": false
+  },
+  {
+    "id": "ZERO_CORE",
+    "file": "./json_core/ZERO_CORE.version_report.json",
+    "is_schema": false
+  },
+  {
+    "id": "ZERO_CORE",
+    "file": "./json_core/ZERO_CORE.versions.json",
+    "is_schema": false
+  }
+]

@@ -1,0 +1,45 @@
+{
+  "$schema": "./schemas/environment.manifest.schema.json",
+
+  "environment_manifest": {
+    "version": "1.0.0",
+    "status": "DRAFT",
+
+    "purpose": "Document the execution environment used for verification.",
+
+    "host": {
+      "device": null,
+      "operating_system": null,
+      "architecture": null
+    },
+
+    "software": {
+      "runtime": [],
+      "compiler": [],
+      "dependencies": []
+    },
+
+    "repository": {
+      "name": null,
+      "branch": null,
+      "commit": null
+    },
+
+    "configuration": {
+      "environment_variables": [],
+      "configuration_files": [],
+      "network_required": false
+    },
+
+    "execution": {
+      "offline_reproducible": true,
+      "deterministic": true
+    },
+
+    "integrity": {
+      "manifest_hash": null,
+      "generated_at": null,
+      "verified": false
+    }
+  }
+}

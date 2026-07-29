@@ -1,0 +1,12 @@
+{
+  "change_control_version": "1.0.0",
+  "generated_at": "2026-07-28T15:12:32Z",
+  "rules": [
+    "review_before_change",
+    "backup_before_update",
+    "audit_after_update",
+    "version_increment_required"
+  ],
+  "mode": "STRICT",
+  "status": "ENABLED"
+}

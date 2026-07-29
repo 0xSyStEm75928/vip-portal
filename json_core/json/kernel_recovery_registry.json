@@ -1,0 +1,66 @@
+{
+  "$schema": "./schemas/kernel.recovery.registry.schema.json",
+
+  "kernel_recovery_registry": {
+    "version": "1.0.0",
+    "status": "ACTIVE",
+
+    "purpose": "Recovery registry for restoring ZeroCore kernel state after runtime failures.",
+
+    "recovery_policy": {
+      "automatic_recovery": true,
+      "checkpoint_required": true,
+      "verify_snapshot": true,
+      "verify_hash": true,
+      "audit_recovery": true
+    },
+
+    "recovery_levels": [
+      {
+        "level": 1,
+        "name": "SERVICE_RESTART",
+        "description": "Restart affected runtime service."
+      },
+      {
+        "level": 2,
+        "name": "MODULE_RELOAD",
+        "description": "Reload affected kernel module."
+      },
+      {
+        "level": 3,
+        "name": "CHECKPOINT_RESTORE",
+        "description": "Restore latest verified checkpoint."
+      },
+      {
+        "level": 4,
+        "name": "FULL_KERNEL_RECOVERY",
+        "description": "Rebuild kernel state from verified registries."
+      }
+    ],
+
+    "recovery_history": [
+      {
+        "recovery_id": null,
+        "started_at": null,
+        "completed_at": null,
+        "trigger": null,
+        "level": null,
+        "result": null,
+        "checkpoint_id": null
+      }
+    ],
+
+    "statistics": {
+      "total_recoveries": 0,
+      "successful": 0,
+      "failed": 0,
+      "last_recovery": null
+    },
+
+    "integrity": {
+      "registry_hash": null,
+      "validated": false,
+      "last_update": null
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "$schema": "./schemas/agent.memory.index.schema.json",
+
+  "agent_memory_index": {
+    "version": "1.0.0",
+    "status": "ACTIVE",
+
+    "purpose": "Semantic memory index for AI agents operating on ZeroCore.",
+
+    "memory_domains": [
+      {
+        "domain": "runtime",
+        "priority": 100,
+        "registry": "runtime_manifest.json"
+      },
+      {
+        "domain": "contracts",
+        "priority": 95,
+        "registry": "contract_registry.json"
+      },
+      {
+        "domain": "events",
+        "priority": 90,
+        "registry": "event_bus.json"
+      },
+      {
+        "domain": "audit",
+        "priority": 90,
+        "registry": "audit_chain.json"
+      },
+      {
+        "domain": "business",
+        "priority": 80,
+        "registry": "business_registry.json"
+      },
+      {
+        "domain": "evidence",
+        "priority": 85,
+        "registry": "evidence_hash_registry.json"
+      },
+      {
+        "domain": "timeline",
+        "priority": 80,
+        "registry": "timeline_of_events.json"
+      }
+    ],
+
+    "lookup_policy": {
+      "schema_validation": true,
+      "hash_validation": true,
+      "prefer_latest": true,
+      "allow_fallback": true
+    },
+
+    "reasoning": {
+      "append_only_memory": true,
+      "traceable_references": true,
+      "cross_registry_resolution": true
+    },
+
+    "statistics": {
+      "indexed_domains": 7,
+      "last_indexed": null,
+      "memory_hash": null
+    }
+  }
+}

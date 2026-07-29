@@ -1,0 +1,33 @@
+{
+  "$schema": "./schemas/lifecycle.gate.schema.json",
+  "version": "1.0.0",
+  "updated_at": "2026-07-30T02:44:00+09:00",
+  "active_gates": [
+    {
+      "target_id": "TARGET_INIT_001",
+      "gate_status": "PASS",
+      "verified_rules": [
+        "evidence_required",
+        "no_delivery_before_payment"
+      ],
+      "checked_at": "2026-07-29T19:05:43.509572+09:00"
+    },
+    {
+      "target_id": "TEST_CUSTOMER_001",
+      "gate_status": "PASS",
+      "verified_rules": [
+        "evidence_required",
+        "no_delivery_before_payment"
+      ],
+      "checked_at": "2026-07-29T19:11:12.442370+09:00"
+    }
+  ],
+  "current_customer": {
+    "id": "CUSTOMER_001",
+    "verified": true,
+    "updated_at": "2026-07-30T02:42:00+09:00"
+  },
+  "dag_node": "N3_GATE",
+  "target_id": "CUSTOMER_001",
+  "chain_status": "SYNCED_VIA_DAG"
+}

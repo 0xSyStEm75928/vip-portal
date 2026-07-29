@@ -1,0 +1,98 @@
+{
+  "record_version": "1.0.0-OUTREACH_RECORD",
+  "recorded_at": "2026-07-29T03:00:00Z",
+  "operational_phase": "AWAITING_CUSTOMER_SIGNALS",
+  "policy": "3-STAGE_SIGNAL_EVALUATION",
+
+  "active_targets_summary": {
+    "total_slots": 5,
+    "outreach_active": 2,
+    "standby_queued": 3
+  },
+
+  "customers_registry": [
+    {
+      "customer_id": "SILENT_USER_0x31C",
+      "deal_id": "DEAL_2026_MULTI_TARGET_ANONYMOUS",
+      "target_type": "CRYPTO_DIRECT_OR_VIP",
+      "signal_status": {
+        "level_1_communication": "OUTREACH_SENT_A_B_C_OPTION",
+        "level_2_commitment": "PENDING",
+        "level_3_payment": "UNVERIFIED",
+        "execution_ready": false
+      },
+      "outreach_detail": {
+        "options_offered": ["A: Direct TX Hash", "B: Test Params", "C: Defer"],
+        "due_date": "2026-07-29T03:15:00Z",
+        "action_required": "OPTION_A_B_OR_C"
+      }
+    },
+    {
+      "customer_id": "CUSTOMER_001",
+      "tenant_id": "TENANT_CUSTOMER_001",
+      "target_type": "CORPORATE_OR_STANDARD",
+      "signal_status": {
+        "level_1_communication": "OUTREACH_SENT_NUMERIC_OPTION",
+        "level_2_commitment": "NDA_IN_PROGRESS",
+        "level_3_payment": "UNVERIFIED",
+        "execution_ready": false
+      },
+      "outreach_detail": {
+        "options_offered": ["1: Estimate/Spec", "2: NDA/Review", "3: Reschedule"],
+        "due_date": "2026-07-29T18:00:00Z",
+        "action_required": "NUMERIC_RESPONSE_1_2_OR_3"
+      }
+    },
+    {
+      "customer_id": "VIP_ADDITIONAL_001",
+      "target_type": "SAME_DAY_CANDIDATE",
+      "signal_status": {
+        "level_1_communication": "OUTREACH_QUEUED",
+        "level_2_commitment": "UNVERIFIED",
+        "level_3_payment": "UNVERIFIED",
+        "execution_ready": false
+      },
+      "outreach_detail": {
+        "options_offered": [],
+        "due_date": null,
+        "action_required": "STANDBY_FOR_BATCH_OUTREACH"
+      }
+    },
+    {
+      "customer_id": "VIP_ADDITIONAL_002",
+      "target_type": "CANDIDATE_SLOT",
+      "signal_status": {
+        "level_1_communication": "IDLE",
+        "level_2_commitment": "UNVERIFIED",
+        "level_3_payment": "UNVERIFIED",
+        "execution_ready": false
+      },
+      "outreach_detail": {
+        "options_offered": [],
+        "due_date": null,
+        "action_required": "INITIAL_CONTACT"
+      }
+    },
+    {
+      "customer_id": "VIP_ADDITIONAL_003",
+      "target_type": "CANDIDATE_SLOT",
+      "signal_status": {
+        "level_1_communication": "IDLE",
+        "level_2_commitment": "UNVERIFIED",
+        "level_3_payment": "UNVERIFIED",
+        "execution_ready": false
+      },
+      "outreach_detail": {
+        "options_offered": [],
+        "due_date": null,
+        "action_required": "INITIAL_CONTACT"
+      }
+    }
+  ],
+
+  "system_gate_status": {
+    "integrated_gate": "ARMED_AND_READY",
+    "fastpass_queue": "HOLDING_VIP_SLOTS",
+    "auto_release_on_signal": true
+  }
+}

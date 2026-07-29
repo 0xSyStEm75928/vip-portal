@@ -1,0 +1,118 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-07-29T10:11:32.110410+00:00",
+  "policy": {
+    "datasets_are_separated": true,
+    "public_data_only_for_cli": true,
+    "manual_review_required": true,
+    "no_private_interest_assumption": true
+  },
+  "legacy_candidates": [
+    {
+      "source": "LEGACY",
+      "id": "CUSTOMER_001",
+      "status": "ACTIVE_REVIEW",
+      "communication": "SPEC_VERIFIED",
+      "commitment": "NDA_IN_PROGRESS",
+      "payment": "UNVERIFIED"
+    },
+    {
+      "source": "LEGACY",
+      "id": "SILENT_USER_0x31C",
+      "status": "OBSERVATION",
+      "communication": "OBSERVED",
+      "commitment": "PENDING",
+      "payment": "UNVERIFIED"
+    },
+    {
+      "source": "LEGACY",
+      "id": "VIP_ADDITIONAL_001",
+      "status": "PENDING_REVIEW",
+      "communication": "OBSERVED",
+      "commitment": "UNVERIFIED",
+      "payment": "UNVERIFIED"
+    }
+  ],
+  "cli_candidates": [
+    {
+      "source": "CLI_DISCOVERY",
+      "name": "trimstray/the-book-of-secret-knowledge",
+      "priority": "A",
+      "group": "ORIGINAL_3",
+      "contact": "NOT_STARTED",
+      "interest": "UNVERIFIED"
+    },
+    {
+      "source": "CLI_DISCOVERY",
+      "name": "n8n-io/n8n",
+      "priority": "A",
+      "group": "ORIGINAL_3",
+      "contact": "NOT_STARTED",
+      "interest": "UNVERIFIED"
+    },
+    {
+      "source": "CLI_DISCOVERY",
+      "name": "ohmyzsh/ohmyzsh",
+      "priority": "A",
+      "group": "ORIGINAL_3",
+      "contact": "NOT_STARTED",
+      "interest": "UNVERIFIED"
+    },
+    {
+      "source": "CLI_DISCOVERY",
+      "name": "yt-dlp/yt-dlp",
+      "priority": "A",
+      "group": "DISCOVERY_7",
+      "contact": "NOT_STARTED",
+      "interest": "UNVERIFIED"
+    },
+    {
+      "source": "CLI_DISCOVERY",
+      "name": "google-gemini/gemini-cli",
+      "priority": "A",
+      "group": "DISCOVERY_7",
+      "contact": "NOT_STARTED",
+      "interest": "UNVERIFIED"
+    },
+    {
+      "source": "CLI_DISCOVERY",
+      "name": "Graphify-Labs/graphify",
+      "priority": "B",
+      "group": "DISCOVERY_7",
+      "contact": "NOT_STARTED",
+      "interest": "UNVERIFIED"
+    },
+    {
+      "source": "CLI_DISCOVERY",
+      "name": "sherlock-project/sherlock",
+      "priority": "B",
+      "group": "DISCOVERY_7",
+      "contact": "NOT_STARTED",
+      "interest": "UNVERIFIED"
+    },
+    {
+      "source": "CLI_DISCOVERY",
+      "name": "OpenHands/OpenHands",
+      "priority": "B",
+      "group": "DISCOVERY_7",
+      "contact": "NOT_STARTED",
+      "interest": "UNVERIFIED"
+    },
+    {
+      "source": "CLI_DISCOVERY",
+      "name": "nexu-io/open-design",
+      "priority": "B",
+      "group": "DISCOVERY_7",
+      "contact": "NOT_STARTED",
+      "interest": "UNVERIFIED"
+    },
+    {
+      "source": "CLI_DISCOVERY",
+      "name": "junegunn/fzf",
+      "priority": "B",
+      "group": "DISCOVERY_7",
+      "contact": "NOT_STARTED",
+      "interest": "UNVERIFIED"
+    }
+  ]
+}

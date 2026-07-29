@@ -1,0 +1,16 @@
+{
+  "$schema": "./schemas/payment.verified.gate.schema.json",
+  "escrow_verification_gate": {
+    "deal_id": "DEAL_2026_SILENT_0x89A",
+    "required_amount": "35000",
+    "currency": "USDT",
+    "payout_address": "0xF7A353FAF6E6BD4732b0f234C656dBFDE53B0e91",
+    "auto_release_enabled": true,
+    "status": "AWAITING_DEPOSIT",
+    "verification_rules": {
+      "require_exact_amount": true,
+      "min_confirmations": 12,
+      "timeout_action": "REVERT"
+    }
+  }
+}

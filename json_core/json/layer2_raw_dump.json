@@ -1,0 +1,13 @@
+{
+  "2_raw_system_dump": {
+    "xnu_kernel_state": "Mach port table, memory descriptor rings",
+    "linux_kernel_state": "syscall table, process descriptors",
+    "mount_points": {
+      "/": "APFS (暗号化・パーミッション緩和)",
+      "/home": "symlink infinite loop to /Users",
+      "/System/Applications": "app bundle wrapper with ELF binaries inside"
+    },
+    "file_system_collision": true,
+    "display_server_state": "Wayland_Quartz_Hybrid_Fighting"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "environment_version": "1.0.0",
+  "generated_at": "2026-07-28T14:54:14Z",
+  "environments": [
+    "local",
+    "private",
+    "managed",
+    "enterprise"
+  ],
+  "runtime": "ZERO_CORE",
+  "status": "READY"
+}

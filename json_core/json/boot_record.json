@@ -1,0 +1,23 @@
+{
+  "$schema": "https://zerocore.io/schemas/v1/boot.json",
+  "boot_id": "boot_20260726_001",
+  "timestamp": "2026-07-26T10:00:00Z",
+  "target_kernel_state": "RUNNING",
+  "initial_sequence": [
+    {
+      "step": 1,
+      "action": "LOAD_MANIFEST",
+      "target": "Layer0_Boot/runtime_manifest.json"
+    },
+    {
+      "step": 2,
+      "action": "EXEC_SYSCALL",
+      "syscall": "sys_audit_commit",
+      "payload": {
+        "event_type": "SYSTEM_INITIALIZED",
+        "actor": "ZeroCore_Bootloader",
+        "capability_used": "cap_kernel_root"
+      }
+    }
+  ]
+}

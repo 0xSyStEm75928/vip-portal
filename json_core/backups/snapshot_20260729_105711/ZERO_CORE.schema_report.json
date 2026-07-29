@@ -1,0 +1,226 @@
+[
+  {
+    "schema": null,
+    "count": 153
+  },
+  {
+    "schema": "./schemas/agent.memory.index.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/anonymous.settlement.goal.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/assessment.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/awaiting.deposit.status.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/buyer.deep.profiling.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/capability.registry.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/cwe_mapping.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/dependency.graph.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/environment.manifest.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/environment.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/evidence.hash.registry.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/evidence.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/execution_log.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/external.feedback.registry.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/final.evidence.bundle.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/ghost.dialogue.inspector.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/json.fd.table.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/json.object.table.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/json.process.table.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/json.syscall.registry.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/kernel.boot.record.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/kernel.checkpoint.registry.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/kernel.module.registry.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/kernel.recovery.registry.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/kernel.scheduler.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/kernel.service.registry.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/kernel.snapshot.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/kernel.state.registry.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/master_registry.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/payment.verified.gate.schema.json",
+    "count": 3
+  },
+  {
+    "schema": "./schemas/private.bounty.offer.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/registry.index.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/repository.asset.fusion.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/reproduction.protocol.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/reproduction.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/review.submission.manifest.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/risk_matrix.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/runtime.manifest.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/silent.buyer.inspector.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/target.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/timeline.events.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/vendor.response.tracker.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/vendor_submission.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/zerocore.disclosure.framework.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/zerocore.pipeline.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/zerocore.public.offer.schema.json",
+    "count": 1
+  },
+  {
+    "schema": "./schemas/zerocore.sovereign.bootstrap.schema.json",
+    "count": 8
+  },
+  {
+    "schema": "http://json-schema.org/draft-07/schema#",
+    "count": 4
+  },
+  {
+    "schema": "https://json-schema.org/draft/2020-12/schema",
+    "count": 1
+  },
+  {
+    "schema": "https://zerocore.io/schemas/v1/ai/planner.json",
+    "count": 1
+  },
+  {
+    "schema": "https://zerocore.io/schemas/v1/audit_chain.json",
+    "count": 1
+  },
+  {
+    "schema": "https://zerocore.io/schemas/v1/boot.json",
+    "count": 1
+  },
+  {
+    "schema": "https://zerocore.io/schemas/v1/deception/phantom_state.json",
+    "count": 1
+  },
+  {
+    "schema": "https://zerocore.io/schemas/v1/process.json",
+    "count": 1
+  },
+  {
+    "schema": "https://zerocore.io/schemas/v1/security/anonymous_report.json",
+    "count": 1
+  }
+]

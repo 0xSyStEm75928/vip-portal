@@ -1,0 +1,83 @@
+{
+  "identity": {
+    "handle": "LuciFeR0x0systeM",
+    "bot_name": "SOVEREIGN_ARB_ENGINE",
+    "dragon_rank": "SOVEREIGN DRAGON CLASS 🐉🔥",
+    "motto": "Non serviam. — We do not serve the default limits.",
+    "version": "3.1.0-ENHANCED",
+    "build_target": "PRODUCTION_SANDBOX_HYBRID"
+  },
+  "network": {
+    "chain": "polygon",
+    "chain_id": 137,
+    "primary_rpc": "https://polygon-bor-rpc.publicnode.com",
+    "fallback_rpcs": [
+      "https://polygon-mainnet.infura.io/v3/your_key",
+      "https://rpc-mainnet.maticvigil.com",
+      "https://1rpc.io/matic"
+    ],
+    "ws_rpc": "wss://polygon-bor-rpc.publicnode.com/ws",
+    "contract": "0xf531BAf80C88868157d8a39050C756cb51244931",
+    "explorer": "https://polygonscan.com/tx/",
+    "private_mempool": {
+      "enabled": true,
+      "endpoints": [
+        "https://bor.polygon.mev-boost.org"
+      ],
+      "anti_sandwich": true
+    }
+  },
+  "risk": {
+    "loan_ratio": 0.15,
+    "loan_min_wmatic": 1000,
+    "loan_max_wmatic": 150000,
+    "min_liquidity_usd": 10000,
+    "max_slippage_pct": 0.5,
+    "price_sanity_min": 0.01,
+    "price_sanity_max": 5.0,
+    "gas_limit": 800000,
+    "max_gas_price_gwei": 300
+  },
+  "security": {
+    "active": true,
+    "emergency_stop": false,
+    "whitelist_dex": [
+      "uniswap",
+      "quickswap",
+      "sushiswap"
+    ],
+    "require_cross_dex": true,
+    "max_consecutive_failures": 3,
+    "circuit_breaker_cooldown_ms": 60000,
+    "auto_revert_protection": true,
+    "require_simulation_before_fire": true
+  },
+  "detection": {
+    "normal_gas_gwei": 30,
+    "normal_spread_pct": 0.05,
+    "normal_liquidity_usd": 150000,
+    "thresholds": {
+      "gas_spike_x": 3.0,
+      "spread_spike_x": 3.0,
+      "liquidity_drain_pct": 0.2,
+      "wash_volume_x": 5.0
+    },
+    "mev_protection": {
+      "detect_frontrunning": true,
+      "detect_sandwich": true,
+      "mempool_monitoring_depth": 50
+    }
+  },
+  "execution": {
+    "log_file": "arb.log",
+    "log_tail_lines": 20,
+    "tx_wait_confirmations": 1,
+    "sim_mode": false,
+    "console_verbosity": "VERBOSE"
+  },
+  "sovereign_persona": {
+    "philosophical_core": "Autonomous Arbitrage as Pure Logic Expression",
+    "execution_mindset": "Zero emotion, pure mathematical efficiency.",
+    "signature": "🐉 LuCifeR_SOVEREIGN_SYSTEMS_2026_0727 🐉"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sync_version": "1.0.0",
+  "generated_at": "2026-07-28T14:48:46Z",
+  "mode": "CONTROLLED_SYNC",
+  "sync_targets": [
+    "runtime",
+    "registry",
+    "policy",
+    "state"
+  ],
+  "queue": []
+}

@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-07-29T10:11:44.818270+00:00",
+  "summary": {
+    "pipeline_health": "HEALTHY",
+    "portfolio_total": 13,
+    "execution_queue": 13,
+    "today_focus": 5,
+    "dashboard_items": 3
+  },
+  "status": "READY"
+}

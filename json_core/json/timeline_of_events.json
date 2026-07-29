@@ -1,0 +1,46 @@
+{
+  "$schema": "./schemas/timeline.events.schema.json",
+
+  "timeline_of_events": {
+    "version": "1.0.0",
+    "status": "ACTIVE",
+
+    "purpose": "Chronological registry of observations, evidence collection, and review activities.",
+
+    "events": [
+      {
+        "event_id": null,
+        "timestamp": null,
+        "category": null,
+        "title": null,
+        "description": null,
+        "related_evidence": [],
+        "related_registry": [],
+        "operator": null,
+        "status": "RECORDED"
+      }
+    ],
+
+    "categories": [
+      "observation",
+      "evidence",
+      "analysis",
+      "reproduction",
+      "communication",
+      "review",
+      "decision"
+    ],
+
+    "integrity": {
+      "ordered": true,
+      "immutable_entries": true,
+      "allow_append_only": true
+    },
+
+    "summary": {
+      "total_events": 0,
+      "first_event": null,
+      "last_event": null
+    }
+  }
+}

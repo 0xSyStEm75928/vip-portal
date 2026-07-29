@@ -1,0 +1,9 @@
+{
+  "isolated_items": [
+    {
+      "raw_input": "<script>bad_data</script>",
+      "reason": "DANGEROUS_OR_INVALID_TYPE",
+      "ts": "2026-07-30T02:42:00+09:00"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "$schema": "./schemas/kernel.scheduler.schema.json",
+
+  "kernel_scheduler": {
+    "version": "1.0.0",
+    "status": "ACTIVE",
+
+    "purpose": "Schedule execution order for registry-native kernel tasks.",
+
+    "scheduler": {
+      "algorithm": "priority_dag",
+      "preemption": false,
+      "parallel_execution": true,
+      "event_driven": true
+    },
+
+    "queues": [
+      {
+        "name": "boot",
+        "priority": 100,
+        "state": "READY"
+      },
+      {
+        "name": "runtime",
+        "priority": 90,
+        "state": "READY"
+      },
+      {
+        "name": "event",
+        "priority": 80,
+        "state": "READY"
+      },
+      {
+        "name": "audit",
+        "priority": 70,
+        "state": "READY"
+      },
+      {
+        "name": "business",
+        "priority": 60,
+        "state": "READY"
+      }
+    ],
+
+    "dispatch_rules": {
+      "verify_schema_before_execution": true,
+      "verify_integrity_before_execution": true,
+      "allow_dependency_resolution": true,
+      "allow_retry": true
+    },
+
+    "runtime": {
+      "active_queue": null,
+      "executed_jobs": 0,
+      "failed_jobs": 0,
+      "last_dispatch": null
+    },
+
+    "integrity": {
+      "scheduler_hash": null,
+      "validated": false
+    }
+  }
+}

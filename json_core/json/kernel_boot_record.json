@@ -1,0 +1,71 @@
+{
+  "$schema": "./schemas/kernel.boot.record.schema.json",
+  "kernel_boot_record": {
+    "version": "1.0.0",
+    "status": "FORGED_ACTIVE",
+    "purpose": "Immutable boot record for ZeroCore kernel initialization.",
+    "boot": {
+      "boot_id": null,
+      "boot_sequence": 1,
+      "started_at": null,
+      "completed_at": "2026-07-28T06:20:10Z",
+      "kernel_version": "1.0.0",
+      "boot_mode": "NORMAL",
+      "initiator": "runtime_manifest"
+    },
+    "boot_stages": [
+      {
+        "stage": 1,
+        "name": "Registry Initialization",
+        "registry": "registry.index.json",
+        "state": "VERIFIED"
+      },
+      {
+        "stage": 2,
+        "name": "Kernel State",
+        "registry": "kernel_state_registry.json",
+        "state": "VERIFIED"
+      },
+      {
+        "stage": 3,
+        "name": "Module Loading",
+        "registry": "kernel_module_registry.json",
+        "state": "VERIFIED"
+      },
+      {
+        "stage": 4,
+        "name": "Service Startup",
+        "registry": "kernel_service_registry.json",
+        "state": "VERIFIED"
+      },
+      {
+        "stage": 5,
+        "name": "Scheduler Activation",
+        "registry": "kernel_scheduler.json",
+        "state": "VERIFIED"
+      },
+      {
+        "stage": 6,
+        "name": "Runtime Ready",
+        "registry": "runtime_manifest.json",
+        "state": "VERIFIED"
+      }
+    ],
+    "verification": {
+      "schema_validation": true,
+      "dependency_validation": true,
+      "integrity_validation": true,
+      "audit_required": true
+    },
+    "result": {
+      "success": true,
+      "boot_hash": "6b95d2008733f2bc4c2894e7108f7b2cdd617a068848303f16929d96e96fa5f0",
+      "snapshot": null
+    },
+    "integrity": {
+      "record_hash": null,
+      "validated": true,
+      "last_update": "2026-07-28T06:20:10Z"
+    }
+  }
+}

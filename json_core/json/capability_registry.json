@@ -1,0 +1,61 @@
+{
+  "$schema": "./schemas/capability.registry.schema.json",
+
+  "capability_registry": {
+    "version": "1.0.0",
+    "status": "ACTIVE",
+
+    "purpose": "Registry describing executable capabilities within ZeroCore.",
+
+    "capabilities": [
+      {
+        "capability_id": "REGISTRY_LOAD",
+        "name": "Registry Loader",
+        "description": "Load registry objects into runtime.",
+        "entrypoint": "runtime_manifest.json",
+        "state": "READY"
+      },
+      {
+        "capability_id": "EVENT_ROUTING",
+        "name": "Event Routing",
+        "description": "Dispatch events through Event Bus.",
+        "entrypoint": "event_bus.json",
+        "state": "READY"
+      },
+      {
+        "capability_id": "EVIDENCE_CHAIN",
+        "name": "Evidence Chain",
+        "description": "Maintain immutable audit evidence.",
+        "entrypoint": "audit_chain.json",
+        "state": "READY"
+      },
+      {
+        "capability_id": "BUSINESS_DISCOVERY",
+        "name": "Business Opportunity Detection",
+        "description": "Evaluate structured business opportunities.",
+        "entrypoint": "business_registry.json",
+        "state": "READY"
+      },
+      {
+        "capability_id": "SCHEMA_VALIDATION",
+        "name": "Schema Validation",
+        "description": "Validate registry objects before runtime.",
+        "entrypoint": "contract_registry.json",
+        "state": "READY"
+      }
+    ],
+
+    "runtime_policy": {
+      "schema_required": true,
+      "audit_required": true,
+      "append_only": true,
+      "hot_reload": true
+    },
+
+    "statistics": {
+      "capability_count": 5,
+      "active": 5,
+      "disabled": 0
+    }
+  }
+}

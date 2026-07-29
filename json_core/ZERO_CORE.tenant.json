@@ -1,0 +1,18 @@
+{
+  "tenant_version": "1.0.0",
+  "multi_tenant": true,
+  "tenants": [
+    {
+      "tenant_id": "TENANT_CUSTOMER_001",
+      "customer_id": "CUSTOMER_001",
+      "status": "PROVISIONING",
+      "package_ref": "small_business"
+    },
+    {
+      "tenant_id": "TENANT_VIP_ADDITIONAL_001",
+      "customer_id": "VIP_ADDITIONAL_001",
+      "status": "ARMED_READY",
+      "package_ref": "small_business"
+    }
+  ]
+}

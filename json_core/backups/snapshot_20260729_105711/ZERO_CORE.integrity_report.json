@@ -1,0 +1,24 @@
+{
+  "integrity_report_version": "1.0.0",
+  "generated_at": "2026-07-28T15:06:32Z",
+  "manifest": {
+    "integrity_manifest_version": "1.0.0",
+    "generated_at": "2026-07-28T15:06:32Z",
+    "algorithm": "SHA-256",
+    "protected": [
+      "configuration",
+      "runtime",
+      "security",
+      "release",
+      "distribution"
+    ],
+    "status": "READY"
+  },
+  "registry": {
+    "hash_registry_version": "1.0.0",
+    "generated_at": "2026-07-28T15:06:32Z",
+    "algorithm": "SHA-256",
+    "entries": []
+  },
+  "verification": "PENDING"
+}

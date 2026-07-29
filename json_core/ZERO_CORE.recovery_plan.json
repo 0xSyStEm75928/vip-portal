@@ -1,0 +1,31 @@
+{
+  "recovery_plan_version": "1.0.0",
+  "generated_at": "2026-07-28T14:48:13Z",
+  "backup": {
+    "backup_version": "1.0.0",
+    "generated_at": "2026-07-28T14:48:13Z",
+    "strategy": [
+      "snapshot",
+      "archive",
+      "restore"
+    ],
+    "backups": [],
+    "status": "READY"
+  },
+  "snapshot": {
+    "snapshot_registry_version": "1.0.0",
+    "generated_at": "2026-07-28T14:48:13Z",
+    "snapshots": [],
+    "retention_policy": {
+      "enabled": true,
+      "mode": "VERSIONED"
+    }
+  },
+  "recovery_steps": [
+    "detect",
+    "validate",
+    "restore",
+    "verify"
+  ],
+  "status": "READY"
+}

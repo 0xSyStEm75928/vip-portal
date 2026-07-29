@@ -1,0 +1,1102 @@
+[
+  {
+    "file": "./json_core/json/zerocore.disclosure.framework.json",
+    "version": null,
+    "schema": "./schemas/zerocore.disclosure.framework.schema.json"
+  },
+  {
+    "file": "./json_core/json/environment_manifest.json",
+    "version": null,
+    "schema": "./schemas/environment.manifest.schema.json"
+  },
+  {
+    "file": "./json_core/json/zerocore.sovereign.bootstrap.v1.json",
+    "version": null,
+    "schema": "./schemas/zerocore.sovereign.bootstrap.schema.json"
+  },
+  {
+    "file": "./json_core/json/covert_signal_047.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/json_fd_table.json",
+    "version": null,
+    "schema": "./schemas/json.fd.table.schema.json"
+  },
+  {
+    "file": "./json_core/json/ghost_window_protocol.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/ghost_window_protocol.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/ghost_window_protocol.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/ghost_window_protocol.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/ghost_window_protocol.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/ghost_window_protocol.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/ghost_window_protocol.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/ghost_window_protocol.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/ghost_window_protocol.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/ghost_window_protocol.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/ghost_window_protocol.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_010.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_006.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/anonymous_settlement_goal.json",
+    "version": null,
+    "schema": "./schemas/anonymous.settlement.goal.schema.json"
+  },
+  {
+    "file": "./json_core/json/007_risk_matrix.json",
+    "version": null,
+    "schema": "./schemas/risk_matrix.schema.json"
+  },
+  {
+    "file": "./json_core/json/covert_signal_051.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/buyer_deep_profiling.json",
+    "version": null,
+    "schema": "./schemas/buyer.deep.profiling.schema.json"
+  },
+  {
+    "file": "./json_core/json/004_evidence.json",
+    "version": null,
+    "schema": "./schemas/evidence.schema.json"
+  },
+  {
+    "file": "./json_core/json/sun.event.v1.json",
+    "version": null,
+    "schema": "http://json-schema.org/draft-07/schema#"
+  },
+  {
+    "file": "./json_core/json/covert_signal_092.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/sovereign_part5.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_084.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/review_submission_manifest.json",
+    "version": null,
+    "schema": "./schemas/review.submission.manifest.schema.json"
+  },
+  {
+    "file": "./json_core/json/zerocore.graph.manifest.json",
+    "version": "1.0.0",
+    "schema": "https://json-schema.org/draft/2020-12/schema"
+  },
+  {
+    "file": "./json_core/json/layer4_routing.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/json_syscall_registry.json",
+    "version": null,
+    "schema": "./schemas/json.syscall.registry.schema.json"
+  },
+  {
+    "file": "./json_core/json/availablePlugins.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_026.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_071.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/anonymous-cli-metrics.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_067.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_088.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_030.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/agent_memory_index.json",
+    "version": null,
+    "schema": "./schemas/agent.memory.index.schema.json"
+  },
+  {
+    "file": "./json_core/json/002_target.json",
+    "version": null,
+    "schema": "./schemas/target.schema.json"
+  },
+  {
+    "file": "./json_core/json/product_data.json",
+    "version": "2.0.0-SOVEREIGN",
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_031.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/origin.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_066.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_089.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/payment.verified.gate.json",
+    "version": "4.1.0-PRODUCTION",
+    "schema": "./schemas/payment.verified.gate.schema.json"
+  },
+  {
+    "file": "./json_core/json/covert_signal_070.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/kernel_checkpoint_registry.json",
+    "version": null,
+    "schema": "./schemas/kernel.checkpoint.registry.schema.json"
+  },
+  {
+    "file": "./json_core/json/covert_signal_027.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/001_environment.json",
+    "version": null,
+    "schema": "./schemas/environment.schema.json"
+  },
+  {
+    "file": "./json_core/json/audit_chain.json",
+    "version": null,
+    "schema": "https://zerocore.io/schemas/v1/audit_chain.json"
+  },
+  {
+    "file": "./json_core/json/story_stream_legend.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_085.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_093.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/sovereign_part4.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/update-notifier-npm.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/capability_registry.json",
+    "version": null,
+    "schema": "./schemas/capability.registry.schema.json"
+  },
+  {
+    "file": "./json_core/json/capabilities.json",
+    "version": "1.0.0",
+    "schema": "http://json-schema.org/draft-07/schema#"
+  },
+  {
+    "file": "./json_core/json/010_master_registry.json",
+    "version": null,
+    "schema": "./schemas/master_registry.schema.json"
+  },
+  {
+    "file": "./json_core/json/covert_signal_050.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_007.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/zerocore.master.poc.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_011.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_046.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/boot_record.json",
+    "version": null,
+    "schema": "https://zerocore.io/schemas/v1/boot.json"
+  },
+  {
+    "file": "./json_core/json/layer1_trigger.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/zerocore.private.v1.json",
+    "version": null,
+    "schema": "./schemas/zerocore.sovereign.bootstrap.schema.json"
+  },
+  {
+    "file": "./json_core/json/covert_signal_020.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_077.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_098.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/003_reproduction.json",
+    "version": null,
+    "schema": "./schemas/reproduction.schema.json"
+  },
+  {
+    "file": "./json_core/json/covert_signal_061.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/zerocore_dag_circuit.json",
+    "version": null,
+    "schema": "./schemas/zerocore.sovereign.bootstrap.schema.json"
+  },
+  {
+    "file": "./json_core/json/covert_signal_036.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/output_summary.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_041.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_016.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_057.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/009_vendor_submission.json",
+    "version": null,
+    "schema": "./schemas/vendor_submission.schema.json"
+  },
+  {
+    "file": "./json_core/json/sovereign_part3.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_094.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/reproduction_protocol.json",
+    "version": null,
+    "schema": "./schemas/reproduction.protocol.schema.json"
+  },
+  {
+    "file": "./json_core/json/awaiting_deposit_status.json",
+    "version": null,
+    "schema": "./schemas/awaiting.deposit.status.schema.json"
+  },
+  {
+    "file": "./json_core/json/json_process_table.json",
+    "version": null,
+    "schema": "./schemas/json.process.table.schema.json"
+  },
+  {
+    "file": "./json_core/json/repository.asset.fusion.json",
+    "version": null,
+    "schema": "./schemas/repository.asset.fusion.schema.json"
+  },
+  {
+    "file": "./json_core/json/covert_signal_082.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/jssh_dag_payload.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_083.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/silent_buyer_inspector.json",
+    "version": null,
+    "schema": "./schemas/silent.buyer.inspector.schema.json"
+  },
+  {
+    "file": "./json_core/json/evidence_hash_registry.json",
+    "version": null,
+    "schema": "./schemas/evidence.hash.registry.schema.json"
+  },
+  {
+    "file": "./json_core/json/sovereign_part2.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_095.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_056.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_001.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/layer3_analysis.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_017.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_040.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/security_monitor_status.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_037.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_060.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/pipeline_config.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/master_sovereign_config.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/kernel_snapshot.json",
+    "version": null,
+    "schema": "./schemas/kernel.snapshot.schema.json"
+  },
+  {
+    "file": "./json_core/json/covert_signal_076.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_099.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_021.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/kernel_service_registry.json",
+    "version": null,
+    "schema": "./schemas/kernel.service.registry.schema.json"
+  },
+  {
+    "file": "./json_core/json/proof_of_concept.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_034.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/layer2_raw_dump.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/registry.index.json",
+    "version": null,
+    "schema": "./schemas/registry.index.schema.json"
+  },
+  {
+    "file": "./json_core/json/covert_signal_063.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_075.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/kernel_boot_record.json",
+    "version": null,
+    "schema": "./schemas/kernel.boot.record.schema.json"
+  },
+  {
+    "file": "./json_core/json/covert_signal_022.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/zerocore.pipeline.json",
+    "version": null,
+    "schema": "./schemas/zerocore.pipeline.schema.json"
+  },
+  {
+    "file": "./json_core/json/covert_signal_059.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/lucifel_payout_claim.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_018.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/runtime_manifest.json",
+    "version": null,
+    "schema": "./schemas/runtime.manifest.schema.json"
+  },
+  {
+    "file": "./json_core/json/006_cwe_mapping.json",
+    "version": null,
+    "schema": "./schemas/cwe_mapping.schema.json"
+  },
+  {
+    "file": "./json_core/json/covert_signal_038.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_080.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_096.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/sovereign_part1.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/json_object_table.json",
+    "version": null,
+    "schema": "./schemas/json.object.table.schema.json"
+  },
+  {
+    "file": "./json_core/json/covert_signal_079.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_055.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/proof_of_concept_v2.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/zerocore.public.offer.json",
+    "version": null,
+    "schema": "./schemas/zerocore.public.offer.schema.json"
+  },
+  {
+    "file": "./json_core/json/005_assessment.json",
+    "version": null,
+    "schema": "./schemas/assessment.schema.json"
+  },
+  {
+    "file": "./json_core/json/covert_signal_002.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_014.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/package.json",
+    "version": "4.23.0",
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_043.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/kernel_state_registry.json",
+    "version": null,
+    "schema": "./schemas/kernel.state.registry.schema.json"
+  },
+  {
+    "file": "./json_core/json/covert_signal_042.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_015.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/product_dag_circuit.json",
+    "version": null,
+    "schema": "./schemas/zerocore.sovereign.bootstrap.schema.json"
+  },
+  {
+    "file": "./json_core/json/covert_signal_003.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_054.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/payment_verified_gate.json",
+    "version": "3.5.0-ANONYMOUS-GATE",
+    "schema": "./schemas/payment.verified.gate.schema.json"
+  },
+  {
+    "file": "./json_core/json/proof_of_concept_v3.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/zerocore.tree.manifest.json",
+    "version": null,
+    "schema": "./schemas/zerocore.sovereign.bootstrap.schema.json"
+  },
+  {
+    "file": "./json_core/json/covert_signal_097.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/dependency.graph.json",
+    "version": null,
+    "schema": "./schemas/dependency.graph.schema.json"
+  },
+  {
+    "file": "./json_core/json/covert_signal_078.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/zerocore.product.v1.json",
+    "version": null,
+    "schema": "./schemas/zerocore.sovereign.bootstrap.schema.json"
+  },
+  {
+    "file": "./json_core/json/covert_signal_081.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_039.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/zero_trust_config.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/planner.json",
+    "version": null,
+    "schema": "https://zerocore.io/schemas/v1/ai/planner.json"
+  },
+  {
+    "file": "./json_core/json/covert_signal_019.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/emergency_evidence_review.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/ghost_dialogue_inspector.json",
+    "version": null,
+    "schema": "./schemas/ghost.dialogue.inspector.schema.json"
+  },
+  {
+    "file": "./json_core/json/kernel_module_registry.json",
+    "version": null,
+    "schema": "./schemas/kernel.module.registry.schema.json"
+  },
+  {
+    "file": "./json_core/json/covert_signal_058.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_023.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/...nt_verified_gate.json",
+    "version": null,
+    "schema": "./schemas/payment.verified.gate.schema.json"
+  },
+  {
+    "file": "./json_core/json/external.feedback.registry.json",
+    "version": null,
+    "schema": "./schemas/external.feedback.registry.schema.json"
+  },
+  {
+    "file": "./json_core/json/zerocore.score.stream.json",
+    "version": null,
+    "schema": "./schemas/zerocore.sovereign.bootstrap.schema.json"
+  },
+  {
+    "file": "./json_core/json/covert_signal_074.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_062.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_035.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/zerocore.sovereign.bootstrap.schema.json",
+    "version": null,
+    "schema": "http://json-schema.org/draft-07/schema#"
+  },
+  {
+    "file": "./json_core/json/covert_signal_086.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_069.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/payload.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/final_bounty_report.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_090.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_028.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/kernel_recovery_registry.json",
+    "version": null,
+    "schema": "./schemas/kernel.recovery.registry.schema.json"
+  },
+  {
+    "file": "./json_core/json/covert_signal_053.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/proof_of_concept_v4.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_004.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_012.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_045.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_100.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_032.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/vendor_response_tracker.json",
+    "version": null,
+    "schema": "./schemas/vendor.response.tracker.schema.json"
+  },
+  {
+    "file": "./json_core/json/covert_signal_065.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/private_bounty_offer.json",
+    "version": null,
+    "schema": "./schemas/private.bounty.offer.schema.json"
+  },
+  {
+    "file": "./json_core/json/watcher_audit.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/product_evolution_dag.json",
+    "version": null,
+    "schema": "./schemas/zerocore.sovereign.bootstrap.schema.json"
+  },
+  {
+    "file": "./json_core/json/ghost_window_concept.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_073.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/phantom_state.json",
+    "version": null,
+    "schema": "https://zerocore.io/schemas/v1/deception/phantom_state.json"
+  },
+  {
+    "file": "./json_core/json/covert_signal_024.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_008.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/timeline_of_events.json",
+    "version": null,
+    "schema": "./schemas/timeline.events.schema.json"
+  },
+  {
+    "file": "./json_core/json/final_evidence_bundle.json",
+    "version": null,
+    "schema": "./schemas/final.evidence.bundle.schema.json"
+  },
+  {
+    "file": "./json_core/json/test_history.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_049.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/index.json",
+    "version": "3.4.0-AUTO",
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_048.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/invoice_registry.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_009.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_025.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_072.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_064.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_033.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/zerocore.master.signals.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/anonymous_poc_payload.json",
+    "version": null,
+    "schema": "https://zerocore.io/schemas/v1/security/anonymous_report.json"
+  },
+  {
+    "file": "./json_core/json/covert_signal_044.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_013.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/dag_schema.json",
+    "version": "3.1.0-DAG-FIXED",
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/zerocore.master.sovereign.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_005.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/ai_evolution_metrics.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_052.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/proof_of_concept_v5.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_029.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/008_execution_log_registry.json",
+    "version": null,
+    "schema": "./schemas/execution_log.schema.json"
+  },
+  {
+    "file": "./json_core/json/covert_signal_091.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/kernel_scheduler.json",
+    "version": null,
+    "schema": "./schemas/kernel.scheduler.schema.json"
+  },
+  {
+    "file": "./json_core/json/covert_signal_087.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/covert_signal_068.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/all_10_prospects_summary.json",
+    "version": null,
+    "schema": null
+  },
+  {
+    "file": "./json_core/json/process_table.json",
+    "version": null,
+    "schema": "https://zerocore.io/schemas/v1/process.json"
+  },
+  {
+    "file": "./json_core/schema/zerocore.sovereign.bootstrap.schema.json",
+    "version": null,
+    "schema": "http://json-schema.org/draft-07/schema#"
+  }
+]

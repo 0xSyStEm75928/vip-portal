@@ -1,0 +1,30 @@
+{
+  "$schema": "./schemas/zerocore.sovereign.bootstrap.schema.json",
+  "tree_meta": {
+    "project": "BELPHEGOR_v.old",
+    "architecture": "ZeroCore Sovereign Architecture",
+    "version": "2.0.0-SOVEREIGN-FULL",
+    "status": "DETERMINISTIC_COMPLETE"
+  },
+  "tree_nodes": {
+    ".github": {
+      "ISSUE_TEMPLATE": ["bug_report.md", "feature_request.md"],
+      "PULL_REQUEST_TEMPLATE.md": "PR Audit Rules",
+      "workflows": ["zerocore.yml"]
+    },
+    ".saac_devil_runtime": ["jssh_bridge.sh"],
+    "Engine": ["zerocore_dialectic_builder.sh"],
+    "Evidence": ["gas_history.log", "github.audit.jsonl"],
+    "schemas": ["zerocore.sovereign.bootstrap.schema.json"],
+    "Validator": ["zerocore_validate.sh"]
+  },
+  "dag_circuit": {
+    "circuit_id": "zerocore.dag.dialectic.v2",
+    "nodes": {
+      "ingest": "Gemini-Context-Engine",
+      "validate_dag": "GPT-Structure-Core",
+      "insulate_secrets": "Claude-Safety-Guard",
+      "execute_proof": "Copilot-Runtime-Bridge"
+    }
+  }
+}

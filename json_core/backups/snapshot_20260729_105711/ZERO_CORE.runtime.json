@@ -1,0 +1,12 @@
+{
+  "runtime_version": "1.0.0",
+  "generated": 1785249132,
+  "graph": null,
+  "metrics": {
+    "files": 30,
+    "bytes": 7379329,
+    "lines": 259972,
+    "schemas": 0,
+    "json": 30
+  }
+}

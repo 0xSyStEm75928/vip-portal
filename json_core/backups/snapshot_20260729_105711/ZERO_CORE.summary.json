@@ -1,0 +1,1008 @@
+{
+  "summary_version": "1.0.0",
+  "generated": 1785249196,
+  "metrics": {
+    "files": 30,
+    "bytes": 7379329,
+    "lines": 259972,
+    "schemas": 0,
+    "json": 30
+  },
+  "audit": {
+    "audit_version": "1.0.0",
+    "generated": 1785249193,
+    "master": {
+      "master_version": "1.0.0",
+      "generated": 1785249133,
+      "manifest": {
+        "manifest_version": "1.0.0",
+        "generated": 1785248371,
+        "metadata": {
+          "meta_version": "1.0.0",
+          "generated": 1785248369,
+          "total_files": 30,
+          "total_bytes": 7379329,
+          "total_lines": 259972,
+          "schema_files": 0,
+          "json_files": 30,
+          "assets": [
+            {
+              "file": "./json_core/ZERO_CORE.30pack.json",
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "bytes": 0,
+              "lines": 0,
+              "schema": false
+            },
+            {
+              "file": "./json_core/ZERO_CORE.bundle.json",
+              "sha256": "c2613edbbd737632e71bd12499d9bda4649ff50ea64b58b5c15f2443a784c1d6",
+              "bytes": 1986632,
+              "lines": 63130,
+              "schema": false
+            },
+            {
+              "file": "./json_core/ZERO_CORE.catalog.json",
+              "sha256": "2ba3685be24728f9d542f59cdd72b8ee3272e2afb064dbbf6abcc22a6087fbdd",
+              "bytes": 34834,
+              "lines": 1072,
+              "schema": false
+            },
+            {
+              "file": "./json_core/ZERO_CORE.dependencies.json",
+              "sha256": "afcaee104ad3ae0a6a6cb8b9139394e68780db9c73c8906fc4f3a11872fab1db",
+              "bytes": 196959,
+              "lines": 5723,
+              "schema": false
+            },
+            {
+              "file": "./json_core/ZERO_CORE.diff.json",
+              "sha256": "bf988bf368e85a0f30353aa6fae87dd92d486bc62f1bb9522e7210c2ca4436ae",
+              "bytes": 69461,
+              "lines": 1921,
+              "schema": false
+            },
+            {
+              "file": "./json_core/ZERO_CORE.export.json",
+              "sha256": "db0faf3150bde6dbf92af57e020a904fedb673982480aafe063da7b233f918a4",
+              "bytes": 1010870,
+              "lines": 32107,
+              "schema": false
+            },
+            {
+              "file": "./json_core/ZERO_CORE.governance.json",
+              "sha256": "31efa12978f38926072f90200be7ab97c0883a8030a66464fae4c776513f8206",
+              "bytes": 178,
+              "lines": 8,
+              "schema": false
+            },
+            {
+              "file": "./json_core/ZERO_CORE.graph.json",
+              "sha256": "357570ab4555dc6a1c02c05ea11c3d02f81bcdda39ee5ea8a33f12b73a80732e",
+              "bytes": 37110,
+              "lines": 1080,
+              "schema": false
+            },
+            {
+              "file": "./json_core/ZERO_CORE.hashes.json",
+              "sha256": "c0f356a8279796a38886b7c7197a5ccf9d430e984a42f6913974c4cebe54fe80",
+              "bytes": 30740,
+              "lines": 846,
+              "schema": false
+            },
+            {
+              "file": "./json_core/ZERO_CORE.ids.json",
+              "sha256": "5c0cb98244586e6c4a8eea52e44d0ef82ac74fe3f2be4fe604147f9a48d75b09",
+              "bytes": 35919,
+              "lines": 1762,
+              "schema": false
+            },
+            {
+              "file": "./json_core/ZERO_CORE.index.json",
+              "sha256": "306bccb0ac5b2eb7a8adb499aeb5de4cb6e697263e1a6da2010608b3f3ec1116",
+              "bytes": 34834,
+              "lines": 1072,
+              "schema": false
+            },
+            {
+              "file": "./json_core/ZERO_CORE.integrity.json",
+              "sha256": "b14c21aa564db177b0befdf70c5da5de87f2272c060ccff1709b17476d7b6473",
+              "bytes": 71924,
+              "lines": 2611,
+              "schema": false
+            },
+            {
+              "file": "./json_core/ZERO_CORE.inventory.json",
+              "sha256": "e9b7b38507cd38b1ddc3042d8048676c78ae91ebf4a6d1833617c4c821495d65",
+              "bytes": 42769,
+              "lines": 1340,
+              "schema": false
+            },
+            {
+              "file": "./json_core/ZERO_CORE.json",
+              "sha256": "5c00d3f8220850f0776b4e0e67891535046ae5436ef5ffa592ee5b37fa4ccb24",
+              "bytes": 59959,
+              "lines": 1845,
+              "schema": false
+            },
+            {
+              "file": "./json_core/ZERO_CORE.keys.json",
+              "sha256": "6cafe720720fb26cc1ad839e91dd31bd3a3a6bf38cb2bbfe2e324b86e2d3a752",
+              "bytes": 145418,
+              "lines": 7841,
+              "schema": false
+            },
+            {
+              "file": "./json_core/ZERO_CORE.manifest.json",
+              "sha256": "9f893bb173d36b0bf2440665b77b884911b8159065cc5a4ead8fabff16fa1d17",
+              "bytes": 321072,
+              "lines": 13509,
+              "schema": false
+            },
+            {
+              "file": "./json_core/ZERO_CORE.master.json",
+              "sha256": "1dfcd4f6d102a16d800f1aa4b417bf211fea14705326a7f75cb36bef22967c34",
+              "bytes": 849429,
+              "lines": 31019,
+              "schema": false
+            },
+            {
+              "file": "./json_core/ZERO_CORE.pipeline.json",
+              "sha256": "5dd4ca3327ab6850e293453c945995e78baeeefcf1c0b939f287c4138932e6c6",
+              "bytes": 238562,
+              "lines": 10026,
+              "schema": false
+            },
+            {
+              "file": "./json_core/ZERO_CORE.queue.json",
+              "sha256": "2e3d5c63e9038b13a03579fd2155964f074fb68c03332be0d7d67182e725c440",
+              "bytes": 18954,
+              "lines": 858,
+              "schema": false
+            },
+            {
+              "file": "./json_core/ZERO_CORE.registry.json",
+              "sha256": "0744d454fff6752e0b2fb20186fe83c8a3f220413fb88e9594396632d993803e",
+              "bytes": 393600,
+              "lines": 14852,
+              "schema": false
+            },
+            {
+              "file": "./json_core/ZERO_CORE.relationships.json",
+              "sha256": "39a08445df04b202e90899b750aae82089916864b1899c1ff2bdbb7d1d89be04",
+              "bytes": 29191,
+              "lines": 1324,
+              "schema": false
+            },
+            {
+              "file": "./json_core/ZERO_CORE.release.json",
+              "sha256": "04255c8c2559b4e4d8bae51c4aeeadd345298d439b9d3ba972d0cf976eb1615f",
+              "bytes": 911747,
+              "lines": 31031,
+              "schema": false
+            },
+            {
+              "file": "./json_core/ZERO_CORE.rewrite_plan.json",
+              "sha256": "2081b1d90fe00039d3d95de3d6921688ffb0bb5bac351fcf58645906876b18ff",
+              "bytes": 199484,
+              "lines": 9164,
+              "schema": false
+            },
+            {
+              "file": "./json_core/ZERO_CORE.runtime.json",
+              "sha256": "2e5195169e9340843af123ef4a6327eaa672e568ddd4fdd345e79dddff4e1f41",
+              "bytes": 692,
+              "lines": 43,
+              "schema": false
+            },
+            {
+              "file": "./json_core/ZERO_CORE.schema_map.json",
+              "sha256": "fbf8d2af0e59c75484a432a58349b5269f32457c35e7f94487f95659a0a1b969",
+              "bytes": 21164,
+              "lines": 882,
+              "schema": false
+            },
+            {
+              "file": "./json_core/ZERO_CORE.schema_report.json",
+              "sha256": "fba22c09f27fe31a87bfd76825a300e62fb7b2b312a6349b5fba225eebd39772",
+              "bytes": 4650,
+              "lines": 226,
+              "schema": false
+            },
+            {
+              "file": "./json_core/ZERO_CORE.snapshot.json",
+              "sha256": "92ef7d63a6ca6158dbda125b849b289aef6a68866556994012a41a7a81723dec",
+              "bytes": 606791,
+              "lines": 23539,
+              "schema": false
+            },
+            {
+              "file": "./json_core/ZERO_CORE.stats.json",
+              "sha256": "0bc3b153d156ad14101b3b10255f91ff6b5fe900ce3256e0d1168bc313a2f565",
+              "bytes": 88,
+              "lines": 5,
+              "schema": false
+            },
+            {
+              "file": "./json_core/ZERO_CORE.version_report.json",
+              "sha256": "d398a46ddedf5c74a6851ed58f457a6d3e68806bb233e32b4c28586aabfd30ff",
+              "bytes": 438,
+              "lines": 34,
+              "schema": false
+            },
+            {
+              "file": "./json_core/ZERO_CORE.versions.json",
+              "sha256": "9dd3796341f504b32a99060633b5a9bb853bcb45d6c639bad599ff53850fb422",
+              "bytes": 25860,
+              "lines": 1102,
+              "schema": false
+            }
+          ]
+        },
+        "statistics": {
+          "files": 30,
+          "bytes": 7379329,
+          "lines": 259972,
+          "average_bytes": 245977.63333333333,
+          "average_lines": 8665.733333333334
+        },
+        "index": [
+          {
+            "file": "./json_core/ZERO_CORE.30pack.json",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "bytes": 0,
+            "lines": 0
+          },
+          {
+            "file": "./json_core/ZERO_CORE.bundle.json",
+            "sha256": "c2613edbbd737632e71bd12499d9bda4649ff50ea64b58b5c15f2443a784c1d6",
+            "bytes": 1986632,
+            "lines": 63130
+          },
+          {
+            "file": "./json_core/ZERO_CORE.catalog.json",
+            "sha256": "2ba3685be24728f9d542f59cdd72b8ee3272e2afb064dbbf6abcc22a6087fbdd",
+            "bytes": 34834,
+            "lines": 1072
+          },
+          {
+            "file": "./json_core/ZERO_CORE.dependencies.json",
+            "sha256": "afcaee104ad3ae0a6a6cb8b9139394e68780db9c73c8906fc4f3a11872fab1db",
+            "bytes": 196959,
+            "lines": 5723
+          },
+          {
+            "file": "./json_core/ZERO_CORE.diff.json",
+            "sha256": "bf988bf368e85a0f30353aa6fae87dd92d486bc62f1bb9522e7210c2ca4436ae",
+            "bytes": 69461,
+            "lines": 1921
+          },
+          {
+            "file": "./json_core/ZERO_CORE.export.json",
+            "sha256": "db0faf3150bde6dbf92af57e020a904fedb673982480aafe063da7b233f918a4",
+            "bytes": 1010870,
+            "lines": 32107
+          },
+          {
+            "file": "./json_core/ZERO_CORE.governance.json",
+            "sha256": "31efa12978f38926072f90200be7ab97c0883a8030a66464fae4c776513f8206",
+            "bytes": 178,
+            "lines": 8
+          },
+          {
+            "file": "./json_core/ZERO_CORE.graph.json",
+            "sha256": "357570ab4555dc6a1c02c05ea11c3d02f81bcdda39ee5ea8a33f12b73a80732e",
+            "bytes": 37110,
+            "lines": 1080
+          },
+          {
+            "file": "./json_core/ZERO_CORE.hashes.json",
+            "sha256": "c0f356a8279796a38886b7c7197a5ccf9d430e984a42f6913974c4cebe54fe80",
+            "bytes": 30740,
+            "lines": 846
+          },
+          {
+            "file": "./json_core/ZERO_CORE.ids.json",
+            "sha256": "5c0cb98244586e6c4a8eea52e44d0ef82ac74fe3f2be4fe604147f9a48d75b09",
+            "bytes": 35919,
+            "lines": 1762
+          },
+          {
+            "file": "./json_core/ZERO_CORE.index.json",
+            "sha256": "306bccb0ac5b2eb7a8adb499aeb5de4cb6e697263e1a6da2010608b3f3ec1116",
+            "bytes": 34834,
+            "lines": 1072
+          },
+          {
+            "file": "./json_core/ZERO_CORE.integrity.json",
+            "sha256": "b14c21aa564db177b0befdf70c5da5de87f2272c060ccff1709b17476d7b6473",
+            "bytes": 71924,
+            "lines": 2611
+          },
+          {
+            "file": "./json_core/ZERO_CORE.inventory.json",
+            "sha256": "e9b7b38507cd38b1ddc3042d8048676c78ae91ebf4a6d1833617c4c821495d65",
+            "bytes": 42769,
+            "lines": 1340
+          },
+          {
+            "file": "./json_core/ZERO_CORE.json",
+            "sha256": "5c00d3f8220850f0776b4e0e67891535046ae5436ef5ffa592ee5b37fa4ccb24",
+            "bytes": 59959,
+            "lines": 1845
+          },
+          {
+            "file": "./json_core/ZERO_CORE.keys.json",
+            "sha256": "6cafe720720fb26cc1ad839e91dd31bd3a3a6bf38cb2bbfe2e324b86e2d3a752",
+            "bytes": 145418,
+            "lines": 7841
+          },
+          {
+            "file": "./json_core/ZERO_CORE.manifest.json",
+            "sha256": "9f893bb173d36b0bf2440665b77b884911b8159065cc5a4ead8fabff16fa1d17",
+            "bytes": 321072,
+            "lines": 13509
+          },
+          {
+            "file": "./json_core/ZERO_CORE.master.json",
+            "sha256": "1dfcd4f6d102a16d800f1aa4b417bf211fea14705326a7f75cb36bef22967c34",
+            "bytes": 849429,
+            "lines": 31019
+          },
+          {
+            "file": "./json_core/ZERO_CORE.pipeline.json",
+            "sha256": "5dd4ca3327ab6850e293453c945995e78baeeefcf1c0b939f287c4138932e6c6",
+            "bytes": 238562,
+            "lines": 10026
+          },
+          {
+            "file": "./json_core/ZERO_CORE.queue.json",
+            "sha256": "2e3d5c63e9038b13a03579fd2155964f074fb68c03332be0d7d67182e725c440",
+            "bytes": 18954,
+            "lines": 858
+          },
+          {
+            "file": "./json_core/ZERO_CORE.registry.json",
+            "sha256": "0744d454fff6752e0b2fb20186fe83c8a3f220413fb88e9594396632d993803e",
+            "bytes": 393600,
+            "lines": 14852
+          },
+          {
+            "file": "./json_core/ZERO_CORE.relationships.json",
+            "sha256": "39a08445df04b202e90899b750aae82089916864b1899c1ff2bdbb7d1d89be04",
+            "bytes": 29191,
+            "lines": 1324
+          },
+          {
+            "file": "./json_core/ZERO_CORE.release.json",
+            "sha256": "04255c8c2559b4e4d8bae51c4aeeadd345298d439b9d3ba972d0cf976eb1615f",
+            "bytes": 911747,
+            "lines": 31031
+          },
+          {
+            "file": "./json_core/ZERO_CORE.rewrite_plan.json",
+            "sha256": "2081b1d90fe00039d3d95de3d6921688ffb0bb5bac351fcf58645906876b18ff",
+            "bytes": 199484,
+            "lines": 9164
+          },
+          {
+            "file": "./json_core/ZERO_CORE.runtime.json",
+            "sha256": "2e5195169e9340843af123ef4a6327eaa672e568ddd4fdd345e79dddff4e1f41",
+            "bytes": 692,
+            "lines": 43
+          },
+          {
+            "file": "./json_core/ZERO_CORE.schema_map.json",
+            "sha256": "fbf8d2af0e59c75484a432a58349b5269f32457c35e7f94487f95659a0a1b969",
+            "bytes": 21164,
+            "lines": 882
+          },
+          {
+            "file": "./json_core/ZERO_CORE.schema_report.json",
+            "sha256": "fba22c09f27fe31a87bfd76825a300e62fb7b2b312a6349b5fba225eebd39772",
+            "bytes": 4650,
+            "lines": 226
+          },
+          {
+            "file": "./json_core/ZERO_CORE.snapshot.json",
+            "sha256": "92ef7d63a6ca6158dbda125b849b289aef6a68866556994012a41a7a81723dec",
+            "bytes": 606791,
+            "lines": 23539
+          },
+          {
+            "file": "./json_core/ZERO_CORE.stats.json",
+            "sha256": "0bc3b153d156ad14101b3b10255f91ff6b5fe900ce3256e0d1168bc313a2f565",
+            "bytes": 88,
+            "lines": 5
+          },
+          {
+            "file": "./json_core/ZERO_CORE.version_report.json",
+            "sha256": "d398a46ddedf5c74a6851ed58f457a6d3e68806bb233e32b4c28586aabfd30ff",
+            "bytes": 438,
+            "lines": 34
+          },
+          {
+            "file": "./json_core/ZERO_CORE.versions.json",
+            "sha256": "9dd3796341f504b32a99060633b5a9bb853bcb45d6c639bad599ff53850fb422",
+            "bytes": 25860,
+            "lines": 1102
+          }
+        ],
+        "hashes": [
+          {
+            "file": "./json_core/ZERO_CORE.30pack.json",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "file": "./json_core/ZERO_CORE.bundle.json",
+            "sha256": "c2613edbbd737632e71bd12499d9bda4649ff50ea64b58b5c15f2443a784c1d6"
+          },
+          {
+            "file": "./json_core/ZERO_CORE.catalog.json",
+            "sha256": "2ba3685be24728f9d542f59cdd72b8ee3272e2afb064dbbf6abcc22a6087fbdd"
+          },
+          {
+            "file": "./json_core/ZERO_CORE.dependencies.json",
+            "sha256": "afcaee104ad3ae0a6a6cb8b9139394e68780db9c73c8906fc4f3a11872fab1db"
+          },
+          {
+            "file": "./json_core/ZERO_CORE.diff.json",
+            "sha256": "bf988bf368e85a0f30353aa6fae87dd92d486bc62f1bb9522e7210c2ca4436ae"
+          },
+          {
+            "file": "./json_core/ZERO_CORE.export.json",
+            "sha256": "db0faf3150bde6dbf92af57e020a904fedb673982480aafe063da7b233f918a4"
+          },
+          {
+            "file": "./json_core/ZERO_CORE.governance.json",
+            "sha256": "31efa12978f38926072f90200be7ab97c0883a8030a66464fae4c776513f8206"
+          },
+          {
+            "file": "./json_core/ZERO_CORE.graph.json",
+            "sha256": "357570ab4555dc6a1c02c05ea11c3d02f81bcdda39ee5ea8a33f12b73a80732e"
+          },
+          {
+            "file": "./json_core/ZERO_CORE.hashes.json",
+            "sha256": "c0f356a8279796a38886b7c7197a5ccf9d430e984a42f6913974c4cebe54fe80"
+          },
+          {
+            "file": "./json_core/ZERO_CORE.ids.json",
+            "sha256": "5c0cb98244586e6c4a8eea52e44d0ef82ac74fe3f2be4fe604147f9a48d75b09"
+          },
+          {
+            "file": "./json_core/ZERO_CORE.index.json",
+            "sha256": "306bccb0ac5b2eb7a8adb499aeb5de4cb6e697263e1a6da2010608b3f3ec1116"
+          },
+          {
+            "file": "./json_core/ZERO_CORE.integrity.json",
+            "sha256": "b14c21aa564db177b0befdf70c5da5de87f2272c060ccff1709b17476d7b6473"
+          },
+          {
+            "file": "./json_core/ZERO_CORE.inventory.json",
+            "sha256": "e9b7b38507cd38b1ddc3042d8048676c78ae91ebf4a6d1833617c4c821495d65"
+          },
+          {
+            "file": "./json_core/ZERO_CORE.json",
+            "sha256": "5c00d3f8220850f0776b4e0e67891535046ae5436ef5ffa592ee5b37fa4ccb24"
+          },
+          {
+            "file": "./json_core/ZERO_CORE.keys.json",
+            "sha256": "6cafe720720fb26cc1ad839e91dd31bd3a3a6bf38cb2bbfe2e324b86e2d3a752"
+          },
+          {
+            "file": "./json_core/ZERO_CORE.manifest.json",
+            "sha256": "9f893bb173d36b0bf2440665b77b884911b8159065cc5a4ead8fabff16fa1d17"
+          },
+          {
+            "file": "./json_core/ZERO_CORE.master.json",
+            "sha256": "1dfcd4f6d102a16d800f1aa4b417bf211fea14705326a7f75cb36bef22967c34"
+          },
+          {
+            "file": "./json_core/ZERO_CORE.pipeline.json",
+            "sha256": "5dd4ca3327ab6850e293453c945995e78baeeefcf1c0b939f287c4138932e6c6"
+          },
+          {
+            "file": "./json_core/ZERO_CORE.queue.json",
+            "sha256": "2e3d5c63e9038b13a03579fd2155964f074fb68c03332be0d7d67182e725c440"
+          },
+          {
+            "file": "./json_core/ZERO_CORE.registry.json",
+            "sha256": "0744d454fff6752e0b2fb20186fe83c8a3f220413fb88e9594396632d993803e"
+          },
+          {
+            "file": "./json_core/ZERO_CORE.relationships.json",
+            "sha256": "39a08445df04b202e90899b750aae82089916864b1899c1ff2bdbb7d1d89be04"
+          },
+          {
+            "file": "./json_core/ZERO_CORE.release.json",
+            "sha256": "04255c8c2559b4e4d8bae51c4aeeadd345298d439b9d3ba972d0cf976eb1615f"
+          },
+          {
+            "file": "./json_core/ZERO_CORE.rewrite_plan.json",
+            "sha256": "2081b1d90fe00039d3d95de3d6921688ffb0bb5bac351fcf58645906876b18ff"
+          },
+          {
+            "file": "./json_core/ZERO_CORE.runtime.json",
+            "sha256": "2e5195169e9340843af123ef4a6327eaa672e568ddd4fdd345e79dddff4e1f41"
+          },
+          {
+            "file": "./json_core/ZERO_CORE.schema_map.json",
+            "sha256": "fbf8d2af0e59c75484a432a58349b5269f32457c35e7f94487f95659a0a1b969"
+          },
+          {
+            "file": "./json_core/ZERO_CORE.schema_report.json",
+            "sha256": "fba22c09f27fe31a87bfd76825a300e62fb7b2b312a6349b5fba225eebd39772"
+          },
+          {
+            "file": "./json_core/ZERO_CORE.snapshot.json",
+            "sha256": "92ef7d63a6ca6158dbda125b849b289aef6a68866556994012a41a7a81723dec"
+          },
+          {
+            "file": "./json_core/ZERO_CORE.stats.json",
+            "sha256": "0bc3b153d156ad14101b3b10255f91ff6b5fe900ce3256e0d1168bc313a2f565"
+          },
+          {
+            "file": "./json_core/ZERO_CORE.version_report.json",
+            "sha256": "d398a46ddedf5c74a6851ed58f457a6d3e68806bb233e32b4c28586aabfd30ff"
+          },
+          {
+            "file": "./json_core/ZERO_CORE.versions.json",
+            "sha256": "9dd3796341f504b32a99060633b5a9bb853bcb45d6c639bad599ff53850fb422"
+          }
+        ]
+      },
+      "bundle": {
+        "bundle_version": "1.0.0",
+        "runtime": {
+          "runtime_version": "1.0.0",
+          "generated": 1785249132,
+          "graph": null,
+          "metrics": {
+            "files": 30,
+            "bytes": 7379329,
+            "lines": 259972,
+            "schemas": 0,
+            "json": 30
+          }
+        },
+        "registry": {
+          "registry_version": "1.0.0",
+          "generated": 1785249131,
+          "catalog": [
+            {
+              "file": "./json_core/ZERO_CORE.30pack.json",
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "bytes": 0,
+              "lines": 0
+            },
+            {
+              "file": "./json_core/ZERO_CORE.bundle.json",
+              "sha256": "c2613edbbd737632e71bd12499d9bda4649ff50ea64b58b5c15f2443a784c1d6",
+              "bytes": 1986632,
+              "lines": 63130
+            },
+            {
+              "file": "./json_core/ZERO_CORE.catalog.json",
+              "sha256": "2ba3685be24728f9d542f59cdd72b8ee3272e2afb064dbbf6abcc22a6087fbdd",
+              "bytes": 34834,
+              "lines": 1072
+            },
+            {
+              "file": "./json_core/ZERO_CORE.dependencies.json",
+              "sha256": "afcaee104ad3ae0a6a6cb8b9139394e68780db9c73c8906fc4f3a11872fab1db",
+              "bytes": 196959,
+              "lines": 5723
+            },
+            {
+              "file": "./json_core/ZERO_CORE.diff.json",
+              "sha256": "bf988bf368e85a0f30353aa6fae87dd92d486bc62f1bb9522e7210c2ca4436ae",
+              "bytes": 69461,
+              "lines": 1921
+            },
+            {
+              "file": "./json_core/ZERO_CORE.export.json",
+              "sha256": "db0faf3150bde6dbf92af57e020a904fedb673982480aafe063da7b233f918a4",
+              "bytes": 1010870,
+              "lines": 32107
+            },
+            {
+              "file": "./json_core/ZERO_CORE.governance.json",
+              "sha256": "31efa12978f38926072f90200be7ab97c0883a8030a66464fae4c776513f8206",
+              "bytes": 178,
+              "lines": 8
+            },
+            {
+              "file": "./json_core/ZERO_CORE.graph.json",
+              "sha256": "357570ab4555dc6a1c02c05ea11c3d02f81bcdda39ee5ea8a33f12b73a80732e",
+              "bytes": 37110,
+              "lines": 1080
+            },
+            {
+              "file": "./json_core/ZERO_CORE.hashes.json",
+              "sha256": "c0f356a8279796a38886b7c7197a5ccf9d430e984a42f6913974c4cebe54fe80",
+              "bytes": 30740,
+              "lines": 846
+            },
+            {
+              "file": "./json_core/ZERO_CORE.ids.json",
+              "sha256": "5c0cb98244586e6c4a8eea52e44d0ef82ac74fe3f2be4fe604147f9a48d75b09",
+              "bytes": 35919,
+              "lines": 1762
+            },
+            {
+              "file": "./json_core/ZERO_CORE.index.json",
+              "sha256": "306bccb0ac5b2eb7a8adb499aeb5de4cb6e697263e1a6da2010608b3f3ec1116",
+              "bytes": 34834,
+              "lines": 1072
+            },
+            {
+              "file": "./json_core/ZERO_CORE.integrity.json",
+              "sha256": "b14c21aa564db177b0befdf70c5da5de87f2272c060ccff1709b17476d7b6473",
+              "bytes": 71924,
+              "lines": 2611
+            },
+            {
+              "file": "./json_core/ZERO_CORE.inventory.json",
+              "sha256": "e9b7b38507cd38b1ddc3042d8048676c78ae91ebf4a6d1833617c4c821495d65",
+              "bytes": 42769,
+              "lines": 1340
+            },
+            {
+              "file": "./json_core/ZERO_CORE.json",
+              "sha256": "5c00d3f8220850f0776b4e0e67891535046ae5436ef5ffa592ee5b37fa4ccb24",
+              "bytes": 59959,
+              "lines": 1845
+            },
+            {
+              "file": "./json_core/ZERO_CORE.keys.json",
+              "sha256": "6cafe720720fb26cc1ad839e91dd31bd3a3a6bf38cb2bbfe2e324b86e2d3a752",
+              "bytes": 145418,
+              "lines": 7841
+            },
+            {
+              "file": "./json_core/ZERO_CORE.manifest.json",
+              "sha256": "9f893bb173d36b0bf2440665b77b884911b8159065cc5a4ead8fabff16fa1d17",
+              "bytes": 321072,
+              "lines": 13509
+            },
+            {
+              "file": "./json_core/ZERO_CORE.master.json",
+              "sha256": "1dfcd4f6d102a16d800f1aa4b417bf211fea14705326a7f75cb36bef22967c34",
+              "bytes": 849429,
+              "lines": 31019
+            },
+            {
+              "file": "./json_core/ZERO_CORE.pipeline.json",
+              "sha256": "5dd4ca3327ab6850e293453c945995e78baeeefcf1c0b939f287c4138932e6c6",
+              "bytes": 238562,
+              "lines": 10026
+            },
+            {
+              "file": "./json_core/ZERO_CORE.queue.json",
+              "sha256": "2e3d5c63e9038b13a03579fd2155964f074fb68c03332be0d7d67182e725c440",
+              "bytes": 18954,
+              "lines": 858
+            },
+            {
+              "file": "./json_core/ZERO_CORE.registry.json",
+              "sha256": "0744d454fff6752e0b2fb20186fe83c8a3f220413fb88e9594396632d993803e",
+              "bytes": 393600,
+              "lines": 14852
+            },
+            {
+              "file": "./json_core/ZERO_CORE.relationships.json",
+              "sha256": "39a08445df04b202e90899b750aae82089916864b1899c1ff2bdbb7d1d89be04",
+              "bytes": 29191,
+              "lines": 1324
+            },
+            {
+              "file": "./json_core/ZERO_CORE.release.json",
+              "sha256": "04255c8c2559b4e4d8bae51c4aeeadd345298d439b9d3ba972d0cf976eb1615f",
+              "bytes": 911747,
+              "lines": 31031
+            },
+            {
+              "file": "./json_core/ZERO_CORE.rewrite_plan.json",
+              "sha256": "2081b1d90fe00039d3d95de3d6921688ffb0bb5bac351fcf58645906876b18ff",
+              "bytes": 199484,
+              "lines": 9164
+            },
+            {
+              "file": "./json_core/ZERO_CORE.runtime.json",
+              "sha256": "2e5195169e9340843af123ef4a6327eaa672e568ddd4fdd345e79dddff4e1f41",
+              "bytes": 692,
+              "lines": 43
+            },
+            {
+              "file": "./json_core/ZERO_CORE.schema_map.json",
+              "sha256": "fbf8d2af0e59c75484a432a58349b5269f32457c35e7f94487f95659a0a1b969",
+              "bytes": 21164,
+              "lines": 882
+            },
+            {
+              "file": "./json_core/ZERO_CORE.schema_report.json",
+              "sha256": "fba22c09f27fe31a87bfd76825a300e62fb7b2b312a6349b5fba225eebd39772",
+              "bytes": 4650,
+              "lines": 226
+            },
+            {
+              "file": "./json_core/ZERO_CORE.snapshot.json",
+              "sha256": "92ef7d63a6ca6158dbda125b849b289aef6a68866556994012a41a7a81723dec",
+              "bytes": 606791,
+              "lines": 23539
+            },
+            {
+              "file": "./json_core/ZERO_CORE.stats.json",
+              "sha256": "0bc3b153d156ad14101b3b10255f91ff6b5fe900ce3256e0d1168bc313a2f565",
+              "bytes": 88,
+              "lines": 5
+            },
+            {
+              "file": "./json_core/ZERO_CORE.version_report.json",
+              "sha256": "d398a46ddedf5c74a6851ed58f457a6d3e68806bb233e32b4c28586aabfd30ff",
+              "bytes": 438,
+              "lines": 34
+            },
+            {
+              "file": "./json_core/ZERO_CORE.versions.json",
+              "sha256": "9dd3796341f504b32a99060633b5a9bb853bcb45d6c639bad599ff53850fb422",
+              "bytes": 25860,
+              "lines": 1102
+            }
+          ]
+        },
+        "integrity": {
+          "algorithm": "SHA-256",
+          "generated": 1785249131,
+          "hashes": [
+            {
+              "file": "./json_core/ZERO_CORE.30pack.json",
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            {
+              "file": "./json_core/ZERO_CORE.bundle.json",
+              "sha256": "c2613edbbd737632e71bd12499d9bda4649ff50ea64b58b5c15f2443a784c1d6"
+            },
+            {
+              "file": "./json_core/ZERO_CORE.catalog.json",
+              "sha256": "2ba3685be24728f9d542f59cdd72b8ee3272e2afb064dbbf6abcc22a6087fbdd"
+            },
+            {
+              "file": "./json_core/ZERO_CORE.dependencies.json",
+              "sha256": "afcaee104ad3ae0a6a6cb8b9139394e68780db9c73c8906fc4f3a11872fab1db"
+            },
+            {
+              "file": "./json_core/ZERO_CORE.diff.json",
+              "sha256": "bf988bf368e85a0f30353aa6fae87dd92d486bc62f1bb9522e7210c2ca4436ae"
+            },
+            {
+              "file": "./json_core/ZERO_CORE.export.json",
+              "sha256": "db0faf3150bde6dbf92af57e020a904fedb673982480aafe063da7b233f918a4"
+            },
+            {
+              "file": "./json_core/ZERO_CORE.governance.json",
+              "sha256": "31efa12978f38926072f90200be7ab97c0883a8030a66464fae4c776513f8206"
+            },
+            {
+              "file": "./json_core/ZERO_CORE.graph.json",
+              "sha256": "357570ab4555dc6a1c02c05ea11c3d02f81bcdda39ee5ea8a33f12b73a80732e"
+            },
+            {
+              "file": "./json_core/ZERO_CORE.hashes.json",
+              "sha256": "c0f356a8279796a38886b7c7197a5ccf9d430e984a42f6913974c4cebe54fe80"
+            },
+            {
+              "file": "./json_core/ZERO_CORE.ids.json",
+              "sha256": "5c0cb98244586e6c4a8eea52e44d0ef82ac74fe3f2be4fe604147f9a48d75b09"
+            },
+            {
+              "file": "./json_core/ZERO_CORE.index.json",
+              "sha256": "306bccb0ac5b2eb7a8adb499aeb5de4cb6e697263e1a6da2010608b3f3ec1116"
+            },
+            {
+              "file": "./json_core/ZERO_CORE.integrity.json",
+              "sha256": "b14c21aa564db177b0befdf70c5da5de87f2272c060ccff1709b17476d7b6473"
+            },
+            {
+              "file": "./json_core/ZERO_CORE.inventory.json",
+              "sha256": "e9b7b38507cd38b1ddc3042d8048676c78ae91ebf4a6d1833617c4c821495d65"
+            },
+            {
+              "file": "./json_core/ZERO_CORE.json",
+              "sha256": "5c00d3f8220850f0776b4e0e67891535046ae5436ef5ffa592ee5b37fa4ccb24"
+            },
+            {
+              "file": "./json_core/ZERO_CORE.keys.json",
+              "sha256": "6cafe720720fb26cc1ad839e91dd31bd3a3a6bf38cb2bbfe2e324b86e2d3a752"
+            },
+            {
+              "file": "./json_core/ZERO_CORE.manifest.json",
+              "sha256": "9f893bb173d36b0bf2440665b77b884911b8159065cc5a4ead8fabff16fa1d17"
+            },
+            {
+              "file": "./json_core/ZERO_CORE.master.json",
+              "sha256": "1dfcd4f6d102a16d800f1aa4b417bf211fea14705326a7f75cb36bef22967c34"
+            },
+            {
+              "file": "./json_core/ZERO_CORE.pipeline.json",
+              "sha256": "5dd4ca3327ab6850e293453c945995e78baeeefcf1c0b939f287c4138932e6c6"
+            },
+            {
+              "file": "./json_core/ZERO_CORE.queue.json",
+              "sha256": "2e3d5c63e9038b13a03579fd2155964f074fb68c03332be0d7d67182e725c440"
+            },
+            {
+              "file": "./json_core/ZERO_CORE.registry.json",
+              "sha256": "0744d454fff6752e0b2fb20186fe83c8a3f220413fb88e9594396632d993803e"
+            },
+            {
+              "file": "./json_core/ZERO_CORE.relationships.json",
+              "sha256": "39a08445df04b202e90899b750aae82089916864b1899c1ff2bdbb7d1d89be04"
+            },
+            {
+              "file": "./json_core/ZERO_CORE.release.json",
+              "sha256": "04255c8c2559b4e4d8bae51c4aeeadd345298d439b9d3ba972d0cf976eb1615f"
+            },
+            {
+              "file": "./json_core/ZERO_CORE.rewrite_plan.json",
+              "sha256": "2081b1d90fe00039d3d95de3d6921688ffb0bb5bac351fcf58645906876b18ff"
+            },
+            {
+              "file": "./json_core/ZERO_CORE.runtime.json",
+              "sha256": "2e5195169e9340843af123ef4a6327eaa672e568ddd4fdd345e79dddff4e1f41"
+            },
+            {
+              "file": "./json_core/ZERO_CORE.schema_map.json",
+              "sha256": "fbf8d2af0e59c75484a432a58349b5269f32457c35e7f94487f95659a0a1b969"
+            },
+            {
+              "file": "./json_core/ZERO_CORE.schema_report.json",
+              "sha256": "fba22c09f27fe31a87bfd76825a300e62fb7b2b312a6349b5fba225eebd39772"
+            },
+            {
+              "file": "./json_core/ZERO_CORE.snapshot.json",
+              "sha256": "92ef7d63a6ca6158dbda125b849b289aef6a68866556994012a41a7a81723dec"
+            },
+            {
+              "file": "./json_core/ZERO_CORE.stats.json",
+              "sha256": "0bc3b153d156ad14101b3b10255f91ff6b5fe900ce3256e0d1168bc313a2f565"
+            },
+            {
+              "file": "./json_core/ZERO_CORE.version_report.json",
+              "sha256": "d398a46ddedf5c74a6851ed58f457a6d3e68806bb233e32b4c28586aabfd30ff"
+            },
+            {
+              "file": "./json_core/ZERO_CORE.versions.json",
+              "sha256": "9dd3796341f504b32a99060633b5a9bb853bcb45d6c639bad599ff53850fb422"
+            }
+          ]
+        }
+      }
+    },
+    "integrity": {
+      "algorithm": "SHA-256",
+      "generated": 1785249131,
+      "hashes": [
+        {
+          "file": "./json_core/ZERO_CORE.30pack.json",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "./json_core/ZERO_CORE.bundle.json",
+          "sha256": "c2613edbbd737632e71bd12499d9bda4649ff50ea64b58b5c15f2443a784c1d6"
+        },
+        {
+          "file": "./json_core/ZERO_CORE.catalog.json",
+          "sha256": "2ba3685be24728f9d542f59cdd72b8ee3272e2afb064dbbf6abcc22a6087fbdd"
+        },
+        {
+          "file": "./json_core/ZERO_CORE.dependencies.json",
+          "sha256": "afcaee104ad3ae0a6a6cb8b9139394e68780db9c73c8906fc4f3a11872fab1db"
+        },
+        {
+          "file": "./json_core/ZERO_CORE.diff.json",
+          "sha256": "bf988bf368e85a0f30353aa6fae87dd92d486bc62f1bb9522e7210c2ca4436ae"
+        },
+        {
+          "file": "./json_core/ZERO_CORE.export.json",
+          "sha256": "db0faf3150bde6dbf92af57e020a904fedb673982480aafe063da7b233f918a4"
+        },
+        {
+          "file": "./json_core/ZERO_CORE.governance.json",
+          "sha256": "31efa12978f38926072f90200be7ab97c0883a8030a66464fae4c776513f8206"
+        },
+        {
+          "file": "./json_core/ZERO_CORE.graph.json",
+          "sha256": "357570ab4555dc6a1c02c05ea11c3d02f81bcdda39ee5ea8a33f12b73a80732e"
+        },
+        {
+          "file": "./json_core/ZERO_CORE.hashes.json",
+          "sha256": "c0f356a8279796a38886b7c7197a5ccf9d430e984a42f6913974c4cebe54fe80"
+        },
+        {
+          "file": "./json_core/ZERO_CORE.ids.json",
+          "sha256": "5c0cb98244586e6c4a8eea52e44d0ef82ac74fe3f2be4fe604147f9a48d75b09"
+        },
+        {
+          "file": "./json_core/ZERO_CORE.index.json",
+          "sha256": "306bccb0ac5b2eb7a8adb499aeb5de4cb6e697263e1a6da2010608b3f3ec1116"
+        },
+        {
+          "file": "./json_core/ZERO_CORE.integrity.json",
+          "sha256": "b14c21aa564db177b0befdf70c5da5de87f2272c060ccff1709b17476d7b6473"
+        },
+        {
+          "file": "./json_core/ZERO_CORE.inventory.json",
+          "sha256": "e9b7b38507cd38b1ddc3042d8048676c78ae91ebf4a6d1833617c4c821495d65"
+        },
+        {
+          "file": "./json_core/ZERO_CORE.json",
+          "sha256": "5c00d3f8220850f0776b4e0e67891535046ae5436ef5ffa592ee5b37fa4ccb24"
+        },
+        {
+          "file": "./json_core/ZERO_CORE.keys.json",
+          "sha256": "6cafe720720fb26cc1ad839e91dd31bd3a3a6bf38cb2bbfe2e324b86e2d3a752"
+        },
+        {
+          "file": "./json_core/ZERO_CORE.manifest.json",
+          "sha256": "9f893bb173d36b0bf2440665b77b884911b8159065cc5a4ead8fabff16fa1d17"
+        },
+        {
+          "file": "./json_core/ZERO_CORE.master.json",
+          "sha256": "1dfcd4f6d102a16d800f1aa4b417bf211fea14705326a7f75cb36bef22967c34"
+        },
+        {
+          "file": "./json_core/ZERO_CORE.pipeline.json",
+          "sha256": "5dd4ca3327ab6850e293453c945995e78baeeefcf1c0b939f287c4138932e6c6"
+        },
+        {
+          "file": "./json_core/ZERO_CORE.queue.json",
+          "sha256": "2e3d5c63e9038b13a03579fd2155964f074fb68c03332be0d7d67182e725c440"
+        },
+        {
+          "file": "./json_core/ZERO_CORE.registry.json",
+          "sha256": "0744d454fff6752e0b2fb20186fe83c8a3f220413fb88e9594396632d993803e"
+        },
+        {
+          "file": "./json_core/ZERO_CORE.relationships.json",
+          "sha256": "39a08445df04b202e90899b750aae82089916864b1899c1ff2bdbb7d1d89be04"
+        },
+        {
+          "file": "./json_core/ZERO_CORE.release.json",
+          "sha256": "04255c8c2559b4e4d8bae51c4aeeadd345298d439b9d3ba972d0cf976eb1615f"
+        },
+        {
+          "file": "./json_core/ZERO_CORE.rewrite_plan.json",
+          "sha256": "2081b1d90fe00039d3d95de3d6921688ffb0bb5bac351fcf58645906876b18ff"
+        },
+        {
+          "file": "./json_core/ZERO_CORE.runtime.json",
+          "sha256": "2e5195169e9340843af123ef4a6327eaa672e568ddd4fdd345e79dddff4e1f41"
+        },
+        {
+          "file": "./json_core/ZERO_CORE.schema_map.json",
+          "sha256": "fbf8d2af0e59c75484a432a58349b5269f32457c35e7f94487f95659a0a1b969"
+        },
+        {
+          "file": "./json_core/ZERO_CORE.schema_report.json",
+          "sha256": "fba22c09f27fe31a87bfd76825a300e62fb7b2b312a6349b5fba225eebd39772"
+        },
+        {
+          "file": "./json_core/ZERO_CORE.snapshot.json",
+          "sha256": "92ef7d63a6ca6158dbda125b849b289aef6a68866556994012a41a7a81723dec"
+        },
+        {
+          "file": "./json_core/ZERO_CORE.stats.json",
+          "sha256": "0bc3b153d156ad14101b3b10255f91ff6b5fe900ce3256e0d1168bc313a2f565"
+        },
+        {
+          "file": "./json_core/ZERO_CORE.version_report.json",
+          "sha256": "d398a46ddedf5c74a6851ed58f457a6d3e68806bb233e32b4c28586aabfd30ff"
+        },
+        {
+          "file": "./json_core/ZERO_CORE.versions.json",
+          "sha256": "9dd3796341f504b32a99060633b5a9bb853bcb45d6c639bad599ff53850fb422"
+        }
+      ]
+    }
+  }
+}

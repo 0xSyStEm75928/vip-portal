@@ -1,0 +1,14 @@
+{
+  "$schema": "./schemas/execution_log.schema.json",
+  "execution_log": {
+    "entries": [],
+    "fields": {
+      "timestamp": "ISO8601",
+      "operator": "string",
+      "command": "string",
+      "exit_code": "integer",
+      "stdout_hash": "sha256",
+      "stderr_hash": "sha256"
+    }
+  }
+}

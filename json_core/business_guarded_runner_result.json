@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-07-29T10:11:08.421282+00:00",
+  "gate": "OPEN",
+  "runner": {
+    "executed": true,
+    "command": "python3 business_master_runner.py",
+    "return_code": 1
+  },
+  "status": "FAILED"
+}

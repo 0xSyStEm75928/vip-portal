@@ -1,0 +1,21 @@
+{
+  "interface_export_version": "1.0.0",
+  "generated_at": "2026-07-28T14:41:30Z",
+  "api": {
+    "api_version": "1.0.0",
+    "generated_at": "2026-07-28T14:41:30Z",
+    "endpoints": [],
+    "auth": "ZERO_CORE_POLICY"
+  },
+  "cli": {
+    "cli_version": "1.0.0",
+    "generated_at": "2026-07-28T14:41:30Z",
+    "command": "sun",
+    "commands": [
+      "status",
+      "audit",
+      "export",
+      "workflow"
+    ]
+  }
+}

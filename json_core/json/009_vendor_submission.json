@@ -1,0 +1,16 @@
+{
+  "$schema": "./schemas/vendor_submission.schema.json",
+  "submission": {
+    "vendor": "Binance",
+    "status": "DRAFT",
+    "ready_for_submission": false,
+    "required_documents": [
+      "Environment",
+      "Evidence",
+      "PoC",
+      "Execution Log",
+      "Risk Analysis",
+      "Timeline"
+    ]
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "$schema": "./schemas/json.syscall.registry.schema.json",
+
+  "json_syscall_registry": {
+    "version": "1.0.0",
+    "status": "ACTIVE",
+
+    "purpose": "Registry-native syscall interface for ZeroCore.",
+
+    "syscalls": [
+      {
+        "syscall_id": "SYS-001",
+        "name": "registry.load",
+        "category": "registry",
+        "arguments": [
+          "registry_file"
+        ],
+        "returns": "registry_handle",
+        "state": "READY"
+      },
+      {
+        "syscall_id": "SYS-002",
+        "name": "event.publish",
+        "category": "event",
+        "arguments": [
+          "event_object"
+        ],
+        "returns": "event_id",
+        "state": "READY"
+      },
+      {
+        "syscall_id": "SYS-003",
+        "name": "audit.append",
+        "category": "audit",
+        "arguments": [
+          "evidence_record"
+        ],
+        "returns": "audit_hash",
+        "state": "READY"
+      },
+      {
+        "syscall_id": "SYS-004",
+        "name": "object.resolve",
+        "category": "object",
+        "arguments": [
+          "object_id"
+        ],
+        "returns": "object_reference",
+        "state": "READY"
+      },
+      {
+        "syscall_id": "SYS-005",
+        "name": "process.spawn",
+        "category": "kernel",
+        "arguments": [
+          "process_manifest"
+        ],
+        "returns": "pid",
+        "state": "READY"
+      }
+    ],
+
+    "execution_policy": {
+      "schema_validation": true,
+      "integrity_validation": true,
+      "audit_required": true,
+      "append_only_logs": true
+    },
+
+    "statistics": {
+      "registered_syscalls": 5,
+      "enabled": 5,
+      "disabled": 0
+    },
+
+    "integrity": {
+      "registry_hash": null,
+      "validated": false,
+      "last_update": null
+    }
+  }
+}

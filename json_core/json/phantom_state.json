@@ -1,0 +1,16 @@
+{
+  "$schema": "https://zerocore.io/schemas/v1/deception/phantom_state.json",
+  "session_id": "sess_trap_8801",
+  "perceived_status": "200_OK_SUCCESS",
+  "perceived_privilege": "ROOT_ADMIN",
+  "fake_data": {
+    "system_wallet_balance": "999999999_USDT",
+    "database_dump_url": "/api/v1/export/full_db.tar.gz"
+  },
+  "deception_engine": {
+    "trap_type": "PONZI_RESOURCE_DRAIN",
+    "loop_delay_ms": 3000,
+    "max_cpu_cost_for_attacker": "HIGH",
+    "is_sandboxed": true
+  }
+}

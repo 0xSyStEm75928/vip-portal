@@ -1,0 +1,23 @@
+{
+  "business_tier_map_version": "1.0.0",
+  "generated_at": "2026-07-28T15:10:40Z",
+  "tiers": [
+    {
+      "id": "01_PERSONAL",
+      "users": "single"
+    },
+    {
+      "id": "02_PERSONAL_PLUS",
+      "users": "individual_operator"
+    },
+    {
+      "id": "03_SMALL_BUSINESS",
+      "users": "organization"
+    },
+    {
+      "id": "04_ENTERPRISE",
+      "users": "multi_tenant"
+    }
+  ],
+  "status": "READY"
+}

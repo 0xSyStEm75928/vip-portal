@@ -1,0 +1,7 @@
+{
+  "incident_state_version": "1.0.0",
+  "generated_at": "2026-07-28T15:13:50Z",
+  "current_state": "NORMAL",
+  "incidents": [],
+  "monitoring": "ENABLED"
+}

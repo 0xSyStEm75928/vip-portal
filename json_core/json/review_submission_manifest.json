@@ -1,0 +1,57 @@
+{
+  "$schema": "./schemas/review.submission.manifest.schema.json",
+
+  "review_submission_manifest": {
+    "version": "1.0.0",
+    "status": "DRAFT",
+
+    "purpose": "Entry point for the complete review and evidence package.",
+
+    "submission": {
+      "submission_id": null,
+      "target_vendor": null,
+      "program": null,
+      "report_title": null,
+      "prepared_at": null,
+      "prepared_by": null
+    },
+
+    "package": {
+      "overview": null,
+      "severity": "UNASSESSED",
+      "reproducible": false,
+      "independent_verification": false
+    },
+
+    "registries": {
+      "environment": "environment_manifest.json",
+      "reproduction": "reproduction_protocol.json",
+      "timeline": "timeline_of_events.json",
+      "hash_registry": "evidence_hash_registry.json",
+      "vendor_tracker": "vendor_response_tracker.json"
+    },
+
+    "artifacts": {
+      "source_code": [],
+      "logs": [],
+      "screenshots": [],
+      "videos": [],
+      "documents": []
+    },
+
+    "review_checklist": {
+      "environment_documented": false,
+      "steps_documented": false,
+      "evidence_hashed": false,
+      "timeline_completed": false,
+      "vendor_information_completed": false,
+      "final_review_completed": false
+    },
+
+    "integrity": {
+      "manifest_hash": null,
+      "generated_at": null,
+      "verified": false
+    }
+  }
+}

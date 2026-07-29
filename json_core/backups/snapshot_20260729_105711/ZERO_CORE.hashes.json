@@ -1,0 +1,846 @@
+[
+  {
+    "file": "./json_core/json/zerocore.disclosure.framework.json",
+    "sha256": "75621792b3cc2636257481db2d7b4a2b334f66e7c3d679b2fea77ec8d9c80231"
+  },
+  {
+    "file": "./json_core/json/environment_manifest.json",
+    "sha256": "32aaa99942f3ae3862070c52e3d61741bd354ff6fc6a6af3ee001a2047ca0b47"
+  },
+  {
+    "file": "./json_core/json/zerocore.sovereign.bootstrap.v1.json",
+    "sha256": "6441dc0819296f86408c4958df9ca4d154906f438c3f74d9ee6453ed313f11cb"
+  },
+  {
+    "file": "./json_core/json/covert_signal_047.json",
+    "sha256": "08a6520eb81f7d477c9f3d5d8ac70ad2198dfc9490cd94cd62ad3ba2ac1d3fa3"
+  },
+  {
+    "file": "./json_core/json/json_fd_table.json",
+    "sha256": "1cb39134326e702fbbe5a983e4bf983b477633ae508166e1ff3df5e1796de9e3"
+  },
+  {
+    "file": "./json_core/json/ghost_window_protocol.json",
+    "sha256": "5fde1e84a56cc17bc3d4e594c33ab9e7f9cab0db1ab48623a257873231cfa133"
+  },
+  {
+    "file": "./json_core/json/covert_signal_010.json",
+    "sha256": "a89cdb888ffbf5e28c38bc3b2df2ae3e9c25d86446b35e1b88fa9b180da87d43"
+  },
+  {
+    "file": "./json_core/json/covert_signal_006.json",
+    "sha256": "e54c256f0bd477771b153556ce91683ea6bb6adea3cf294243dbe89eae17e676"
+  },
+  {
+    "file": "./json_core/json/anonymous_settlement_goal.json",
+    "sha256": "295f3e03320ac3715a3a15098decf96e42f50f4afe5d7b1a61b50ba86478acb0"
+  },
+  {
+    "file": "./json_core/json/007_risk_matrix.json",
+    "sha256": "711a18c2e0772761f8c539f7ac723eab77f14a5604ecd04ba88feeceaaa89ac7"
+  },
+  {
+    "file": "./json_core/json/covert_signal_051.json",
+    "sha256": "9a361314424a0f75bef9a419d6600585779f687b60961edca1b32ac454061c67"
+  },
+  {
+    "file": "./json_core/json/buyer_deep_profiling.json",
+    "sha256": "706e83aea5decdc1017a4cb3d2ae344256002091dc1ef1b8390d2d77172eee48"
+  },
+  {
+    "file": "./json_core/json/004_evidence.json",
+    "sha256": "f632b93e7b07916d3fe900e43508d366db92b3e7cfec65b51ac10d2cc65e0f52"
+  },
+  {
+    "file": "./json_core/json/sun.event.v1.json",
+    "sha256": "80c54c96bb9cda3ef5f8c3b58f57d6c2fe37427138f7ae31ee46006a6f83cec1"
+  },
+  {
+    "file": "./json_core/json/covert_signal_092.json",
+    "sha256": "879c07b0e6fcf1b301a6d081a5af75c5b33ba07ec5b4759b071f3a48266b140f"
+  },
+  {
+    "file": "./json_core/json/sovereign_part5.json",
+    "sha256": "83e71df33ec44b43ed8333ea1be35e58a954365148a3483b900491dc45232889"
+  },
+  {
+    "file": "./json_core/json/covert_signal_084.json",
+    "sha256": "df654a87782b4e7989062a31f7fb7e7a13425523772c78a08fbb352ceeed1418"
+  },
+  {
+    "file": "./json_core/json/review_submission_manifest.json",
+    "sha256": "eab8463d66483f721ff1b4c063f864d9fb550dbb0c2f3322c03343decea05603"
+  },
+  {
+    "file": "./json_core/json/zerocore.graph.manifest.json",
+    "sha256": "928dd5fdddc1c095fde8c1e046d45662a6f1c45ae68db16e81c9e7150c09c51c"
+  },
+  {
+    "file": "./json_core/json/layer4_routing.json",
+    "sha256": "1ca4ffcc13d260fa7ff35c65177c0438ce230459a19ed4b02ae97c8eb30653b7"
+  },
+  {
+    "file": "./json_core/json/json_syscall_registry.json",
+    "sha256": "9cda95f7b3e391c2663ee58f0ec1fcbfcab4a1d41efbd2c8e0a81cfc546fd280"
+  },
+  {
+    "file": "./json_core/json/availablePlugins.json",
+    "sha256": "e3fe58bd700745e0dcec483ec0e74a5bfcf2b537720c4db807d8b9e0abcd21c0"
+  },
+  {
+    "file": "./json_core/json/covert_signal_026.json",
+    "sha256": "609eca745a97b3702e0accefa2e624f4ae28a00396c7543fa4342a9f85cd8874"
+  },
+  {
+    "file": "./json_core/json/covert_signal_071.json",
+    "sha256": "949889026ad7acde2648b9544a0b8791c90ebe4742ec96affaae852a13635900"
+  },
+  {
+    "file": "./json_core/json/anonymous-cli-metrics.json",
+    "sha256": "88716b86cbcd730ac722f4587460797cc89bdd3f98242b71e3356200963b1483"
+  },
+  {
+    "file": "./json_core/json/covert_signal_067.json",
+    "sha256": "6b0715f632916b30a49f996bfd54d7c7584754b222a9349ba19546b679e57ce0"
+  },
+  {
+    "file": "./json_core/json/covert_signal_088.json",
+    "sha256": "897133386b6596580fb484407670bf681ead8152ea277f4e5b57d03904fa5d46"
+  },
+  {
+    "file": "./json_core/json/covert_signal_030.json",
+    "sha256": "df127a4044ef16816be696ff1bb36b14fd2488f0ccd3f933bc00edffb335535d"
+  },
+  {
+    "file": "./json_core/json/agent_memory_index.json",
+    "sha256": "d01d2b4e0921d2a4c52de7fe285a27ce0e521ffb92e07c580da158abd114c714"
+  },
+  {
+    "file": "./json_core/json/002_target.json",
+    "sha256": "4cc526342fe818582b38ef5f85bd288c5ac42eb091a1d5acf36efe3261da9eb8"
+  },
+  {
+    "file": "./json_core/json/product_data.json",
+    "sha256": "0184601edb3dd21bac4b781e7efed1a02711c2543aaf090a60b66262d1881277"
+  },
+  {
+    "file": "./json_core/json/covert_signal_031.json",
+    "sha256": "115697ce3e03ac108c0bee33c8e8a841ba2b68674a9727647f09c0fb91b239d4"
+  },
+  {
+    "file": "./json_core/json/origin.json",
+    "sha256": "e0dd5d3f6ad5d7733fad597be2a267d038c0b67951e0b79eeec7a90ecea64c40"
+  },
+  {
+    "file": "./json_core/json/covert_signal_066.json",
+    "sha256": "ce2725ade3af8c176b23b9689e7f3ed40b10c6fb5f27a0cffe70f2337bd7d818"
+  },
+  {
+    "file": "./json_core/json/covert_signal_089.json",
+    "sha256": "a6c60789b60bcf76ffbad7c317828035ec380103949e6509b71b1bdcbc41d66b"
+  },
+  {
+    "file": "./json_core/json/payment.verified.gate.json",
+    "sha256": "207d4723ae179400bbbc31aa94ff3fe864c03adc14d9b9e7cc5d6eabb8784a30"
+  },
+  {
+    "file": "./json_core/json/covert_signal_070.json",
+    "sha256": "dc4d797450e8f3c06ee19fb73ef67fa0cd4e7b833b7d78982c1cea19f0e1d170"
+  },
+  {
+    "file": "./json_core/json/kernel_checkpoint_registry.json",
+    "sha256": "2152d841664e4d13c15c2e18d3c4ebffa1f702f330593ab97a7eafb2d0d76cc9"
+  },
+  {
+    "file": "./json_core/json/covert_signal_027.json",
+    "sha256": "acc92f3f4808e6f06e5dbe5e1a1e11807d1d6064cde0c2da20dae2ec65769522"
+  },
+  {
+    "file": "./json_core/json/001_environment.json",
+    "sha256": "f99b057e30e1fd74955518661e5aa8acffac84417f426c944e05564d7f4b1cca"
+  },
+  {
+    "file": "./json_core/json/audit_chain.json",
+    "sha256": "99c5d110277449c858bf53e94a7ece8ddfb0da9e330e71f0b4cc6b65397d0740"
+  },
+  {
+    "file": "./json_core/json/story_stream_legend.json",
+    "sha256": "055117cf1e3fcd27fe52da380bea584911be62b744336a65c94a1135682e59bc"
+  },
+  {
+    "file": "./json_core/json/covert_signal_085.json",
+    "sha256": "3e06bf01833f3d58be32e5963ff7c79f1ce330bd99ee0348471bb27418e003fe"
+  },
+  {
+    "file": "./json_core/json/covert_signal_093.json",
+    "sha256": "7e9782839a621a2ade146e9a6cd099b31adf12802bdfb9a2de88c175f0a561d9"
+  },
+  {
+    "file": "./json_core/json/sovereign_part4.json",
+    "sha256": "d604d5803861d58dab3f1bd8c51efdb6534f91ffc548ff592417aee8f51b9d89"
+  },
+  {
+    "file": "./json_core/json/update-notifier-npm.json",
+    "sha256": "c8e1f688836e36dce5005bb27d87c6aef6e3cf0c609bcac98b93ac1505bffbb5"
+  },
+  {
+    "file": "./json_core/json/capability_registry.json",
+    "sha256": "03ed4da4223095842aa04175f31d711172a815bf63ac5b71a00d2cfa3626b5f5"
+  },
+  {
+    "file": "./json_core/json/capabilities.json",
+    "sha256": "0c7fdd91ed723db2accc087ce399cc3744dfe071a24c0852f0b7f493e781114a"
+  },
+  {
+    "file": "./json_core/json/010_master_registry.json",
+    "sha256": "1468f2b03811ef57fef01cd029fe30cc94b91c4d86d3319f7d1ace8ca1a57dfd"
+  },
+  {
+    "file": "./json_core/json/covert_signal_050.json",
+    "sha256": "d0d86c3c115ae3b3a8a53246a102cfffd3b1cbc730032752b7c7048a31418e03"
+  },
+  {
+    "file": "./json_core/json/covert_signal_007.json",
+    "sha256": "6d7bb40ca0cef592b83ed982e0848a36586f029050474a522f03148fd816c459"
+  },
+  {
+    "file": "./json_core/json/zerocore.master.poc.json",
+    "sha256": "02309354271e48d15670868e641a41b3df5673f447f14f6016a477c23e43272f"
+  },
+  {
+    "file": "./json_core/json/covert_signal_011.json",
+    "sha256": "ad1fd0cabc0e5b6f05b6f0631d763047dfa8685be02322628f5bcae668083765"
+  },
+  {
+    "file": "./json_core/json/covert_signal_046.json",
+    "sha256": "71b56c92688566277dd3a719c9c2f5e22cb579b935065161db471a01b37a8971"
+  },
+  {
+    "file": "./json_core/json/boot_record.json",
+    "sha256": "e6fa88ae97f43cd3a44bc9b8bbdf627902472ca6df650b76568fca0a3eb8e311"
+  },
+  {
+    "file": "./json_core/json/layer1_trigger.json",
+    "sha256": "d91effbc536a4b12b1ffa16da6642faf82f4bc61814d8c01fa21871a2dbfecd3"
+  },
+  {
+    "file": "./json_core/json/zerocore.private.v1.json",
+    "sha256": "72623e0055c8a39796704e53a005120cf16540671067cd689a870cbd93b12d18"
+  },
+  {
+    "file": "./json_core/json/covert_signal_020.json",
+    "sha256": "4fff1f7aa8335fbf784a9eedd74829a401301a465053bc071cd50e65a6a621b6"
+  },
+  {
+    "file": "./json_core/json/covert_signal_077.json",
+    "sha256": "d97941df95058efca8222406d6efe55c37a46555c574fdd16c36c9001d3385e5"
+  },
+  {
+    "file": "./json_core/json/covert_signal_098.json",
+    "sha256": "dfb5e11fe8c100385f41d2954fc21cb9096fde7f4ede11028c5491ae3da3f5b7"
+  },
+  {
+    "file": "./json_core/json/003_reproduction.json",
+    "sha256": "624227333fb4cf0d9f236aaae37e48de4fd732d6fe986d7b267c9e6487287c6f"
+  },
+  {
+    "file": "./json_core/json/covert_signal_061.json",
+    "sha256": "73b29c6327770fb9a6414fe2778036fa2b973d585724c80aa883760124649241"
+  },
+  {
+    "file": "./json_core/json/zerocore_dag_circuit.json",
+    "sha256": "f711e78e0d53afb81581d2de6fdfa797120b1ec964dbf6d97acf048f830efae5"
+  },
+  {
+    "file": "./json_core/json/covert_signal_036.json",
+    "sha256": "35d7f52b0fd3afc2dc5ed830e22bfd0492c163b30e43663d34072356a8f37cde"
+  },
+  {
+    "file": "./json_core/json/output_summary.json",
+    "sha256": "7eaf173c376c5d9a3d2be04b6807f8859793375eec7eca7aadce3ade5d28b5a9"
+  },
+  {
+    "file": "./json_core/json/covert_signal_041.json",
+    "sha256": "7b1460341a6c40bf9c9e6dec22ea3f3697de76a4bf61a78c1456e192e0cc8a32"
+  },
+  {
+    "file": "./json_core/json/covert_signal_016.json",
+    "sha256": "5e8ac296f736d8344149961b5c3d182bfb7f6577093f16a1b7afe195142f3baa"
+  },
+  {
+    "file": "./json_core/json/covert_signal_057.json",
+    "sha256": "c0466ccf3808a0abcb3dbc0bf06fc3a12b9665d34c170fea659a565b68c01c6e"
+  },
+  {
+    "file": "./json_core/json/009_vendor_submission.json",
+    "sha256": "a99eb8a9b4dbe8bc47d8cfb87eb9fa49d6a66621a6e6069cae3624137fc3ea34"
+  },
+  {
+    "file": "./json_core/json/sovereign_part3.json",
+    "sha256": "29f8cdd1083fe54124ae3a771505e48d6798abe0f4dd21429623c16c627d643e"
+  },
+  {
+    "file": "./json_core/json/covert_signal_094.json",
+    "sha256": "f5e352519fd03f4f7229597b571b361e779aeb605f776929c562530f1c7be249"
+  },
+  {
+    "file": "./json_core/json/reproduction_protocol.json",
+    "sha256": "1cece291168eda0e49d63ba4adcd24bef7d6813806246c071163728cd3a26301"
+  },
+  {
+    "file": "./json_core/json/awaiting_deposit_status.json",
+    "sha256": "3a389d1ff0ac3025f2fa783b2197bffc967195e644b209d2367b4c174e093faa"
+  },
+  {
+    "file": "./json_core/json/json_process_table.json",
+    "sha256": "4be20cbab27471547c7a719869e7c1e6a6c3a13490957220c74f047d7fe17610"
+  },
+  {
+    "file": "./json_core/json/repository.asset.fusion.json",
+    "sha256": "567d51f62c697a7dff01684e5628f569b6aff2cc166753e9042dd31c17ac0a7e"
+  },
+  {
+    "file": "./json_core/json/covert_signal_082.json",
+    "sha256": "c18e63468ad0118ad2e21375395920bbac99c07f39dd43211b26138976b19de1"
+  },
+  {
+    "file": "./json_core/json/jssh_dag_payload.json",
+    "sha256": "09d8922a5f87152448162ef3a9744f378554bc4d6568b79b4979bf1d31a096bd"
+  },
+  {
+    "file": "./json_core/json/covert_signal_083.json",
+    "sha256": "582b6d4daaf63fb7e4bfb8ea4cb9fbe1e6553d09769d1d0ceb154dbb077c037a"
+  },
+  {
+    "file": "./json_core/json/silent_buyer_inspector.json",
+    "sha256": "a127d8d1a4e20dcc8277feecf3861de94ced6b3744f7ef418018305482745111"
+  },
+  {
+    "file": "./json_core/json/evidence_hash_registry.json",
+    "sha256": "f03fb28840bf1e366c26c27db06cd7cc5f94cbebf399c0e36f91a572e14aee3a"
+  },
+  {
+    "file": "./json_core/json/sovereign_part2.json",
+    "sha256": "e749d79becef97e66db9ecebb7ee5baf8fa92f822cde5d317869e2ff985b6a8f"
+  },
+  {
+    "file": "./json_core/json/covert_signal_095.json",
+    "sha256": "1b7d0745879e1aa9decc31371403ce4fe7193e7dabf14f4bf72cbdf76838820c"
+  },
+  {
+    "file": "./json_core/json/covert_signal_056.json",
+    "sha256": "b0ff82efc4bad0f3c753b52c97032f33c7e0a234f1f0226dd779e1b5856f7480"
+  },
+  {
+    "file": "./json_core/json/covert_signal_001.json",
+    "sha256": "7371387128d0d73e2c66baaf11bb9ad7909b286b6a3e5ed365b6f40ea0a08dc8"
+  },
+  {
+    "file": "./json_core/json/layer3_analysis.json",
+    "sha256": "c41e634d8a39a8cfadbe3aca76f7f8a34711e73b7b39dd7942c029a5c1872c48"
+  },
+  {
+    "file": "./json_core/json/covert_signal_017.json",
+    "sha256": "056a9ea90541b824ce35b001d391b2a519295544d52670f0469a5f2c1703bc4a"
+  },
+  {
+    "file": "./json_core/json/covert_signal_040.json",
+    "sha256": "5c97d88a9cd161558652e42bc37b6e54c3728f430d017ed2ad1272f17c1bd881"
+  },
+  {
+    "file": "./json_core/json/security_monitor_status.json",
+    "sha256": "7bda92eeb89c1d1f8f4d871e49074778e5f0835035c3a1f085389f9abfbb4ea8"
+  },
+  {
+    "file": "./json_core/json/.crates2.json",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "./json_core/json/covert_signal_037.json",
+    "sha256": "4fe399ed19d206cfae9181a6b34032e1f9ba9016196ffb4c63b2cfdbba8a4210"
+  },
+  {
+    "file": "./json_core/json/covert_signal_060.json",
+    "sha256": "0773a3588eddcbbe3881989dc5cef08968a3cb15a5cd6e68ebcddcc9a2a97b4a"
+  },
+  {
+    "file": "./json_core/json/pipeline_config.json",
+    "sha256": "35b58d7cc35d793dc98234eb9fc17a80fd1fef2e054dd6b24c9192051e3c2e7d"
+  },
+  {
+    "file": "./json_core/json/master_sovereign_config.json",
+    "sha256": "32c8af898b751bc68d9bd559ef135e35a3531c650130dc08b4002f59fe5be012"
+  },
+  {
+    "file": "./json_core/json/kernel_snapshot.json",
+    "sha256": "4deb12cdff2522e984e87e418d43fbbeb8a52ab265c3b4768e09c6958cef7aaa"
+  },
+  {
+    "file": "./json_core/json/covert_signal_076.json",
+    "sha256": "a87118dd1f968e1c9097149779995a4c100e022a7ecdff22ae7947133737f6e2"
+  },
+  {
+    "file": "./json_core/json/covert_signal_099.json",
+    "sha256": "343a3773ad1f4912ea16111ef30d0fd438975fa2256c946f9d7c0adf2a5f0488"
+  },
+  {
+    "file": "./json_core/json/covert_signal_021.json",
+    "sha256": "e486d240965be0dce07636db833d4d0ccf9e2bede68f2c591738f6d870309bd0"
+  },
+  {
+    "file": "./json_core/json/kernel_service_registry.json",
+    "sha256": "fcd999c9a830aabfef5dedfa24c76f03955cc563b3b13695a1e8a4bef89c5f04"
+  },
+  {
+    "file": "./json_core/json/proof_of_concept.json",
+    "sha256": "8a53d88ce33cfd0b144cbcb10c3b1401e56d12500d66abe7884630de4412fcaa"
+  },
+  {
+    "file": "./json_core/json/covert_signal_034.json",
+    "sha256": "462c81c170e5c4d3122cde737000ec00869c650a7581ba40d25e183bd2c3d69a"
+  },
+  {
+    "file": "./json_core/json/layer2_raw_dump.json",
+    "sha256": "ebd01b5d4ca660e8e67b63189b185892712cfe87b7260232f0699eaa9c2eea52"
+  },
+  {
+    "file": "./json_core/json/registry.index.json",
+    "sha256": "a9c2ee1110b3202d4f77980d0abb7e02665d8db011103894e4c346bf13471146"
+  },
+  {
+    "file": "./json_core/json/covert_signal_063.json",
+    "sha256": "2af7d5c19a13aa008db75714252e14785d52b19090dbc32ac1d23ef18e64ab28"
+  },
+  {
+    "file": "./json_core/json/covert_signal_075.json",
+    "sha256": "c9d887506617f5bb89e9f05d5ed8d46b04732d6a8b597e6ddc9f733f33aba18b"
+  },
+  {
+    "file": "./json_core/json/kernel_boot_record.json",
+    "sha256": "dfe21906b345e43905a5a1b2fdb468d6192caf2d7b391f0ca0b010fc5c653345"
+  },
+  {
+    "file": "./json_core/json/covert_signal_022.json",
+    "sha256": "08ac4d98a5fac44df77030d673cd98f3000e0752e540a5a0b42fd9e0fb5ab71f"
+  },
+  {
+    "file": "./json_core/json/zerocore.pipeline.json",
+    "sha256": "2c3bbd33f1f0814483de3ba1cef618cfeaa2ece2789710ffbb9f49098f19c0cb"
+  },
+  {
+    "file": "./json_core/json/covert_signal_059.json",
+    "sha256": "dcc6c743b107fd79dc122c5255d52ab3212f1a27b216f3f89a7eba73a4f1a3a0"
+  },
+  {
+    "file": "./json_core/json/lucifel_payout_claim.json",
+    "sha256": "fe861797b47fbab0f12590e928a723e70d82f568fcc7eacdb3deb74e59566ce9"
+  },
+  {
+    "file": "./json_core/json/covert_signal_018.json",
+    "sha256": "b7acfbb850cac3150f16b5f09cc2776be46ad7fdc710a10ce6c7d55a1334525b"
+  },
+  {
+    "file": "./json_core/json/runtime_manifest.json",
+    "sha256": "a6f8efbf75f119ccb2669e1d28d11c0ccfdaf3b24f3c176068234fd1ebfea6c1"
+  },
+  {
+    "file": "./json_core/json/006_cwe_mapping.json",
+    "sha256": "4a20b6550f2e3fcf745b62577ed54335ea29003a6f0df3ceda3e3ed952017dd5"
+  },
+  {
+    "file": "./json_core/json/covert_signal_038.json",
+    "sha256": "e22aadd2b13086640e0c1b3daedcdedb9009cde49e541a78b8d0e6bf6aab461e"
+  },
+  {
+    "file": "./json_core/json/covert_signal_080.json",
+    "sha256": "e2008ea3d0294c98d8d0d67d506489542a1ebdd23ffceb76b44f9ba8bdf12bc1"
+  },
+  {
+    "file": "./json_core/json/covert_signal_096.json",
+    "sha256": "61ad03df5acd4f89bed7b338862771e2c0c889d9b4c9ff5ce942635d03fdb136"
+  },
+  {
+    "file": "./json_core/json/sovereign_part1.json",
+    "sha256": "9b4fb6c9079a148e9382bbd02999dce6a654d4627581f4c67f57353267102e42"
+  },
+  {
+    "file": "./json_core/json/json_object_table.json",
+    "sha256": "424577a6cea2ced1e1bc96c5b9a37d1d63e3e235d2c18801c4287acc1ad7e6c8"
+  },
+  {
+    "file": "./json_core/json/covert_signal_079.json",
+    "sha256": "d847c8eff16e900a969d29d0ac32f186465409005cd2ff2bf011f3244f4e8d12"
+  },
+  {
+    "file": "./json_core/json/covert_signal_055.json",
+    "sha256": "62e5767f28a36a85068e91cb5e17081c665b476f711ef7c47863fa92f1179eec"
+  },
+  {
+    "file": "./json_core/json/proof_of_concept_v2.json",
+    "sha256": "1a9fe7dd604e0136304604c88f896892eed8add8f88470949b1ca08acd5d128f"
+  },
+  {
+    "file": "./json_core/json/zerocore.public.offer.json",
+    "sha256": "39944d318416dcf83f5622707803d31a01c5114c214d071be44bd09e4f4739b5"
+  },
+  {
+    "file": "./json_core/json/005_assessment.json",
+    "sha256": "f119fe58eaca94f6a73aac85dd9d12e35d2062e02f927b8cea9ad5d1f049c613"
+  },
+  {
+    "file": "./json_core/json/covert_signal_002.json",
+    "sha256": "a5e9841a2ec5d89bf45d92c00b521fa89e47a05f40f4ef8d491373f57633088f"
+  },
+  {
+    "file": "./json_core/json/covert_signal_014.json",
+    "sha256": "c96e04f2e1c24a17e73cea2b7c017375892e363a216812a39eb0fa106656498f"
+  },
+  {
+    "file": "./json_core/json/package.json",
+    "sha256": "40fdd6ae4d0976431f92e7e8a0c16181ea4c1cb24c5283751db4b2a443ea6656"
+  },
+  {
+    "file": "./json_core/json/covert_signal_043.json",
+    "sha256": "841ad710082aa441ea282903e4023d40c7b52055548588b36cee7806055c60f2"
+  },
+  {
+    "file": "./json_core/json/kernel_state_registry.json",
+    "sha256": "a47fb85c476a6be9e870c4a95aac5cfe9c3552d758b52c1a110d3389bf1f3ba6"
+  },
+  {
+    "file": "./json_core/json/covert_signal_042.json",
+    "sha256": "b4d42345f5fb31ffe938dd77d29317cc214275c93f75ea27dd14c0258cdcdeb7"
+  },
+  {
+    "file": "./json_core/json/covert_signal_015.json",
+    "sha256": "9a2fcbf1d093f2bbbb43eecfda14912d68c812ad19d0062098c8e0ce7e28a0b5"
+  },
+  {
+    "file": "./json_core/json/product_dag_circuit.json",
+    "sha256": "0108e6ca20bedf5e9cadac268fe3bfc710f4fbb0511755d09b9785a01aefb6cd"
+  },
+  {
+    "file": "./json_core/json/covert_signal_003.json",
+    "sha256": "c5431506684d7108f5ccbf54f15ecca77d9a7de591f0b564eb4579b13d77270a"
+  },
+  {
+    "file": "./json_core/json/covert_signal_054.json",
+    "sha256": "94fb59178d2eba01c18d79876e08b35d62880823374762b12cee312badc8d9f7"
+  },
+  {
+    "file": "./json_core/json/payment_verified_gate.json",
+    "sha256": "d3a3de0d0820dda59a1ae8097bd1523cc7f8c7d15fd3f7a46e4f277411aaaa16"
+  },
+  {
+    "file": "./json_core/json/proof_of_concept_v3.json",
+    "sha256": "2d1191dc9f2cd5ffb35b4b402594333dcefd92ed8a3f71f1029df8fd1b70a5ec"
+  },
+  {
+    "file": "./json_core/json/zerocore.tree.manifest.json",
+    "sha256": "25efc9acd1438842b1610be6e16bd83686d90aec1b03a1d4db156835b6506c49"
+  },
+  {
+    "file": "./json_core/json/covert_signal_097.json",
+    "sha256": "946016e29db73f00585ac278cea7e1280c787badb12791fa6dee69e7838efa4c"
+  },
+  {
+    "file": "./json_core/json/dependency.graph.json",
+    "sha256": "cec915fbbbfa8116f1ed5b320b546ff3b3eaf6dd68bac9fb39d6057c4d1155d4"
+  },
+  {
+    "file": "./json_core/json/covert_signal_078.json",
+    "sha256": "798338151a4d638e7b2f86ca6e6443ffa485600eeae65bd36b5367d127e8d6c8"
+  },
+  {
+    "file": "./json_core/json/zerocore.product.v1.json",
+    "sha256": "9c66b037fbd55ac7358988f5fc803c5f984b752b8e7b93fb7f6f91504813016d"
+  },
+  {
+    "file": "./json_core/json/covert_signal_081.json",
+    "sha256": "e68fdcea456209671fd1a7d2c12307f6a750b0d5d067b43dbb8de1e77c5b77a0"
+  },
+  {
+    "file": "./json_core/json/covert_signal_039.json",
+    "sha256": "34c2bf73c4ade426bd22432e71b1a33fafcf39a02991d6ae599f650da285a789"
+  },
+  {
+    "file": "./json_core/json/zero_trust_config.json",
+    "sha256": "20e05ef9e912824635176950d8644782caf6f9e58ccd4a23d9a3f87c4d0e5475"
+  },
+  {
+    "file": "./json_core/json/planner.json",
+    "sha256": "0ccbb42b9de549585581745594b9e93409ed9d38067d6fff631184e93f14cf3c"
+  },
+  {
+    "file": "./json_core/json/covert_signal_019.json",
+    "sha256": "e93b25fcd479dfb5fc7490726a483599d871ba5bda4c673966a75a7d48a24021"
+  },
+  {
+    "file": "./json_core/json/emergency_evidence_review.json",
+    "sha256": "e2fe5b33d9f6c35b84c01e027ff4963943511ee580501ca1bf1da9d79699c3af"
+  },
+  {
+    "file": "./json_core/json/ghost_dialogue_inspector.json",
+    "sha256": "cadc316459249df965760d5fbf9d388860c5aa281a8954430b023120504bc388"
+  },
+  {
+    "file": "./json_core/json/kernel_module_registry.json",
+    "sha256": "113652d8b2dc17d8a27c4175300f569a6a316f2e0df1c9a4ed9019211187b18c"
+  },
+  {
+    "file": "./json_core/json/covert_signal_058.json",
+    "sha256": "85b62133297bf49c046fe1a7bcb53d113a8333a01c08756c2aee6d0fdb4c480a"
+  },
+  {
+    "file": "./json_core/json/covert_signal_023.json",
+    "sha256": "48c76f3049719ac0efc8123ee2b7c7983a11b8167672bb26b9ad3e01eb0aa2dd"
+  },
+  {
+    "file": "./json_core/json/...nt_verified_gate.json",
+    "sha256": "860ea15fd31a7cc1c203f6eac1ae2d0eb7a91e793cf8f9a813bf55e445c2e254"
+  },
+  {
+    "file": "./json_core/json/external.feedback.registry.json",
+    "sha256": "66c850c6e22755fd56ec8778c4cdd3b4a9bd96ed94d2f267835b741be62e2368"
+  },
+  {
+    "file": "./json_core/json/zerocore.score.stream.json",
+    "sha256": "53107c58e52ddaa27832ee6f239e9b44e9aa9568a5974f8ef60608a2b3c8421b"
+  },
+  {
+    "file": "./json_core/json/covert_signal_074.json",
+    "sha256": "6d8a3828efd66470b0c4f6d153751d76c5c848011973b25b7c563589778e8c00"
+  },
+  {
+    "file": "./json_core/json/covert_signal_062.json",
+    "sha256": "ed1e6b9fa5c0f1088e1a9b8f6fea424abac86349f0313b612ac41ed819929d4b"
+  },
+  {
+    "file": "./json_core/json/covert_signal_035.json",
+    "sha256": "6eaee657b47842db90f2d7d281abd48c4f5d77f90289b018a4f0d93c308b1102"
+  },
+  {
+    "file": "./json_core/json/zerocore.sovereign.bootstrap.schema.json",
+    "sha256": "7b16ac52e1e3934a40d6a7e37cf0279199693d23c2f60f213e448d1063db6c4e"
+  },
+  {
+    "file": "./json_core/json/covert_signal_086.json",
+    "sha256": "b6ec56a0e71ad2129a89dffda4b7dfa0266fb38de177b28a697a4db7ac2de761"
+  },
+  {
+    "file": "./json_core/json/covert_signal_069.json",
+    "sha256": "e8c55731b4f955ec9e30cf82a4919fe2302c220bc83fe818835f8af6f3aa1d6b"
+  },
+  {
+    "file": "./json_core/json/payload.json",
+    "sha256": "d456a72978decc4fa1a5028c1d329bb8429b08c200a3f0095f85a098f32c85ee"
+  },
+  {
+    "file": "./json_core/json/final_bounty_report.json",
+    "sha256": "b8803342972f18886be3abcfb0d9ffefab6da2174c7a52f97cff21b111271b28"
+  },
+  {
+    "file": "./json_core/json/covert_signal_090.json",
+    "sha256": "816cb3c9f5234f5dd641883a320809960a13ba31b7df9b9743dfe9cf236ae6bf"
+  },
+  {
+    "file": "./json_core/json/covert_signal_028.json",
+    "sha256": "fee79e2d4b90021859020e618310b4c9a27d1302737f929ae476714cd2623523"
+  },
+  {
+    "file": "./json_core/json/kernel_recovery_registry.json",
+    "sha256": "00d7b7f0d45e74dd40a57e5ea721e00fe5e2db288e0c3cfe1dd4409aafb0df87"
+  },
+  {
+    "file": "./json_core/json/covert_signal_053.json",
+    "sha256": "3d0b8070252af65b30ce39ecf61b6f178e8363ec4d7e99eefd11ea2addb1b044"
+  },
+  {
+    "file": "./json_core/json/proof_of_concept_v4.json",
+    "sha256": "2151aa1dbc41d5da7aa53e65939b084fcda31db15c4594c420e2ef48bfc91618"
+  },
+  {
+    "file": "./json_core/json/covert_signal_004.json",
+    "sha256": "2b963e4eff4f0005407c81a3f50a6bb8ef3d414691a4c4aa3e18b8dfc80d27d4"
+  },
+  {
+    "file": "./json_core/json/covert_signal_012.json",
+    "sha256": "5f0b99415225578a3837f350652761ab582f7bc5ea15687ef9c8eb79ca60cf7a"
+  },
+  {
+    "file": "./json_core/json/covert_signal_045.json",
+    "sha256": "53287c62504e9b22a66e93dfcd828a0a28b46b50eccb3a917f70bfcbea0388ee"
+  },
+  {
+    "file": "./json_core/json/covert_signal_100.json",
+    "sha256": "77056cf07c5d715dd9116ea72a2bedc8562c39e769cc13849d69afb46a634cb9"
+  },
+  {
+    "file": "./json_core/json/covert_signal_032.json",
+    "sha256": "651c1187715b9ff733219411b210f064a6915a92318650688cc9d6b98ea34292"
+  },
+  {
+    "file": "./json_core/json/vendor_response_tracker.json",
+    "sha256": "0376f38319bff463cf1da00260ec4afb1e49761c756564132ec08c86e03ecbef"
+  },
+  {
+    "file": "./json_core/json/covert_signal_065.json",
+    "sha256": "12ae3da25a71533056b1919871ef61c9f45c24b82a4881cb900fa07ef87b8929"
+  },
+  {
+    "file": "./json_core/json/private_bounty_offer.json",
+    "sha256": "e82ade1666452bd24275ef69b0b7b17e14ccfb6a5d340420da015eadc4b5f4f6"
+  },
+  {
+    "file": "./json_core/json/watcher_audit.json",
+    "sha256": "2f478ebe3e462309abbd68e270a295a91cab49e60550c06a6c93ba3118f7da2c"
+  },
+  {
+    "file": "./json_core/json/product_evolution_dag.json",
+    "sha256": "a35e213c88120c7cc0e670dfa91f872ca131a37a1f01ef1a75e2715c7e061679"
+  },
+  {
+    "file": "./json_core/json/ghost_window_concept.json",
+    "sha256": "44817c0cf1c00e8437b5878e8f63b000da2cc6f54acf1d2811ba8967b5485c25"
+  },
+  {
+    "file": "./json_core/json/covert_signal_073.json",
+    "sha256": "daae450b82b8aeb42af945aa60a8dde11247b10ef8966287345090962323e002"
+  },
+  {
+    "file": "./json_core/json/phantom_state.json",
+    "sha256": "8ce283e775eab0caeae4421a2f70730dc53c86efa9e99606fae06ae852d3a1f0"
+  },
+  {
+    "file": "./json_core/json/covert_signal_024.json",
+    "sha256": "9006cba5d5a98db3d6564699ac2f190611fa0e82e098fd02e3b5a385f2805f76"
+  },
+  {
+    "file": "./json_core/json/covert_signal_008.json",
+    "sha256": "982310c817a5a0ecbb1ede8f27630101c9e6309d6a65336f70e2658c0fabd5bd"
+  },
+  {
+    "file": "./json_core/json/timeline_of_events.json",
+    "sha256": "825273334837504de576a57d6c35d7dc0fbb2eda4098df63ad155659d171fc4a"
+  },
+  {
+    "file": "./json_core/json/final_evidence_bundle.json",
+    "sha256": "d57f929779ad22a54f8c239f82f246b0aafe729d396d1c5452abb6ea1e0076e5"
+  },
+  {
+    "file": "./json_core/json/test_history.json",
+    "sha256": "e04b63d5c3877668ddcbd8ac604b5828ec23b88cef8b98dcd73decb8015e0859"
+  },
+  {
+    "file": "./json_core/json/covert_signal_049.json",
+    "sha256": "ee1e72259c578a39f5d6e78134fccae830d12781b546ee23e2a4bfa8bf240920"
+  },
+  {
+    "file": "./json_core/json/index.json",
+    "sha256": "451da3b16a03bfbb5a3348e69d1a0b3be00555914559c50e08024c63145e9ac4"
+  },
+  {
+    "file": "./json_core/json/covert_signal_048.json",
+    "sha256": "75f61ee90866b83a29afdbd76af6254b16616c903566765cb351148c4f942255"
+  },
+  {
+    "file": "./json_core/json/invoice_registry.json",
+    "sha256": "6baeeb49cac87349ffbe1012a60f3443b8e1194058d6bca126ab602ef3e707f2"
+  },
+  {
+    "file": "./json_core/json/covert_signal_009.json",
+    "sha256": "10744ee64e359dfedac3655ef630ca8e2b92d31defd324c794824743afcb8e65"
+  },
+  {
+    "file": "./json_core/json/covert_signal_025.json",
+    "sha256": "8bb5558bd84880169c4fd5568535977628c149e305724df5c663a9c28f5d9d3f"
+  },
+  {
+    "file": "./json_core/json/covert_signal_072.json",
+    "sha256": "43b201c7346a2df714406ca6d52ff1294a355582f84780566951dbe6fd2870e2"
+  },
+  {
+    "file": "./json_core/json/covert_signal_064.json",
+    "sha256": "cba1e1e23ef98d24bcbe5ccc74cc9b6b0a2ee1e95a15081431fb0222e858fe4a"
+  },
+  {
+    "file": "./json_core/json/covert_signal_033.json",
+    "sha256": "3c3bd53760392e636911af8cd7496e31fc98ab35956ea007e471461f3b938ff0"
+  },
+  {
+    "file": "./json_core/json/zerocore.master.signals.json",
+    "sha256": "4dae0a095f554534934e7fca0b3ba0dedb6520d7ad165183042c29756d7bae60"
+  },
+  {
+    "file": "./json_core/json/anonymous_poc_payload.json",
+    "sha256": "6c2c4ee4ec5560908ea0391f5bea0171723848ca7897a7e74d45311b1a64037f"
+  },
+  {
+    "file": "./json_core/json/covert_signal_044.json",
+    "sha256": "3144edaf6446868126c13ce04ebe2451bd93476e97c0db544157664355dab970"
+  },
+  {
+    "file": "./json_core/json/covert_signal_013.json",
+    "sha256": "1c07341ab102586a55f368eccde524e265861b4044d53eb6e57e5e2418f4065a"
+  },
+  {
+    "file": "./json_core/json/dag_schema.json",
+    "sha256": "9991b96ef6baa9743b63bed57d8871ba221b2fb19aab6e18c116a6a61f157eb8"
+  },
+  {
+    "file": "./json_core/json/zerocore.master.sovereign.json",
+    "sha256": "d1eab923d1c27f143b420a252e0322b336ed87e02f3332abc478251c2c5a6fa9"
+  },
+  {
+    "file": "./json_core/json/covert_signal_005.json",
+    "sha256": "f663965eace8e11bd86402f46e416c7613b961d2a8b5f8fcf702e3455c4144e5"
+  },
+  {
+    "file": "./json_core/json/ai_evolution_metrics.json",
+    "sha256": "27c8d36d8ef3aaeac67e728b0dd978eb0d6b85c491c93e682e8c21c2bdec15f9"
+  },
+  {
+    "file": "./json_core/json/covert_signal_052.json",
+    "sha256": "fe16c4f218ec70e7eabeca2973ae73b6d176aa6d945579ea56e77b4d0d283cdd"
+  },
+  {
+    "file": "./json_core/json/proof_of_concept_v5.json",
+    "sha256": "166eaec153854bb4d75246d4bf91ed0c95cddd973ed33f83d86a8dbbc5f8d91b"
+  },
+  {
+    "file": "./json_core/json/covert_signal_029.json",
+    "sha256": "e72967546eb7e460a3498ccab75c0c10c70ac90669c085f7865ddd34a8f220b4"
+  },
+  {
+    "file": "./json_core/json/008_execution_log_registry.json",
+    "sha256": "8ea09825369a34806ed2af264576624e1488747914d7ee5778f16812849ffef9"
+  },
+  {
+    "file": "./json_core/json/covert_signal_091.json",
+    "sha256": "a2c21f8864a1e14f2d86341482beb5a3c7fe2e7d8b0eb0d292a0bc948bd3a16e"
+  },
+  {
+    "file": "./json_core/json/kernel_scheduler.json",
+    "sha256": "06adb6aabfb03a7bc49dfe284a1b859d224b4b0e068313962395d4662804e4d0"
+  },
+  {
+    "file": "./json_core/json/covert_signal_087.json",
+    "sha256": "7a16d9566655fec818cb58c64ea0a9cd69989baaca405821f6bcb11ce21115b7"
+  },
+  {
+    "file": "./json_core/json/covert_signal_068.json",
+    "sha256": "541875804844875d23065ee76eb765a81e21766ed2a954588ee302a16825ef07"
+  },
+  {
+    "file": "./json_core/json/all_10_prospects_summary.json",
+    "sha256": "a13706e09b217aaeb40d8cea81890b171c322a9f43f488a8ff5f77916e156a07"
+  },
+  {
+    "file": "./json_core/json/process_table.json",
+    "sha256": "68e908159a9c001c5a27a5ed64e26af8b75e50020c7480ad8b930ce98879814e"
+  },
+  {
+    "file": "./json_core/schema/zerocore.sovereign.bootstrap.schema.json",
+    "sha256": "7b16ac52e1e3934a40d6a7e37cf0279199693d23c2f60f213e448d1063db6c4e"
+  }
+]

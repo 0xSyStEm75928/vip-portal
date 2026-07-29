@@ -1,0 +1,45 @@
+{
+  "node_health_version": "1.0.0",
+  "generated_at": "2026-07-28T14:48:46Z",
+  "cluster": {
+    "cluster_state_version": "1.0.0",
+    "generated_at": "2026-07-28T14:48:46Z",
+    "federation": {
+      "federation_version": "1.0.0",
+      "generated_at": "2026-07-28T14:48:46Z",
+      "node_registry": {
+        "node_registry_version": "1.0.0",
+        "generated_at": "2026-07-28T14:48:46Z",
+        "node_type": [
+          "primary",
+          "secondary",
+          "federated"
+        ],
+        "nodes": [],
+        "status": "READY"
+      },
+      "sync_engine": {
+        "sync_version": "1.0.0",
+        "generated_at": "2026-07-28T14:48:46Z",
+        "mode": "CONTROLLED_SYNC",
+        "sync_targets": [
+          "runtime",
+          "registry",
+          "policy",
+          "state"
+        ],
+        "queue": []
+      },
+      "federation_mode": "MULTI_NODE",
+      "members": []
+    },
+    "topology": "READY",
+    "state": "STABLE"
+  },
+  "checks": [
+    "connectivity",
+    "sync",
+    "integrity"
+  ],
+  "status": "HEALTHY"
+}

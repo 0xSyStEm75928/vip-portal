@@ -1,0 +1,40 @@
+{
+  "matrix_version": "6.0.0-BLACK_GEAR",
+  "updated_at": "2026-07-28T17:43:33.112619+00:00",
+  "operational_mode": "STRICT_COMMERCIAL_BLACK_GEAR",
+  "commercial_governance": {
+    "zero_tolerance_idle": true,
+    "idle_timeout_seconds": 900,
+    "action_on_timeout": "FORCE_PURGE_AND_BLACKHOLE",
+    "policy_note": "冷やかし・様子見は15分で即時枠剥奪およびブラックリスト突入"
+  },
+  "target_registry": [
+    {
+      "target_id": "SILENT_USER_0x31C",
+      "payout_address": "0xF7A353FAF6E6BD4732b0f234C656dBFDE53B0e91",
+      "required_amount": "35,000 USDT",
+      "tier": "TIER_0_IMMEDIATE",
+      "status": "RELEASED_PAYMENT_VERIFIED",
+      "fraud_score": 0,
+      "gate_rules": {
+        "mempool_verification_required": true,
+        "dummy_hash_auto_ban": true,
+        "instant_provisioning_on_tx": true
+      },
+      "validated_tx": "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef"
+    }
+  ],
+  "intake_categories": {
+    "PAYMENT_DEPOSIT": "【着金】オンチェーン物理ハッシュ検知",
+    "CRYPTO_SIGNATURE": "【署名】EIP-712不可逆本人証明",
+    "BLACK_PURGE": "【排除】冷やかし・時間切れ自動廃棄",
+    "VIP_INSTANT_UNLOCK": "【解放】即日バイパス実行"
+  },
+  "blackhole_registry": {
+    "banned_addresses": [],
+    "banned_hashes": [
+      "0xYOUR_TX_HASH_HERE"
+    ],
+    "ban_reason": "DUMMY_OR_FAKE_HASH_SUBMISSION"
+  }
+}

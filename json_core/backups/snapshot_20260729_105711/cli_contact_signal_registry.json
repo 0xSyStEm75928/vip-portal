@@ -1,0 +1,60 @@
+{
+  "$schema": "./schemas/contact.signal.registry.schema.json",
+  "version": "1.0.0",
+  "purpose": "Public candidate signal evaluation",
+
+  "rules": {
+    "no_private_tracking_claim": true,
+    "public_information_only": true,
+    "human_review_required": true
+  },
+
+  "signal_levels": {
+    "visibility": "PUBLIC",
+    "interest": "UNVERIFIED",
+    "contact": "UNVERIFIED",
+    "business": "PENDING"
+  },
+
+  "candidates": [
+    {
+      "name": "n8n-io/n8n",
+      "signals": [
+        "workflow_automation",
+        "ai_agent",
+        "developer_ecosystem"
+      ],
+      "possible_reason_for_attention": [
+        "technology_evaluation",
+        "ecosystem_research",
+        "business_alignment"
+      ],
+      "status": "OBSERVATION"
+    },
+    {
+      "name": "Graphify-Labs/graphify",
+      "signals": [
+        "knowledge_graph",
+        "code_analysis",
+        "ai_tooling"
+      ],
+      "possible_reason_for_attention": [
+        "technical_interest",
+        "integration_review"
+      ],
+      "status": "OBSERVATION"
+    },
+    {
+      "name": "OpenHands/OpenHands",
+      "signals": [
+        "ai_agent",
+        "developer_productivity"
+      ],
+      "possible_reason_for_attention": [
+        "market_research",
+        "competitive_analysis"
+      ],
+      "status": "OBSERVATION"
+    }
+  ]
+}

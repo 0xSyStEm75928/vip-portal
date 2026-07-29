@@ -1,0 +1,141 @@
+{
+  "$schema": "./schemas/global.bundle.manifest.schema.json",
+
+  "bundle": {
+    "id": "ZERO_CORE_GLOBAL_BUNDLE",
+    "version": "1.0.0",
+    "status": "ACTIVE",
+
+    "purpose": "Unified bundle manifest for PERSONAL, BUSINESS and DISCOVERY pipelines",
+
+    "architecture": {
+      "model": "DAG",
+      "root": "GLOBAL_BUNDLE",
+      "flow": "NODE_DEPENDENCY_GRAPH"
+    },
+
+    "nodes": {
+      "GLOBAL_BUNDLE": {
+        "type": "ROOT",
+        "children": [
+          "REGISTRY",
+          "INDEX",
+          "RUNNER",
+          "PROJECTS"
+        ]
+      },
+
+      "REGISTRY": {
+        "type": "CONFIGURATION",
+        "depends_on": [
+          "GLOBAL_BUNDLE"
+        ]
+      },
+
+      "INDEX": {
+        "type": "REFERENCE",
+        "depends_on": [
+          "REGISTRY"
+        ]
+      },
+
+      "RUNNER": {
+        "type": "EXECUTION",
+        "depends_on": [
+          "INDEX"
+        ]
+      },
+
+      "PROJECTS": {
+        "type": "PROJECT_LAYER",
+        "depends_on": [
+          "RUNNER"
+        ],
+        "children": [
+          "PERSONAL_CORE",
+          "BUSINESS_CORE",
+          "CLI_DISCOVERY"
+        ]
+      },
+
+      "PERSONAL_CORE": {
+        "type": "PERSONAL",
+        "status": "READY_FOR_ATTACH"
+      },
+
+      "BUSINESS_CORE": {
+        "type": "BUSINESS",
+        "status": "READY",
+        "documents": [
+          "customer_real_deal_review.json",
+          "customer_deal_sync_result.json",
+          "customer_deal_action_plan.json",
+          "customer_execution_gate_check.json",
+          "customer_final_business_dashboard.json",
+          "business_portfolio_status.json",
+          "business_execution_queue.json",
+          "today_business_focus.json",
+          "business_integrity_report.json",
+          "business_master_index.json",
+          "business_pipeline_summary.json"
+        ]
+      },
+
+      "CLI_DISCOVERY": {
+        "type": "DISCOVERY",
+        "status": "READY",
+        "documents": [
+          "cli_target_discovery.json",
+          "cli_business_candidate_review.json",
+          "cli_business_signal_deep_review.json",
+          "original_10_target_audit.json",
+          "original_10_target_priority.json"
+        ]
+      }
+    },
+
+    "edges": [
+      [
+        "GLOBAL_BUNDLE",
+        "REGISTRY"
+      ],
+      [
+        "REGISTRY",
+        "INDEX"
+      ],
+      [
+        "INDEX",
+        "RUNNER"
+      ],
+      [
+        "RUNNER",
+        "PROJECTS"
+      ],
+      [
+        "PROJECTS",
+        "PERSONAL_CORE"
+      ],
+      [
+        "PROJECTS",
+        "BUSINESS_CORE"
+      ],
+      [
+        "PROJECTS",
+        "CLI_DISCOVERY"
+      ]
+    ],
+
+    "policy": {
+      "evidence_required": true,
+      "manual_confirmation_required": true,
+      "no_private_interest_assumption": true,
+      "no_hidden_state_claim": true
+    },
+
+    "integrity": {
+      "checksum": null,
+      "signature": null,
+      "verified": false
+    }
+  }
+}

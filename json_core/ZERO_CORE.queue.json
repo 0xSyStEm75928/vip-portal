@@ -1,0 +1,858 @@
+[
+  {
+    "file": "./json_core/ZERO_CORE.index.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/ZERO_CORE.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/...nt_verified_gate.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/.crates2.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/001_environment.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/002_target.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/003_reproduction.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/004_evidence.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/005_assessment.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/006_cwe_mapping.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/007_risk_matrix.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/008_execution_log_registry.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/009_vendor_submission.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/010_master_registry.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/agent_memory_index.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/ai_evolution_metrics.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/all_10_prospects_summary.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/anonymous-cli-metrics.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/anonymous_poc_payload.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/anonymous_settlement_goal.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/audit_chain.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/availablePlugins.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/awaiting_deposit_status.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/boot_record.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/buyer_deep_profiling.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/capabilities.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/capability_registry.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_001.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_002.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_003.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_004.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_005.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_006.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_007.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_008.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_009.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_010.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_011.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_012.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_013.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_014.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_015.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_016.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_017.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_018.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_019.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_020.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_021.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_022.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_023.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_024.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_025.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_026.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_027.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_028.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_029.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_030.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_031.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_032.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_033.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_034.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_035.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_036.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_037.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_038.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_039.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_040.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_041.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_042.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_043.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_044.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_045.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_046.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_047.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_048.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_049.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_050.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_051.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_052.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_053.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_054.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_055.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_056.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_057.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_058.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_059.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_060.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_061.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_062.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_063.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_064.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_065.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_066.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_067.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_068.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_069.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_070.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_071.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_072.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_073.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_074.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_075.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_076.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_077.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_078.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_079.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_080.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_081.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_082.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_083.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_084.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_085.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_086.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_087.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_088.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_089.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_090.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_091.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_092.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_093.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_094.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_095.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_096.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_097.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_098.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_099.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/covert_signal_100.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/dag_schema.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/dependency.graph.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/emergency_evidence_review.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/environment_manifest.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/evidence_hash_registry.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/external.feedback.registry.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/final_bounty_report.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/final_evidence_bundle.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/ghost_dialogue_inspector.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/ghost_window_concept.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/ghost_window_protocol.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/index.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/invoice_registry.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/json_fd_table.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/json_object_table.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/json_process_table.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/json_syscall_registry.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/jssh_dag_payload.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/kernel_boot_record.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/kernel_checkpoint_registry.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/kernel_module_registry.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/kernel_recovery_registry.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/kernel_scheduler.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/kernel_service_registry.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/kernel_snapshot.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/kernel_state_registry.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/layer1_trigger.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/layer2_raw_dump.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/layer3_analysis.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/layer4_routing.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/lucifel_payout_claim.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/master_sovereign_config.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/origin.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/output_summary.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/package.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/payload.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/payment.verified.gate.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/payment_verified_gate.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/phantom_state.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/pipeline_config.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/planner.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/private_bounty_offer.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/process_table.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/product_dag_circuit.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/product_data.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/product_evolution_dag.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/proof_of_concept.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/proof_of_concept_v2.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/proof_of_concept_v3.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/proof_of_concept_v4.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/proof_of_concept_v5.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/registry.index.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/repository.asset.fusion.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/reproduction_protocol.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/review_submission_manifest.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/runtime_manifest.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/security_monitor_status.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/silent_buyer_inspector.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/sovereign_part1.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/sovereign_part2.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/sovereign_part3.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/sovereign_part4.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/sovereign_part5.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/story_stream_legend.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/sun.event.v1.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/test_history.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/timeline_of_events.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/update-notifier-npm.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/vendor_response_tracker.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/watcher_audit.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/zero_trust_config.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/zerocore.disclosure.framework.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/zerocore.graph.manifest.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/zerocore.master.poc.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/zerocore.master.signals.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/zerocore.master.sovereign.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/zerocore.pipeline.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/zerocore.private.v1.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/zerocore.product.v1.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/zerocore.public.offer.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/zerocore.score.stream.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/zerocore.sovereign.bootstrap.schema.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/zerocore.sovereign.bootstrap.v1.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/zerocore.tree.manifest.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/json/zerocore_dag_circuit.json",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/jsonl/input_stream.jsonl",
+    "status": "PENDING"
+  },
+  {
+    "file": "./json_core/schema/zerocore.sovereign.bootstrap.schema.json",
+    "status": "PENDING"
+  }
+]

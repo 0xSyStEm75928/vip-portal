@@ -1,0 +1,11 @@
+{
+  "metrics_runtime_version": "1.0.0",
+  "generated_at": "2026-07-28T15:04:14Z",
+  "metrics": [
+    "execution_count",
+    "runtime_state",
+    "error_count",
+    "audit_count"
+  ],
+  "collection": "ENABLED"
+}

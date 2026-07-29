@@ -1,0 +1,10 @@
+{
+  "memory_version": "1.0.0",
+  "generated_at": "2026-07-28T14:43:52Z",
+  "storage": [
+    "short_term",
+    "long_term",
+    "evidence"
+  ],
+  "records": []
+}

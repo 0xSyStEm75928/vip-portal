@@ -1,0 +1,43 @@
+{
+  "config_manifest_version": "1.0.0",
+  "generated_at": "2026-07-28T15:03:15Z",
+  "registry": {
+    "config_registry_version": "1.0.0",
+    "generated_at": "2026-07-28T15:03:15Z",
+    "configs": [
+      "runtime",
+      "security",
+      "profile",
+      "policy",
+      "deployment"
+    ],
+    "status": "READY"
+  },
+  "loader": {
+    "environment_loader_version": "1.0.0",
+    "generated_at": "2026-07-28T15:03:15Z",
+    "sources": [
+      "json",
+      "environment",
+      "runtime"
+    ],
+    "priority": [
+      "policy",
+      "environment",
+      "default"
+    ],
+    "status": "READY"
+  },
+  "config": {
+    "runtime_config_version": "1.0.0",
+    "generated_at": "2026-07-28T15:03:15Z",
+    "mode": "STRICT",
+    "defaults": {
+      "profile": "01_PERSONAL",
+      "runtime": "enabled",
+      "audit": true
+    },
+    "status": "LOADED"
+  },
+  "state": "CONFIG_READY"
+}

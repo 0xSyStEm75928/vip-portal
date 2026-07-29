@@ -1,0 +1,72 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-07-29T10:11:38.573138+00:00",
+  "policy": {
+    "manual_execution": true,
+    "human_confirmation_required": true,
+    "no_delivery_without_payment": true,
+    "public_data_only": true
+  },
+  "today_focus": [
+    {
+      "order": 1,
+      "target": "CUSTOMER_001",
+      "source": "LEGACY",
+      "priority": "BUSINESS",
+      "stage": "ACTIVE_REVIEW",
+      "status": "READY_FOR_REVIEW",
+      "required_action": [
+        "NDA_STATUS",
+        "REQUIREMENT_CONFIRMATION",
+        "CONTRACT_PATH"
+      ]
+    },
+    {
+      "order": 2,
+      "target": "SILENT_USER_0x31C",
+      "source": "LEGACY",
+      "priority": "BUSINESS",
+      "stage": "OBSERVATION",
+      "status": "READY_FOR_REVIEW",
+      "required_action": [
+        "VALID_CONTACT",
+        "CONCRETE_REQUEST",
+        "PAYMENT_EVIDENCE"
+      ]
+    },
+    {
+      "order": 3,
+      "target": "VIP_ADDITIONAL_001",
+      "source": "LEGACY",
+      "priority": "BUSINESS",
+      "stage": "PENDING_REVIEW",
+      "status": "READY_FOR_REVIEW",
+      "required_action": [
+        "CONTACT_CONFIRMATION",
+        "BUSINESS_REQUIREMENT"
+      ]
+    },
+    {
+      "order": 4,
+      "target": "trimstray/the-book-of-secret-knowledge",
+      "source": "CLI_DISCOVERY",
+      "priority": "A",
+      "stage": "EARLY_TARGET_REVIEW",
+      "status": "READY_FOR_REVIEW",
+      "required_action": [
+        "HUMAN_REVIEW"
+      ]
+    },
+    {
+      "order": 5,
+      "target": "n8n-io/n8n",
+      "source": "CLI_DISCOVERY",
+      "priority": "A",
+      "stage": "EARLY_TARGET_REVIEW",
+      "status": "READY_FOR_REVIEW",
+      "required_action": [
+        "HUMAN_REVIEW"
+      ]
+    }
+  ]
+}

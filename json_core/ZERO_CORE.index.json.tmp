@@ -1,0 +1,265 @@
+[
+{
+  "file": "./json_core/ZERO_CORE.json",
+  "sha256": "5c00d3f8220850f0776b4e0e67891535046ae5436ef5ffa592ee5b37fa4ccb24",
+  "size": 59959
+}
+,
+{
+  "file": "./json_core/json/...nt_verified_gate.json",
+  "sha256": "860ea15fd31a7cc1c203f6eac1ae2d0eb7a91e793cf8f9a813bf55e445c2e254",
+  "size": 467
+}
+,
+{
+  "file": "./json_core/json/.crates2.json",
+  "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "size": 0
+}
+,
+{
+  "file": "./json_core/json/001_environment.json",
+  "sha256": "f99b057e30e1fd74955518661e5aa8acffac84417f426c944e05564d7f4b1cca",
+  "size": 377
+}
+,
+{
+  "file": "./json_core/json/002_target.json",
+  "sha256": "4cc526342fe818582b38ef5f85bd288c5ac42eb091a1d5acf36efe3261da9eb8",
+  "size": 344
+}
+,
+{
+  "file": "./json_core/json/003_reproduction.json",
+  "sha256": "624227333fb4cf0d9f236aaae37e48de4fd732d6fe986d7b267c9e6487287c6f",
+  "size": 385
+}
+,
+{
+  "file": "./json_core/json/004_evidence.json",
+  "sha256": "f632b93e7b07916d3fe900e43508d366db92b3e7cfec65b51ac10d2cc65e0f52",
+  "size": 538
+}
+,
+{
+  "file": "./json_core/json/005_assessment.json",
+  "sha256": "f119fe58eaca94f6a73aac85dd9d12e35d2062e02f927b8cea9ad5d1f049c613",
+  "size": 654
+}
+,
+{
+  "file": "./json_core/json/006_cwe_mapping.json",
+  "sha256": "4a20b6550f2e3fcf745b62577ed54335ea29003a6f0df3ceda3e3ed952017dd5",
+  "size": 556
+}
+,
+{
+  "file": "./json_core/json/007_risk_matrix.json",
+  "sha256": "711a18c2e0772761f8c539f7ac723eab77f14a5604ecd04ba88feeceaaa89ac7",
+  "size": 271
+}
+,
+{
+  "file": "./json_core/json/008_execution_log_registry.json",
+  "sha256": "8ea09825369a34806ed2af264576624e1488747914d7ee5778f16812849ffef9",
+  "size": 298
+}
+,
+{
+  "file": "./json_core/json/009_vendor_submission.json",
+  "sha256": "a99eb8a9b4dbe8bc47d8cfb87eb9fa49d6a66621a6e6069cae3624137fc3ea34",
+  "size": 314
+}
+,
+{
+  "file": "./json_core/json/010_master_registry.json",
+  "sha256": "1468f2b03811ef57fef01cd029fe30cc94b91c4d86d3319f7d1ace8ca1a57dfd",
+  "size": 479
+}
+,
+{
+  "file": "./json_core/json/agent_memory_index.json",
+  "sha256": "d01d2b4e0921d2a4c52de7fe285a27ce0e521ffb92e07c580da158abd114c714",
+  "size": 1447
+}
+,
+{
+  "file": "./json_core/json/ai_evolution_metrics.json",
+  "sha256": "27c8d36d8ef3aaeac67e728b0dd978eb0d6b85c491c93e682e8c21c2bdec15f9",
+  "size": 872
+}
+,
+{
+  "file": "./json_core/json/all_10_prospects_summary.json",
+  "sha256": "a13706e09b217aaeb40d8cea81890b171c322a9f43f488a8ff5f77916e156a07",
+  "size": 1492
+}
+,
+{
+  "file": "./json_core/json/anonymous-cli-metrics.json",
+  "sha256": "88716b86cbcd730ac722f4587460797cc89bdd3f98242b71e3356200963b1483",
+  "size": 171
+}
+,
+{
+  "file": "./json_core/json/anonymous_poc_payload.json",
+  "sha256": "6c2c4ee4ec5560908ea0391f5bea0171723848ca7897a7e74d45311b1a64037f",
+  "size": 2577
+}
+,
+{
+  "file": "./json_core/json/anonymous_settlement_goal.json",
+  "sha256": "295f3e03320ac3715a3a15098decf96e42f50f4afe5d7b1a61b50ba86478acb0",
+  "size": 1557
+}
+,
+{
+  "file": "./json_core/json/audit_chain.json",
+  "sha256": "99c5d110277449c858bf53e94a7ece8ddfb0da9e330e71f0b4cc6b65397d0740",
+  "size": 1435
+}
+,
+{
+  "file": "./json_core/json/availablePlugins.json",
+  "sha256": "e3fe58bd700745e0dcec483ec0e74a5bfcf2b537720c4db807d8b9e0abcd21c0",
+  "size": 24
+}
+,
+{
+  "file": "./json_core/json/awaiting_deposit_status.json",
+  "sha256": "3a389d1ff0ac3025f2fa783b2197bffc967195e644b209d2367b4c174e093faa",
+  "size": 623
+}
+,
+{
+  "file": "./json_core/json/boot_record.json",
+  "sha256": "e6fa88ae97f43cd3a44bc9b8bbdf627902472ca6df650b76568fca0a3eb8e311",
+  "size": 567
+}
+,
+{
+  "file": "./json_core/json/buyer_deep_profiling.json",
+  "sha256": "706e83aea5decdc1017a4cb3d2ae344256002091dc1ef1b8390d2d77172eee48",
+  "size": 1590
+}
+,
+{
+  "file": "./json_core/json/capabilities.json",
+  "sha256": "0c7fdd91ed723db2accc087ce399cc3744dfe071a24c0852f0b7f493e781114a",
+  "size": 481
+}
+,
+{
+  "file": "./json_core/json/capability_registry.json",
+  "sha256": "03ed4da4223095842aa04175f31d711172a815bf63ac5b71a00d2cfa3626b5f5",
+  "size": 1657
+}
+,
+{
+  "file": "./json_core/json/covert_signal_001.json",
+  "sha256": "7371387128d0d73e2c66baaf11bb9ad7909b286b6a3e5ed365b6f40ea0a08dc8",
+  "size": 119
+}
+,
+{
+  "file": "./json_core/json/covert_signal_002.json",
+  "sha256": "a5e9841a2ec5d89bf45d92c00b521fa89e47a05f40f4ef8d491373f57633088f",
+  "size": 119
+}
+,
+{
+  "file": "./json_core/json/covert_signal_003.json",
+  "sha256": "c5431506684d7108f5ccbf54f15ecca77d9a7de591f0b564eb4579b13d77270a",
+  "size": 119
+}
+,
+{
+  "file": "./json_core/json/covert_signal_004.json",
+  "sha256": "2b963e4eff4f0005407c81a3f50a6bb8ef3d414691a4c4aa3e18b8dfc80d27d4",
+  "size": 119
+}
+,
+{
+  "file": "./json_core/json/covert_signal_005.json",
+  "sha256": "f663965eace8e11bd86402f46e416c7613b961d2a8b5f8fcf702e3455c4144e5",
+  "size": 119
+}
+,
+{
+  "file": "./json_core/json/covert_signal_006.json",
+  "sha256": "e54c256f0bd477771b153556ce91683ea6bb6adea3cf294243dbe89eae17e676",
+  "size": 119
+}
+,
+{
+  "file": "./json_core/json/covert_signal_007.json",
+  "sha256": "6d7bb40ca0cef592b83ed982e0848a36586f029050474a522f03148fd816c459",
+  "size": 119
+}
+,
+{
+  "file": "./json_core/json/covert_signal_008.json",
+  "sha256": "982310c817a5a0ecbb1ede8f27630101c9e6309d6a65336f70e2658c0fabd5bd",
+  "size": 119
+}
+,
+{
+  "file": "./json_core/json/covert_signal_009.json",
+  "sha256": "10744ee64e359dfedac3655ef630ca8e2b92d31defd324c794824743afcb8e65",
+  "size": 119
+}
+,
+{
+  "file": "./json_core/json/covert_signal_010.json",
+  "sha256": "a89cdb888ffbf5e28c38bc3b2df2ae3e9c25d86446b35e1b88fa9b180da87d43",
+  "size": 120
+}
+,
+{
+  "file": "./json_core/json/covert_signal_011.json",
+  "sha256": "ad1fd0cabc0e5b6f05b6f0631d763047dfa8685be02322628f5bcae668083765",
+  "size": 120
+}
+,
+{
+  "file": "./json_core/json/covert_signal_012.json",
+  "sha256": "5f0b99415225578a3837f350652761ab582f7bc5ea15687ef9c8eb79ca60cf7a",
+  "size": 120
+}
+,
+{
+  "file": "./json_core/json/covert_signal_013.json",
+  "sha256": "1c07341ab102586a55f368eccde524e265861b4044d53eb6e57e5e2418f4065a",
+  "size": 120
+}
+,
+{
+  "file": "./json_core/json/covert_signal_014.json",
+  "sha256": "c96e04f2e1c24a17e73cea2b7c017375892e363a216812a39eb0fa106656498f",
+  "size": 120
+}
+,
+{
+  "file": "./json_core/json/covert_signal_015.json",
+  "sha256": "9a2fcbf1d093f2bbbb43eecfda14912d68c812ad19d0062098c8e0ce7e28a0b5",
+  "size": 120
+}
+,
+{
+  "file": "./json_core/json/covert_signal_016.json",
+  "sha256": "5e8ac296f736d8344149961b5c3d182bfb7f6577093f16a1b7afe195142f3baa",
+  "size": 120
+}
+,
+{
+  "file": "./json_core/json/covert_signal_017.json",
+  "sha256": "056a9ea90541b824ce35b001d391b2a519295544d52670f0469a5f2c1703bc4a",
+  "size": 120
+}
+,
+{
+  "file": "./json_core/json/covert_signal_018.json",
+  "sha256": "b7acfbb850cac3150f16b5f09cc2776be46ad7fdc710a10ce6c7d55a1334525b",
+  "size": 120
+}
+,

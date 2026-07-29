@@ -1,0 +1,27 @@
+{
+  "version": "1.0.0",
+  "purpose": "CLI ecosystem candidate prioritization",
+  "candidates": [
+    {
+      "name": "n8n-io/n8n",
+      "category": "workflow_automation",
+      "domain_match": "HIGH",
+      "commercial_fit": "HIGH",
+      "priority": "A"
+    },
+    {
+      "name": "Graphify-Labs/graphify",
+      "category": "knowledge_graph",
+      "domain_match": "HIGH",
+      "commercial_fit": "MEDIUM",
+      "priority": "A"
+    },
+    {
+      "name": "OpenHands/OpenHands",
+      "category": "ai_agent",
+      "domain_match": "HIGH",
+      "commercial_fit": "MEDIUM",
+      "priority": "A"
+    }
+  ]
+}

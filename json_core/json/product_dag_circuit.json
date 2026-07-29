@@ -1,0 +1,33 @@
+{
+  "$schema": "./schemas/zerocore.sovereign.bootstrap.schema.json",
+  "circuit_meta": {
+    "circuit_id": "product_generation_dag_v1",
+    "target": "PUBLIC_DOCUMENT_GENERATION"
+  },
+  "nodes": {
+    "node_01_gemini_context": {
+      "provider": "Gemini Engine",
+      "action": "Context Extraction & Vision Mapping",
+      "input": "Engine/product_data.json",
+      "output": "structured_ast"
+    },
+    "node_02_gpt_architecture": {
+      "provider": "GPT Engine",
+      "action": "Logical Structuring & Document Layout Standard",
+      "depends_on": ["node_01_gemini_context"],
+      "output": "markdown_schema"
+    },
+    "node_03_claude_safety": {
+      "provider": "Claude Engine",
+      "action": "Secret Leakage Inspection & Insulation Fuse",
+      "depends_on": ["node_02_gpt_architecture"],
+      "output": "sanitized_stream"
+    },
+    "node_04_copilot_writer": {
+      "provider": "Copilot Engine",
+      "action": "Public Document Rendering & Evidence Hash Sign",
+      "depends_on": ["node_03_claude_safety"],
+      "output": "PUBLIC_PRODUCT_SPEC.md"
+    }
+  }
+}

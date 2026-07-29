@@ -1,0 +1,721 @@
+{
+  "version": "3.0.0",
+  "generated_at": "2026-07-29T08:03:45.688437+00:00",
+  "kernel": "BUSINESS_MASTER",
+  "status": "READY",
+  "documents": {
+    "business_master_index.json": {
+      "exists": true,
+      "content": {
+        "version": "1.0.0",
+        "generated_at": "2026-07-29T02:44:50.622096+00:00",
+        "pipeline_status": "READY",
+        "documents": [
+          "customer_real_deal_review.json",
+          "customer_deal_sync_result.json",
+          "customer_deal_action_plan.json",
+          "customer_execution_gate_check.json",
+          "customer_final_business_dashboard.json",
+          "original_10_target_audit.json",
+          "original_10_target_priority.json",
+          "merged_business_view.json",
+          "business_portfolio_status.json",
+          "business_execution_queue.json",
+          "today_business_focus.json",
+          "business_integrity_report.json"
+        ]
+      }
+    },
+    "business_pipeline_summary.json": {
+      "exists": true,
+      "content": {
+        "version": "1.0.0",
+        "generated_at": "2026-07-29T02:44:51.843819+00:00",
+        "summary": {
+          "pipeline_health": "HEALTHY",
+          "portfolio_total": 13,
+          "execution_queue": 13,
+          "today_focus": 5,
+          "dashboard_items": 3
+        },
+        "status": "READY"
+      }
+    },
+    "business_integrity_report.json": {
+      "exists": true,
+      "content": {
+        "version": "1.0.0",
+        "generated_at": "2026-07-29T02:44:49.394764+00:00",
+        "policy": {
+          "read_only": true,
+          "schema_check": true,
+          "manual_review_required": true
+        },
+        "files": [
+          {
+            "file": "json_core/customer_real_deal_review.json",
+            "exists": true,
+            "valid_json": true
+          },
+          {
+            "file": "json_core/original_10_target_priority.json",
+            "exists": true,
+            "valid_json": true
+          },
+          {
+            "file": "json_core/merged_business_view.json",
+            "exists": true,
+            "valid_json": true
+          },
+          {
+            "file": "json_core/business_portfolio_status.json",
+            "exists": true,
+            "valid_json": true
+          },
+          {
+            "file": "json_core/business_execution_queue.json",
+            "exists": true,
+            "valid_json": true
+          },
+          {
+            "file": "json_core/today_business_focus.json",
+            "exists": true,
+            "valid_json": true
+          }
+        ],
+        "overall_status": "HEALTHY"
+      }
+    },
+    "business_release_check.json": {
+      "exists": true,
+      "content": {
+        "version": "1.0.0",
+        "generated_at": "2026-07-29T02:44:54.291168+00:00",
+        "release_state": "READY",
+        "policy": {
+          "read_only": true,
+          "manual_release_required": true,
+          "public_data_only": true
+        },
+        "files": [
+          {
+            "file": "business_master_index.json",
+            "exists": true,
+            "valid_json": true
+          },
+          {
+            "file": "business_pipeline_summary.json",
+            "exists": true,
+            "valid_json": true
+          },
+          {
+            "file": "business_final_report.json",
+            "exists": true,
+            "valid_json": true
+          },
+          {
+            "file": "business_integrity_report.json",
+            "exists": true,
+            "valid_json": true
+          },
+          {
+            "file": "business_execution_queue.json",
+            "exists": true,
+            "valid_json": true
+          },
+          {
+            "file": "today_business_focus.json",
+            "exists": true,
+            "valid_json": true
+          }
+        ]
+      }
+    },
+    "business_final_report.json": {
+      "exists": true,
+      "content": {
+        "version": "1.0.0",
+        "generated_at": "2026-07-29T02:44:53.062705+00:00",
+        "status": {
+          "pipeline": "READY",
+          "health": "HEALTHY"
+        },
+        "counts": {
+          "portfolio": 13,
+          "legacy": 3,
+          "cli": 10,
+          "today_focus": 5
+        },
+        "policy": {
+          "public_data_only": true,
+          "manual_review_required": true,
+          "no_private_interest_assumption": true,
+          "execution_requires_confirmation": true
+        },
+        "result": "READY_FOR_HUMAN_REVIEW"
+      }
+    },
+    "business_execution_queue.json": {
+      "exists": true,
+      "content": {
+        "version": "1.0.0",
+        "generated_at": "2026-07-29T02:44:46.958814+00:00",
+        "policy": {
+          "manual_review_required": true,
+          "public_data_only": true,
+          "execution_requires_confirmation": true
+        },
+        "execution_queue": [
+          {
+            "order": 1,
+            "source": "LEGACY",
+            "target": "CUSTOMER_001",
+            "priority": "BUSINESS",
+            "stage": "ACTIVE_REVIEW",
+            "next_step": [
+              "NDA_STATUS",
+              "REQUIREMENT_CONFIRMATION",
+              "CONTRACT_PATH"
+            ]
+          },
+          {
+            "order": 2,
+            "source": "LEGACY",
+            "target": "SILENT_USER_0x31C",
+            "priority": "BUSINESS",
+            "stage": "OBSERVATION",
+            "next_step": [
+              "VALID_CONTACT",
+              "CONCRETE_REQUEST",
+              "PAYMENT_EVIDENCE"
+            ]
+          },
+          {
+            "order": 3,
+            "source": "LEGACY",
+            "target": "VIP_ADDITIONAL_001",
+            "priority": "BUSINESS",
+            "stage": "PENDING_REVIEW",
+            "next_step": [
+              "CONTACT_CONFIRMATION",
+              "BUSINESS_REQUIREMENT"
+            ]
+          },
+          {
+            "order": 4,
+            "source": "CLI_DISCOVERY",
+            "target": "trimstray/the-book-of-secret-knowledge",
+            "priority": "A",
+            "stage": "EARLY_TARGET_REVIEW",
+            "next_step": [
+              "HUMAN_REVIEW"
+            ]
+          },
+          {
+            "order": 5,
+            "source": "CLI_DISCOVERY",
+            "target": "n8n-io/n8n",
+            "priority": "A",
+            "stage": "EARLY_TARGET_REVIEW",
+            "next_step": [
+              "HUMAN_REVIEW"
+            ]
+          },
+          {
+            "order": 6,
+            "source": "CLI_DISCOVERY",
+            "target": "ohmyzsh/ohmyzsh",
+            "priority": "A",
+            "stage": "EARLY_TARGET_REVIEW",
+            "next_step": [
+              "HUMAN_REVIEW"
+            ]
+          },
+          {
+            "order": 7,
+            "source": "CLI_DISCOVERY",
+            "target": "yt-dlp/yt-dlp",
+            "priority": "A",
+            "stage": "PUBLIC_DISCOVERY_REVIEW",
+            "next_step": [
+              "HUMAN_REVIEW"
+            ]
+          },
+          {
+            "order": 8,
+            "source": "CLI_DISCOVERY",
+            "target": "google-gemini/gemini-cli",
+            "priority": "A",
+            "stage": "PUBLIC_DISCOVERY_REVIEW",
+            "next_step": [
+              "HUMAN_REVIEW"
+            ]
+          },
+          {
+            "order": 9,
+            "source": "CLI_DISCOVERY",
+            "target": "Graphify-Labs/graphify",
+            "priority": "B",
+            "stage": "PUBLIC_DISCOVERY_REVIEW",
+            "next_step": [
+              "HUMAN_REVIEW"
+            ]
+          },
+          {
+            "order": 10,
+            "source": "CLI_DISCOVERY",
+            "target": "sherlock-project/sherlock",
+            "priority": "B",
+            "stage": "PUBLIC_DISCOVERY_REVIEW",
+            "next_step": [
+              "HUMAN_REVIEW"
+            ]
+          },
+          {
+            "order": 11,
+            "source": "CLI_DISCOVERY",
+            "target": "OpenHands/OpenHands",
+            "priority": "B",
+            "stage": "PUBLIC_DISCOVERY_REVIEW",
+            "next_step": [
+              "HUMAN_REVIEW"
+            ]
+          },
+          {
+            "order": 12,
+            "source": "CLI_DISCOVERY",
+            "target": "nexu-io/open-design",
+            "priority": "B",
+            "stage": "PUBLIC_DISCOVERY_REVIEW",
+            "next_step": [
+              "HUMAN_REVIEW"
+            ]
+          },
+          {
+            "order": 13,
+            "source": "CLI_DISCOVERY",
+            "target": "junegunn/fzf",
+            "priority": "B",
+            "stage": "PUBLIC_DISCOVERY_REVIEW",
+            "next_step": [
+              "HUMAN_REVIEW"
+            ]
+          }
+        ]
+      }
+    },
+    "today_business_focus.json": {
+      "exists": true,
+      "content": {
+        "version": "1.0.0",
+        "generated_at": "2026-07-29T02:44:48.182414+00:00",
+        "policy": {
+          "manual_execution": true,
+          "human_confirmation_required": true,
+          "no_delivery_without_payment": true,
+          "public_data_only": true
+        },
+        "today_focus": [
+          {
+            "order": 1,
+            "target": "CUSTOMER_001",
+            "source": "LEGACY",
+            "priority": "BUSINESS",
+            "stage": "ACTIVE_REVIEW",
+            "status": "READY_FOR_REVIEW",
+            "required_action": [
+              "NDA_STATUS",
+              "REQUIREMENT_CONFIRMATION",
+              "CONTRACT_PATH"
+            ]
+          },
+          {
+            "order": 2,
+            "target": "SILENT_USER_0x31C",
+            "source": "LEGACY",
+            "priority": "BUSINESS",
+            "stage": "OBSERVATION",
+            "status": "READY_FOR_REVIEW",
+            "required_action": [
+              "VALID_CONTACT",
+              "CONCRETE_REQUEST",
+              "PAYMENT_EVIDENCE"
+            ]
+          },
+          {
+            "order": 3,
+            "target": "VIP_ADDITIONAL_001",
+            "source": "LEGACY",
+            "priority": "BUSINESS",
+            "stage": "PENDING_REVIEW",
+            "status": "READY_FOR_REVIEW",
+            "required_action": [
+              "CONTACT_CONFIRMATION",
+              "BUSINESS_REQUIREMENT"
+            ]
+          },
+          {
+            "order": 4,
+            "target": "trimstray/the-book-of-secret-knowledge",
+            "source": "CLI_DISCOVERY",
+            "priority": "A",
+            "stage": "EARLY_TARGET_REVIEW",
+            "status": "READY_FOR_REVIEW",
+            "required_action": [
+              "HUMAN_REVIEW"
+            ]
+          },
+          {
+            "order": 5,
+            "target": "n8n-io/n8n",
+            "source": "CLI_DISCOVERY",
+            "priority": "A",
+            "stage": "EARLY_TARGET_REVIEW",
+            "status": "READY_FOR_REVIEW",
+            "required_action": [
+              "HUMAN_REVIEW"
+            ]
+          }
+        ]
+      }
+    },
+    "business_portfolio_status.json": {
+      "exists": true,
+      "content": {
+        "version": "1.0.0",
+        "generated_at": "2026-07-29T02:44:45.734396+00:00",
+        "policy": {
+          "datasets_separated": true,
+          "manual_review_required": true,
+          "public_data_only": true,
+          "no_private_interest_assumption": true
+        },
+        "summary": {
+          "legacy_total": 3,
+          "cli_total": 10,
+          "portfolio_total": 13
+        },
+        "portfolio": [
+          {
+            "source": "LEGACY",
+            "id": "CUSTOMER_001",
+            "stage": "ACTIVE_REVIEW",
+            "priority": "BUSINESS",
+            "payment": "UNVERIFIED",
+            "next_step": [
+              "NDA_STATUS",
+              "REQUIREMENT_CONFIRMATION",
+              "CONTRACT_PATH"
+            ]
+          },
+          {
+            "source": "LEGACY",
+            "id": "SILENT_USER_0x31C",
+            "stage": "OBSERVATION",
+            "priority": "BUSINESS",
+            "payment": "UNVERIFIED",
+            "next_step": [
+              "VALID_CONTACT",
+              "CONCRETE_REQUEST",
+              "PAYMENT_EVIDENCE"
+            ]
+          },
+          {
+            "source": "LEGACY",
+            "id": "VIP_ADDITIONAL_001",
+            "stage": "PENDING_REVIEW",
+            "priority": "BUSINESS",
+            "payment": "UNVERIFIED",
+            "next_step": [
+              "CONTACT_CONFIRMATION",
+              "BUSINESS_REQUIREMENT"
+            ]
+          },
+          {
+            "source": "CLI_DISCOVERY",
+            "id": "trimstray/the-book-of-secret-knowledge",
+            "stage": "EARLY_TARGET_REVIEW",
+            "priority": "A",
+            "contact": "NOT_STARTED",
+            "next_step": [
+              "HUMAN_REVIEW"
+            ]
+          },
+          {
+            "source": "CLI_DISCOVERY",
+            "id": "n8n-io/n8n",
+            "stage": "EARLY_TARGET_REVIEW",
+            "priority": "A",
+            "contact": "NOT_STARTED",
+            "next_step": [
+              "HUMAN_REVIEW"
+            ]
+          },
+          {
+            "source": "CLI_DISCOVERY",
+            "id": "ohmyzsh/ohmyzsh",
+            "stage": "EARLY_TARGET_REVIEW",
+            "priority": "A",
+            "contact": "NOT_STARTED",
+            "next_step": [
+              "HUMAN_REVIEW"
+            ]
+          },
+          {
+            "source": "CLI_DISCOVERY",
+            "id": "yt-dlp/yt-dlp",
+            "stage": "PUBLIC_DISCOVERY_REVIEW",
+            "priority": "A",
+            "contact": "NOT_STARTED",
+            "next_step": [
+              "HUMAN_REVIEW"
+            ]
+          },
+          {
+            "source": "CLI_DISCOVERY",
+            "id": "google-gemini/gemini-cli",
+            "stage": "PUBLIC_DISCOVERY_REVIEW",
+            "priority": "A",
+            "contact": "NOT_STARTED",
+            "next_step": [
+              "HUMAN_REVIEW"
+            ]
+          },
+          {
+            "source": "CLI_DISCOVERY",
+            "id": "Graphify-Labs/graphify",
+            "stage": "PUBLIC_DISCOVERY_REVIEW",
+            "priority": "B",
+            "contact": "NOT_STARTED",
+            "next_step": [
+              "HUMAN_REVIEW"
+            ]
+          },
+          {
+            "source": "CLI_DISCOVERY",
+            "id": "sherlock-project/sherlock",
+            "stage": "PUBLIC_DISCOVERY_REVIEW",
+            "priority": "B",
+            "contact": "NOT_STARTED",
+            "next_step": [
+              "HUMAN_REVIEW"
+            ]
+          },
+          {
+            "source": "CLI_DISCOVERY",
+            "id": "OpenHands/OpenHands",
+            "stage": "PUBLIC_DISCOVERY_REVIEW",
+            "priority": "B",
+            "contact": "NOT_STARTED",
+            "next_step": [
+              "HUMAN_REVIEW"
+            ]
+          },
+          {
+            "source": "CLI_DISCOVERY",
+            "id": "nexu-io/open-design",
+            "stage": "PUBLIC_DISCOVERY_REVIEW",
+            "priority": "B",
+            "contact": "NOT_STARTED",
+            "next_step": [
+              "HUMAN_REVIEW"
+            ]
+          },
+          {
+            "source": "CLI_DISCOVERY",
+            "id": "junegunn/fzf",
+            "stage": "PUBLIC_DISCOVERY_REVIEW",
+            "priority": "B",
+            "contact": "NOT_STARTED",
+            "next_step": [
+              "HUMAN_REVIEW"
+            ]
+          }
+        ]
+      }
+    },
+    "merged_business_view.json": {
+      "exists": true,
+      "content": {
+        "version": "1.0.0",
+        "generated_at": "2026-07-29T02:44:44.505577+00:00",
+        "policy": {
+          "datasets_are_separated": true,
+          "public_data_only_for_cli": true,
+          "manual_review_required": true,
+          "no_private_interest_assumption": true
+        },
+        "legacy_candidates": [
+          {
+            "source": "LEGACY",
+            "id": "CUSTOMER_001",
+            "status": "ACTIVE_REVIEW",
+            "communication": "SPEC_VERIFIED",
+            "commitment": "NDA_IN_PROGRESS",
+            "payment": "UNVERIFIED"
+          },
+          {
+            "source": "LEGACY",
+            "id": "SILENT_USER_0x31C",
+            "status": "OBSERVATION",
+            "communication": "OBSERVED",
+            "commitment": "PENDING",
+            "payment": "UNVERIFIED"
+          },
+          {
+            "source": "LEGACY",
+            "id": "VIP_ADDITIONAL_001",
+            "status": "PENDING_REVIEW",
+            "communication": "OBSERVED",
+            "commitment": "UNVERIFIED",
+            "payment": "UNVERIFIED"
+          }
+        ],
+        "cli_candidates": [
+          {
+            "source": "CLI_DISCOVERY",
+            "name": "trimstray/the-book-of-secret-knowledge",
+            "priority": "A",
+            "group": "ORIGINAL_3",
+            "contact": "NOT_STARTED",
+            "interest": "UNVERIFIED"
+          },
+          {
+            "source": "CLI_DISCOVERY",
+            "name": "n8n-io/n8n",
+            "priority": "A",
+            "group": "ORIGINAL_3",
+            "contact": "NOT_STARTED",
+            "interest": "UNVERIFIED"
+          },
+          {
+            "source": "CLI_DISCOVERY",
+            "name": "ohmyzsh/ohmyzsh",
+            "priority": "A",
+            "group": "ORIGINAL_3",
+            "contact": "NOT_STARTED",
+            "interest": "UNVERIFIED"
+          },
+          {
+            "source": "CLI_DISCOVERY",
+            "name": "yt-dlp/yt-dlp",
+            "priority": "A",
+            "group": "DISCOVERY_7",
+            "contact": "NOT_STARTED",
+            "interest": "UNVERIFIED"
+          },
+          {
+            "source": "CLI_DISCOVERY",
+            "name": "google-gemini/gemini-cli",
+            "priority": "A",
+            "group": "DISCOVERY_7",
+            "contact": "NOT_STARTED",
+            "interest": "UNVERIFIED"
+          },
+          {
+            "source": "CLI_DISCOVERY",
+            "name": "Graphify-Labs/graphify",
+            "priority": "B",
+            "group": "DISCOVERY_7",
+            "contact": "NOT_STARTED",
+            "interest": "UNVERIFIED"
+          },
+          {
+            "source": "CLI_DISCOVERY",
+            "name": "sherlock-project/sherlock",
+            "priority": "B",
+            "group": "DISCOVERY_7",
+            "contact": "NOT_STARTED",
+            "interest": "UNVERIFIED"
+          },
+          {
+            "source": "CLI_DISCOVERY",
+            "name": "OpenHands/OpenHands",
+            "priority": "B",
+            "group": "DISCOVERY_7",
+            "contact": "NOT_STARTED",
+            "interest": "UNVERIFIED"
+          },
+          {
+            "source": "CLI_DISCOVERY",
+            "name": "nexu-io/open-design",
+            "priority": "B",
+            "group": "DISCOVERY_7",
+            "contact": "NOT_STARTED",
+            "interest": "UNVERIFIED"
+          },
+          {
+            "source": "CLI_DISCOVERY",
+            "name": "junegunn/fzf",
+            "priority": "B",
+            "group": "DISCOVERY_7",
+            "contact": "NOT_STARTED",
+            "interest": "UNVERIFIED"
+          }
+        ]
+      }
+    },
+    "customer_final_business_dashboard.json": {
+      "exists": true,
+      "content": {
+        "version": "1.0.0",
+        "generated_at": "2026-07-29T02:44:42.049966+00:00",
+        "policy": {
+          "public_data_only": true,
+          "no_hidden_interest_claim": true,
+          "no_auto_contact": true,
+          "human_decision_required": true
+        },
+        "dashboard": [
+          {
+            "customer_id": "CUSTOMER_001",
+            "priority": "A",
+            "execution_state": "LOCKED",
+            "business_stage": "HIGH_PRIORITY_PENDING",
+            "contact_permission": "NOT_GRANTED",
+            "purchase_intent": "UNVERIFIED",
+            "next_step": [
+              "human_confirmation",
+              "verify_requirement",
+              "verify_contract",
+              "verify_payment"
+            ]
+          },
+          {
+            "customer_id": "SILENT_USER_0x31C",
+            "priority": "B",
+            "execution_state": "LOCKED",
+            "business_stage": "OBSERVATION",
+            "contact_permission": "NOT_GRANTED",
+            "purchase_intent": "UNVERIFIED",
+            "next_step": [
+              "human_confirmation",
+              "verify_requirement",
+              "verify_contract",
+              "verify_payment"
+            ]
+          },
+          {
+            "customer_id": "VIP_ADDITIONAL_001",
+            "priority": "B",
+            "execution_state": "LOCKED",
+            "business_stage": "OBSERVATION",
+            "contact_permission": "NOT_GRANTED",
+            "purchase_intent": "UNVERIFIED",
+            "next_step": [
+              "human_confirmation",
+              "verify_requirement",
+              "verify_contract",
+              "verify_payment"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "statistics": {
+    "total_documents": 10,
+    "loaded": 10,
+    "missing": 0
+  }
+}

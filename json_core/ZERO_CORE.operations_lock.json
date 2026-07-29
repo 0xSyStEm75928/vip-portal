@@ -1,0 +1,15 @@
+{
+  "operations_lock_version": "1.0.0",
+  "generated_at": "2026-07-28T15:12:32Z",
+  "runtime_state": "LOCKED",
+  "protected_layers": [
+    "core",
+    "runtime",
+    "profile",
+    "tenant",
+    "security",
+    "deployment"
+  ],
+  "modification_policy": "CONTROLLED",
+  "status": "OPERATION_LOCKED"
+}

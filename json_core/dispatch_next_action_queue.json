@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-07-29T10:11:20.920678+00:00",
+  "policy": {
+    "evidence_based": true,
+    "no_assumption": true,
+    "manual_execution": true
+  },
+  "tomorrow_actions": [
+    {
+      "id": "CUSTOMER_001",
+      "locked": true,
+      "status": "VERIFIED"
+    }
+  ],
+  "updated_at": "2026-07-30T02:44:00+09:00",
+  "execution_status": "VERIFIED_AND_ACTION_LOCKED",
+  "source_sync_ref": "json_core/customer_deal_sync_result.json",
+  "dag_node": "N4_ACTION",
+  "target_id": "CUSTOMER_001",
+  "chain_status": "SYNCED_VIA_DAG"
+}

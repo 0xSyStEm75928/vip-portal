@@ -1,0 +1,20 @@
+{
+  "$schema": "./schemas/observation.registry.schema.json",
+  "version": "1.0.0",
+  "purpose": "Public discovery candidate observation tracking",
+
+  "evaluation": {
+    "identity_match": "UNVERIFIED",
+    "contact_history": "UNVERIFIED",
+    "project_alignment": "PENDING",
+    "business_signal": "UNVERIFIED"
+  },
+
+  "rules": {
+    "no_assumption_without_evidence": true,
+    "public_data_only": true,
+    "manual_review_required": true
+  },
+
+  "candidates": []
+}

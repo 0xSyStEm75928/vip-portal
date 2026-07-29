@@ -1,0 +1,16 @@
+{
+  "4_chaos_routing": {
+    "available_chaos_modes": [
+      "SILENT_CHAOS_MODE",
+      "AGGRESSIVE_KERNEL_PANIC_MODE",
+      "BEAUTIFUL_UI_WITH_CORRUPT_FILESYSTEM"
+    ],
+    "current_selected_mode": "SILENT_CHAOS_MODE",
+    "restrictions": {
+      "full_destruction_enabled": false,
+      "data_loss_guard_active": true,
+      "panic_frequency_limit": "max_3_per_hour",
+      "ai_refinement_roadmap": "段階的に Copilot と詰める"
+    }
+  }
+}

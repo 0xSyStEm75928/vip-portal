@@ -1,0 +1,14 @@
+{
+  "$schema": "https://zerocore.io/schemas/v1/ai/planner.json",
+  "plan_id": "plan_ai_001",
+  "target_agent": "ai_agent_worker",
+  "tasks": [
+    {
+      "task_id": 1,
+      "action": "APPROVE_INVOICE",
+      "target_invoice": "inv_8801",
+      "required_capability": "cap_business_write",
+      "syscall_trigger": "sys_invoice_update"
+    }
+  ]
+}

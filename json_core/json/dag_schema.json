@@ -1,0 +1,61 @@
+{
+  "graph_id": "PANDEMONIUM_MEV_DAG_CORE",
+  "version": "3.1.0-DAG-FIXED",
+  "nodes": [
+    {
+      "id": "node_pool_pand",
+      "type": "RESOURCE",
+      "label": "PAND Reserve",
+      "value": 1000000,
+      "unit": "PAND"
+    },
+    {
+      "id": "node_pool_usdc",
+      "type": "RESOURCE",
+      "label": "USDC Reserve",
+      "value": 500000,
+      "unit": "USDC"
+    },
+    {
+      "id": "node_amm_engine",
+      "type": "TRANSFORM_MATH",
+      "formula": "CONSTANT_PRODUCT_K",
+      "inputs": ["node_pool_pand", "node_pool_usdc"]
+    },
+    {
+      "id": "node_dominance_power",
+      "type": "STATE",
+      "label": "Dominance Power",
+      "value": 99.8,
+      "unit": "%"
+    }
+  ],
+  "edges": [
+    {"from": "node_pool_pand", "to": "node_amm_engine"},
+    {"from": "node_pool_usdc", "to": "node_amm_engine"},
+    {"from": "node_amm_engine", "to": "node_dominance_power"}
+  ],
+  "actions": [
+    {
+      "id": "act_sandwich",
+      "name": "⚔️ SANDWICH ATTACK",
+      "type": "DOMINANCE_EXEC",
+      "cost_type": "GWEI",
+      "effect": "HARVEST_SLIPPAGE"
+    },
+    {
+      "id": "act_override",
+      "name": "🔥 GWEI OVERRIDE",
+      "type": "PRIORITY_BUMP",
+      "cost_type": "GAS_BOOST",
+      "effect": "CRUSH_RIVAL"
+    },
+    {
+      "id": "act_rage",
+      "name": "💀 PANDEMONIUM RAGE",
+      "type": "CHAOS_CASCADE",
+      "cost_type": "ALL_OUT",
+      "effect": "MASS_HARVEST"
+    }
+  ]
+}

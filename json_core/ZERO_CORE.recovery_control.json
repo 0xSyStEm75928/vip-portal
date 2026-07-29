@@ -1,0 +1,10 @@
+{
+  "recovery_control_version": "1.0.0",
+  "generated_at": "2026-07-28T15:13:50Z",
+  "recovery_modes": [
+    "snapshot_restore",
+    "configuration_restore",
+    "archive_restore"
+  ],
+  "status": "RECOVERY_READY"
+}

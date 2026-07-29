@@ -1,0 +1,71 @@
+{
+  "$schema": "./schemas/json.fd.table.schema.json",
+
+  "json_fd_table": {
+    "version": "1.0.0",
+    "status": "ACTIVE",
+
+    "purpose": "Registry-native file descriptor table for ZeroCore runtime.",
+
+    "descriptors": [
+      {
+        "fd": 0,
+        "name": "stdin",
+        "type": "stream",
+        "owner": "jssh",
+        "state": "OPEN",
+        "mode": "READ"
+      },
+      {
+        "fd": 1,
+        "name": "stdout",
+        "type": "stream",
+        "owner": "jssh",
+        "state": "OPEN",
+        "mode": "WRITE"
+      },
+      {
+        "fd": 2,
+        "name": "stderr",
+        "type": "stream",
+        "owner": "kernel",
+        "state": "OPEN",
+        "mode": "WRITE"
+      },
+      {
+        "fd": 100,
+        "name": "event_stream",
+        "type": "registry",
+        "owner": "event_bus",
+        "state": "READY",
+        "mode": "READ_WRITE"
+      },
+      {
+        "fd": 101,
+        "name": "audit_stream",
+        "type": "registry",
+        "owner": "audit_chain",
+        "state": "READY",
+        "mode": "APPEND"
+      }
+    ],
+
+    "allocation_policy": {
+      "dynamic_fd": true,
+      "reuse_closed_fd": true,
+      "reserve_system_fd": true
+    },
+
+    "statistics": {
+      "open_descriptors": 5,
+      "reserved_descriptors": 3,
+      "highest_fd": 101
+    },
+
+    "integrity": {
+      "table_hash": null,
+      "validated": false,
+      "last_update": null
+    }
+  }
+}

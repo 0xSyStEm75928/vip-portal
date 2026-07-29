@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "1.0.0",
+  "metadata": {
+    "title": "ZeroCore Sovereign Graph Spec",
+    "description": "Graph theory based node-edge topology definition",
+    "security_level": "PRIVATE"
+  },
+  "graph": {
+    "nodes": [
+      {
+        "id": "node_core_kernel",
+        "type": "execution_unit",
+        "label": "Kernel Engine",
+        "attributes": {
+          "isolation": "sandboxed",
+          "weight": 100
+        }
+      },
+      {
+        "id": "node_audit_gate",
+        "type": "verification_unit",
+        "label": "Deterministic Gate",
+        "attributes": {
+          "isolation": "strict",
+          "weight": 50
+        }
+      }
+    ],
+    "edges": [
+      {
+        "source": "node_core_kernel",
+        "target": "node_audit_gate",
+        "relation": "FLOWS_TO",
+        "constraints": {
+          "deterministic": true,
+          "timeout_ms": 1000
+        }
+      }
+    ]
+  }
+}

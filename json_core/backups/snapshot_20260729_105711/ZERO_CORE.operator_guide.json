@@ -1,0 +1,14 @@
+{
+  "operator_guide_version": "1.0.0",
+  "generated_at": "2026-07-28T15:08:19Z",
+  "operations": [
+    "startup",
+    "healthcheck",
+    "audit",
+    "backup",
+    "restore"
+  ],
+  "interface": "CLI",
+  "command": "sun",
+  "status": "READY"
+}

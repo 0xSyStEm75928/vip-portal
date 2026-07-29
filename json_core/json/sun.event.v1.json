@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SunEventV1",
+  "type": "object",
+  "required": ["event_id", "timestamp", "source", "type", "payload", "hash"],
+  "properties": {
+    "event_id": { "type": "string", "pattern": "^evt_[a-f0-9]{16}$" },
+    "timestamp": { "type": "string" },
+    "source": { "type": "string" },
+    "type": { "type": "string" },
+    "payload": { "type": "object" },
+    "hash": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" }
+  },
+  "additionalProperties": false
+}

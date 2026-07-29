@@ -1,0 +1,119 @@
+{
+  "$schema": "./schemas/external.feedback.registry.schema.json",
+
+  "external_feedback_registry": {
+    "name": "ZEROCORE_EXTERNAL_FEEDBACK_REGISTRY",
+    "version": "1.0.0",
+    "purpose": "Record independent reviews, evaluations, adoption signals and verified offers",
+    "principles": [
+      "evidence_before_claim",
+      "external_validation_required",
+      "no_unverified_market_claim"
+    ]
+  },
+
+  "asset_reference": {
+    "project": "ZeroCore / SaaC DeviL Kernel Architecture",
+    "manifest": "ZEROCORE_ASSET_MANIFEST.json",
+    "technical_dossier": "ZEROCORE_TECHNICAL_DOSSIER.json"
+  },
+
+  "validation_state": {
+    "technical_asset_exists": true,
+    "repository_evidence_exists": true,
+    "external_validation_exists": false,
+    "market_offer_exists": false
+  },
+
+  "review_channels": [
+    {
+      "type": "AI_REVIEW",
+      "providers": [
+        "OpenAI",
+        "Gemini",
+        "Claude"
+      ],
+      "status": "awaiting_submission"
+    },
+    {
+      "type": "ENGINEER_REVIEW",
+      "providers": [],
+      "status": "awaiting_submission"
+    },
+    {
+      "type": "BUSINESS_EVALUATION",
+      "providers": [],
+      "status": "awaiting_submission"
+    }
+  ],
+
+  "incoming_reviews": [],
+
+  "offers": {
+    "incoming": [],
+    "accepted": [],
+    "rejected": []
+  },
+
+  "adoption_records": [],
+
+  "metrics": {
+    "technical_reviews": 0,
+    "independent_engineers": 0,
+    "customer_pilots": 0,
+    "paid_contracts": 0,
+    "verified_offers": 0
+  },
+
+  "review_entry_schema": {
+    "review_id": "",
+    "reviewer_type": "",
+    "reviewer_name": "",
+    "organization": "",
+    "timestamp": "",
+    "rating": {
+      "technical_value": null,
+      "commercial_value": null,
+      "innovation": null
+    },
+    "summary": "",
+    "evidence_reference": ""
+  },
+
+  "offer_entry_schema": {
+    "offer_id": "",
+    "source": "",
+    "organization": "",
+    "offer_type": "",
+    "allowed_types": [
+      "license",
+      "partnership",
+      "investment",
+      "integration",
+      "acquisition"
+    ],
+    "timestamp": "",
+    "terms_reference": "",
+    "status": "unverified"
+  },
+
+  "review_request": {
+    "objective": "Independent technical and commercial evaluation of ZeroCore architecture asset",
+    "questions": [
+      "Is the architecture technically differentiated?",
+      "Does evidence-first governance provide operational value?",
+      "What production requirements remain?",
+      "What realistic commercial path exists?"
+    ]
+  },
+
+  "final_state": {
+    "stage": "prototype_review_candidate",
+    "next_actions": [
+      "submit_external_review",
+      "collect_independent_feedback",
+      "record_verified_evidence",
+      "evaluate_market_fit"
+    ]
+  }
+}

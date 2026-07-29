@@ -1,0 +1,19 @@
+{
+  "bootstrap_version": "1.0.0",
+  "generated": 1785249322,
+  "boot": {
+    "boot_version": "1.0.0",
+    "generated": 1785249320,
+    "state": "BOOT"
+  },
+  "runtime": {
+    "runtime_state_version": "1.0.0",
+    "generated": 1785249321,
+    "state": "INITIALIZED"
+  },
+  "policy": {
+    "policy_version": "1.0.0",
+    "generated": 1785249321,
+    "mode": "STRICT"
+  }
+}

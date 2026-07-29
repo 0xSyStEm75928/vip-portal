@@ -1,0 +1,10 @@
+{
+  "execution_policy_version": "1.0.0",
+  "generated_at": "2026-07-28T14:59:20Z",
+  "rules": [
+    "validate_before_execute",
+    "audit_after_execute",
+    "deny_invalid_command"
+  ],
+  "mode": "STRICT"
+}

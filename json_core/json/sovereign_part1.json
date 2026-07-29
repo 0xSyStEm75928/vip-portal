@@ -1,0 +1,31 @@
+{
+  "identity": {
+    "handle": "LuciFeR0x0systeM",
+    "bot_name": "SOVEREIGN_ARB_ENGINE",
+    "dragon_rank": "SOVEREIGN DRAGON CLASS 🐉🔥",
+    "motto": "Non serviam. — We do not serve the default limits.",
+    "version": "3.1.0-ENHANCED",
+    "build_target": "PRODUCTION_SANDBOX_HYBRID"
+  },
+
+  "network": {
+    "chain": "polygon",
+    "chain_id": 137,
+    "primary_rpc": "https://polygon-bor-rpc.publicnode.com",
+    "fallback_rpcs": [
+      "https://polygon-mainnet.infura.io/v3/your_key",
+      "https://rpc-mainnet.maticvigil.com",
+      "https://1rpc.io/matic"
+    ],
+    "ws_rpc": "wss://polygon-bor-rpc.publicnode.com/ws",
+    "contract": "0xf531BAf80C88868157d8a39050C756cb51244931",
+    "explorer": "https://polygonscan.com/tx/",
+    "private_mempool": {
+      "enabled": true,
+      "endpoints": [
+        "https://bor.polygon.mev-boost.org"
+      ],
+      "anti_sandwich": true
+    }
+  }
+}

@@ -1,0 +1,1993 @@
+{
+  "version": "2.0.0",
+  "generated_at": "2026-07-29T08:01:56.894107+00:00",
+  "pipeline": "BUSINESS_MASTER",
+  "status": "READY",
+  "documents": {
+    "ZERO_CORE.customer.json": {
+      "exists": true,
+      "content": {
+        "customer_version": "3.0.0-REAL_COMMENT_FILTER",
+        "updated_at": "2026-07-28T18:52:44.471724+00:00",
+        "policy": "VERIFY_REAL_COMMENT_ONLY",
+        "customers": [
+          {
+            "customer_id": "REVEALED_CLIENT",
+            "github_comment_status": "PENDING_NEXT_SESSION",
+            "signal_eval": {
+              "has_real_comment": true,
+              "is_spurious_or_fake": false,
+              "status": "VERIFIED",
+              "deep_verification": "CORE_INSPECTED_REAL_USER"
+            },
+            "action_gate": {
+              "on_real_comment": "PROCEED_GUI_SUPPORT",
+              "on_fake_or_none": "PURGE_IMMEDIATELY"
+            },
+            "github_account_name": "REVEALED_CLIENT"
+          },
+          {
+            "customer_id": "TEST_CUSTOMER_001",
+            "updated_at": "2026-07-29T02:44:34.618752+00:00",
+            "status": "OBSERVATION",
+            "channel": "AUTO_RUN"
+          }
+        ]
+      }
+    },
+    "customer_intake.json": {
+      "exists": true,
+      "content": {
+        "customer": {
+          "customer_id": "TEST_CUSTOMER_001",
+          "first_contact_at": "2026-07-29T00:40:10.380281+00:00",
+          "last_contact_at": "2026-07-29T02:44:34.618752+00:00",
+          "status": "OBSERVATION",
+          "channel": "AUTO_RUN"
+        }
+      }
+    },
+    "customer_lifecycle_gate.json": {
+      "exists": true,
+      "content": {
+        "$schema": "./schemas/customer.lifecycle.gate.schema.json",
+        "version": "1.0.0",
+        "purpose": "Customer onboarding lifecycle control",
+        "customer_flow": [
+          {
+            "stage": "INTAKE",
+            "status": "READY",
+            "required": [
+              "customer_id",
+              "requirement"
+            ]
+          },
+          {
+            "stage": "VERIFICATION",
+            "status": "PENDING",
+            "required": [
+              "identity_confirmation",
+              "scope_confirmation"
+            ]
+          },
+          {
+            "stage": "CONTRACT",
+            "status": "PENDING",
+            "required": [
+              "agreement"
+            ]
+          },
+          {
+            "stage": "PAYMENT",
+            "status": "PENDING",
+            "required": [
+              "payment_confirmation"
+            ]
+          },
+          {
+            "stage": "WORKSPACE",
+            "status": "READY",
+            "required": [
+              "tenant_assignment"
+            ]
+          },
+          {
+            "stage": "DELIVERY",
+            "status": "LOCKED",
+            "required": [
+              "execution_authorization"
+            ]
+          }
+        ],
+        "current_customer": {
+          "customer_id": "TEST_CUSTOMER_001",
+          "updated_at": "2026-07-29T02:44:34.618752+00:00",
+          "verified": false,
+          "blocked_actions": [
+            "assume_purchase_intent",
+            "assume_private_view",
+            "deliver_before_confirmation"
+          ]
+        },
+        "rules": {
+          "no_delivery_before_confirmation": true,
+          "payment_gate_required": true,
+          "manual_review_required": true
+        }
+      }
+    },
+    "customer_review_queue.json": {
+      "exists": true,
+      "content": {
+        "$schema": "./schemas/customer.review.queue.schema.json",
+        "version": "1.0.0",
+        "purpose": "Human reviewed customer prioritization queue",
+        "review_policy": {
+          "evidence_required": true,
+          "no_assumption": true,
+          "manual_confirmation": true
+        },
+        "queue": [
+          {
+            "customer_id": "CUSTOMER_001",
+            "priority": "A",
+            "signal": {
+              "communication": "SPEC_VERIFIED",
+              "commitment": "NDA_IN_PROGRESS",
+              "payment": "UNVERIFIED"
+            },
+            "next_check": [
+              "NDA_STATUS",
+              "REQUIREMENT_STATUS",
+              "CONTRACT_PATH"
+            ],
+            "status": "ACTIVE_REVIEW"
+          },
+          {
+            "customer_id": "SILENT_USER_0x31C",
+            "priority": "B",
+            "signal": {
+              "communication": "OBSERVED",
+              "commitment": "PENDING",
+              "payment": "UNVERIFIED"
+            },
+            "next_check": [
+              "VALID_CONTACT",
+              "CONCRETE_COMMITMENT"
+            ],
+            "status": "OBSERVATION"
+          },
+          {
+            "target_id": "TEST_CUSTOMER_001",
+            "requires_human_approval": true,
+            "current_status": "OBSERVATION",
+            "updated_at": "2026-07-29T00:40:10.380281+00:00"
+          },
+          {
+            "target_id": "TEST_CUSTOMER_001",
+            "requires_human_approval": true,
+            "current_status": "OBSERVATION",
+            "updated_at": "2026-07-29T01:28:09.639283+00:00"
+          },
+          {
+            "target_id": "TEST_CUSTOMER_001",
+            "requires_human_approval": true,
+            "current_status": "OBSERVATION",
+            "updated_at": "2026-07-29T01:28:27.238506+00:00"
+          },
+          {
+            "target_id": "TEST_CUSTOMER_001",
+            "requires_human_approval": true,
+            "current_status": "OBSERVATION",
+            "updated_at": "2026-07-29T01:28:52.697090+00:00"
+          },
+          {
+            "target_id": "TEST_CUSTOMER_001",
+            "requires_human_approval": true,
+            "current_status": "OBSERVATION",
+            "updated_at": "2026-07-29T02:43:09.322213+00:00"
+          },
+          {
+            "target_id": "TEST_CUSTOMER_001",
+            "requires_human_approval": true,
+            "current_status": "OBSERVATION",
+            "updated_at": "2026-07-29T02:44:34.618752+00:00"
+          }
+        ],
+        "blocked_actions": [
+          "assume_purchase_intent",
+          "assume_private_view",
+          "deliver_before_confirmation"
+        ]
+      }
+    },
+    "tomorrow_operation_plan.json": {
+      "exists": true,
+      "content": {
+        "$schema": "./schemas/tomorrow.operation.plan.schema.json",
+        "version": "1.0.0",
+        "purpose": "Next business operation priority control",
+        "priority": [
+          {
+            "target": "CUSTOMER_001",
+            "priority": "A",
+            "objective": "Confirm requirement and contract progress",
+            "status": "WAITING",
+            "next_action": [
+              "confirm_requirement",
+              "confirm_NDA",
+              "confirm_contract_path"
+            ]
+          },
+          {
+            "target": "CLI_CANDIDATES",
+            "priority": "B",
+            "objective": "Public profile review",
+            "status": "OBSERVATION",
+            "next_action": [
+              "verify_contact_channel",
+              "prepare_manual_message"
+            ]
+          },
+          {
+            "target": "TEST_CUSTOMER_001",
+            "priority": "A",
+            "objective": "Action for OBSERVATION",
+            "status": "OBSERVATION",
+            "updated_at": "2026-07-29T00:40:10.380281+00:00"
+          },
+          {
+            "target": "TEST_CUSTOMER_001",
+            "priority": "A",
+            "objective": "Action for OBSERVATION",
+            "status": "OBSERVATION",
+            "updated_at": "2026-07-29T01:28:09.639283+00:00"
+          },
+          {
+            "target": "TEST_CUSTOMER_001",
+            "priority": "A",
+            "objective": "Action for OBSERVATION",
+            "status": "OBSERVATION",
+            "updated_at": "2026-07-29T01:28:27.238506+00:00"
+          },
+          {
+            "target": "TEST_CUSTOMER_001",
+            "priority": "A",
+            "objective": "Action for OBSERVATION",
+            "status": "OBSERVATION",
+            "updated_at": "2026-07-29T01:28:52.697090+00:00"
+          },
+          {
+            "target": "TEST_CUSTOMER_001",
+            "priority": "A",
+            "objective": "Action for OBSERVATION",
+            "status": "OBSERVATION",
+            "updated_at": "2026-07-29T02:43:09.322213+00:00"
+          },
+          {
+            "target": "TEST_CUSTOMER_001",
+            "priority": "A",
+            "objective": "Action for OBSERVATION",
+            "status": "OBSERVATION",
+            "updated_at": "2026-07-29T02:44:34.618752+00:00"
+          }
+        ],
+        "rules": {
+          "no_delivery_before_payment_or_contract": true,
+          "no_private_interest_assumption": true,
+          "evidence_required": true
+        }
+      }
+    },
+    "cli_business_candidate_review.json": {
+      "exists": true,
+      "content": {
+        "version": "1.0.0",
+        "generated_at": "2026-07-29T02:44:35.880327+00:00",
+        "policy": {
+          "public_data_only": true,
+          "no_hidden_interest_assumption": true,
+          "human_review_required": true
+        },
+        "summary": {
+          "total_targets": 10
+        },
+        "candidates": [
+          {
+            "name": "trimstray/the-book-of-secret-knowledge",
+            "url": "https://github.com/trimstray/the-book-of-secret-knowledge",
+            "stars": 235573,
+            "language": null,
+            "signals": [
+              "CLI",
+              "KNOWLEDGE_SYSTEM"
+            ],
+            "technical_match": "POSSIBLE",
+            "business_contact": "REQUIRES_REVIEW",
+            "private_interest": "UNVERIFIED",
+            "priority": "B"
+          },
+          {
+            "name": "n8n-io/n8n",
+            "url": "https://github.com/n8n-io/n8n",
+            "stars": 198412,
+            "language": "TypeScript",
+            "signals": [
+              "AI",
+              "AUTOMATION",
+              "AUTOMATION"
+            ],
+            "technical_match": "POSSIBLE",
+            "business_contact": "REQUIRES_REVIEW",
+            "private_interest": "UNVERIFIED",
+            "priority": "A"
+          },
+          {
+            "name": "ohmyzsh/ohmyzsh",
+            "url": "https://github.com/ohmyzsh/ohmyzsh",
+            "stars": 188869,
+            "language": "Shell",
+            "signals": [
+              "AI"
+            ],
+            "technical_match": "POSSIBLE",
+            "business_contact": "REQUIRES_REVIEW",
+            "private_interest": "UNVERIFIED",
+            "priority": "B"
+          },
+          {
+            "name": "yt-dlp/yt-dlp",
+            "url": "https://github.com/yt-dlp/yt-dlp",
+            "stars": 180726,
+            "language": "Python",
+            "signals": [],
+            "technical_match": "LOW",
+            "business_contact": "REQUIRES_REVIEW",
+            "private_interest": "UNVERIFIED",
+            "priority": "C"
+          },
+          {
+            "name": "google-gemini/gemini-cli",
+            "url": "https://github.com/google-gemini/gemini-cli",
+            "stars": 106220,
+            "language": "TypeScript",
+            "signals": [
+              "AI",
+              "AI_AGENT",
+              "CLI"
+            ],
+            "technical_match": "POSSIBLE",
+            "business_contact": "REQUIRES_REVIEW",
+            "private_interest": "UNVERIFIED",
+            "priority": "A"
+          },
+          {
+            "name": "Graphify-Labs/graphify",
+            "url": "https://github.com/Graphify-Labs/graphify",
+            "stars": 97656,
+            "language": "Python",
+            "signals": [
+              "AI",
+              "CLI",
+              "KNOWLEDGE_SYSTEM"
+            ],
+            "technical_match": "POSSIBLE",
+            "business_contact": "REQUIRES_REVIEW",
+            "private_interest": "UNVERIFIED",
+            "priority": "A"
+          },
+          {
+            "name": "sherlock-project/sherlock",
+            "url": "https://github.com/sherlock-project/sherlock",
+            "stars": 87254,
+            "language": "Python",
+            "signals": [],
+            "technical_match": "LOW",
+            "business_contact": "REQUIRES_REVIEW",
+            "private_interest": "UNVERIFIED",
+            "priority": "C"
+          },
+          {
+            "name": "OpenHands/OpenHands",
+            "url": "https://github.com/OpenHands/OpenHands",
+            "stars": 82414,
+            "language": "TypeScript",
+            "signals": [
+              "AI"
+            ],
+            "technical_match": "POSSIBLE",
+            "business_contact": "REQUIRES_REVIEW",
+            "private_interest": "UNVERIFIED",
+            "priority": "B"
+          },
+          {
+            "name": "nexu-io/open-design",
+            "url": "https://github.com/nexu-io/open-design",
+            "stars": 82227,
+            "language": "TypeScript",
+            "signals": [
+              "AI_AGENT",
+              "CLI"
+            ],
+            "technical_match": "POSSIBLE",
+            "business_contact": "REQUIRES_REVIEW",
+            "private_interest": "UNVERIFIED",
+            "priority": "B"
+          },
+          {
+            "name": "junegunn/fzf",
+            "url": "https://github.com/junegunn/fzf",
+            "stars": 82010,
+            "language": "Go",
+            "signals": [],
+            "technical_match": "LOW",
+            "business_contact": "REQUIRES_REVIEW",
+            "private_interest": "UNVERIFIED",
+            "priority": "C"
+          }
+        ]
+      }
+    },
+    "cli_business_signal_deep_review.json": {
+      "exists": true,
+      "content": {
+        "version": "1.0.0",
+        "generated_at": "2026-07-29T02:44:37.108746+00:00",
+        "policy": {
+          "public_data_only": true,
+          "no_hidden_view_claim": true,
+          "manual_confirmation_required": true
+        },
+        "summary": {
+          "total_candidates": 10
+        },
+        "reviewed_candidates": [
+          {
+            "name": "trimstray/the-book-of-secret-knowledge",
+            "url": "https://github.com/trimstray/the-book-of-secret-knowledge",
+            "stars": 235573,
+            "public_signal": {
+              "repository_exists": true,
+              "public_activity": "UNVERIFIED",
+              "maintainer_contact": "UNVERIFIED",
+              "commercial_presence": "UNVERIFIED"
+            },
+            "technical_signal": {
+              "matched_keywords": [
+                "CLI",
+                "KNOWLEDGE_SYSTEM"
+              ],
+              "architecture_fit": "POSSIBLE"
+            },
+            "business_evaluation": {
+              "contact_possible": "POSSIBLE",
+              "partnership_fit": "UNVERIFIED",
+              "purchase_intent": "UNVERIFIED"
+            },
+            "decision": {
+              "priority": "B",
+              "next_action": "PUBLIC_PROFILE_REVIEW"
+            }
+          },
+          {
+            "name": "n8n-io/n8n",
+            "url": "https://github.com/n8n-io/n8n",
+            "stars": 198412,
+            "public_signal": {
+              "repository_exists": true,
+              "public_activity": "UNVERIFIED",
+              "maintainer_contact": "UNVERIFIED",
+              "commercial_presence": "UNVERIFIED"
+            },
+            "technical_signal": {
+              "matched_keywords": [
+                "AI",
+                "AUTOMATION",
+                "AUTOMATION"
+              ],
+              "architecture_fit": "POSSIBLE"
+            },
+            "business_evaluation": {
+              "contact_possible": "POSSIBLE",
+              "partnership_fit": "UNVERIFIED",
+              "purchase_intent": "UNVERIFIED"
+            },
+            "decision": {
+              "priority": "A",
+              "next_action": "TECHNICAL_BUSINESS_REVIEW"
+            }
+          },
+          {
+            "name": "ohmyzsh/ohmyzsh",
+            "url": "https://github.com/ohmyzsh/ohmyzsh",
+            "stars": 188869,
+            "public_signal": {
+              "repository_exists": true,
+              "public_activity": "UNVERIFIED",
+              "maintainer_contact": "UNVERIFIED",
+              "commercial_presence": "UNVERIFIED"
+            },
+            "technical_signal": {
+              "matched_keywords": [
+                "AI"
+              ],
+              "architecture_fit": "POSSIBLE"
+            },
+            "business_evaluation": {
+              "contact_possible": "POSSIBLE",
+              "partnership_fit": "UNVERIFIED",
+              "purchase_intent": "UNVERIFIED"
+            },
+            "decision": {
+              "priority": "B",
+              "next_action": "PUBLIC_PROFILE_REVIEW"
+            }
+          },
+          {
+            "name": "yt-dlp/yt-dlp",
+            "url": "https://github.com/yt-dlp/yt-dlp",
+            "stars": 180726,
+            "public_signal": {
+              "repository_exists": true,
+              "public_activity": "UNVERIFIED",
+              "maintainer_contact": "UNVERIFIED",
+              "commercial_presence": "UNVERIFIED"
+            },
+            "technical_signal": {
+              "matched_keywords": [],
+              "architecture_fit": "LOW"
+            },
+            "business_evaluation": {
+              "contact_possible": "POSSIBLE",
+              "partnership_fit": "UNVERIFIED",
+              "purchase_intent": "UNVERIFIED"
+            },
+            "decision": {
+              "priority": "C",
+              "next_action": "LOW_PRIORITY_REVIEW"
+            }
+          },
+          {
+            "name": "google-gemini/gemini-cli",
+            "url": "https://github.com/google-gemini/gemini-cli",
+            "stars": 106220,
+            "public_signal": {
+              "repository_exists": true,
+              "public_activity": "UNVERIFIED",
+              "maintainer_contact": "UNVERIFIED",
+              "commercial_presence": "UNVERIFIED"
+            },
+            "technical_signal": {
+              "matched_keywords": [
+                "AI",
+                "AI_AGENT",
+                "CLI"
+              ],
+              "architecture_fit": "POSSIBLE"
+            },
+            "business_evaluation": {
+              "contact_possible": "POSSIBLE",
+              "partnership_fit": "UNVERIFIED",
+              "purchase_intent": "UNVERIFIED"
+            },
+            "decision": {
+              "priority": "A",
+              "next_action": "TECHNICAL_BUSINESS_REVIEW"
+            }
+          },
+          {
+            "name": "Graphify-Labs/graphify",
+            "url": "https://github.com/Graphify-Labs/graphify",
+            "stars": 97656,
+            "public_signal": {
+              "repository_exists": true,
+              "public_activity": "UNVERIFIED",
+              "maintainer_contact": "UNVERIFIED",
+              "commercial_presence": "UNVERIFIED"
+            },
+            "technical_signal": {
+              "matched_keywords": [
+                "AI",
+                "CLI",
+                "KNOWLEDGE_SYSTEM"
+              ],
+              "architecture_fit": "POSSIBLE"
+            },
+            "business_evaluation": {
+              "contact_possible": "POSSIBLE",
+              "partnership_fit": "UNVERIFIED",
+              "purchase_intent": "UNVERIFIED"
+            },
+            "decision": {
+              "priority": "A",
+              "next_action": "TECHNICAL_BUSINESS_REVIEW"
+            }
+          },
+          {
+            "name": "sherlock-project/sherlock",
+            "url": "https://github.com/sherlock-project/sherlock",
+            "stars": 87254,
+            "public_signal": {
+              "repository_exists": true,
+              "public_activity": "UNVERIFIED",
+              "maintainer_contact": "UNVERIFIED",
+              "commercial_presence": "UNVERIFIED"
+            },
+            "technical_signal": {
+              "matched_keywords": [],
+              "architecture_fit": "LOW"
+            },
+            "business_evaluation": {
+              "contact_possible": "POSSIBLE",
+              "partnership_fit": "UNVERIFIED",
+              "purchase_intent": "UNVERIFIED"
+            },
+            "decision": {
+              "priority": "C",
+              "next_action": "LOW_PRIORITY_REVIEW"
+            }
+          },
+          {
+            "name": "OpenHands/OpenHands",
+            "url": "https://github.com/OpenHands/OpenHands",
+            "stars": 82414,
+            "public_signal": {
+              "repository_exists": true,
+              "public_activity": "UNVERIFIED",
+              "maintainer_contact": "UNVERIFIED",
+              "commercial_presence": "UNVERIFIED"
+            },
+            "technical_signal": {
+              "matched_keywords": [
+                "AI"
+              ],
+              "architecture_fit": "POSSIBLE"
+            },
+            "business_evaluation": {
+              "contact_possible": "POSSIBLE",
+              "partnership_fit": "UNVERIFIED",
+              "purchase_intent": "UNVERIFIED"
+            },
+            "decision": {
+              "priority": "B",
+              "next_action": "PUBLIC_PROFILE_REVIEW"
+            }
+          },
+          {
+            "name": "nexu-io/open-design",
+            "url": "https://github.com/nexu-io/open-design",
+            "stars": 82227,
+            "public_signal": {
+              "repository_exists": true,
+              "public_activity": "UNVERIFIED",
+              "maintainer_contact": "UNVERIFIED",
+              "commercial_presence": "UNVERIFIED"
+            },
+            "technical_signal": {
+              "matched_keywords": [
+                "AI_AGENT",
+                "CLI"
+              ],
+              "architecture_fit": "POSSIBLE"
+            },
+            "business_evaluation": {
+              "contact_possible": "POSSIBLE",
+              "partnership_fit": "UNVERIFIED",
+              "purchase_intent": "UNVERIFIED"
+            },
+            "decision": {
+              "priority": "B",
+              "next_action": "PUBLIC_PROFILE_REVIEW"
+            }
+          },
+          {
+            "name": "junegunn/fzf",
+            "url": "https://github.com/junegunn/fzf",
+            "stars": 82010,
+            "public_signal": {
+              "repository_exists": true,
+              "public_activity": "UNVERIFIED",
+              "maintainer_contact": "UNVERIFIED",
+              "commercial_presence": "UNVERIFIED"
+            },
+            "technical_signal": {
+              "matched_keywords": [],
+              "architecture_fit": "LOW"
+            },
+            "business_evaluation": {
+              "contact_possible": "POSSIBLE",
+              "partnership_fit": "UNVERIFIED",
+              "purchase_intent": "UNVERIFIED"
+            },
+            "decision": {
+              "priority": "C",
+              "next_action": "LOW_PRIORITY_REVIEW"
+            }
+          }
+        ]
+      }
+    },
+    "customer_real_deal_review.json": {
+      "exists": true,
+      "content": {
+        "$schema": "./schemas/customer.real.deal.review.schema.json",
+        "version": "1.0.0",
+        "purpose": "Real customer candidate review layer",
+        "policy": {
+          "evidence_required": true,
+          "no_assumption": true,
+          "manual_confirmation_required": true
+        },
+        "deal_stages": {
+          "communication": "UNVERIFIED",
+          "requirement": "UNVERIFIED",
+          "contract": "UNVERIFIED",
+          "payment": "UNVERIFIED",
+          "delivery": "LOCKED"
+        },
+        "customers": [
+          {
+            "customer_id": "CUSTOMER_001",
+            "signal": {
+              "communication": "SPEC_VERIFIED",
+              "commitment": "NDA_IN_PROGRESS",
+              "payment": "UNVERIFIED"
+            },
+            "review": {
+              "next_check": [
+                "NDA_STATUS",
+                "REQUIREMENT_CONFIRMATION",
+                "CONTRACT_PATH"
+              ],
+              "execution_ready": false
+            },
+            "status": "ACTIVE_REVIEW"
+          },
+          {
+            "customer_id": "SILENT_USER_0x31C",
+            "signal": {
+              "communication": "OBSERVED",
+              "commitment": "PENDING",
+              "payment": "UNVERIFIED"
+            },
+            "review": {
+              "next_check": [
+                "VALID_CONTACT",
+                "CONCRETE_REQUEST",
+                "PAYMENT_EVIDENCE"
+              ],
+              "execution_ready": false
+            },
+            "status": "OBSERVATION"
+          },
+          {
+            "customer_id": "VIP_ADDITIONAL_001",
+            "signal": {
+              "communication": "OBSERVED",
+              "commitment": "UNVERIFIED",
+              "payment": "UNVERIFIED"
+            },
+            "review": {
+              "next_check": [
+                "CONTACT_CONFIRMATION",
+                "BUSINESS_REQUIREMENT"
+              ],
+              "execution_ready": false
+            },
+            "status": "PENDING_REVIEW"
+          }
+        ]
+      }
+    },
+    "customer_deal_sync_result.json": {
+      "exists": true,
+      "content": {
+        "version": "1.0.0",
+        "generated_at": "2026-07-29T02:44:38.360103+00:00",
+        "policy": {
+          "read_only_check": true,
+          "no_state_change": true,
+          "evidence_required": true
+        },
+        "customers": [
+          {
+            "customer_id": "CUSTOMER_001",
+            "deal_status": "ACTIVE_REVIEW",
+            "signal": {
+              "communication": "SPEC_VERIFIED",
+              "commitment": "NDA_IN_PROGRESS",
+              "payment": "UNVERIFIED"
+            },
+            "existing_customer_record": "NOT_FOUND",
+            "queue_record": "FOUND",
+            "next_action": [
+              "NDA_STATUS",
+              "REQUIREMENT_CONFIRMATION",
+              "CONTRACT_PATH"
+            ]
+          },
+          {
+            "customer_id": "SILENT_USER_0x31C",
+            "deal_status": "OBSERVATION",
+            "signal": {
+              "communication": "OBSERVED",
+              "commitment": "PENDING",
+              "payment": "UNVERIFIED"
+            },
+            "existing_customer_record": "NOT_FOUND",
+            "queue_record": "FOUND",
+            "next_action": [
+              "VALID_CONTACT",
+              "CONCRETE_REQUEST",
+              "PAYMENT_EVIDENCE"
+            ]
+          },
+          {
+            "customer_id": "VIP_ADDITIONAL_001",
+            "deal_status": "PENDING_REVIEW",
+            "signal": {
+              "communication": "OBSERVED",
+              "commitment": "UNVERIFIED",
+              "payment": "UNVERIFIED"
+            },
+            "existing_customer_record": "NOT_FOUND",
+            "queue_record": "NOT_FOUND",
+            "next_action": [
+              "CONTACT_CONFIRMATION",
+              "BUSINESS_REQUIREMENT"
+            ]
+          }
+        ]
+      }
+    },
+    "customer_deal_action_plan.json": {
+      "exists": true,
+      "content": {
+        "version": "1.0.0",
+        "generated_at": "2026-07-29T02:44:39.586436+00:00",
+        "policy": {
+          "evidence_based": true,
+          "no_assumption": true,
+          "manual_execution": true
+        },
+        "tomorrow_actions": [
+          {
+            "customer_id": "CUSTOMER_001",
+            "current_status": "ACTIVE_REVIEW",
+            "priority": "A",
+            "recommended_action": "NDA_AND_REQUIREMENT_CONFIRMATION",
+            "required_checks": [
+              "NDA_STATUS",
+              "REQUIREMENT_CONFIRMATION",
+              "CONTRACT_PATH"
+            ],
+            "payment_state": "UNVERIFIED"
+          },
+          {
+            "customer_id": "SILENT_USER_0x31C",
+            "current_status": "OBSERVATION",
+            "priority": "B",
+            "recommended_action": "VALIDATE_CONTACT_AND_REQUEST",
+            "required_checks": [
+              "VALID_CONTACT",
+              "CONCRETE_REQUEST",
+              "PAYMENT_EVIDENCE"
+            ],
+            "payment_state": "UNVERIFIED"
+          },
+          {
+            "customer_id": "VIP_ADDITIONAL_001",
+            "current_status": "PENDING_REVIEW",
+            "priority": "B",
+            "recommended_action": "VALIDATE_CONTACT_AND_REQUEST",
+            "required_checks": [
+              "CONTACT_CONFIRMATION",
+              "BUSINESS_REQUIREMENT"
+            ],
+            "payment_state": "UNVERIFIED"
+          }
+        ]
+      }
+    },
+    "customer_execution_gate_check.json": {
+      "exists": true,
+      "content": {
+        "version": "1.0.0",
+        "generated_at": "2026-07-29T02:44:40.831857+00:00",
+        "policy": {
+          "no_delivery_before_confirmation": true,
+          "payment_gate_required": true,
+          "human_approval_required": true
+        },
+        "execution_checks": [
+          {
+            "customer_id": "CUSTOMER_001",
+            "priority": "A",
+            "recommended_action": "NDA_AND_REQUIREMENT_CONFIRMATION",
+            "execution_state": "LOCKED",
+            "reason": "PAYMENT_CONFIRMATION_REQUIRED",
+            "manual_review": true
+          },
+          {
+            "customer_id": "SILENT_USER_0x31C",
+            "priority": "B",
+            "recommended_action": "VALIDATE_CONTACT_AND_REQUEST",
+            "execution_state": "LOCKED",
+            "reason": "PAYMENT_CONFIRMATION_REQUIRED",
+            "manual_review": true
+          },
+          {
+            "customer_id": "VIP_ADDITIONAL_001",
+            "priority": "B",
+            "recommended_action": "VALIDATE_CONTACT_AND_REQUEST",
+            "execution_state": "LOCKED",
+            "reason": "PAYMENT_CONFIRMATION_REQUIRED",
+            "manual_review": true
+          }
+        ]
+      }
+    },
+    "customer_final_business_dashboard.json": {
+      "exists": true,
+      "content": {
+        "version": "1.0.0",
+        "generated_at": "2026-07-29T02:44:42.049966+00:00",
+        "policy": {
+          "public_data_only": true,
+          "no_hidden_interest_claim": true,
+          "no_auto_contact": true,
+          "human_decision_required": true
+        },
+        "dashboard": [
+          {
+            "customer_id": "CUSTOMER_001",
+            "priority": "A",
+            "execution_state": "LOCKED",
+            "business_stage": "HIGH_PRIORITY_PENDING",
+            "contact_permission": "NOT_GRANTED",
+            "purchase_intent": "UNVERIFIED",
+            "next_step": [
+              "human_confirmation",
+              "verify_requirement",
+              "verify_contract",
+              "verify_payment"
+            ]
+          },
+          {
+            "customer_id": "SILENT_USER_0x31C",
+            "priority": "B",
+            "execution_state": "LOCKED",
+            "business_stage": "OBSERVATION",
+            "contact_permission": "NOT_GRANTED",
+            "purchase_intent": "UNVERIFIED",
+            "next_step": [
+              "human_confirmation",
+              "verify_requirement",
+              "verify_contract",
+              "verify_payment"
+            ]
+          },
+          {
+            "customer_id": "VIP_ADDITIONAL_001",
+            "priority": "B",
+            "execution_state": "LOCKED",
+            "business_stage": "OBSERVATION",
+            "contact_permission": "NOT_GRANTED",
+            "purchase_intent": "UNVERIFIED",
+            "next_step": [
+              "human_confirmation",
+              "verify_requirement",
+              "verify_contract",
+              "verify_payment"
+            ]
+          }
+        ]
+      }
+    },
+    "original_10_target_audit.json": {
+      "exists": true,
+      "content": {
+        "version": "1.0.0",
+        "generated_at": "2026-07-29T00:59:04.877636+00:00",
+        "policy": {
+          "public_data_only": true,
+          "no_hidden_monitoring_claim": true,
+          "no_private_interest_assumption": true,
+          "manual_review_required": true
+        },
+        "summary": {
+          "total": 10,
+          "original_3": 3,
+          "discovery_7": 7
+        },
+        "targets": [
+          {
+            "name": "trimstray/the-book-of-secret-knowledge",
+            "url": "https://github.com/trimstray/the-book-of-secret-knowledge",
+            "stars": 235573,
+            "language": null,
+            "group": "ORIGINAL_3",
+            "review_stage": "EARLY_TARGET_REVIEW",
+            "evidence": {
+              "public_presence": true,
+              "contact_history": "UNVERIFIED",
+              "private_interest": "UNVERIFIED",
+              "silent_view": "UNVERIFIED",
+              "business_intent": "UNVERIFIED"
+            },
+            "next_check": [
+              "verify_public_contact",
+              "verify_project_alignment",
+              "human_message_required"
+            ]
+          },
+          {
+            "name": "n8n-io/n8n",
+            "url": "https://github.com/n8n-io/n8n",
+            "stars": 198412,
+            "language": "TypeScript",
+            "group": "ORIGINAL_3",
+            "review_stage": "EARLY_TARGET_REVIEW",
+            "evidence": {
+              "public_presence": true,
+              "contact_history": "UNVERIFIED",
+              "private_interest": "UNVERIFIED",
+              "silent_view": "UNVERIFIED",
+              "business_intent": "UNVERIFIED"
+            },
+            "next_check": [
+              "verify_public_contact",
+              "verify_project_alignment",
+              "human_message_required"
+            ]
+          },
+          {
+            "name": "ohmyzsh/ohmyzsh",
+            "url": "https://github.com/ohmyzsh/ohmyzsh",
+            "stars": 188869,
+            "language": "Shell",
+            "group": "ORIGINAL_3",
+            "review_stage": "EARLY_TARGET_REVIEW",
+            "evidence": {
+              "public_presence": true,
+              "contact_history": "UNVERIFIED",
+              "private_interest": "UNVERIFIED",
+              "silent_view": "UNVERIFIED",
+              "business_intent": "UNVERIFIED"
+            },
+            "next_check": [
+              "verify_public_contact",
+              "verify_project_alignment",
+              "human_message_required"
+            ]
+          },
+          {
+            "name": "yt-dlp/yt-dlp",
+            "url": "https://github.com/yt-dlp/yt-dlp",
+            "stars": 180726,
+            "language": "Python",
+            "group": "DISCOVERY_7",
+            "review_stage": "PUBLIC_DISCOVERY_REVIEW",
+            "evidence": {
+              "public_presence": true,
+              "contact_history": "UNVERIFIED",
+              "private_interest": "UNVERIFIED",
+              "silent_view": "UNVERIFIED",
+              "business_intent": "UNVERIFIED"
+            },
+            "next_check": [
+              "verify_public_contact",
+              "verify_project_alignment",
+              "human_message_required"
+            ]
+          },
+          {
+            "name": "google-gemini/gemini-cli",
+            "url": "https://github.com/google-gemini/gemini-cli",
+            "stars": 106220,
+            "language": "TypeScript",
+            "group": "DISCOVERY_7",
+            "review_stage": "PUBLIC_DISCOVERY_REVIEW",
+            "evidence": {
+              "public_presence": true,
+              "contact_history": "UNVERIFIED",
+              "private_interest": "UNVERIFIED",
+              "silent_view": "UNVERIFIED",
+              "business_intent": "UNVERIFIED"
+            },
+            "next_check": [
+              "verify_public_contact",
+              "verify_project_alignment",
+              "human_message_required"
+            ]
+          },
+          {
+            "name": "Graphify-Labs/graphify",
+            "url": "https://github.com/Graphify-Labs/graphify",
+            "stars": 97656,
+            "language": "Python",
+            "group": "DISCOVERY_7",
+            "review_stage": "PUBLIC_DISCOVERY_REVIEW",
+            "evidence": {
+              "public_presence": true,
+              "contact_history": "UNVERIFIED",
+              "private_interest": "UNVERIFIED",
+              "silent_view": "UNVERIFIED",
+              "business_intent": "UNVERIFIED"
+            },
+            "next_check": [
+              "verify_public_contact",
+              "verify_project_alignment",
+              "human_message_required"
+            ]
+          },
+          {
+            "name": "sherlock-project/sherlock",
+            "url": "https://github.com/sherlock-project/sherlock",
+            "stars": 87254,
+            "language": "Python",
+            "group": "DISCOVERY_7",
+            "review_stage": "PUBLIC_DISCOVERY_REVIEW",
+            "evidence": {
+              "public_presence": true,
+              "contact_history": "UNVERIFIED",
+              "private_interest": "UNVERIFIED",
+              "silent_view": "UNVERIFIED",
+              "business_intent": "UNVERIFIED"
+            },
+            "next_check": [
+              "verify_public_contact",
+              "verify_project_alignment",
+              "human_message_required"
+            ]
+          },
+          {
+            "name": "OpenHands/OpenHands",
+            "url": "https://github.com/OpenHands/OpenHands",
+            "stars": 82414,
+            "language": "TypeScript",
+            "group": "DISCOVERY_7",
+            "review_stage": "PUBLIC_DISCOVERY_REVIEW",
+            "evidence": {
+              "public_presence": true,
+              "contact_history": "UNVERIFIED",
+              "private_interest": "UNVERIFIED",
+              "silent_view": "UNVERIFIED",
+              "business_intent": "UNVERIFIED"
+            },
+            "next_check": [
+              "verify_public_contact",
+              "verify_project_alignment",
+              "human_message_required"
+            ]
+          },
+          {
+            "name": "nexu-io/open-design",
+            "url": "https://github.com/nexu-io/open-design",
+            "stars": 82227,
+            "language": "TypeScript",
+            "group": "DISCOVERY_7",
+            "review_stage": "PUBLIC_DISCOVERY_REVIEW",
+            "evidence": {
+              "public_presence": true,
+              "contact_history": "UNVERIFIED",
+              "private_interest": "UNVERIFIED",
+              "silent_view": "UNVERIFIED",
+              "business_intent": "UNVERIFIED"
+            },
+            "next_check": [
+              "verify_public_contact",
+              "verify_project_alignment",
+              "human_message_required"
+            ]
+          },
+          {
+            "name": "junegunn/fzf",
+            "url": "https://github.com/junegunn/fzf",
+            "stars": 82010,
+            "language": "Go",
+            "group": "DISCOVERY_7",
+            "review_stage": "PUBLIC_DISCOVERY_REVIEW",
+            "evidence": {
+              "public_presence": true,
+              "contact_history": "UNVERIFIED",
+              "private_interest": "UNVERIFIED",
+              "silent_view": "UNVERIFIED",
+              "business_intent": "UNVERIFIED"
+            },
+            "next_check": [
+              "verify_public_contact",
+              "verify_project_alignment",
+              "human_message_required"
+            ]
+          }
+        ]
+      }
+    },
+    "original_10_target_priority.json": {
+      "exists": true,
+      "content": {
+        "version": "1.0.0",
+        "generated_at": "2026-07-29T02:44:43.277580+00:00",
+        "policy": {
+          "public_data_only": true,
+          "manual_review_required": true,
+          "no_private_interest_assumption": true
+        },
+        "targets": [
+          {
+            "name": "trimstray/the-book-of-secret-knowledge",
+            "url": "https://github.com/trimstray/the-book-of-secret-knowledge",
+            "group": "ORIGINAL_3",
+            "stars": 235573,
+            "priority": "A",
+            "review_stage": "EARLY_TARGET_REVIEW",
+            "business_state": "REVIEW_REQUIRED",
+            "contact_state": "NOT_STARTED",
+            "interest": "UNVERIFIED",
+            "next_action": "HUMAN_REVIEW"
+          },
+          {
+            "name": "n8n-io/n8n",
+            "url": "https://github.com/n8n-io/n8n",
+            "group": "ORIGINAL_3",
+            "stars": 198412,
+            "priority": "A",
+            "review_stage": "EARLY_TARGET_REVIEW",
+            "business_state": "REVIEW_REQUIRED",
+            "contact_state": "NOT_STARTED",
+            "interest": "UNVERIFIED",
+            "next_action": "HUMAN_REVIEW"
+          },
+          {
+            "name": "ohmyzsh/ohmyzsh",
+            "url": "https://github.com/ohmyzsh/ohmyzsh",
+            "group": "ORIGINAL_3",
+            "stars": 188869,
+            "priority": "A",
+            "review_stage": "EARLY_TARGET_REVIEW",
+            "business_state": "REVIEW_REQUIRED",
+            "contact_state": "NOT_STARTED",
+            "interest": "UNVERIFIED",
+            "next_action": "HUMAN_REVIEW"
+          },
+          {
+            "name": "yt-dlp/yt-dlp",
+            "url": "https://github.com/yt-dlp/yt-dlp",
+            "group": "DISCOVERY_7",
+            "stars": 180726,
+            "priority": "A",
+            "review_stage": "PUBLIC_DISCOVERY_REVIEW",
+            "business_state": "REVIEW_REQUIRED",
+            "contact_state": "NOT_STARTED",
+            "interest": "UNVERIFIED",
+            "next_action": "HUMAN_REVIEW"
+          },
+          {
+            "name": "google-gemini/gemini-cli",
+            "url": "https://github.com/google-gemini/gemini-cli",
+            "group": "DISCOVERY_7",
+            "stars": 106220,
+            "priority": "A",
+            "review_stage": "PUBLIC_DISCOVERY_REVIEW",
+            "business_state": "REVIEW_REQUIRED",
+            "contact_state": "NOT_STARTED",
+            "interest": "UNVERIFIED",
+            "next_action": "HUMAN_REVIEW"
+          },
+          {
+            "name": "Graphify-Labs/graphify",
+            "url": "https://github.com/Graphify-Labs/graphify",
+            "group": "DISCOVERY_7",
+            "stars": 97656,
+            "priority": "B",
+            "review_stage": "PUBLIC_DISCOVERY_REVIEW",
+            "business_state": "REVIEW_REQUIRED",
+            "contact_state": "NOT_STARTED",
+            "interest": "UNVERIFIED",
+            "next_action": "HUMAN_REVIEW"
+          },
+          {
+            "name": "sherlock-project/sherlock",
+            "url": "https://github.com/sherlock-project/sherlock",
+            "group": "DISCOVERY_7",
+            "stars": 87254,
+            "priority": "B",
+            "review_stage": "PUBLIC_DISCOVERY_REVIEW",
+            "business_state": "REVIEW_REQUIRED",
+            "contact_state": "NOT_STARTED",
+            "interest": "UNVERIFIED",
+            "next_action": "HUMAN_REVIEW"
+          },
+          {
+            "name": "OpenHands/OpenHands",
+            "url": "https://github.com/OpenHands/OpenHands",
+            "group": "DISCOVERY_7",
+            "stars": 82414,
+            "priority": "B",
+            "review_stage": "PUBLIC_DISCOVERY_REVIEW",
+            "business_state": "REVIEW_REQUIRED",
+            "contact_state": "NOT_STARTED",
+            "interest": "UNVERIFIED",
+            "next_action": "HUMAN_REVIEW"
+          },
+          {
+            "name": "nexu-io/open-design",
+            "url": "https://github.com/nexu-io/open-design",
+            "group": "DISCOVERY_7",
+            "stars": 82227,
+            "priority": "B",
+            "review_stage": "PUBLIC_DISCOVERY_REVIEW",
+            "business_state": "REVIEW_REQUIRED",
+            "contact_state": "NOT_STARTED",
+            "interest": "UNVERIFIED",
+            "next_action": "HUMAN_REVIEW"
+          },
+          {
+            "name": "junegunn/fzf",
+            "url": "https://github.com/junegunn/fzf",
+            "group": "DISCOVERY_7",
+            "stars": 82010,
+            "priority": "B",
+            "review_stage": "PUBLIC_DISCOVERY_REVIEW",
+            "business_state": "REVIEW_REQUIRED",
+            "contact_state": "NOT_STARTED",
+            "interest": "UNVERIFIED",
+            "next_action": "HUMAN_REVIEW"
+          }
+        ]
+      }
+    },
+    "merged_business_view.json": {
+      "exists": true,
+      "content": {
+        "version": "1.0.0",
+        "generated_at": "2026-07-29T02:44:44.505577+00:00",
+        "policy": {
+          "datasets_are_separated": true,
+          "public_data_only_for_cli": true,
+          "manual_review_required": true,
+          "no_private_interest_assumption": true
+        },
+        "legacy_candidates": [
+          {
+            "source": "LEGACY",
+            "id": "CUSTOMER_001",
+            "status": "ACTIVE_REVIEW",
+            "communication": "SPEC_VERIFIED",
+            "commitment": "NDA_IN_PROGRESS",
+            "payment": "UNVERIFIED"
+          },
+          {
+            "source": "LEGACY",
+            "id": "SILENT_USER_0x31C",
+            "status": "OBSERVATION",
+            "communication": "OBSERVED",
+            "commitment": "PENDING",
+            "payment": "UNVERIFIED"
+          },
+          {
+            "source": "LEGACY",
+            "id": "VIP_ADDITIONAL_001",
+            "status": "PENDING_REVIEW",
+            "communication": "OBSERVED",
+            "commitment": "UNVERIFIED",
+            "payment": "UNVERIFIED"
+          }
+        ],
+        "cli_candidates": [
+          {
+            "source": "CLI_DISCOVERY",
+            "name": "trimstray/the-book-of-secret-knowledge",
+            "priority": "A",
+            "group": "ORIGINAL_3",
+            "contact": "NOT_STARTED",
+            "interest": "UNVERIFIED"
+          },
+          {
+            "source": "CLI_DISCOVERY",
+            "name": "n8n-io/n8n",
+            "priority": "A",
+            "group": "ORIGINAL_3",
+            "contact": "NOT_STARTED",
+            "interest": "UNVERIFIED"
+          },
+          {
+            "source": "CLI_DISCOVERY",
+            "name": "ohmyzsh/ohmyzsh",
+            "priority": "A",
+            "group": "ORIGINAL_3",
+            "contact": "NOT_STARTED",
+            "interest": "UNVERIFIED"
+          },
+          {
+            "source": "CLI_DISCOVERY",
+            "name": "yt-dlp/yt-dlp",
+            "priority": "A",
+            "group": "DISCOVERY_7",
+            "contact": "NOT_STARTED",
+            "interest": "UNVERIFIED"
+          },
+          {
+            "source": "CLI_DISCOVERY",
+            "name": "google-gemini/gemini-cli",
+            "priority": "A",
+            "group": "DISCOVERY_7",
+            "contact": "NOT_STARTED",
+            "interest": "UNVERIFIED"
+          },
+          {
+            "source": "CLI_DISCOVERY",
+            "name": "Graphify-Labs/graphify",
+            "priority": "B",
+            "group": "DISCOVERY_7",
+            "contact": "NOT_STARTED",
+            "interest": "UNVERIFIED"
+          },
+          {
+            "source": "CLI_DISCOVERY",
+            "name": "sherlock-project/sherlock",
+            "priority": "B",
+            "group": "DISCOVERY_7",
+            "contact": "NOT_STARTED",
+            "interest": "UNVERIFIED"
+          },
+          {
+            "source": "CLI_DISCOVERY",
+            "name": "OpenHands/OpenHands",
+            "priority": "B",
+            "group": "DISCOVERY_7",
+            "contact": "NOT_STARTED",
+            "interest": "UNVERIFIED"
+          },
+          {
+            "source": "CLI_DISCOVERY",
+            "name": "nexu-io/open-design",
+            "priority": "B",
+            "group": "DISCOVERY_7",
+            "contact": "NOT_STARTED",
+            "interest": "UNVERIFIED"
+          },
+          {
+            "source": "CLI_DISCOVERY",
+            "name": "junegunn/fzf",
+            "priority": "B",
+            "group": "DISCOVERY_7",
+            "contact": "NOT_STARTED",
+            "interest": "UNVERIFIED"
+          }
+        ]
+      }
+    },
+    "business_portfolio_status.json": {
+      "exists": true,
+      "content": {
+        "version": "1.0.0",
+        "generated_at": "2026-07-29T02:44:45.734396+00:00",
+        "policy": {
+          "datasets_separated": true,
+          "manual_review_required": true,
+          "public_data_only": true,
+          "no_private_interest_assumption": true
+        },
+        "summary": {
+          "legacy_total": 3,
+          "cli_total": 10,
+          "portfolio_total": 13
+        },
+        "portfolio": [
+          {
+            "source": "LEGACY",
+            "id": "CUSTOMER_001",
+            "stage": "ACTIVE_REVIEW",
+            "priority": "BUSINESS",
+            "payment": "UNVERIFIED",
+            "next_step": [
+              "NDA_STATUS",
+              "REQUIREMENT_CONFIRMATION",
+              "CONTRACT_PATH"
+            ]
+          },
+          {
+            "source": "LEGACY",
+            "id": "SILENT_USER_0x31C",
+            "stage": "OBSERVATION",
+            "priority": "BUSINESS",
+            "payment": "UNVERIFIED",
+            "next_step": [
+              "VALID_CONTACT",
+              "CONCRETE_REQUEST",
+              "PAYMENT_EVIDENCE"
+            ]
+          },
+          {
+            "source": "LEGACY",
+            "id": "VIP_ADDITIONAL_001",
+            "stage": "PENDING_REVIEW",
+            "priority": "BUSINESS",
+            "payment": "UNVERIFIED",
+            "next_step": [
+              "CONTACT_CONFIRMATION",
+              "BUSINESS_REQUIREMENT"
+            ]
+          },
+          {
+            "source": "CLI_DISCOVERY",
+            "id": "trimstray/the-book-of-secret-knowledge",
+            "stage": "EARLY_TARGET_REVIEW",
+            "priority": "A",
+            "contact": "NOT_STARTED",
+            "next_step": [
+              "HUMAN_REVIEW"
+            ]
+          },
+          {
+            "source": "CLI_DISCOVERY",
+            "id": "n8n-io/n8n",
+            "stage": "EARLY_TARGET_REVIEW",
+            "priority": "A",
+            "contact": "NOT_STARTED",
+            "next_step": [
+              "HUMAN_REVIEW"
+            ]
+          },
+          {
+            "source": "CLI_DISCOVERY",
+            "id": "ohmyzsh/ohmyzsh",
+            "stage": "EARLY_TARGET_REVIEW",
+            "priority": "A",
+            "contact": "NOT_STARTED",
+            "next_step": [
+              "HUMAN_REVIEW"
+            ]
+          },
+          {
+            "source": "CLI_DISCOVERY",
+            "id": "yt-dlp/yt-dlp",
+            "stage": "PUBLIC_DISCOVERY_REVIEW",
+            "priority": "A",
+            "contact": "NOT_STARTED",
+            "next_step": [
+              "HUMAN_REVIEW"
+            ]
+          },
+          {
+            "source": "CLI_DISCOVERY",
+            "id": "google-gemini/gemini-cli",
+            "stage": "PUBLIC_DISCOVERY_REVIEW",
+            "priority": "A",
+            "contact": "NOT_STARTED",
+            "next_step": [
+              "HUMAN_REVIEW"
+            ]
+          },
+          {
+            "source": "CLI_DISCOVERY",
+            "id": "Graphify-Labs/graphify",
+            "stage": "PUBLIC_DISCOVERY_REVIEW",
+            "priority": "B",
+            "contact": "NOT_STARTED",
+            "next_step": [
+              "HUMAN_REVIEW"
+            ]
+          },
+          {
+            "source": "CLI_DISCOVERY",
+            "id": "sherlock-project/sherlock",
+            "stage": "PUBLIC_DISCOVERY_REVIEW",
+            "priority": "B",
+            "contact": "NOT_STARTED",
+            "next_step": [
+              "HUMAN_REVIEW"
+            ]
+          },
+          {
+            "source": "CLI_DISCOVERY",
+            "id": "OpenHands/OpenHands",
+            "stage": "PUBLIC_DISCOVERY_REVIEW",
+            "priority": "B",
+            "contact": "NOT_STARTED",
+            "next_step": [
+              "HUMAN_REVIEW"
+            ]
+          },
+          {
+            "source": "CLI_DISCOVERY",
+            "id": "nexu-io/open-design",
+            "stage": "PUBLIC_DISCOVERY_REVIEW",
+            "priority": "B",
+            "contact": "NOT_STARTED",
+            "next_step": [
+              "HUMAN_REVIEW"
+            ]
+          },
+          {
+            "source": "CLI_DISCOVERY",
+            "id": "junegunn/fzf",
+            "stage": "PUBLIC_DISCOVERY_REVIEW",
+            "priority": "B",
+            "contact": "NOT_STARTED",
+            "next_step": [
+              "HUMAN_REVIEW"
+            ]
+          }
+        ]
+      }
+    },
+    "business_execution_queue.json": {
+      "exists": true,
+      "content": {
+        "version": "1.0.0",
+        "generated_at": "2026-07-29T02:44:46.958814+00:00",
+        "policy": {
+          "manual_review_required": true,
+          "public_data_only": true,
+          "execution_requires_confirmation": true
+        },
+        "execution_queue": [
+          {
+            "order": 1,
+            "source": "LEGACY",
+            "target": "CUSTOMER_001",
+            "priority": "BUSINESS",
+            "stage": "ACTIVE_REVIEW",
+            "next_step": [
+              "NDA_STATUS",
+              "REQUIREMENT_CONFIRMATION",
+              "CONTRACT_PATH"
+            ]
+          },
+          {
+            "order": 2,
+            "source": "LEGACY",
+            "target": "SILENT_USER_0x31C",
+            "priority": "BUSINESS",
+            "stage": "OBSERVATION",
+            "next_step": [
+              "VALID_CONTACT",
+              "CONCRETE_REQUEST",
+              "PAYMENT_EVIDENCE"
+            ]
+          },
+          {
+            "order": 3,
+            "source": "LEGACY",
+            "target": "VIP_ADDITIONAL_001",
+            "priority": "BUSINESS",
+            "stage": "PENDING_REVIEW",
+            "next_step": [
+              "CONTACT_CONFIRMATION",
+              "BUSINESS_REQUIREMENT"
+            ]
+          },
+          {
+            "order": 4,
+            "source": "CLI_DISCOVERY",
+            "target": "trimstray/the-book-of-secret-knowledge",
+            "priority": "A",
+            "stage": "EARLY_TARGET_REVIEW",
+            "next_step": [
+              "HUMAN_REVIEW"
+            ]
+          },
+          {
+            "order": 5,
+            "source": "CLI_DISCOVERY",
+            "target": "n8n-io/n8n",
+            "priority": "A",
+            "stage": "EARLY_TARGET_REVIEW",
+            "next_step": [
+              "HUMAN_REVIEW"
+            ]
+          },
+          {
+            "order": 6,
+            "source": "CLI_DISCOVERY",
+            "target": "ohmyzsh/ohmyzsh",
+            "priority": "A",
+            "stage": "EARLY_TARGET_REVIEW",
+            "next_step": [
+              "HUMAN_REVIEW"
+            ]
+          },
+          {
+            "order": 7,
+            "source": "CLI_DISCOVERY",
+            "target": "yt-dlp/yt-dlp",
+            "priority": "A",
+            "stage": "PUBLIC_DISCOVERY_REVIEW",
+            "next_step": [
+              "HUMAN_REVIEW"
+            ]
+          },
+          {
+            "order": 8,
+            "source": "CLI_DISCOVERY",
+            "target": "google-gemini/gemini-cli",
+            "priority": "A",
+            "stage": "PUBLIC_DISCOVERY_REVIEW",
+            "next_step": [
+              "HUMAN_REVIEW"
+            ]
+          },
+          {
+            "order": 9,
+            "source": "CLI_DISCOVERY",
+            "target": "Graphify-Labs/graphify",
+            "priority": "B",
+            "stage": "PUBLIC_DISCOVERY_REVIEW",
+            "next_step": [
+              "HUMAN_REVIEW"
+            ]
+          },
+          {
+            "order": 10,
+            "source": "CLI_DISCOVERY",
+            "target": "sherlock-project/sherlock",
+            "priority": "B",
+            "stage": "PUBLIC_DISCOVERY_REVIEW",
+            "next_step": [
+              "HUMAN_REVIEW"
+            ]
+          },
+          {
+            "order": 11,
+            "source": "CLI_DISCOVERY",
+            "target": "OpenHands/OpenHands",
+            "priority": "B",
+            "stage": "PUBLIC_DISCOVERY_REVIEW",
+            "next_step": [
+              "HUMAN_REVIEW"
+            ]
+          },
+          {
+            "order": 12,
+            "source": "CLI_DISCOVERY",
+            "target": "nexu-io/open-design",
+            "priority": "B",
+            "stage": "PUBLIC_DISCOVERY_REVIEW",
+            "next_step": [
+              "HUMAN_REVIEW"
+            ]
+          },
+          {
+            "order": 13,
+            "source": "CLI_DISCOVERY",
+            "target": "junegunn/fzf",
+            "priority": "B",
+            "stage": "PUBLIC_DISCOVERY_REVIEW",
+            "next_step": [
+              "HUMAN_REVIEW"
+            ]
+          }
+        ]
+      }
+    },
+    "today_business_focus.json": {
+      "exists": true,
+      "content": {
+        "version": "1.0.0",
+        "generated_at": "2026-07-29T02:44:48.182414+00:00",
+        "policy": {
+          "manual_execution": true,
+          "human_confirmation_required": true,
+          "no_delivery_without_payment": true,
+          "public_data_only": true
+        },
+        "today_focus": [
+          {
+            "order": 1,
+            "target": "CUSTOMER_001",
+            "source": "LEGACY",
+            "priority": "BUSINESS",
+            "stage": "ACTIVE_REVIEW",
+            "status": "READY_FOR_REVIEW",
+            "required_action": [
+              "NDA_STATUS",
+              "REQUIREMENT_CONFIRMATION",
+              "CONTRACT_PATH"
+            ]
+          },
+          {
+            "order": 2,
+            "target": "SILENT_USER_0x31C",
+            "source": "LEGACY",
+            "priority": "BUSINESS",
+            "stage": "OBSERVATION",
+            "status": "READY_FOR_REVIEW",
+            "required_action": [
+              "VALID_CONTACT",
+              "CONCRETE_REQUEST",
+              "PAYMENT_EVIDENCE"
+            ]
+          },
+          {
+            "order": 3,
+            "target": "VIP_ADDITIONAL_001",
+            "source": "LEGACY",
+            "priority": "BUSINESS",
+            "stage": "PENDING_REVIEW",
+            "status": "READY_FOR_REVIEW",
+            "required_action": [
+              "CONTACT_CONFIRMATION",
+              "BUSINESS_REQUIREMENT"
+            ]
+          },
+          {
+            "order": 4,
+            "target": "trimstray/the-book-of-secret-knowledge",
+            "source": "CLI_DISCOVERY",
+            "priority": "A",
+            "stage": "EARLY_TARGET_REVIEW",
+            "status": "READY_FOR_REVIEW",
+            "required_action": [
+              "HUMAN_REVIEW"
+            ]
+          },
+          {
+            "order": 5,
+            "target": "n8n-io/n8n",
+            "source": "CLI_DISCOVERY",
+            "priority": "A",
+            "stage": "EARLY_TARGET_REVIEW",
+            "status": "READY_FOR_REVIEW",
+            "required_action": [
+              "HUMAN_REVIEW"
+            ]
+          }
+        ]
+      }
+    },
+    "business_integrity_report.json": {
+      "exists": true,
+      "content": {
+        "version": "1.0.0",
+        "generated_at": "2026-07-29T02:44:49.394764+00:00",
+        "policy": {
+          "read_only": true,
+          "schema_check": true,
+          "manual_review_required": true
+        },
+        "files": [
+          {
+            "file": "json_core/customer_real_deal_review.json",
+            "exists": true,
+            "valid_json": true
+          },
+          {
+            "file": "json_core/original_10_target_priority.json",
+            "exists": true,
+            "valid_json": true
+          },
+          {
+            "file": "json_core/merged_business_view.json",
+            "exists": true,
+            "valid_json": true
+          },
+          {
+            "file": "json_core/business_portfolio_status.json",
+            "exists": true,
+            "valid_json": true
+          },
+          {
+            "file": "json_core/business_execution_queue.json",
+            "exists": true,
+            "valid_json": true
+          },
+          {
+            "file": "json_core/today_business_focus.json",
+            "exists": true,
+            "valid_json": true
+          }
+        ],
+        "overall_status": "HEALTHY"
+      }
+    },
+    "business_master_index.json": {
+      "exists": true,
+      "content": {
+        "version": "1.0.0",
+        "generated_at": "2026-07-29T02:44:50.622096+00:00",
+        "pipeline_status": "READY",
+        "documents": [
+          "customer_real_deal_review.json",
+          "customer_deal_sync_result.json",
+          "customer_deal_action_plan.json",
+          "customer_execution_gate_check.json",
+          "customer_final_business_dashboard.json",
+          "original_10_target_audit.json",
+          "original_10_target_priority.json",
+          "merged_business_view.json",
+          "business_portfolio_status.json",
+          "business_execution_queue.json",
+          "today_business_focus.json",
+          "business_integrity_report.json"
+        ]
+      }
+    },
+    "business_pipeline_summary.json": {
+      "exists": true,
+      "content": {
+        "version": "1.0.0",
+        "generated_at": "2026-07-29T02:44:51.843819+00:00",
+        "summary": {
+          "pipeline_health": "HEALTHY",
+          "portfolio_total": 13,
+          "execution_queue": 13,
+          "today_focus": 5,
+          "dashboard_items": 3
+        },
+        "status": "READY"
+      }
+    },
+    "business_final_report.json": {
+      "exists": true,
+      "content": {
+        "version": "1.0.0",
+        "generated_at": "2026-07-29T02:44:53.062705+00:00",
+        "status": {
+          "pipeline": "READY",
+          "health": "HEALTHY"
+        },
+        "counts": {
+          "portfolio": 13,
+          "legacy": 3,
+          "cli": 10,
+          "today_focus": 5
+        },
+        "policy": {
+          "public_data_only": true,
+          "manual_review_required": true,
+          "no_private_interest_assumption": true,
+          "execution_requires_confirmation": true
+        },
+        "result": "READY_FOR_HUMAN_REVIEW"
+      }
+    },
+    "business_release_check.json": {
+      "exists": true,
+      "content": {
+        "version": "1.0.0",
+        "generated_at": "2026-07-29T02:44:54.291168+00:00",
+        "release_state": "READY",
+        "policy": {
+          "read_only": true,
+          "manual_release_required": true,
+          "public_data_only": true
+        },
+        "files": [
+          {
+            "file": "business_master_index.json",
+            "exists": true,
+            "valid_json": true
+          },
+          {
+            "file": "business_pipeline_summary.json",
+            "exists": true,
+            "valid_json": true
+          },
+          {
+            "file": "business_final_report.json",
+            "exists": true,
+            "valid_json": true
+          },
+          {
+            "file": "business_integrity_report.json",
+            "exists": true,
+            "valid_json": true
+          },
+          {
+            "file": "business_execution_queue.json",
+            "exists": true,
+            "valid_json": true
+          },
+          {
+            "file": "today_business_focus.json",
+            "exists": true,
+            "valid_json": true
+          }
+        ]
+      }
+    }
+  }
+}

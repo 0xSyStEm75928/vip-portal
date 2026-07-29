@@ -1,0 +1,20 @@
+{
+  "$schema": "./schemas/payment.verified.gate.schema.json",
+  "version": "3.5.0-ANONYMOUS-GATE",
+  "deal_metadata": {
+    "deal_id": "DEAL_2026_ANONYMOUS_VERIFICATION_GATE",
+    "target_scope": "PUBLIC_ANONYMOUS_CLIENTS",
+    "privacy_protocol": "STRICT_ANONYMOUS_ZERO_KNOWLEDGE",
+    "payout_address": "0xF7A353FAF6E6BD4732b0f234C656dBFDE53B0e91"
+  },
+  "feedback_prompt": {
+    "question_to_client": "本ゲートは匿名アクセス・事前検証（NDAまたは暗号署名）用に設置された公開枠組みです。",
+    "response_from_host": "ご要望に応じた安全な手続き（署名検証またはNDA締結）をご案内いたします。提示資料（NDA_AGREEMENT.md）をご確認の上、必要な操作を行ってください。",
+    "status": "AWAITING_ANONYMOUS_VERIFICATION"
+  },
+  "value_anchor": {
+    "sovereign_kernel_hash": "0x8F_SOVEREIGN_KERNEL_LOCKED",
+    "dag_circuit_hash": "0x3A_DAG_CIRCUIT_LOCKED",
+    "status": "LOCKED_UNTIL_VERIFICATION"
+  }
+}

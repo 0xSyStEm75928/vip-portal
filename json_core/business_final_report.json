@@ -1,0 +1,21 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-07-29T10:11:46.943406+00:00",
+  "status": {
+    "pipeline": "READY",
+    "health": "HEALTHY"
+  },
+  "counts": {
+    "portfolio": 13,
+    "legacy": 3,
+    "cli": 10,
+    "today_focus": 5
+  },
+  "policy": {
+    "public_data_only": true,
+    "manual_review_required": true,
+    "no_private_interest_assumption": true,
+    "execution_requires_confirmation": true
+  },
+  "result": "READY_FOR_HUMAN_REVIEW"
+}

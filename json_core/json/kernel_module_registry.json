@@ -1,0 +1,74 @@
+{
+  "$schema": "./schemas/kernel.module.registry.schema.json",
+
+  "kernel_module_registry": {
+    "version": "1.0.0",
+    "status": "ACTIVE",
+
+    "purpose": "Registry of loadable kernel modules for ZeroCore.",
+
+    "modules": [
+      {
+        "module_id": "MOD-001",
+        "name": "runtime",
+        "registry": "runtime_manifest.json",
+        "type": "core",
+        "autoload": true,
+        "state": "READY"
+      },
+      {
+        "module_id": "MOD-002",
+        "name": "event_bus",
+        "registry": "event_bus.json",
+        "type": "event",
+        "autoload": true,
+        "state": "READY"
+      },
+      {
+        "module_id": "MOD-003",
+        "name": "audit_chain",
+        "registry": "audit_chain.json",
+        "type": "audit",
+        "autoload": true,
+        "state": "READY"
+      },
+      {
+        "module_id": "MOD-004",
+        "name": "business",
+        "registry": "business_registry.json",
+        "type": "service",
+        "autoload": false,
+        "state": "READY"
+      },
+      {
+        "module_id": "MOD-005",
+        "name": "agent_memory",
+        "registry": "agent_memory_index.json",
+        "type": "ai",
+        "autoload": true,
+        "state": "READY"
+      }
+    ],
+
+    "loader_policy": {
+      "verify_schema": true,
+      "verify_dependencies": true,
+      "verify_integrity": true,
+      "allow_hot_reload": true,
+      "rollback_on_failure": true
+    },
+
+    "statistics": {
+      "registered_modules": 5,
+      "autoload_modules": 4,
+      "loaded_modules": 0,
+      "failed_modules": 0
+    },
+
+    "integrity": {
+      "registry_hash": null,
+      "validated": false,
+      "last_update": null
+    }
+  }
+}

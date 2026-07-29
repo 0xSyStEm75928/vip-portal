@@ -1,0 +1,46 @@
+{
+  "runtime_manifest_version": "2.0.0",
+  "generated_at": "2026-07-28T14:59:20Z",
+  "execution": {
+    "runtime_execution_version": "1.0.0",
+    "generated_at": "2026-07-28T14:59:20Z",
+    "execution_flow": [
+      "input",
+      "parse",
+      "validate",
+      "authorize",
+      "execute",
+      "record"
+    ],
+    "engines": [
+      "cli",
+      "runtime",
+      "json"
+    ],
+    "status": "READY"
+  },
+  "router": {
+    "command_router_version": "1.0.0",
+    "generated_at": "2026-07-28T14:59:20Z",
+    "routes": {
+      "status": "runtime.status",
+      "health": "runtime.health",
+      "audit": "audit.report",
+      "profile": "profile.manager",
+      "runtime": "runtime.control",
+      "export": "artifact.export"
+    },
+    "router_state": "READY"
+  },
+  "policy": {
+    "execution_policy_version": "1.0.0",
+    "generated_at": "2026-07-28T14:59:20Z",
+    "rules": [
+      "validate_before_execute",
+      "audit_after_execute",
+      "deny_invalid_command"
+    ],
+    "mode": "STRICT"
+  },
+  "status": "RUNTIME_READY"
+}

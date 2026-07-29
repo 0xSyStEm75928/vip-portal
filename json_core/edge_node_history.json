@@ -1,0 +1,25 @@
+[
+  {
+    "timestamp": "2026-07-29T18:05:08.696179",
+    "node_id": "ERR_UNK_NODE_999",
+    "status": "ACCEPTED_VIA_QUARANTINE",
+    "raw_payload": "undefined_raw_string",
+    "safety_guard": "PASS"
+  },
+  {
+    "timestamp": "2026-07-29T18:05:08.696598",
+    "node_id": "OVERFLOW_VOL_001",
+    "status": "ACCEPTED_VIA_QUARANTINE",
+    "raw_payload": {
+      "amount": 999999999999
+    },
+    "safety_guard": "PASS"
+  },
+  {
+    "timestamp": "2026-07-29T18:05:08.696752",
+    "node_id": "NULL_VAL_CUSTOMER",
+    "status": "ACCEPTED_VIA_QUARANTINE",
+    "raw_payload": null,
+    "safety_guard": "PASS"
+  }
+]

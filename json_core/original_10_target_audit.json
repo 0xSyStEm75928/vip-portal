@@ -1,0 +1,217 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-07-29T00:59:04.877636+00:00",
+  "policy": {
+    "public_data_only": true,
+    "no_hidden_monitoring_claim": true,
+    "no_private_interest_assumption": true,
+    "manual_review_required": true
+  },
+  "summary": {
+    "total": 10,
+    "original_3": 3,
+    "discovery_7": 7
+  },
+  "targets": [
+    {
+      "name": "trimstray/the-book-of-secret-knowledge",
+      "url": "https://github.com/trimstray/the-book-of-secret-knowledge",
+      "stars": 235573,
+      "language": null,
+      "group": "ORIGINAL_3",
+      "review_stage": "EARLY_TARGET_REVIEW",
+      "evidence": {
+        "public_presence": true,
+        "contact_history": "UNVERIFIED",
+        "private_interest": "UNVERIFIED",
+        "silent_view": "UNVERIFIED",
+        "business_intent": "UNVERIFIED"
+      },
+      "next_check": [
+        "verify_public_contact",
+        "verify_project_alignment",
+        "human_message_required"
+      ]
+    },
+    {
+      "name": "n8n-io/n8n",
+      "url": "https://github.com/n8n-io/n8n",
+      "stars": 198412,
+      "language": "TypeScript",
+      "group": "ORIGINAL_3",
+      "review_stage": "EARLY_TARGET_REVIEW",
+      "evidence": {
+        "public_presence": true,
+        "contact_history": "UNVERIFIED",
+        "private_interest": "UNVERIFIED",
+        "silent_view": "UNVERIFIED",
+        "business_intent": "UNVERIFIED"
+      },
+      "next_check": [
+        "verify_public_contact",
+        "verify_project_alignment",
+        "human_message_required"
+      ]
+    },
+    {
+      "name": "ohmyzsh/ohmyzsh",
+      "url": "https://github.com/ohmyzsh/ohmyzsh",
+      "stars": 188869,
+      "language": "Shell",
+      "group": "ORIGINAL_3",
+      "review_stage": "EARLY_TARGET_REVIEW",
+      "evidence": {
+        "public_presence": true,
+        "contact_history": "UNVERIFIED",
+        "private_interest": "UNVERIFIED",
+        "silent_view": "UNVERIFIED",
+        "business_intent": "UNVERIFIED"
+      },
+      "next_check": [
+        "verify_public_contact",
+        "verify_project_alignment",
+        "human_message_required"
+      ]
+    },
+    {
+      "name": "yt-dlp/yt-dlp",
+      "url": "https://github.com/yt-dlp/yt-dlp",
+      "stars": 180726,
+      "language": "Python",
+      "group": "DISCOVERY_7",
+      "review_stage": "PUBLIC_DISCOVERY_REVIEW",
+      "evidence": {
+        "public_presence": true,
+        "contact_history": "UNVERIFIED",
+        "private_interest": "UNVERIFIED",
+        "silent_view": "UNVERIFIED",
+        "business_intent": "UNVERIFIED"
+      },
+      "next_check": [
+        "verify_public_contact",
+        "verify_project_alignment",
+        "human_message_required"
+      ]
+    },
+    {
+      "name": "google-gemini/gemini-cli",
+      "url": "https://github.com/google-gemini/gemini-cli",
+      "stars": 106220,
+      "language": "TypeScript",
+      "group": "DISCOVERY_7",
+      "review_stage": "PUBLIC_DISCOVERY_REVIEW",
+      "evidence": {
+        "public_presence": true,
+        "contact_history": "UNVERIFIED",
+        "private_interest": "UNVERIFIED",
+        "silent_view": "UNVERIFIED",
+        "business_intent": "UNVERIFIED"
+      },
+      "next_check": [
+        "verify_public_contact",
+        "verify_project_alignment",
+        "human_message_required"
+      ]
+    },
+    {
+      "name": "Graphify-Labs/graphify",
+      "url": "https://github.com/Graphify-Labs/graphify",
+      "stars": 97656,
+      "language": "Python",
+      "group": "DISCOVERY_7",
+      "review_stage": "PUBLIC_DISCOVERY_REVIEW",
+      "evidence": {
+        "public_presence": true,
+        "contact_history": "UNVERIFIED",
+        "private_interest": "UNVERIFIED",
+        "silent_view": "UNVERIFIED",
+        "business_intent": "UNVERIFIED"
+      },
+      "next_check": [
+        "verify_public_contact",
+        "verify_project_alignment",
+        "human_message_required"
+      ]
+    },
+    {
+      "name": "sherlock-project/sherlock",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "stars": 87254,
+      "language": "Python",
+      "group": "DISCOVERY_7",
+      "review_stage": "PUBLIC_DISCOVERY_REVIEW",
+      "evidence": {
+        "public_presence": true,
+        "contact_history": "UNVERIFIED",
+        "private_interest": "UNVERIFIED",
+        "silent_view": "UNVERIFIED",
+        "business_intent": "UNVERIFIED"
+      },
+      "next_check": [
+        "verify_public_contact",
+        "verify_project_alignment",
+        "human_message_required"
+      ]
+    },
+    {
+      "name": "OpenHands/OpenHands",
+      "url": "https://github.com/OpenHands/OpenHands",
+      "stars": 82414,
+      "language": "TypeScript",
+      "group": "DISCOVERY_7",
+      "review_stage": "PUBLIC_DISCOVERY_REVIEW",
+      "evidence": {
+        "public_presence": true,
+        "contact_history": "UNVERIFIED",
+        "private_interest": "UNVERIFIED",
+        "silent_view": "UNVERIFIED",
+        "business_intent": "UNVERIFIED"
+      },
+      "next_check": [
+        "verify_public_contact",
+        "verify_project_alignment",
+        "human_message_required"
+      ]
+    },
+    {
+      "name": "nexu-io/open-design",
+      "url": "https://github.com/nexu-io/open-design",
+      "stars": 82227,
+      "language": "TypeScript",
+      "group": "DISCOVERY_7",
+      "review_stage": "PUBLIC_DISCOVERY_REVIEW",
+      "evidence": {
+        "public_presence": true,
+        "contact_history": "UNVERIFIED",
+        "private_interest": "UNVERIFIED",
+        "silent_view": "UNVERIFIED",
+        "business_intent": "UNVERIFIED"
+      },
+      "next_check": [
+        "verify_public_contact",
+        "verify_project_alignment",
+        "human_message_required"
+      ]
+    },
+    {
+      "name": "junegunn/fzf",
+      "url": "https://github.com/junegunn/fzf",
+      "stars": 82010,
+      "language": "Go",
+      "group": "DISCOVERY_7",
+      "review_stage": "PUBLIC_DISCOVERY_REVIEW",
+      "evidence": {
+        "public_presence": true,
+        "contact_history": "UNVERIFIED",
+        "private_interest": "UNVERIFIED",
+        "silent_view": "UNVERIFIED",
+        "business_intent": "UNVERIFIED"
+      },
+      "next_check": [
+        "verify_public_contact",
+        "verify_project_alignment",
+        "human_message_required"
+      ]
+    }
+  ]
+}

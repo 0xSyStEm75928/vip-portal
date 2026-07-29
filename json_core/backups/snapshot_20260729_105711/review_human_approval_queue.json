@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "updated_at": "2026-07-29T19:06:18.525650+09:00",
+  "pending_reviews": [
+    {
+      "queue_id": "Q_TARGET_INIT_001",
+      "target_id": "TARGET_INIT_001",
+      "priority": "A",
+      "next_action": "HUMAN_CONFIRMATION",
+      "requires_approval": true,
+      "created_at": "2026-07-29T19:06:18.525650+09:00"
+    }
+  ]
+}

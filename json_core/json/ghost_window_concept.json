@@ -1,0 +1,12 @@
+{
+  "poc_meta": {
+    "concept_name": "GhostWindow-Deception-Architecture",
+    "target_mechanism": "UI_Redress_Sandboxing_Bypass_Proof",
+    "status": "CONCEPTUAL_VERIFIED"
+  },
+  "threat_model": {
+    "layer_name": "Visual_Trust_Layer",
+    "deception_type": "LEGACY_GUI_MIMICRY",
+    "execution_vector": "Phantom_Frame_Overlay"
+  }
+}

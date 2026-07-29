@@ -1,0 +1,131 @@
+{
+  "$schema": "./schemas/system.alignment.bundle.schema.json",
+  "version": "1.0.0",
+
+  "purpose": "Existing DAG alignment bundle",
+  "mode": "REFERENCE_ONLY",
+
+  "principles": {
+    "preserve_existing_files": true,
+    "no_new_business_logic": true,
+    "no_auto_execution": true,
+    "dag_first": true,
+    "human_confirmation_required": true
+  },
+
+  "position_anchor": {
+    "manifest": "current_position_manifest.json",
+    "phase": "BUSINESS_PIPELINE_CONTINUATION",
+    "state": "ALIGNED",
+    "operation": "WAIT_FOR_VALID_EVENT"
+  },
+
+  "layers": {
+
+    "LOWER_LAYER": {
+      "name": "PERSISTENCE_AND_STATE",
+      "nodes": [
+        "json_core/ZERO_CORE.customer.json",
+        "json_core/customer_lifecycle_gate.json"
+      ],
+      "role": "authoritative_state"
+    },
+
+    "MIDDLE_LAYER": {
+      "name": "CONTROL_AND_ROUTING",
+      "nodes": [
+        "json_core/tomorrow_operation_plan.json",
+        "json_core/customer_review_queue.json",
+        "json_core/business_execution_queue.json"
+      ],
+      "role": "decision_boundary"
+    },
+
+    "UPPER_LAYER": {
+      "name": "BUSINESS_VIEW_AND_REPORT",
+      "nodes": [
+        "json_core/business_master_index.json",
+        "json_core/business_pipeline_summary.json",
+        "json_core/business_final_report.json"
+      ],
+      "role": "human_visibility"
+    }
+
+  },
+
+  "dag": {
+
+    "flow": [
+      {
+        "from": "INGRESS",
+        "to": "GATE"
+      },
+      {
+        "from": "GATE",
+        "to": "PERSISTENCE"
+      },
+      {
+        "from": "PERSISTENCE",
+        "to": "PLAN"
+      },
+      {
+        "from": "PLAN",
+        "to": "REVIEW"
+      },
+      {
+        "from": "REVIEW",
+        "to": "BUSINESS_QUEUE"
+      },
+      {
+        "from": "BUSINESS_QUEUE",
+        "to": "REPORT"
+      }
+    ],
+
+    "acyclic": true,
+
+    "rebuildable": true
+  },
+
+
+  "execution_rules": {
+
+    "allowed": [
+      "append_event",
+      "validate_state",
+      "generate_report"
+    ],
+
+    "blocked": [
+      "overwrite_without_confirmation",
+      "infer_private_interest",
+      "automatic_contact"
+    ]
+
+  },
+
+
+  "current_target": {
+
+    "bundle_status": "READY",
+
+    "next_operation": "INPUT_REQUIRED",
+
+    "position_lock": true
+
+  },
+
+
+  "integrity": {
+
+    "purpose": "prevent_position_drift",
+
+    "source_of_truth": [
+      "existing_json",
+      "existing_dag",
+      "human_confirmation"
+    ]
+
+  }
+
+}

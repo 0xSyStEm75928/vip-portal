@@ -1,0 +1,18 @@
+{
+  "$schema": "./schemas/zerocore.sovereign.bootstrap.schema.json",
+  "stream_monitor": {
+    "target": "LEGEND_SCORE_LINK",
+    "normalization_standard": "GENERIC_COMPLIANT_V1",
+    "metrics": [
+      { "id": "SYNTAX_INTEGRITY", "weight": 25, "label": "JSON構文・Schema完全性" },
+      { "id": "DAG_CONNECTIVITY", "weight": 25, "label": "DAGノード依存関係リンク" },
+      { "id": "EVIDENCE_IMMUTABILITY", "weight": 25, "label": "監査ログ・Merkle不変性" },
+      { "id": "SPEC_STANDARD_SCORE", "weight": 25, "label": "汎用規格（正規品）適合度" }
+    ],
+    "stream_config": {
+      "mode": "VISUAL_OBSERVATION",
+      "granularity": 100,
+      "delay_ms": 30
+    }
+  }
+}

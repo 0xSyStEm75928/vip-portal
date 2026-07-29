@@ -1,0 +1,54 @@
+{
+  "$schema": "./schemas/kernel.checkpoint.registry.schema.json",
+
+  "kernel_checkpoint_registry": {
+    "version": "1.0.0",
+    "status": "ACTIVE",
+
+    "purpose": "Persistent checkpoint registry for ZeroCore runtime recovery.",
+
+    "checkpoint_policy": {
+      "automatic": true,
+      "append_only": true,
+      "hash_required": true,
+      "audit_required": true
+    },
+
+    "checkpoints": [
+      {
+        "checkpoint_id": "CKPT-000001",
+        "created_at": null,
+        "boot_id": null,
+        "snapshot": "kernel_snapshot.json",
+        "state": "VALID",
+        "hash": null
+      }
+    ],
+
+    "retention": {
+      "keep_latest": 50,
+      "compression": true,
+      "allow_prune": false
+    },
+
+    "restore_policy": {
+      "verify_hash": true,
+      "verify_schema": true,
+      "verify_dependencies": true,
+      "rollback_on_failure": true
+    },
+
+    "statistics": {
+      "checkpoint_count": 1,
+      "latest_checkpoint": "CKPT-000001",
+      "successful_restores": 0,
+      "failed_restores": 0
+    },
+
+    "integrity": {
+      "registry_hash": null,
+      "validated": false,
+      "last_update": null
+    }
+  }
+}

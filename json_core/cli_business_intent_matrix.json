@@ -1,0 +1,36 @@
+{
+  "$schema": "./schemas/business.intent.schema.json",
+  "version": "1.0.0",
+  "purpose": "Candidate business approach prioritization",
+
+  "evaluation_model": {
+    "technical_match": 0,
+    "commercial_match": 0,
+    "communication_signal": 0,
+    "payment_signal": 0
+  },
+
+  "decision_policy": {
+    "contact_without_evidence": false,
+    "public_project_contact_allowed": true,
+    "payment_required_for_execution": true
+  },
+
+  "targets": [
+    {
+      "name": "n8n-io/n8n",
+      "approach": "developer_or_business_partnership",
+      "priority": "A"
+    },
+    {
+      "name": "Graphify-Labs/graphify",
+      "approach": "technical_collaboration",
+      "priority": "B"
+    },
+    {
+      "name": "OpenHands/OpenHands",
+      "approach": "ecosystem_alignment",
+      "priority": "B"
+    }
+  ]
+}

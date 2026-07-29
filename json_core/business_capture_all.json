@@ -1,0 +1,3385 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-07-29T08:06:16.081496+00:00",
+  "status": "CAPTURED",
+  "summary": {
+    "total_files": 259,
+    "valid_json": 256,
+    "invalid_json": 3
+  },
+  "files": [
+    {
+      "file": "ZERO_CORE.30bundle.json",
+      "size": 6539,
+      "sha256": "b621183fa17ec880a70b62cdb2174af5e687979555de15bbe57471f84eaada2f",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "assets",
+        "bundle_id",
+        "created_at",
+        "integrity_hash"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.30catalog.json",
+      "size": 1309,
+      "sha256": "7b3f20cff5a107feeb28c72eb12b98eb38854c4d65725d92ed228815f3bb0638",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "data",
+        "schemas"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.30dependency.json",
+      "size": 2476,
+      "sha256": "cd665640d7777a56d69a54b2e0f870665b911742db59d7319451885da677cf9a",
+      "valid_json": true,
+      "root_type": "list"
+    },
+    {
+      "file": "ZERO_CORE.30graph.json",
+      "size": 6213,
+      "sha256": "99752910bbe2387cc97ffa0f38b6de4e410d356bc1feffccbdfa9093bc56777c",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "edges",
+        "nodes"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.30hashmap.json",
+      "size": 4216,
+      "sha256": "aac3b48fa04cac4a3a9a32b4f5e39847b7244dae8f54c31060797b081d4db32f",
+      "valid_json": true,
+      "root_type": "list"
+    },
+    {
+      "file": "ZERO_CORE.30index.json",
+      "size": 5376,
+      "sha256": "e1d27d0e367ad8ba4dd7f73bdab65372b2c9869c9c3634d594f0bf017b0ff2ee",
+      "valid_json": true,
+      "root_type": "list"
+    },
+    {
+      "file": "ZERO_CORE.30integrity.json",
+      "size": 3407,
+      "sha256": "34688ffb2758760cc09a765f38e471bc143a7e85ccfdbbf405ac6366f31d7e89",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "algorithm",
+        "assets_count",
+        "hashes",
+        "total_bytes"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.30manifest.json",
+      "size": 17511,
+      "sha256": "431416046f1be8eb6766c4d0d41ab914879896ab597a53040dfeae036b80ddd9",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated",
+        "hashes",
+        "index",
+        "manifest_version",
+        "metadata",
+        "statistics"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.30meta.json",
+      "size": 6611,
+      "sha256": "3cc2d74c0ddd07a6796dff1ac9081ffe734d73d2a0ce6693bfd0c7637048b0c0",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "assets",
+        "generated",
+        "json_files",
+        "meta_version",
+        "schema_files",
+        "total_bytes",
+        "total_files",
+        "total_lines"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.30pack.json",
+      "size": 6006,
+      "sha256": "bc459582c573913e3a0d850b0dbee51d463af35d314534fb334ce8f6d50e6ff7",
+      "valid_json": true,
+      "root_type": "list"
+    },
+    {
+      "file": "ZERO_CORE.30registry.json",
+      "size": 3166,
+      "sha256": "ea9f48a83a9d96d6bb771bac0b774832bef133a1c82f680ebec508e8cd175633",
+      "valid_json": true,
+      "root_type": "list"
+    },
+    {
+      "file": "ZERO_CORE.30runtime.json",
+      "size": 1487,
+      "sha256": "cb906669be6edebefc0da236bb15e7760b966b75ffa75d3983320a8f44bc12d4",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "catalog_summary",
+        "engine",
+        "max_memory_mb",
+        "mode"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.30stats.json",
+      "size": 134,
+      "sha256": "ec63f88c981a897c1fba79981579e3c2736e18fde64dd69215c9e032fd484620",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "average_bytes",
+        "average_lines",
+        "bytes",
+        "files",
+        "lines"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.agent.json",
+      "size": 172,
+      "sha256": "4597200ade58521d3e3ae033baef3d191058cacc3a341feb1a6fe87c7b36c582",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "agent_version",
+        "agents",
+        "generated_at",
+        "lifecycle"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.ai.json",
+      "size": 219,
+      "sha256": "954ebfe3b417c288d64c67be103f5ec0872628a5270386ec1bd701cd2f6396cf",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "ai_version",
+        "capabilities",
+        "engine",
+        "generated_at",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.ai_governance.json",
+      "size": 197,
+      "sha256": "69233c6bfe2cb3f4bee6c97a64f31e4a9e1501f2ad4220aec1cae4f8daf74405",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "ai_governance_version",
+        "generated_at",
+        "principles",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.ai_policy.json",
+      "size": 338,
+      "sha256": "69ab2ef9ddd4e2543e0d85e64ea69ad65585be75bf508800808fd63f91b78dae",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "ai_policy_version",
+        "enforcement",
+        "generated_at",
+        "governance"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.api.json",
+      "size": 120,
+      "sha256": "b9df2b7dfa0f0633a2214a04603c592ff6eedb6c94730360959d20355e78cf83",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "api_version",
+        "auth",
+        "endpoints",
+        "generated_at"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.api_gateway.json",
+      "size": 119,
+      "sha256": "18873b1c2536017752851391a1efa5694ee6757bc3a7aae490961506fe5089ea",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "api_gateway_version",
+        "generated_at",
+        "mode",
+        "routes"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.approval.json",
+      "size": 95,
+      "sha256": "a6ec12b04a0e90895e72ef79b439640a383ee0ce05fc1f001fc6f8a26d2273e1",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "approval_version",
+        "approvals",
+        "generated_at"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.archive.json",
+      "size": 46756,
+      "sha256": "0b4f62d64489c4d4051545deac23dbf98563480c9e5032c392514f678386669b",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "archive_version",
+        "generated",
+        "package"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.archive_lock.json",
+      "size": 1811,
+      "sha256": "83b38b5866d1983e40b5172251a4b24a9b323dfae99b15b69ef58fe16ce644c3",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "archive",
+        "archive_lock_version",
+        "generated_at",
+        "state",
+        "version"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.artifact_index.json",
+      "size": 302,
+      "sha256": "1bf502e2329c4befbf5b06a02a04c40df6601548913673d0bbfd94e37b88d975",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "artifact_index_version",
+        "artifacts",
+        "generated_at",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.artifact_package.json",
+      "size": 723,
+      "sha256": "4b1650bb9e3f4934e1f59c86a71597a98bb1524a0f0fd396afad80229cbdb278",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "artifact_package_version",
+        "bundle",
+        "distribution",
+        "generated_at",
+        "integrity",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.audit.json",
+      "size": 37165,
+      "sha256": "af017de2c35544fff025d475d6baaaa5932f6e4dac5b6423e6379dd2420a76a6",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "audit_version",
+        "generated",
+        "integrity",
+        "master"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.audit_chain.json",
+      "size": 1004,
+      "sha256": "2e8f572e6a6ed87e638d6fc5c503684206749ef99e3ac40a8620c9fa3b808696",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "audit_chain_version",
+        "events",
+        "generated_at",
+        "identity",
+        "immutable",
+        "policy"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.audit_evidence.json",
+      "size": 243,
+      "sha256": "070c53d536572fb668e8d1e59248c93c116c75af1ed6784dcdc24b53d530e514",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "audit_evidence_version",
+        "evidence_types",
+        "generated_at",
+        "records",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.audit_manifest.json",
+      "size": 797,
+      "sha256": "906d455a214fa815311c16c488116653c6bc459819d7ac90d2c9d652fec1f826",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "audit_manifest_version",
+        "generated_at",
+        "report",
+        "state"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.audit_report_v2.json",
+      "size": 622,
+      "sha256": "1f66e59b4ea244dea239e4b9ed8b196f4430659c0337c17371694b49cfd9e7fd",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "audit_report_version",
+        "chain",
+        "generated_at",
+        "result"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.backup.json",
+      "size": 178,
+      "sha256": "8ebbe5e2f76ad87fa3a99795b56ec9406f0903a262f97ac182dfaf25c88e3ea4",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "backup_version",
+        "backups",
+        "generated_at",
+        "status",
+        "strategy"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.backup_manifest.json",
+      "size": 875,
+      "sha256": "e700a365979f447a9029a6056cdde488aefb25b03c464bfd9d436e77f82f3b11",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "backup",
+        "backup_manifest_version",
+        "generated_at",
+        "snapshot",
+        "state"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.backup_point.json",
+      "size": 249,
+      "sha256": "d07f5b462eb22ce8954687bfbcced3ea02c4c046fcf8eeef8340e59801ab42db",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "backup_point_version",
+        "checkpoint_type",
+        "generated_at",
+        "includes",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.billing.json",
+      "size": 114,
+      "sha256": "686b5c133478e9c18cc7d1a0625456540be302fb1cfa9a00f9b05aca0ef97bc2",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "billing_version",
+        "generated_at",
+        "invoices",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.black_execution_matrix.json",
+      "size": 1437,
+      "sha256": "db6a7b2415b4974cd8f9ee76d9016ce813982e99d8ebaa8ed4798332e29ff68e",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "blackhole_registry",
+        "commercial_governance",
+        "intake_categories",
+        "matrix_version",
+        "operational_mode",
+        "target_registry",
+        "updated_at"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.boot.json",
+      "size": 76,
+      "sha256": "c3d4c12722baee5ebd369f9b85d3e4ec7cbf08f68147a04231bde240391747a0",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "boot_version",
+        "generated",
+        "state"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.bootstrap.json",
+      "size": 371,
+      "sha256": "244751fd55f490d44e52ee3f9db2e0afaab0e358860d7fe8439d052551e71a83",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "boot",
+        "bootstrap_version",
+        "generated",
+        "policy",
+        "runtime"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.bundle.json",
+      "size": 11249,
+      "sha256": "bab4e31be17d43fc79001b55fb7580605e39e21cf9df56d16fff712a05614f9f",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "bundle_version",
+        "integrity",
+        "registry",
+        "runtime"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.business_tier_map.json",
+      "size": 417,
+      "sha256": "2c8d9965aca2b5721e8b3b5ab6b4693c47ed7e2870b747d5da0caa5662828de5",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "business_tier_map_version",
+        "generated_at",
+        "status",
+        "tiers"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.catalog.json",
+      "size": 611,
+      "sha256": "8ccb964bf1db991d69e5c9fc05fd8566ffccc7490ec2408c17c92189096a1025",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "catalog_version",
+        "generated_at",
+        "module_registry",
+        "plugin_registry",
+        "searchable"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.change_control.json",
+      "size": 258,
+      "sha256": "5987df0de93db4530b053749ab3816da9dde3290bd791994cb1360808ea65db8",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "change_control_version",
+        "generated_at",
+        "mode",
+        "rules",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.changelog.json",
+      "size": 79,
+      "sha256": "40dcc13fc2547fe17e332bd2f8757253c6047ae6004c3d45b5855e4f07207a36",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "changelog_version",
+        "entries",
+        "generated"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.channels.json",
+      "size": 139,
+      "sha256": "10b221a4ed1698b9c5803c24170165f3bd0f36ba9ba4f539084edc5b9f42c1bc",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "channels",
+        "channels_version",
+        "generated"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.checkpoint.json",
+      "size": 49303,
+      "sha256": "6106869c6260e5a38c6b413e6b5b18d9a23f6b19eb8ae90e2ad675e9ad066df7",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "archive",
+        "checkpoint_version",
+        "generated",
+        "state"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.ci_prepare.json",
+      "size": 225,
+      "sha256": "b846f33725196618b805b8ea0202419817cfac4ff75d02fc8147ea324df5881b",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "ci_prepare_version",
+        "environment",
+        "generated_at",
+        "pipeline",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.cli.json",
+      "size": 168,
+      "sha256": "8b7328cc732601c6769e5fc94a6a6b6fa95d67fda6ac5bb560f00492f9bc67be",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "cli_version",
+        "command",
+        "commands",
+        "generated_at"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.cli_manifest.json",
+      "size": 999,
+      "sha256": "a60dc4b35ff3e714d9895d1e5f409f3cb9af089696200e9c1637981cd3cdf59a",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "cli",
+        "cli_manifest_version",
+        "commands",
+        "generated_at",
+        "interface",
+        "state"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.cli_registry.json",
+      "size": 232,
+      "sha256": "d142f27ad686c2be95ac0cc5651188fba17a144a74a751b7c7577a46c81a29ad",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "cli_registry_version",
+        "command_entry",
+        "commands",
+        "generated_at",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.cluster_state.json",
+      "size": 793,
+      "sha256": "f8a4d4022d17cf3cb834c5ec7700ec9ba245c36f8b41c2db9e48c12d72e1f888",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "cluster_state_version",
+        "federation",
+        "generated_at",
+        "state",
+        "topology"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.command_map.json",
+      "size": 314,
+      "sha256": "8390b05e23dbaa02d582d18d28b6aa8a22f4909f004c6bc389cd061824e64326",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "command_map_version",
+        "generated_at",
+        "mappings"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.command_router.json",
+      "size": 321,
+      "sha256": "0ab9cd064ab6c2e01f46cb12d24333f42f8c76a0c933ca6463741a16cc39e91c",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "command_router_version",
+        "generated_at",
+        "router_state",
+        "routes"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.complete.json",
+      "size": 196721,
+      "sha256": "7d9111fc109f8972835ff2e270537209130dad3ac965a923ca457b019b4286e0",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated",
+        "lifecycle",
+        "master",
+        "report",
+        "status",
+        "zero_core_version"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.compliance.json",
+      "size": 183,
+      "sha256": "8683e604230f28a17ebd3a6f9120f06ff9098e455f6bf14ab3b17906b507fac0",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "compliance_version",
+        "frameworks",
+        "generated_at",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.component_catalog.json",
+      "size": 228,
+      "sha256": "de5b54db92c138e70f35ed9dce53282474e6fd200a2c71169bf0ea50fc84cccb",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "component_catalog_version",
+        "components",
+        "generated_at",
+        "searchable"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.config_manifest.json",
+      "size": 881,
+      "sha256": "72365730af9caa0cc9f0db3b26e2ce5c99c61803daa4428a8a40eaf6c29c7e29",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "config",
+        "config_manifest_version",
+        "generated_at",
+        "loader",
+        "registry",
+        "state"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.config_registry.json",
+      "size": 201,
+      "sha256": "72b0954abc98776389255bc26b45b791184cdb9c65af2046994ca7accc29edea",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "config_registry_version",
+        "configs",
+        "generated_at",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.consolidation.json",
+      "size": 314,
+      "sha256": "dc1ad8ace708c34e4c43c6253dbb2133d81016eeb8eb3fb98ac530053d71b7f3",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "consolidation_version",
+        "duplicate_check",
+        "generated_at",
+        "layers",
+        "state"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.customer.backup.json",
+      "size": 95,
+      "sha256": "39d97e4fe0cd5b71dbf12834609478fab4c2a0f3ea9bb3ea0c5d779f04a86417",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "customer_version",
+        "customers",
+        "generated_at"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.customer.json",
+      "size": 810,
+      "sha256": "1bc39dc3b5f94a1887ef6afed7a5cbf743b5736a39c7f90b264db61e78b288c8",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "customer_version",
+        "customers",
+        "policy",
+        "updated_at"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.data.json",
+      "size": 106,
+      "sha256": "d2a9848b3cad974dae2f40337c954c46256c1e063b552b3fb417838f48fce1e2",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "data_version",
+        "generated_at",
+        "records",
+        "schemas"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.decision.json",
+      "size": 171,
+      "sha256": "c332e32ed21eff61a47758b07859c07836f6da1ebd08c691b3979e1cd48dd7a5",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "decision_mode",
+        "decision_version",
+        "factors",
+        "generated_at"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.defense.json",
+      "size": 153,
+      "sha256": "55fc0012a4a427cc712da4fbea8de3b19ee87dde7b41860faf27304f5db1b365",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "defense_version",
+        "generated_at",
+        "layers"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.dependencies.json",
+      "size": 196959,
+      "sha256": "afcaee104ad3ae0a6a6cb8b9139394e68780db9c73c8906fc4f3a11872fab1db",
+      "valid_json": true,
+      "root_type": "list"
+    },
+    {
+      "file": "ZERO_CORE.dependency.json",
+      "size": 80,
+      "sha256": "40e93540a06f933eb4b35a0edd22e7bcdd070c12aa4a61ea52c7f8ad4c6543ff",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "dependency_version",
+        "generated",
+        "graph"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.deploy.json",
+      "size": 105884,
+      "sha256": "e51a84941df6e86fa2b23164a0cca310687e6fe322514b98f60596b66c6b1664",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "deploy_version",
+        "distribution",
+        "generated"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.deployment_blueprint.json",
+      "size": 276,
+      "sha256": "68f0c2e299320bd614406162c4b760e8e3bb17cf6bc393fbb4da8466c386494b",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "deployment_blueprint_version",
+        "deployment_modes",
+        "generated_at",
+        "status",
+        "targets"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.deployment_manifest.json",
+      "size": 1136,
+      "sha256": "90fcd60598af2534d062652488ed74b5f9a8884588e392179d747914673f0d8b",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "deployment_manifest_version",
+        "deployment_state",
+        "environment",
+        "generated_at",
+        "package_matrix"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.deployment_package.json",
+      "size": 883,
+      "sha256": "5819884ab0bc4369895ec9d4f23703d7d89604849b4ca890ad4b961c1a973fa0",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "deployment_package_version",
+        "deployment_state",
+        "deployment_targets",
+        "generated_at",
+        "tenant_model"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.deployment_profile.json",
+      "size": 435,
+      "sha256": "6e41f1fd1a7c0789af3dbd95d226f9bc8bc05771d131a7c8870b34ce7bc3bc2c",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "deployment_profile_version",
+        "generated_at",
+        "profiles",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.diff.json",
+      "size": 69461,
+      "sha256": "bf988bf368e85a0f30353aa6fae87dd92d486bc62f1bb9522e7210c2ca4436ae",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "files",
+        "generated",
+        "hashes"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.dist.json",
+      "size": 100976,
+      "sha256": "267601187013a779b6e7ed6a089af32acb1ee789e42b45f3c670ef5c8b933714",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "dist_version",
+        "generated",
+        "package",
+        "ready"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.distribution.json",
+      "size": 110972,
+      "sha256": "1911c93642f80717961f5c9ffaf5f9c1b8bf378b7dffe72e7aa3e5ec775dde36",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "channels",
+        "deploy",
+        "distribution_version",
+        "generated"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.distribution_manifest.json",
+      "size": 929,
+      "sha256": "5cb2ed40ad004ccf558a8b5e0322541945fa13087c572cacee310aa40842aa13",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "distribution_manifest_version",
+        "generated_at",
+        "package",
+        "state"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.distribution_map.json",
+      "size": 264,
+      "sha256": "c61eebd99299f7eeee513451966177124ec50442d6f8ba661a91297cd143bd96",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "channels",
+        "distribution_map_version",
+        "generated_at",
+        "status",
+        "targets"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.distribution_package.json",
+      "size": 1512,
+      "sha256": "af02368bc49043796e056fadce61cbfe9add5df6bc4f244900b2c42eeb827af4",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "distribution_package_version",
+        "generated_at",
+        "operational_state",
+        "package_status",
+        "release_manifest"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.documentation.json",
+      "size": 212,
+      "sha256": "5d0554f7450bebd5b38bae55ba7feb9f3b9da326706cd62fd58e8d7032959277",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "documentation_version",
+        "generated_at",
+        "sections",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.environment.json",
+      "size": 211,
+      "sha256": "ebb279776961899658b0f783269a2b2d8e5bb1894559fdb0e8174dff17891e2a",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "environment_version",
+        "environments",
+        "generated_at",
+        "runtime",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.environment_loader.json",
+      "size": 240,
+      "sha256": "d36bae002e2a62a333e56eb26ece471d86ec7aba5912fb4b6bc2a26df73fccbf",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "environment_loader_version",
+        "generated_at",
+        "priority",
+        "sources",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.evaluation.json",
+      "size": 161,
+      "sha256": "2a80401fc9c2234d7a5bd613af236624eaf04b8ab5923e5094c59daa0929885e",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "evaluation_version",
+        "generated_at",
+        "metrics",
+        "results"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.event.json",
+      "size": 181,
+      "sha256": "42145cd97ae16ed5e12244ce9995ed3bc64fcbf2d4f392137cb056946f81979e",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "event_types",
+        "event_version",
+        "generated_at",
+        "queue"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.events.json",
+      "size": 74,
+      "sha256": "d98cd22da2f81980376d92866bb97878653433917477c9baab6124a6435baefc",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "events_version",
+        "generated",
+        "queue"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.evidence_chain.json",
+      "size": 466,
+      "sha256": "27d779a3074967826ca482c9a948c31415f3aec886d24359e0452035a9b44946",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "chain",
+        "evidence",
+        "evidence_chain_version",
+        "generated_at",
+        "integrity"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.evidence_report.json",
+      "size": 789,
+      "sha256": "0195fa7b365683b4fe268c22badb8107ddc6bbc43b0e3a11f870d5da60878ded",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "evidence",
+        "evidence_report_version",
+        "generated_at",
+        "validation"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.execution_log.json",
+      "size": 541,
+      "sha256": "9e7c98b2461671c2db376a3c806c33d782976ae65b962f13ce68d040d338092b",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "event",
+        "execution_log_version",
+        "generated_at",
+        "records",
+        "workflow"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.execution_policy.json",
+      "size": 207,
+      "sha256": "7c520ef3a8ce0c8517b72b4273e3db90b5951ee1330b9486f0d73e7b243d9b99",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "execution_policy_version",
+        "generated_at",
+        "mode",
+        "rules"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.export.json",
+      "size": 45021,
+      "sha256": "34c4567ecc9ea9c29d62cec795bc1dcdcaaf722371ecb0bf8d1923926fda478e",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "export_version",
+        "generated",
+        "master",
+        "release"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.export_bundle.json",
+      "size": 239,
+      "sha256": "fb0c041c567e680242eaeb0df57dd151cd7badbc6e3145e60a092f8d81ae2ef4",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "export_bundle_version",
+        "generated_at",
+        "includes",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.extension_policy.json",
+      "size": 204,
+      "sha256": "a1b52f11f0d3840d0f7314e87ebc779e6135c919684728e16ad9fe4103adce85",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "default_action",
+        "extension_policy_version",
+        "generated_at",
+        "rules"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.fastpass_queue.json",
+      "size": 1728,
+      "sha256": "c885da74bed91761004a6c8f861ee60fe868a64bf51e38b0d53afdff2ea0cfdf",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "fastpass_protocol_version",
+        "mode",
+        "special_notice",
+        "updated_at",
+        "vip_special_slots"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.federation.json",
+      "size": 595,
+      "sha256": "70e57d48eb1801342652264c4f8c301dbc6a5ec88bb4f97ee53ad40b2023aa20",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "federation_mode",
+        "federation_version",
+        "generated_at",
+        "members",
+        "node_registry",
+        "sync_engine"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.final.json",
+      "size": 121203,
+      "sha256": "46fb713a91f6e95a8fc3ab1de823d0ecff9e4a577b6ce4526302893046894119",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "export",
+        "generated",
+        "master",
+        "status",
+        "summary",
+        "zero_core_version"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.final_audit.json",
+      "size": 234,
+      "sha256": "b6bb539688b3b4c3622643b82999b52bec3c1a5d848e8258609b566a8aadc61e",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "checks",
+        "final_audit_version",
+        "generated_at",
+        "result"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.final_control.json",
+      "size": 455,
+      "sha256": "4e9b8a92eb9d320554f6f01d2089d086b6e554765bf38405ebd01b7c4da07dd2",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "controls",
+        "final_control_version",
+        "generated_at",
+        "release_gate",
+        "state"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.final_manifest.json",
+      "size": 763,
+      "sha256": "c5eb039b74e33df6e0dd16ffc3b61e7c7a258770bc745ac4997424434ff0b22d",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "final_manifest_version",
+        "generated_at",
+        "release",
+        "state",
+        "version"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.final_operations_manifest.json",
+      "size": 765,
+      "sha256": "27cccef56ea855f8b0e70118eef1bca2d38dcf5f00bca8b45661b0ecc0af3ba3",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "change_control",
+        "final_operations_manifest_version",
+        "generated_at",
+        "lock",
+        "state"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.governance.json",
+      "size": 224,
+      "sha256": "44f066c049936f2dbb9e8e17f00e6201b5957da22531a03822e85d2b3d663820",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "authority",
+        "generated_at",
+        "governance_version",
+        "principles"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.graph.json",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "valid_json": false,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "file": "ZERO_CORE.graph_map.json",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "valid_json": false,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "file": "ZERO_CORE.hash_registry.json",
+      "size": 124,
+      "sha256": "70c62f0b80c83a6f669ec5841151b0decd75deb3dd8b5f085de723545684a2de",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "algorithm",
+        "entries",
+        "generated_at",
+        "hash_registry_version"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.hashes.json",
+      "size": 30740,
+      "sha256": "c0f356a8279796a38886b7c7197a5ccf9d430e984a42f6913974c4cebe54fe80",
+      "valid_json": true,
+      "root_type": "list"
+    },
+    {
+      "file": "ZERO_CORE.health.json",
+      "size": 113,
+      "sha256": "51cd9e42903b725ede1450c897e80596c4c31d4818a28be8120645cfdfe4a097",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "checks",
+        "generated_at",
+        "health_version",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.health_control.json",
+      "size": 201,
+      "sha256": "a63e4c9c127135755554782df4f6a9ee2fe60c7646424b563e54d23afb0cdcfb",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "checks",
+        "generated_at",
+        "health_control_version",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.health_manifest.json",
+      "size": 774,
+      "sha256": "f921d063202cc9c94a3049caa45a4d86d26add151c8ace3126982024e666c42f",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "health",
+        "health_manifest_version",
+        "incident",
+        "recovery",
+        "state"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.health_monitor.json",
+      "size": 420,
+      "sha256": "b52cedb24cd9a123493de6e923b03cd5e45a540fad8cf4ef10e67352d08fbf87",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "checks",
+        "generated_at",
+        "health_monitor_version",
+        "metrics",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.health_report.json",
+      "size": 217,
+      "sha256": "f1e007252080c101716274461bdddd9052ca7edd175e6f8bcda709f7e362eb9d",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "health",
+        "health_report_version"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.health_report_v2.json",
+      "size": 1074,
+      "sha256": "8a2c68f9d47f23da9d8b46358a784275cc908e5f251085eb1f77c8902873d75f",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "evidence",
+        "generated_at",
+        "health_report_version",
+        "readiness",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.identity.json",
+      "size": 159,
+      "sha256": "871ea290e531cc7158c9486f821a39638f37abb50a42266b389f9db8d58c93c8",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "identity_provider",
+        "identity_version",
+        "status",
+        "subjects"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.ids.json",
+      "size": 35919,
+      "sha256": "5c0cb98244586e6c4a8eea52e44d0ef82ac74fe3f2be4fe604147f9a48d75b09",
+      "valid_json": true,
+      "root_type": "list"
+    },
+    {
+      "file": "ZERO_CORE.incident_state.json",
+      "size": 157,
+      "sha256": "444da5c5a7ccb1081c4bfe6361a4f9efa51f0d306a3aa0ef8b9a7dad3e387c11",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "current_state",
+        "generated_at",
+        "incident_state_version",
+        "incidents",
+        "monitoring"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.index.json",
+      "size": 112,
+      "sha256": "723940fe6b42e6c1d18d0e246e06210d4dd6aca9149cd9371de04a98666f257b",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "index_version",
+        "indexes",
+        "searchable"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.integrated_gate.json",
+      "size": 985,
+      "sha256": "28ba990312c328f7e82627603c56dd76000081fed8e230961e3fe9f3c5ae6378",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "execution_hook",
+        "gate_version",
+        "intake_categories",
+        "mode",
+        "payment_gate",
+        "target_address",
+        "updated_at",
+        "verification_gate"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.integration.json",
+      "size": 600,
+      "sha256": "4a7c98429944f80dde6fc2dbf94941cdf59f4c64fd2e85e0618a4631b55cc0f1",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "integration_layers",
+        "integration_version",
+        "manifest",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.integrity.json",
+      "size": 4527,
+      "sha256": "0e4a45a55faefe24d388ff10ab809a2e09f0a0bfb7a81b9b352fa442796600c7",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "algorithm",
+        "generated",
+        "hashes"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.integrity_manifest.json",
+      "size": 241,
+      "sha256": "d4c73ccfe0c59e5954c72c0f6a9e9d448c5e2d65ac2392fe74c9bdd758fa890a",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "algorithm",
+        "generated_at",
+        "integrity_manifest_version",
+        "protected",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.integrity_report.json",
+      "size": 542,
+      "sha256": "942857476e1ab7a87f463ef7012085725437e69da3b82ea93da6ed99b525bc02",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "integrity_report_version",
+        "manifest",
+        "registry",
+        "verification"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.interface_export.json",
+      "size": 422,
+      "sha256": "f8746ebc8b935d5469bdd216a15a3e7d7526f49cda07d6aea77e941ca731c5a0",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "api",
+        "cli",
+        "generated_at",
+        "interface_export_version"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.interface_profile.json",
+      "size": 232,
+      "sha256": "cdf8b704a32eed62873dc58cfe9a42d7c71245ecd46e16d52e7bd6784985c64a",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "design",
+        "generated_at",
+        "interface_profile_version",
+        "mode",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.inventory.json",
+      "size": 24410,
+      "sha256": "01e01df0a245152ee35a294e08559b5ab86489d643caa5777d7a89dbb0108dfa",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "catalog",
+        "generated",
+        "inventory_version",
+        "manifest"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.json",
+      "size": 59959,
+      "sha256": "5c00d3f8220850f0776b4e0e67891535046ae5436ef5ffa592ee5b37fa4ccb24",
+      "valid_json": false,
+      "error": "Expecting value: line 19 column 1 (char 471)"
+    },
+    {
+      "file": "ZERO_CORE.keys.json",
+      "size": 145418,
+      "sha256": "6cafe720720fb26cc1ad839e91dd31bd3a3a6bf38cb2bbfe2e324b86e2d3a752",
+      "valid_json": true,
+      "root_type": "list"
+    },
+    {
+      "file": "ZERO_CORE.license.json",
+      "size": 121,
+      "sha256": "ce18f8d17b1e2769c08257d16d6bf232c4a9cd985acec4d8a36346acd7b9c089",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "license_version",
+        "licenses",
+        "validation"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.lifecycle.json",
+      "size": 106,
+      "sha256": "cd5b70c65aafd32333b3ddb6a47bd451615f42332aa3d844d2a22fa71f8d6222",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated",
+        "lifecycle_version",
+        "phase",
+        "state"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.loader.json",
+      "size": 675,
+      "sha256": "4df9bbaa663f399d9c5b13c99400047999351aab12ad658153fb456314ecd475",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "extension_policy",
+        "generated_at",
+        "loader_version",
+        "loading_mode",
+        "module_registry"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.maintenance_base.json",
+      "size": 280,
+      "sha256": "897dca5c3649327241e71e2b97cf7fb8218dfdeeb92abe5ed5282242f3394764",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "compatibility",
+        "generated_at",
+        "maintenance_base_version",
+        "maintenance_cycle",
+        "status",
+        "update_strategy"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.maintenance_profile.json",
+      "size": 248,
+      "sha256": "6901b74a639180e947b4b560f9e1a5e709b4ccf772ddc6bc5365a1296e11e386",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "maintenance",
+        "maintenance_profile_version",
+        "policy",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.manifest.json",
+      "size": 321072,
+      "sha256": "9f893bb173d36b0bf2440665b77b884911b8159065cc5a4ead8fabff16fa1d17",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "hashes",
+        "ids",
+        "index",
+        "keys",
+        "manifest_version",
+        "schemas",
+        "versions"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.manifest_summary.json",
+      "size": 742,
+      "sha256": "6e580a761ffb8f10b8eefe5375b762b28135db0959ed22377d141d253954a74e",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "artifact_index",
+        "component_catalog",
+        "generated_at",
+        "manifest_summary_version",
+        "state"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.master.json",
+      "size": 30569,
+      "sha256": "a7101d31bf87533933f469f427ec6f433436d6a9edb259f527eb775037b8d6b1",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "bundle",
+        "generated",
+        "manifest",
+        "master_version"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.memory.json",
+      "size": 161,
+      "sha256": "437b9b8051ae172158a135c40af77378fb61c39b549a9eb12fb73a54d4a9f7cd",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "memory_version",
+        "records",
+        "storage"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.message_bus.json",
+      "size": 201,
+      "sha256": "a43e941b38e3023cfc7de0b8b8feca0e223e821ed10c9042a963723af517512d",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "message_bus_version",
+        "mode",
+        "status",
+        "topics"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.metrics.json",
+      "size": 87,
+      "sha256": "ccff965884c526e8ed5205040587488105139c591c74c639c707bc15768855fd",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "bytes",
+        "files",
+        "json",
+        "lines",
+        "schemas"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.metrics_runtime.json",
+      "size": 211,
+      "sha256": "9b6969f767dd89587432ddb9ec2eb50f7498a5bcc9fdfb3c812e60d699d09cf9",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "collection",
+        "generated_at",
+        "metrics",
+        "metrics_runtime_version"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.migration.json",
+      "size": 209,
+      "sha256": "81ee5c91d6191b7b4e97b68b061f18aa37212c733cfcfb9eba05f94c93c2dcc6",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "migration_version",
+        "migrations",
+        "status",
+        "supported"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.model_registry.json",
+      "size": 182,
+      "sha256": "60362b270fa93e4f45153d83ad90d109c1c1efde52fa0442c45c83419a67ae67",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "lifecycle",
+        "model_registry_version",
+        "models"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.module_registry.json",
+      "size": 270,
+      "sha256": "6ec891b8dd6ffbf3cdb322e77d33918ff0b60100c0fcf7b6d011d658928c3323",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "lifecycle",
+        "module_registry_version",
+        "modules"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.namespace.json",
+      "size": 118,
+      "sha256": "6c5b56723d646c66ab5f6440f0559e8183953cd0cd906f1a4a23fcf23c22bc1d",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "isolation",
+        "namespace_version",
+        "namespaces"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.node_health.json",
+      "size": 1044,
+      "sha256": "7548c63076b813a28b130ceb2b494e332863583732e87fd2ed6e56e1cf55aea0",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "checks",
+        "cluster",
+        "generated_at",
+        "node_health_version",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.node_registry.json",
+      "size": 187,
+      "sha256": "d2448c4a281c07b34ebe3cb9bccba62a7d6d26e073f7f52dfc7e70accea542f1",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "node_registry_version",
+        "node_type",
+        "nodes",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.observability.json",
+      "size": 183,
+      "sha256": "a2e448d26cdad579fad1276a4e7ead97ff968b324f7fe31b7980e1be00812f21",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "layers",
+        "observability_version",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.observability_manifest.json",
+      "size": 817,
+      "sha256": "77b3a9f043b02a2ab11aa6e76aea2f1daae96b2b926f5b5f09cb43aa49da8477",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "health",
+        "observability",
+        "observability_manifest_version",
+        "state"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.operation_audit.json",
+      "size": 218,
+      "sha256": "11b224f9ffa4d65dc4320e5b8cdc12ab6c45c5c0d9bf74b8ba46420564578b88",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "checks",
+        "generated_at",
+        "operation_audit_version",
+        "result"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.operation_profile.json",
+      "size": 261,
+      "sha256": "b70210ae3e1cb134b7e08009f9ebb1acb718912a06e1aaaaf1b5a26e5dcf9cd8",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "enabled_layers",
+        "generated_at",
+        "mode",
+        "operation_profile_version",
+        "state"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.operation_report.json",
+      "size": 368,
+      "sha256": "3239e93e6d751f98b8e3f6a08ef6a3972db625fb1b1f67e416df9c05dc6184dd",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "audit",
+        "generated_at",
+        "operation_report_version",
+        "readiness"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.operational.json",
+      "size": 883,
+      "sha256": "cdec267961ca5b6c2c0eff34ea44077811de5bc1b434be1a6553afd1ebe4b585",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "health",
+        "integration",
+        "mode",
+        "operational_version"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.operational_status.json",
+      "size": 535,
+      "sha256": "3fb4251beaf1c1802a8850ac308cee547d42503c69f91d1b2f9926eca233fb73",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "operational_status_version",
+        "state",
+        "validation"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.operations_lock.json",
+      "size": 301,
+      "sha256": "694fbbd7c4ce3a29009ad7d78878b78093b81606fbc83fa5cb9766c91812c3f7",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "modification_policy",
+        "operations_lock_version",
+        "protected_layers",
+        "runtime_state",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.operator_guide.json",
+      "size": 243,
+      "sha256": "d58b42b259b7f10a08e6fb58ee285a0949f151961b60de9ec58972fa3fbb2b53",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "command",
+        "generated_at",
+        "interface",
+        "operations",
+        "operator_guide_version",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.organization.json",
+      "size": 169,
+      "sha256": "497b8f109ea51580b44bd7dbfd2b5e3b831f490c855c59f3f0678ab24319561e",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "hierarchy",
+        "organization_version",
+        "organizations"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.outreach_record.json",
+      "size": 2920,
+      "sha256": "ab8b932313c421c43582c5e9d6df9bab32c636d69be035ba6c9897160dfe1922",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "active_targets_summary",
+        "customers_registry",
+        "operational_phase",
+        "policy",
+        "record_version",
+        "recorded_at",
+        "system_gate_status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.package.json",
+      "size": 44288,
+      "sha256": "b67b7c437eee011f73a38a34d1b2e20cd8515b4da6441f5c9888ab040d175fc8",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "bundle",
+        "generated",
+        "master",
+        "package_version"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.package_matrix.json",
+      "size": 680,
+      "sha256": "4700b32a128d4d8cb9d3f4af884fa27f46a930dc201a97410413d50da46ec222",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "package_matrix_version",
+        "packages",
+        "profiles",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.permission.json",
+      "size": 210,
+      "sha256": "2094e23a80c6aaa647f5da62639a1c089a57640e8aefc25545b08db43b1182da",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "namespace_control",
+        "permission_version",
+        "permissions"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.pipeline.json",
+      "size": 6485,
+      "sha256": "451cb7a938c0c296fed4d5bd02c53cabcfb9362d1824855c015dbedf9add1d2e",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated",
+        "pipeline_version",
+        "registry",
+        "runtime"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.plan.json",
+      "size": 166,
+      "sha256": "c14dcaaa2dcd9fe08ba48922242a3160d479dc2f4841cd4a590285fe80df32e6",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "plan_version",
+        "tiers"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.plugin_registry.json",
+      "size": 156,
+      "sha256": "be99006bec8b2a42704fad0156b46d65a5d80757a50cf21693c650483d431768",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "plugin_registry_version",
+        "plugins",
+        "registry_type",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.policy.json",
+      "size": 79,
+      "sha256": "c75a0a8679270b1d421501b13bc2872484539b72c5858d61048e1761e04282e3",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated",
+        "mode",
+        "policy_version"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.policy_engine.json",
+      "size": 629,
+      "sha256": "43502316d590d3549d9ac35823ec29dceffe22f7a1253646b3fec748690817d7",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "default",
+        "enforcement",
+        "generated_at",
+        "permission_registry",
+        "policy_engine_version",
+        "role_registry"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.post_archive_check.json",
+      "size": 221,
+      "sha256": "aa1bafc15d395ca95de252c86f2bd0c783d5fe118ccd4e7a7929c82bb8dd1234",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "checks",
+        "generated_at",
+        "post_archive_check_version",
+        "result"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.process.json",
+      "size": 147,
+      "sha256": "cade013cc4f423f8e6a3ff1a6cda9ea6b0a9c323495d6e84ae64e1897a07957b",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "executor",
+        "generated_at",
+        "process_version",
+        "status",
+        "workers"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.query.json",
+      "size": 224,
+      "sha256": "530a25ecc5dcc13fdac03f829ee8324483a7482612c9a23e7b3b5c3b107e970b",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "filters",
+        "generated_at",
+        "index",
+        "query_version"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.queue.json",
+      "size": 18954,
+      "sha256": "2e3d5c63e9038b13a03579fd2155964f074fb68c03332be0d7d67182e725c440",
+      "valid_json": true,
+      "root_type": "list"
+    },
+    {
+      "file": "ZERO_CORE.rate_policy.json",
+      "size": 122,
+      "sha256": "e391bb8a0960ed82e4f893377420f041acfb1d898741b2fb8f60a07ac77de228",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "enforcement",
+        "generated_at",
+        "limits",
+        "rate_policy_version"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.ready.json",
+      "size": 51785,
+      "sha256": "c5515eb555cf8ea4b47d38c5951b4db19074d067d4f38278bcf8b040eed3413a",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "checkpoint",
+        "generated",
+        "ready"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.recovery.json",
+      "size": 32375,
+      "sha256": "06618d94ecc9818d96ae182622761a44dc44dcfd68459d4006f3c9892834a9d3",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated",
+        "recovery_version",
+        "source"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.recovery_control.json",
+      "size": 216,
+      "sha256": "af32cf23c6711e5d39c4d69eb54340e932ddc5f67973feb3070b68b4a3e41dfe",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "recovery_control_version",
+        "recovery_modes",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.recovery_plan.json",
+      "size": 607,
+      "sha256": "7572b59c8ff433a0e5882d4bf998f37c6890ea6c26b5bde67a7804241ec5d42b",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "backup",
+        "generated_at",
+        "recovery_plan_version",
+        "recovery_steps",
+        "snapshot",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.recovery_snapshot.json",
+      "size": 428,
+      "sha256": "5cdd05b7f20ba18abb38b5b5a168630a236b175eefa808b2968c47915f47ba18",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "recovery_mode",
+        "recovery_snapshot_version",
+        "source",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.registry.json",
+      "size": 5813,
+      "sha256": "15403cd5ad2a94b017092b23f61b79e4e3af811d1cc50a8ddcd0722d5ecd0e46",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "catalog",
+        "generated",
+        "registry_version"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.regression.json",
+      "size": 426,
+      "sha256": "75afbe54442185854d283e9db937f007d536d5158dcc898f6ef83feb9b3a7b4d",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "checks",
+        "generated_at",
+        "regression_version",
+        "result",
+        "test_suite"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.relationships.json",
+      "size": 29191,
+      "sha256": "39a08445df04b202e90899b750aae82089916864b1899c1ff2bdbb7d1d89be04",
+      "valid_json": true,
+      "root_type": "list"
+    },
+    {
+      "file": "ZERO_CORE.release.json",
+      "size": 11974,
+      "sha256": "d21473ce5dc9bcaa900a9365b39ccbaae051074a167ac37f998a7bc67f50465a",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "bundle",
+        "generated",
+        "release_version"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.release_candidate.json",
+      "size": 315,
+      "sha256": "1fed6ab7426b2439bfed4094629231f380034b99d25be261d1b0975c3d85eb2e",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "included",
+        "release_candidate_version",
+        "release_line",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.release_control.json",
+      "size": 168,
+      "sha256": "2f9b4e5878dbe968c09993c77d5eb640930e9283d622b3622dd3b2bb2604e4c4",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "release_control_version",
+        "stages"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.release_gate.json",
+      "size": 225,
+      "sha256": "231b393ac58794c09ab5249a6c3154d95c9f463fa7eae812615e9b16f2b28061",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "checks",
+        "generated_at",
+        "release_gate_version",
+        "result",
+        "state"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.release_lock.json",
+      "size": 160,
+      "sha256": "77b3da455d42191b27b7b14893c083ecd2f91ab7d565c15dfe382e2cb43da11d",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "immutable",
+        "mode",
+        "release_lock_version",
+        "release_state"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.release_manifest.json",
+      "size": 330,
+      "sha256": "8c59c8d64568f63bdb97b6ff413a28b2642ec0f0ed4ad7586cdc80b382e81f2b",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "components",
+        "generated_at",
+        "release_manifest_version",
+        "release_state"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.release_status.json",
+      "size": 310,
+      "sha256": "b409e8b66beccb0612bb072edd3d7c8d44fdcb74e35422718c33c2f092fa5455",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "release_lock",
+        "release_status_version",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.report.json",
+      "size": 157286,
+      "sha256": "8fa87333ae314072795a5ce6d3bdf0576aa79f5ead709062dbdeb1a53e282eb0",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "distribution",
+        "generated",
+        "report_version",
+        "summary"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.restore_state.json",
+      "size": 1030,
+      "sha256": "454a776a5878d3bff24502dcd2648d6ecdfab09ee7782f8b7ac8e1ba3e0312fb",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "migration",
+        "recovery",
+        "restore_state_version",
+        "state"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.rewrite_plan.json",
+      "size": 199484,
+      "sha256": "2081b1d90fe00039d3d95de3d6921688ffb0bb5bac351fcf58645906876b18ff",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated",
+        "keys",
+        "plan_version",
+        "rewrite_targets",
+        "source",
+        "versions"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.role.json",
+      "size": 198,
+      "sha256": "3e99e34afd814b8d2d06f436e747db5dc09bcf690fb9840240e130956c6a051c",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "hierarchy",
+        "role_version"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.route.json",
+      "size": 341,
+      "sha256": "1a51edfb631b9fa6c53c94c6ca2ceecadb0154a62fdd636dabb2fadc5849444a",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "gateway",
+        "generated_at",
+        "route_version",
+        "services"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.runtime.json",
+      "size": 190,
+      "sha256": "42760dbb508c721c1881769aa19925c5c56321e7fb54e32a103dc2e01b49b8e0",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated",
+        "graph",
+        "metrics",
+        "runtime_version"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.runtime_config.json",
+      "size": 219,
+      "sha256": "06d10b061a4c0f794588b9814ef8b3643a0426ca0a915619a543e5c559bf9812",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "defaults",
+        "generated_at",
+        "mode",
+        "runtime_config_version",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.runtime_execution.json",
+      "size": 277,
+      "sha256": "2c014beacb430504e49eca5a0bf50eb35f188a802af5bcd849e2c14551d9c939",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "engines",
+        "execution_flow",
+        "generated_at",
+        "runtime_execution_version",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.runtime_manifest.json",
+      "size": 1030,
+      "sha256": "1d83fb5a7c402a852e9b1b79368b1ddd88f0764da9b6d1a0cbfc00ba93f4600c",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "deployment",
+        "generated_at",
+        "operation_profile",
+        "runtime_manifest_version",
+        "status",
+        "version_lock"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.runtime_manifest_v2.json",
+      "size": 1036,
+      "sha256": "b673a4defa381e248995f0d732ff6a22180ccb04a081a21cd2f5126ca74eb6ca",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "execution",
+        "generated_at",
+        "policy",
+        "router",
+        "runtime_manifest_version",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.runtime_ready.json",
+      "size": 470,
+      "sha256": "2e604f8c694924d5867204d9c3c52286e528808a3daa1e056b1c66090d3ffe06",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "bootstrap",
+        "generated",
+        "ready"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.runtime_state.json",
+      "size": 92,
+      "sha256": "dba94963a0405e25410f256d05e5150a679cb1aaead229180e8dfaa0d77c6102",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated",
+        "runtime_state_version",
+        "state"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.safety_gate.json",
+      "size": 191,
+      "sha256": "99370340223ce3b4b1f9a6320a8896d8a3a069cd961cb0ed988711f0c357c642",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "checks",
+        "default",
+        "enforcement",
+        "generated_at",
+        "safety_gate_version"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.schema_lock.json",
+      "size": 196,
+      "sha256": "a24280f964b91d39e613de1fd3e4c9eebfb569095c702543834cb8412f8c3874",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "frozen",
+        "generated_at",
+        "protected",
+        "schema_lock_version"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.schema_map.json",
+      "size": 21164,
+      "sha256": "fbf8d2af0e59c75484a432a58349b5269f32457c35e7f94487f95659a0a1b969",
+      "valid_json": true,
+      "root_type": "list"
+    },
+    {
+      "file": "ZERO_CORE.schema_report.json",
+      "size": 4650,
+      "sha256": "fba22c09f27fe31a87bfd76825a300e62fb7b2b312a6349b5fba225eebd39772",
+      "valid_json": true,
+      "root_type": "list"
+    },
+    {
+      "file": "ZERO_CORE.schema_version.json",
+      "size": 132,
+      "sha256": "5ed7de7b50af985b9e1ecd4b8d3beb86c7ae70636600610f7bc3ca0c61b1c02e",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "compatibility",
+        "current",
+        "generated_at",
+        "schema_version"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.security.json",
+      "size": 180,
+      "sha256": "46353171baf5590f6482bf54ee85cae87329df956e0e35915adad44f26b82277",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "controls",
+        "generated_at",
+        "mode",
+        "security_version"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.self_check.json",
+      "size": 203,
+      "sha256": "504c11dec3bedecc5c4304f8c6ca1aa960597132522acbfe4115f0679198844c",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "checks",
+        "generated_at",
+        "result",
+        "self_check_version"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.service_manifest.json",
+      "size": 1124,
+      "sha256": "dc81d12c596a0973e2766cff6918d335dcca946749c56804dc6ec58f6a0ed752",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "binding",
+        "generated_at",
+        "service_manifest_version",
+        "state",
+        "tiers"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.service_profile_binding.json",
+      "size": 481,
+      "sha256": "43eab71b3e1a9e17ae01f9d4d820491601197cd47f720616e3a9d5f1439b5fbf",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "profiles",
+        "service_profile_binding_version",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.service_registry.json",
+      "size": 102,
+      "sha256": "e75ab6aa804570404b615e815b823a9aa6aa5c58bc68f76ac4eb57c68a120f5f",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "service_registry_version",
+        "services"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.session.json",
+      "size": 82,
+      "sha256": "8dffc677ede5883993b3e6e9eb2c2e6572b602e67105d91f93a993e6b64e6b2e",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated",
+        "session_id",
+        "session_version"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.signature.json",
+      "size": 32402,
+      "sha256": "58300bcfaa969eb54ac4ae337a0fe0246f0d479ddc95f479ce3b93898f9b9906",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "algorithm",
+        "generated",
+        "master",
+        "signature_version"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.snapshot.json",
+      "size": 32375,
+      "sha256": "5d3050b08c73965b6d927291a9a0f52c0ccfdf7be6fe397616f4b7ada5209bd2",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated",
+        "master",
+        "snapshot_version"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.snapshot_registry.json",
+      "size": 178,
+      "sha256": "fde74e462863fbdb14cc968391dc89d6afa7533a0884fda3225f7db8e137b517",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "retention_policy",
+        "snapshot_registry_version",
+        "snapshots"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.state.json",
+      "size": 50,
+      "sha256": "3bfbb45407e6714baae86d1ea2160d500a5ea2b886d2641377bf5bff86c85f1d",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated",
+        "state"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.stats.json",
+      "size": 88,
+      "sha256": "0bc3b153d156ad14101b3b10255f91ff6b5fe900ce3256e0d1168bc313a2f565",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "average_bytes",
+        "total_bytes",
+        "total_files"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.storage.json",
+      "size": 161,
+      "sha256": "a88ce826d94a3d498f63098e660853b0f8c704168769144cf3b84fe40b11d35a",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "drivers",
+        "generated_at",
+        "mode",
+        "storage_version"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.summary.json",
+      "size": 39342,
+      "sha256": "17148443c46f30a8a8c6e28834eb799e186d6a79d93407dab99ac8e7c0c155ea",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "audit",
+        "generated",
+        "metrics",
+        "summary_version"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.sync.json",
+      "size": 198,
+      "sha256": "610f7ce5e45f07e2a948a2a7baacbdf7880e1f1fa87ff3bf5591c03d5924c8e9",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "mode",
+        "queue",
+        "sync_targets",
+        "sync_version"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.system.json",
+      "size": 238283,
+      "sha256": "b92598ed136bdcae3c705f3766f3021397f664a41a1cccb0b37df5294f322cc9",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "complete",
+        "generated",
+        "master",
+        "runtime",
+        "system_version"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.system_state.json",
+      "size": 562,
+      "sha256": "fa56294ce80dfd9e46c13ea640d1fe34ee813d0c396cb76abdb30b022aa22eb3",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "release_candidate",
+        "status",
+        "system_state_version"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.tenant.json",
+      "size": 410,
+      "sha256": "8a859d0f8ea559713a8378e4d1a29313aee5da1bdcfaaeff0f3dd3e47a33990c",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "multi_tenant",
+        "tenant_version",
+        "tenants"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.tenant_manifest.json",
+      "size": 1752,
+      "sha256": "19ac8aa1c30b1689035a5b8a52bc0482b8b55c40cef272de51f4c034e6620064",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "deployment",
+        "generated_at",
+        "state",
+        "tenant_manifest_version",
+        "tenant_map"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.tenant_package_map.json",
+      "size": 599,
+      "sha256": "780e418f856cdae0e4d3b1bcc09dc23787118290db7fd494c40a01e7b946c472",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "packages",
+        "status",
+        "tenant_package_map_version"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.test_report.json",
+      "size": 1119,
+      "sha256": "2025cd388b50da9c0ec31ac149419c9e2f7468b94e08eada0e4e73901ec11b69",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "ci_prepare",
+        "generated_at",
+        "regression",
+        "status",
+        "test_report_version",
+        "test_suite"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.test_suite.json",
+      "size": 210,
+      "sha256": "4649c644a6658dcb9e18da2331c714fa9ddc208e81e57e3194b6145bb3a7714e",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "status",
+        "suites",
+        "test_suite_version"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.v1_archive_manifest.json",
+      "size": 2118,
+      "sha256": "7dd9e529835e376472d6eeee92c9d3180916311467877acd945a0ddc22678ec0",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "archive",
+        "archive_manifest_version",
+        "generated_at",
+        "release",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.v1_final_status.json",
+      "size": 649,
+      "sha256": "bfd7a89c1b41fef297b62171a2285ed54216927a9ad46b962e7756821d2d9c1c",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "control",
+        "final_status_version",
+        "generated_at",
+        "release",
+        "status"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.validation.json",
+      "size": 485,
+      "sha256": "1258ce57a7b1bf9b7d8b4570416b2d32da1eb68730691cbac3dbc2933a59ba63",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "self_check",
+        "status",
+        "validation_targets",
+        "validation_version"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.validation_result.json",
+      "size": 372,
+      "sha256": "f331845a242075bc10f4ba12b1f9345b891eb9e9f91e39961f0490acff086e25",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "archive_check",
+        "generated_at",
+        "validation",
+        "validation_result_version"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.verify.json",
+      "size": 170,
+      "sha256": "59e287d8bcf6c9357375af784b3da4ec159fb704d7b19a573c5c0ab88feb552c",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "result",
+        "verification",
+        "verify_version"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.version_lock.json",
+      "size": 234,
+      "sha256": "65b711065a9bae09873ad3ed7e03c36b210047b03a700ebc67b9597c434a616a",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "core_version",
+        "generated_at",
+        "immutable",
+        "locked_components",
+        "version_lock_version"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.version_maintenance_manifest.json",
+      "size": 1330,
+      "sha256": "4182cc5d8b73c4389fbdb7e5e844515a774ab3f8ea9547204c4d9e2298ec2c85",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "maintenance",
+        "operations",
+        "release_line",
+        "state",
+        "version_maintenance_manifest_version"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.version_report.json",
+      "size": 438,
+      "sha256": "d398a46ddedf5c74a6851ed58f457a6d3e68806bb233e32b4c28586aabfd30ff",
+      "valid_json": true,
+      "root_type": "list"
+    },
+    {
+      "file": "ZERO_CORE.version_snapshot.json",
+      "size": 242,
+      "sha256": "6e280da7e7ac30740e3b7298692294083adcdd446e3d392e9fc6fd369e8ec9c7",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "core_version",
+        "generated_at",
+        "immutable",
+        "snapshot",
+        "version_snapshot_version"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.versions.json",
+      "size": 25860,
+      "sha256": "9dd3796341f504b32a99060633b5a9bb853bcb45d6c639bad599ff53850fb422",
+      "valid_json": true,
+      "root_type": "list"
+    },
+    {
+      "file": "ZERO_CORE.webhook.json",
+      "size": 94,
+      "sha256": "4f69673dc4b8c282f8c4ed7fe340468378533488b22cac61e84d849a35075e90",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "listeners",
+        "webhook_version"
+      ]
+    },
+    {
+      "file": "ZERO_CORE.workflow.json",
+      "size": 191,
+      "sha256": "04b16bcff37b12d719c7f3f4361c3c0ce673bc6b298fcde3815c5e958cd2fc1f",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "states",
+        "transitions",
+        "workflow_version"
+      ]
+    },
+    {
+      "file": "business_bundle.json",
+      "size": 62735,
+      "sha256": "38b30102c829948364e490c5c7937b09ebd66e267a61d1efdfcf889a217c179b",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "documents",
+        "generated_at",
+        "pipeline",
+        "status",
+        "version"
+      ]
+    },
+    {
+      "file": "business_execution_queue.json",
+      "size": 3208,
+      "sha256": "bb44c019fcf7bfbe4e37c93fcef34a658510a95295524590f53796b053cc963d",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "execution_queue",
+        "generated_at",
+        "policy",
+        "version"
+      ]
+    },
+    {
+      "file": "business_final_report.json",
+      "size": 450,
+      "sha256": "a6deb38207fe32f0afc6d822964212ba1a258ab0527abac57854dd0a3de43217",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "counts",
+        "generated_at",
+        "policy",
+        "result",
+        "status",
+        "version"
+      ]
+    },
+    {
+      "file": "business_integrity_report.json",
+      "size": 928,
+      "sha256": "3754e2cd327134b4fee9f8d6425333d054742c15dfdf983069d8f91300f8a89c",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "files",
+        "generated_at",
+        "overall_status",
+        "policy",
+        "version"
+      ]
+    },
+    {
+      "file": "business_master_bundle.json",
+      "size": 20821,
+      "sha256": "8fa5f7c9fda78cb322470e267cc8a555eba3b39eaedbe6a3b342d5386d14c94b",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "documents",
+        "generated_at",
+        "kernel",
+        "statistics",
+        "status",
+        "version"
+      ]
+    },
+    {
+      "file": "business_master_index.json",
+      "size": 587,
+      "sha256": "34f039ba4bccf50d7f192f55f15cc6b22835942ca9a4f18e9819ae2a43029557",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "documents",
+        "generated_at",
+        "pipeline_status",
+        "version"
+      ]
+    },
+    {
+      "file": "business_pipeline_summary.json",
+      "size": 254,
+      "sha256": "af06a148c325dde8daedb63b3d2b56659c5559b03f1d15901034cf57e7c537c2",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "status",
+        "summary",
+        "version"
+      ]
+    },
+    {
+      "file": "business_portfolio_status.json",
+      "size": 3446,
+      "sha256": "f2472bfc787f1a8aed18c5b414dc170cad814ff60180ec7ee7b0904ab448e607",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "policy",
+        "portfolio",
+        "summary",
+        "version"
+      ]
+    },
+    {
+      "file": "business_release_check.json",
+      "size": 865,
+      "sha256": "411efc99b8696b08b4508173e26e3ff28f3751e3a0d927aa0b437c7d2ec48086",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "files",
+        "generated_at",
+        "policy",
+        "release_state",
+        "version"
+      ]
+    },
+    {
+      "file": "cli_business_candidate_review.json",
+      "size": 3793,
+      "sha256": "bec57cc4363f78b0b8ea926a81ef7b94cbca31caa26aaff55b270d932cf1b736",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "candidates",
+        "generated_at",
+        "policy",
+        "summary",
+        "version"
+      ]
+    },
+    {
+      "file": "cli_business_intent_matrix.json",
+      "size": 802,
+      "sha256": "98dd8e370d9501681e2838e8418ee40b269c636a7c39a801c65e95fdcd3a13b4",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "$schema",
+        "decision_policy",
+        "evaluation_model",
+        "purpose",
+        "targets",
+        "version"
+      ]
+    },
+    {
+      "file": "cli_business_signal_deep_review.json",
+      "size": 7586,
+      "sha256": "e69ea5ebd14c5fbb020c848741abc457de8db811a5ef94f0c17fddfca18444de",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "policy",
+        "reviewed_candidates",
+        "summary",
+        "version"
+      ]
+    },
+    {
+      "file": "cli_contact_evidence_registry.json",
+      "size": 2134,
+      "sha256": "7d026fc40284cdc8b2ee01df8d8c9993ca4fb96cd7554d6e269cdcd80e46eec7",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "$schema",
+        "candidates",
+        "evidence_model",
+        "next_review",
+        "policy",
+        "purpose",
+        "version"
+      ]
+    },
+    {
+      "file": "cli_contact_signal_registry.json",
+      "size": 1314,
+      "sha256": "f194532662d7eddd95131939c9faebfcbb119793a4903c15002e6197fa881478",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "$schema",
+        "candidates",
+        "purpose",
+        "rules",
+        "signal_levels",
+        "version"
+      ]
+    },
+    {
+      "file": "cli_next_action_queue.json",
+      "size": 601,
+      "sha256": "5505d71334350d30a8da27209540b4c33d16487c240595fd6eae1eb103aa8b9f",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "$schema",
+        "blocked_actions",
+        "purpose",
+        "queue",
+        "version"
+      ]
+    },
+    {
+      "file": "cli_observation_registry.json",
+      "size": 466,
+      "sha256": "bb15a790453d9b22e66ff59ca5458e7a75816c8c142d1c81f4fcecd268e0c3d0",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "$schema",
+        "candidates",
+        "evaluation",
+        "purpose",
+        "rules",
+        "version"
+      ]
+    },
+    {
+      "file": "cli_target_discovery.json",
+      "size": 4719,
+      "sha256": "e42cde922cef27d33a25571431d7769fa3f342569b99a4a4c2ff6d8bc802a230",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "discovery_version",
+        "generated_at",
+        "search",
+        "targets"
+      ]
+    },
+    {
+      "file": "cli_target_priority.json",
+      "size": 610,
+      "sha256": "108ff5cf4f4f60cf8cc8e7e6e0900fa4f00427cf525447c345daf550ebe5c9d1",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "candidates",
+        "purpose",
+        "version"
+      ]
+    },
+    {
+      "file": "customer_deal_action_plan.json",
+      "size": 1186,
+      "sha256": "99ddd17200672437727bb54847c4541e51b5e1954cf245abd6c326400012839c",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "policy",
+        "tomorrow_actions",
+        "version"
+      ]
+    },
+    {
+      "file": "customer_deal_sync_result.json",
+      "size": 1439,
+      "sha256": "13ec3045765a16aace2eef8f0468969f835a16daef4e330e66a50297fc26901c",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "customers",
+        "generated_at",
+        "policy",
+        "version"
+      ]
+    },
+    {
+      "file": "customer_execution_gate_check.json",
+      "size": 991,
+      "sha256": "30013a4196d207e3f298151ba38dd27a7f78f8094c8959379a38b5525bc93ce8",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "execution_checks",
+        "generated_at",
+        "policy",
+        "version"
+      ]
+    },
+    {
+      "file": "customer_final_business_dashboard.json",
+      "size": 1382,
+      "sha256": "b08ea78ed9f0a77023fa93918fc3eb5fc58ddb095be25156045a327a5e109eb3",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "dashboard",
+        "generated_at",
+        "policy",
+        "version"
+      ]
+    },
+    {
+      "file": "customer_intake.json",
+      "size": 237,
+      "sha256": "f5a4418f5c07fb0cd066c017d5ed0e9c6530b66726bf2168f79e6c826164200f",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "customer"
+      ]
+    },
+    {
+      "file": "customer_lifecycle_gate.json",
+      "size": 1359,
+      "sha256": "73071e884a0bf7130b37fd3e3c59a64123adf568d48b5a8b3e80e77096e55c97",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "$schema",
+        "current_customer",
+        "customer_flow",
+        "purpose",
+        "rules",
+        "version"
+      ]
+    },
+    {
+      "file": "customer_negotiation_status.json",
+      "size": 743,
+      "sha256": "d1f4877ef6eca66e89661d68fb8fecda41d0815308ea3e38b0ff5c3f93980289",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "negotiation",
+        "policy",
+        "version"
+      ]
+    },
+    {
+      "file": "customer_real_deal_review.json",
+      "size": 1661,
+      "sha256": "58509b593368ea85bdda25e12c0af82d85675c44822dfe87836093aa4a0e2ca7",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "$schema",
+        "customers",
+        "deal_stages",
+        "policy",
+        "purpose",
+        "version"
+      ]
+    },
+    {
+      "file": "customer_review_queue.json",
+      "size": 2190,
+      "sha256": "f5025a0c9db9152770781c58af4f374ca8f25ac3f04a1b0c29e8c858d8f322d3",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "$schema",
+        "blocked_actions",
+        "purpose",
+        "queue",
+        "review_policy",
+        "version"
+      ]
+    },
+    {
+      "file": "merged_business_view.json",
+      "size": 2913,
+      "sha256": "1cac5914390b0f20fb6a0ccfccaab0738cf4ca37a993b783e795b6682c98b7ab",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "cli_candidates",
+        "generated_at",
+        "legacy_candidates",
+        "policy",
+        "version"
+      ]
+    },
+    {
+      "file": "original_10_target_audit.json",
+      "size": 6235,
+      "sha256": "33360b140aa2b95df4bfc05bfccf139ce23a20abe0c49cd1bb01079bf7076667",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "policy",
+        "summary",
+        "targets",
+        "version"
+      ]
+    },
+    {
+      "file": "original_10_target_priority.json",
+      "size": 4009,
+      "sha256": "771c14bbe293cd58b4a7e776632e6a2a52b7999acea68460790dd3623c8fafff",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "policy",
+        "targets",
+        "version"
+      ]
+    },
+    {
+      "file": "rollback_result.json",
+      "size": 9078,
+      "sha256": "6da66691c05e8a24a1c8967dddce524b6d0b11b30ef724f6f5a238a2b9e224ca",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "backup_used",
+        "generated_at",
+        "policy",
+        "restored_files",
+        "status",
+        "version"
+      ]
+    },
+    {
+      "file": "today_business_focus.json",
+      "size": 1688,
+      "sha256": "e3ececf14c7dc64464b0d599c0e36189ec221c1890cca517372c96089505e02d",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "generated_at",
+        "policy",
+        "today_focus",
+        "version"
+      ]
+    },
+    {
+      "file": "tomorrow_operation_plan.json",
+      "size": 2050,
+      "sha256": "6ce959301064d4e1e7c8b04fc95a479cc25a6a943f64e0cdb9ac68f6d9f273cb",
+      "valid_json": true,
+      "root_type": "dict",
+      "keys": [
+        "$schema",
+        "priority",
+        "purpose",
+        "rules",
+        "version"
+      ]
+    }
+  ]
+}

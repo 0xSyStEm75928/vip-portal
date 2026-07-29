@@ -1,0 +1,37 @@
+{
+  "$schema": "./schemas/evidence.hash.registry.schema.json",
+
+  "evidence_hash_registry": {
+    "version": "1.0.0",
+    "status": "ACTIVE",
+
+    "purpose": "Maintain integrity records for all collected evidence.",
+
+    "hash_algorithm": "SHA-256",
+
+    "records": [
+      {
+        "evidence_id": null,
+        "file": null,
+        "sha256": null,
+        "size_bytes": null,
+        "created_at": null,
+        "collector": null,
+        "verified": false
+      }
+    ],
+
+    "verification_policy": {
+      "allow_duplicate_hash": false,
+      "require_timestamp": true,
+      "require_filename": true,
+      "immutable_after_registration": true
+    },
+
+    "summary": {
+      "registered_files": 0,
+      "verified_files": 0,
+      "verification_status": "PENDING"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "customer": {
+    "customer_id": "CUSTOMER_001",
+    "last_contact_at": "2026-07-29T19:50:00+09:00",
+    "status": "VERIFICATION",
+    "channel": "DIRECT_CONTACT"
+  },
+  "updated_at": "2026-07-30T02:44:00+09:00",
+  "dag_node": "N1_INGRESS",
+  "target_id": "CUSTOMER_001",
+  "chain_status": "SYNCED_VIA_DAG"
+}

@@ -1,0 +1,42 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-07-29T10:11:49.144135+00:00",
+  "release_state": "READY",
+  "policy": {
+    "read_only": true,
+    "manual_release_required": true,
+    "public_data_only": true
+  },
+  "files": [
+    {
+      "file": "business_master_index.json",
+      "exists": true,
+      "valid_json": true
+    },
+    {
+      "file": "business_pipeline_summary.json",
+      "exists": true,
+      "valid_json": true
+    },
+    {
+      "file": "business_final_report.json",
+      "exists": true,
+      "valid_json": true
+    },
+    {
+      "file": "business_integrity_report.json",
+      "exists": true,
+      "valid_json": true
+    },
+    {
+      "file": "business_execution_queue.json",
+      "exists": true,
+      "valid_json": true
+    },
+    {
+      "file": "today_business_focus.json",
+      "exists": true,
+      "valid_json": true
+    }
+  ]
+}

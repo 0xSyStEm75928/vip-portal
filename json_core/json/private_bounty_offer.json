@@ -1,0 +1,34 @@
+{
+  "$schema": "./schemas/private.bounty.offer.schema.json",
+  "anonymous_deal_offer": {
+    "target_prospect": "SILENT_USER_0x89A",
+    "asset_code": "7-DEMONS-PARALLEL-DAG-CORE",
+    "settlement_currency": "USDT / USDC / ETH (Privacy Escrow)",
+    "pricing_tiers": {
+      "tier_1_core_licensing": {
+        "label": "コア機能ライセンス（非独占）",
+        "bounty_amount": "15,000 USDT",
+        "deliverables": ["DEMON_01", "DEMON_02", "DEMON_03"]
+      },
+      "tier_2_full_demons_pack": {
+        "label": "7つの悪魔 全モジュール譲渡（非独占）",
+        "bounty_amount": "35,000 USDT",
+        "deliverables": ["ALL_7_DEMONS_MODULES"]
+      },
+      "tier_3_sovereign_exclusivity": {
+        "label": "完全主権・独占買い取り（リポジトリ完全削除保証付き）",
+        "bounty_amount": "85,000 USDT",
+        "deliverables": [
+          "ALL_7_DEMONS_MODULES",
+          "ZKP_MUTUAL_NON_DISCLOSURE",
+          "COMPLETE_REPO_PURGE_GUARANTEE"
+        ]
+      }
+    },
+    "escrow_conditions": {
+      "deposit_required": "100%",
+      "verification_method": "ZERO_KNOWLEDGE_PROOF_EXECUTION",
+      "refund_policy": "NO_REFUND_AFTER_PROOF_VERIFICATION"
+    }
+  }
+}

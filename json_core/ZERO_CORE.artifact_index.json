@@ -1,0 +1,19 @@
+{
+  "artifact_index_version": "1.0.0",
+  "generated_at": "2026-07-28T14:52:56Z",
+  "artifacts": [
+    "kernel",
+    "runtime",
+    "profile",
+    "authority",
+    "event",
+    "data",
+    "security",
+    "ai",
+    "plugin",
+    "release",
+    "validation",
+    "operation"
+  ],
+  "status": "INDEXED"
+}

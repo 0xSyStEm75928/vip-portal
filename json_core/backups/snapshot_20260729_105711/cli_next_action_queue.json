@@ -1,0 +1,30 @@
+{
+  "$schema": "./schemas/action.queue.schema.json",
+  "version": "1.0.0",
+
+  "purpose": "Human reviewed outreach preparation",
+
+  "queue": [
+    {
+      "target": "n8n-io/n8n",
+      "action": "REVIEW_PUBLIC_PROFILE",
+      "status": "READY"
+    },
+    {
+      "target": "Graphify-Labs/graphify",
+      "action": "REVIEW_PUBLIC_PROFILE",
+      "status": "READY"
+    },
+    {
+      "target": "OpenHands/OpenHands",
+      "action": "REVIEW_PUBLIC_PROFILE",
+      "status": "READY"
+    }
+  ],
+
+  "blocked_actions": [
+    "claim_hidden_view",
+    "assume_private_interest",
+    "auto_send_message"
+  ]
+}

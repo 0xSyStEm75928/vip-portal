@@ -1,0 +1,11 @@
+{
+  "ai_governance_version": "1.0.0",
+  "generated_at": "2026-07-28T14:49:33Z",
+  "principles": [
+    "safety",
+    "traceability",
+    "evaluation",
+    "human_control"
+  ],
+  "status": "READY"
+}

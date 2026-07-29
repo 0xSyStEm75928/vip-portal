@@ -1,0 +1,10 @@
+{
+  "compliance_version": "1.0.0",
+  "generated_at": "2026-07-28T14:42:00Z",
+  "frameworks": [
+    "internal_control",
+    "audit_log",
+    "access_review"
+  ],
+  "status": "READY"
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "./schemas/risk_matrix.schema.json",
+  "risk_matrix": {
+    "current_state": "UNVERIFIED",
+    "confidentiality": "UNKNOWN",
+    "integrity": "UNKNOWN",
+    "availability": "UNKNOWN",
+    "exploitability": "UNKNOWN",
+    "overall_risk": "UNASSESSED"
+  }
+}

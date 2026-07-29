@@ -1,0 +1,24 @@
+{
+  "$schema": "./schemas/cwe_mapping.schema.json",
+  "cwe_mapping": {
+    "status": "UNDER_REVIEW",
+    "candidate_cwe": [
+      {
+        "id": "CWE-367",
+        "title": "Time-of-check Time-of-use Race Condition",
+        "confidence": "LOW",
+        "verified": false
+      },
+      {
+        "id": "CWE-244",
+        "title": "Improper Clearing of Heap Memory Before Release",
+        "confidence": "LOW",
+        "verified": false
+      }
+    ],
+    "notes": [
+      "Mapping is preliminary.",
+      "Independent reproduction required."
+    ]
+  }
+}

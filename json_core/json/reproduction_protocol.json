@@ -1,0 +1,58 @@
+{
+  "$schema": "./schemas/reproduction.protocol.schema.json",
+
+  "reproduction_protocol": {
+    "version": "1.0.0",
+
+    "status": "DRAFT",
+
+    "objective": "Provide deterministic reproduction steps for independent verification.",
+
+    "environment": {
+      "hardware": null,
+      "operating_system": null,
+      "runtime": null,
+      "application_version": null
+    },
+
+    "steps": [
+      {
+        "step": 1,
+        "action": "Prepare clean environment"
+      },
+      {
+        "step": 2,
+        "action": "Load proof-of-concept"
+      },
+      {
+        "step": 3,
+        "action": "Execute reproduction procedure"
+      },
+      {
+        "step": 4,
+        "action": "Collect logs and timestamps"
+      },
+      {
+        "step": 5,
+        "action": "Compare expected and observed results"
+      }
+    ],
+
+    "expected_result": {
+      "observable": null,
+      "success_condition": null
+    },
+
+    "artifacts": {
+      "logs": [],
+      "screenshots": [],
+      "hashes": [],
+      "binaries": []
+    },
+
+    "verification": {
+      "independent_reproduction": false,
+      "reviewed": false
+    }
+  }
+}

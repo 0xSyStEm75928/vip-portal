@@ -1,0 +1,56 @@
+{
+  "$schema": "./schemas/zerocore.disclosure.framework.schema.json",
+
+  "zerocore_disclosure_framework": {
+    "version": "1.0.0",
+    "status": "ACTIVE",
+
+    "purpose": "Framework for preparing reproducible and evidence-based technical disclosures.",
+
+    "principles": [
+      "evidence_before_claim",
+      "reproducibility_first",
+      "schema_first",
+      "registry_first",
+      "append_only_audit",
+      "independent_verification",
+      "coordinated_disclosure",
+      "clear_scope_definition"
+    ],
+
+    "quality_gates": [
+      {
+        "name": "Evidence",
+        "required": true,
+        "description": "Claims are supported by collected evidence."
+      },
+      {
+        "name": "Reproduction",
+        "required": true,
+        "description": "Another reviewer can reproduce the reported behavior."
+      },
+      {
+        "name": "Environment",
+        "required": true,
+        "description": "Execution environment is documented."
+      },
+      {
+        "name": "Audit",
+        "required": true,
+        "description": "Evidence chain is complete and traceable."
+      }
+    ],
+
+    "expected_outputs": {
+      "review_package": "review_submission_manifest.json",
+      "evidence_bundle": "final_evidence_bundle.json",
+      "timeline": "timeline_of_events.json"
+    },
+
+    "disclaimer": {
+      "no_guarantee_of_acceptance": true,
+      "final_assessment_by_vendor": true,
+      "requires_independent_validation": true
+    }
+  }
+}
