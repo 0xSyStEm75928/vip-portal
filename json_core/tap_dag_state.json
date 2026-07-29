@@ -1,5 +1,12 @@
 {
   "node": "N1_INGRESS",
   "val_bias": 55.0,
-  "status": "HARMLESS_SAFE"
+  "status": "FORMULA_VERIFIED_UNLOCKED",
+  "param_a": 25,
+  "param_b": 10,
+  "param_c": 25,
+  "total_sum": 60,
+  "raw_score": 1.0,
+  "ema_val": 51.5,
+  "sigmoid_prob": 0.5374
 }
