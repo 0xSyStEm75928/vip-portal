@@ -1,0 +1,66 @@
+{
+  "$schema": "./schemas/zero.core.customer.schema.json",
+  "version": "1.0.0",
+  "updated_at": "2026-07-29T19:50:00+09:00",
+  "customers": {
+    "TARGET_INIT_001": {
+      "status": "VERIFIED",
+      "last_evidence": {
+        "event_id": "EVT_2026-07-29T19:05:43.494292+09:00",
+        "timestamp": "2026-07-29T19:05:43.494292+09:00",
+        "source": "CLI_INIT",
+        "target_id": "TARGET_INIT_001",
+        "payload": {
+          "raw_input": "SYSTEM_HYBRID_ANCHOR_ACTIVE"
+        }
+      },
+      "gate": {
+        "target_id": "TARGET_INIT_001",
+        "gate_status": "PASS",
+        "verified_rules": [
+          "evidence_required",
+          "no_delivery_before_payment"
+        ],
+        "checked_at": "2026-07-29T19:05:43.509572+09:00"
+      },
+      "updated_at": "2026-07-29T19:05:43.494292+09:00"
+    },
+    "TEST_CUSTOMER_001": {
+      "status": "VERIFIED",
+      "last_evidence": {
+        "event_id": "EVT_2026-07-29T19:11:12.420194+09:00",
+        "timestamp": "2026-07-29T19:11:12.420194+09:00",
+        "source": "CLI_DIRECT",
+        "target_id": "TEST_CUSTOMER_001",
+        "payload": {
+          "raw_input": "OBSERVATION AUTO_RUN"
+        }
+      },
+      "gate": {
+        "target_id": "TEST_CUSTOMER_001",
+        "gate_status": "PASS",
+        "verified_rules": [
+          "evidence_required",
+          "no_delivery_before_payment"
+        ],
+        "checked_at": "2026-07-29T19:11:12.442370+09:00"
+      },
+      "updated_at": "2026-07-29T19:11:12.420194+09:00"
+    },
+    "CUSTOMER_001": {
+      "id": "CUSTOMER_001",
+      "pct": 40,
+      "updated_at": "2026-07-29T19:55:00+09:00"
+    },
+    "SILENT_USER_0x31C": {
+      "id": "SILENT_USER_0x31C",
+      "pct": 40,
+      "updated_at": "2026-07-29T19:55:00+09:00"
+    },
+    "VIP_ADDITIONAL_001": {
+      "id": "VIP_ADDITIONAL_001",
+      "pct": 40,
+      "updated_at": "2026-07-29T19:55:00+09:00"
+    }
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-07-29T01:27:17.531551+00:00",
+  "policy": {
+    "manual_review_required": true,
+    "public_data_only": true,
+    "execution_requires_confirmation": true
+  },
+  "execution_queue": [
+    {
+      "order": 1,
+      "source": "LEGACY",
+      "target": "CUSTOMER_001",
+      "priority": "BUSINESS",
+      "stage": "ACTIVE_REVIEW",
+      "next_step": [
+        "NDA_STATUS",
+        "REQUIREMENT_CONFIRMATION",
+        "CONTRACT_PATH"
+      ]
+    },
+    {
+      "order": 2,
+      "source": "LEGACY",
+      "target": "SILENT_USER_0x31C",
+      "priority": "BUSINESS",
+      "stage": "OBSERVATION",
+      "next_step": [
+        "VALID_CONTACT",
+        "CONCRETE_REQUEST",
+        "PAYMENT_EVIDENCE"
+      ]
+    },
+    {
+      "order": 3,
+      "source": "LEGACY",
+      "target": "VIP_ADDITIONAL_001",
+      "priority": "BUSINESS",
+      "stage": "PENDING_REVIEW",
+      "next_step": [
+        "CONTACT_CONFIRMATION",
+        "BUSINESS_REQUIREMENT"
+      ]
+    },
+    {
+      "order": 4,
+      "source": "CLI_DISCOVERY",
+      "target": "trimstray/the-book-of-secret-knowledge",
+      "priority": "A",
+      "stage": "EARLY_TARGET_REVIEW",
+      "next_step": [
+        "HUMAN_REVIEW"
+      ]
+    },
+    {
+      "order": 5,
+      "source": "CLI_DISCOVERY",
+      "target": "n8n-io/n8n",
+      "priority": "A",
+      "stage": "EARLY_TARGET_REVIEW",
+      "next_step": [
+        "HUMAN_REVIEW"
+      ]
+    },
+    {
+      "order": 6,
+      "source": "CLI_DISCOVERY",
+      "target": "ohmyzsh/ohmyzsh",
+      "priority": "A",
+      "stage": "EARLY_TARGET_REVIEW",
+      "next_step": [
+        "HUMAN_REVIEW"
+      ]
+    },
+    {
+      "order": 7,
+      "source": "CLI_DISCOVERY",
+      "target": "yt-dlp/yt-dlp",
+      "priority": "A",
+      "stage": "PUBLIC_DISCOVERY_REVIEW",
+      "next_step": [
+        "HUMAN_REVIEW"
+      ]
+    },
+    {
+      "order": 8,
+      "source": "CLI_DISCOVERY",
+      "target": "google-gemini/gemini-cli",
+      "priority": "A",
+      "stage": "PUBLIC_DISCOVERY_REVIEW",
+      "next_step": [
+        "HUMAN_REVIEW"
+      ]
+    },
+    {
+      "order": 9,
+      "source": "CLI_DISCOVERY",
+      "target": "Graphify-Labs/graphify",
+      "priority": "B",
+      "stage": "PUBLIC_DISCOVERY_REVIEW",
+      "next_step": [
+        "HUMAN_REVIEW"
+      ]
+    },
+    {
+      "order": 10,
+      "source": "CLI_DISCOVERY",
+      "target": "sherlock-project/sherlock",
+      "priority": "B",
+      "stage": "PUBLIC_DISCOVERY_REVIEW",
+      "next_step": [
+        "HUMAN_REVIEW"
+      ]
+    },
+    {
+      "order": 11,
+      "source": "CLI_DISCOVERY",
+      "target": "OpenHands/OpenHands",
+      "priority": "B",
+      "stage": "PUBLIC_DISCOVERY_REVIEW",
+      "next_step": [
+        "HUMAN_REVIEW"
+      ]
+    },
+    {
+      "order": 12,
+      "source": "CLI_DISCOVERY",
+      "target": "nexu-io/open-design",
+      "priority": "B",
+      "stage": "PUBLIC_DISCOVERY_REVIEW",
+      "next_step": [
+        "HUMAN_REVIEW"
+      ]
+    },
+    {
+      "order": 13,
+      "source": "CLI_DISCOVERY",
+      "target": "junegunn/fzf",
+      "priority": "B",
+      "stage": "PUBLIC_DISCOVERY_REVIEW",
+      "next_step": [
+        "HUMAN_REVIEW"
+      ]
+    }
+  ]
+}

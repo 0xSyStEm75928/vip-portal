@@ -1,0 +1,15 @@
+{
+  "interface_profile_version": "1.0.0",
+  "generated_at": "2026-07-28T14:56:51Z",
+  "mode": [
+    "cui",
+    "cli",
+    "json"
+  ],
+  "design": [
+    "pipeable",
+    "scriptable",
+    "automation_ready"
+  ],
+  "status": "READY"
+}

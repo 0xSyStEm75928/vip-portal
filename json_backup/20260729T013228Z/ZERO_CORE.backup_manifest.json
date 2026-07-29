@@ -1,0 +1,37 @@
+{
+  "backup_manifest_version": "1.0.0",
+  "generated_at": "2026-07-28T15:08:19Z",
+  "backup": {
+    "backup_point_version": "1.0.0",
+    "generated_at": "2026-07-28T15:08:19Z",
+    "checkpoint_type": "RELEASE_CANDIDATE",
+    "includes": [
+      "core",
+      "runtime",
+      "configuration",
+      "security",
+      "distribution"
+    ],
+    "status": "CREATED"
+  },
+  "snapshot": {
+    "recovery_snapshot_version": "1.0.0",
+    "generated_at": "2026-07-28T15:08:19Z",
+    "source": {
+      "backup_point_version": "1.0.0",
+      "generated_at": "2026-07-28T15:08:19Z",
+      "checkpoint_type": "RELEASE_CANDIDATE",
+      "includes": [
+        "core",
+        "runtime",
+        "configuration",
+        "security",
+        "distribution"
+      ],
+      "status": "CREATED"
+    },
+    "recovery_mode": "RESTORE_POINT",
+    "status": "READY"
+  },
+  "state": "BACKUP_READY"
+}

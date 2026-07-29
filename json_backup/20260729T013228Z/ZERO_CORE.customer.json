@@ -1,0 +1,28 @@
+{
+  "customer_version": "3.0.0-REAL_COMMENT_FILTER",
+  "updated_at": "2026-07-28T18:52:44.471724+00:00",
+  "policy": "VERIFY_REAL_COMMENT_ONLY",
+  "customers": [
+    {
+      "customer_id": "REVEALED_CLIENT",
+      "github_comment_status": "PENDING_NEXT_SESSION",
+      "signal_eval": {
+        "has_real_comment": true,
+        "is_spurious_or_fake": false,
+        "status": "VERIFIED",
+        "deep_verification": "CORE_INSPECTED_REAL_USER"
+      },
+      "action_gate": {
+        "on_real_comment": "PROCEED_GUI_SUPPORT",
+        "on_fake_or_none": "PURGE_IMMEDIATELY"
+      },
+      "github_account_name": "REVEALED_CLIENT"
+    },
+    {
+      "customer_id": "TEST_CUSTOMER_001",
+      "updated_at": "2026-07-29T01:28:52.697090+00:00",
+      "status": "OBSERVATION",
+      "channel": "TEST"
+    }
+  ]
+}

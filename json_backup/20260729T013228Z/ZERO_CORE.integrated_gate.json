@@ -1,0 +1,32 @@
+{
+  "gate_version": "5.0.0-ZERO_CORE",
+  "updated_at": "2026-07-28T17:37:33.637594+00:00",
+  "mode": "ACTIVE_MONITOR_AND_AUTO_RELEASE",
+  "target_address": "0xF7A353FAF6E6BD4732b0f234C656dBFDE53B0e91",
+  "verification_gate": {
+    "required": true,
+    "verified": true,
+    "method": "CRYPTO_SIGNATURE_OR_DEPOSIT",
+    "status": "ARMED_AND_READY"
+  },
+  "payment_gate": {
+    "status": "VERIFIED_ON_MEMPOOL",
+    "required_amount": "35000 USDT",
+    "auto_release_on_mempool": true,
+    "bypass_manual_approval": true,
+    "transaction_hash": "0xYOUR_TX_HASH_HERE"
+  },
+  "intake_categories": {
+    "PAYMENT_DEPOSIT": "着金・決済完了通知",
+    "CRYPTO_SIGNATURE": "暗号署名・本人検証",
+    "VIP_FASTPASS": "即日優先処理リクエスト",
+    "CONTRACT_EXECUTION": "契約・NDA締結"
+  },
+  "execution_hook": {
+    "on_signal_received": [
+      "UPDATE_GATE_STATUS_VERIFIED",
+      "TRIGGER_INSTANT_TENANT_PROVISIONING",
+      "WRITE_EXECUTION_LOG"
+    ]
+  }
+}

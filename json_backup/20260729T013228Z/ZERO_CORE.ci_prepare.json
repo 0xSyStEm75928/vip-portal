@@ -1,0 +1,15 @@
+{
+  "ci_prepare_version": "1.0.0",
+  "generated_at": "2026-07-28T14:53:35Z",
+  "pipeline": [
+    "validate",
+    "test",
+    "audit",
+    "release"
+  ],
+  "environment": [
+    "local",
+    "server"
+  ],
+  "status": "READY"
+}

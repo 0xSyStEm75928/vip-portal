@@ -1,0 +1,31 @@
+{
+  "policy_engine_version": "1.0.0",
+  "generated_at": "2026-07-28T14:39:33Z",
+  "enforcement": "STRICT",
+  "default": "DENY",
+  "role_registry": {
+    "role_version": "1.0.0",
+    "generated_at": "2026-07-28T14:39:33Z",
+    "hierarchy": [
+      "super_admin",
+      "tenant_admin",
+      "manager",
+      "staff",
+      "external_auditor",
+      "viewer"
+    ]
+  },
+  "permission_registry": {
+    "permission_version": "1.0.0",
+    "generated_at": "2026-07-28T14:39:33Z",
+    "permissions": [
+      "read",
+      "write",
+      "execute",
+      "admin",
+      "audit",
+      "manage"
+    ],
+    "namespace_control": true
+  }
+}

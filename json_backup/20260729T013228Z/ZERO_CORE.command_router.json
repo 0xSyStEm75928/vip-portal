@@ -1,0 +1,13 @@
+{
+  "command_router_version": "1.0.0",
+  "generated_at": "2026-07-28T14:59:20Z",
+  "routes": {
+    "status": "runtime.status",
+    "health": "runtime.health",
+    "audit": "audit.report",
+    "profile": "profile.manager",
+    "runtime": "runtime.control",
+    "export": "artifact.export"
+  },
+  "router_state": "READY"
+}

@@ -1,0 +1,9 @@
+{
+  "customer": {
+    "customer_id": "TEST_CUSTOMER_001",
+    "first_contact_at": "2026-07-29T00:40:10.380281+00:00",
+    "last_contact_at": "2026-07-29T01:28:52.697090+00:00",
+    "status": "OBSERVATION",
+    "channel": "TEST"
+  }
+}

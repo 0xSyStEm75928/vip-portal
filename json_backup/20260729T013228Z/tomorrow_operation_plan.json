@@ -1,0 +1,61 @@
+{
+  "$schema": "./schemas/tomorrow.operation.plan.schema.json",
+  "version": "1.0.0",
+  "purpose": "Next business operation priority control",
+  "priority": [
+    {
+      "target": "CUSTOMER_001",
+      "priority": "A",
+      "objective": "Confirm requirement and contract progress",
+      "status": "WAITING",
+      "next_action": [
+        "confirm_requirement",
+        "confirm_NDA",
+        "confirm_contract_path"
+      ]
+    },
+    {
+      "target": "CLI_CANDIDATES",
+      "priority": "B",
+      "objective": "Public profile review",
+      "status": "OBSERVATION",
+      "next_action": [
+        "verify_contact_channel",
+        "prepare_manual_message"
+      ]
+    },
+    {
+      "target": "TEST_CUSTOMER_001",
+      "priority": "A",
+      "objective": "Action for OBSERVATION",
+      "status": "OBSERVATION",
+      "updated_at": "2026-07-29T00:40:10.380281+00:00"
+    },
+    {
+      "target": "TEST_CUSTOMER_001",
+      "priority": "A",
+      "objective": "Action for OBSERVATION",
+      "status": "OBSERVATION",
+      "updated_at": "2026-07-29T01:28:09.639283+00:00"
+    },
+    {
+      "target": "TEST_CUSTOMER_001",
+      "priority": "A",
+      "objective": "Action for OBSERVATION",
+      "status": "OBSERVATION",
+      "updated_at": "2026-07-29T01:28:27.238506+00:00"
+    },
+    {
+      "target": "TEST_CUSTOMER_001",
+      "priority": "A",
+      "objective": "Action for OBSERVATION",
+      "status": "OBSERVATION",
+      "updated_at": "2026-07-29T01:28:52.697090+00:00"
+    }
+  ],
+  "rules": {
+    "no_delivery_before_payment_or_contract": true,
+    "no_private_interest_assumption": true,
+    "evidence_required": true
+  }
+}

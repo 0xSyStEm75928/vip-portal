@@ -1,0 +1,35 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-07-29T01:27:11.382128+00:00",
+  "policy": {
+    "no_delivery_before_confirmation": true,
+    "payment_gate_required": true,
+    "human_approval_required": true
+  },
+  "execution_checks": [
+    {
+      "customer_id": "CUSTOMER_001",
+      "priority": "A",
+      "recommended_action": "NDA_AND_REQUIREMENT_CONFIRMATION",
+      "execution_state": "LOCKED",
+      "reason": "PAYMENT_CONFIRMATION_REQUIRED",
+      "manual_review": true
+    },
+    {
+      "customer_id": "SILENT_USER_0x31C",
+      "priority": "B",
+      "recommended_action": "VALIDATE_CONTACT_AND_REQUEST",
+      "execution_state": "LOCKED",
+      "reason": "PAYMENT_CONFIRMATION_REQUIRED",
+      "manual_review": true
+    },
+    {
+      "customer_id": "VIP_ADDITIONAL_001",
+      "priority": "B",
+      "recommended_action": "VALIDATE_CONTACT_AND_REQUEST",
+      "execution_state": "LOCKED",
+      "reason": "PAYMENT_CONFIRMATION_REQUIRED",
+      "manual_review": true
+    }
+  ]
+}

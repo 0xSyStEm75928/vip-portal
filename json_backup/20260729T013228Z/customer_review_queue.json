@@ -1,0 +1,70 @@
+{
+  "$schema": "./schemas/customer.review.queue.schema.json",
+  "version": "1.0.0",
+  "purpose": "Human reviewed customer prioritization queue",
+  "review_policy": {
+    "evidence_required": true,
+    "no_assumption": true,
+    "manual_confirmation": true
+  },
+  "queue": [
+    {
+      "customer_id": "CUSTOMER_001",
+      "priority": "A",
+      "signal": {
+        "communication": "SPEC_VERIFIED",
+        "commitment": "NDA_IN_PROGRESS",
+        "payment": "UNVERIFIED"
+      },
+      "next_check": [
+        "NDA_STATUS",
+        "REQUIREMENT_STATUS",
+        "CONTRACT_PATH"
+      ],
+      "status": "ACTIVE_REVIEW"
+    },
+    {
+      "customer_id": "SILENT_USER_0x31C",
+      "priority": "B",
+      "signal": {
+        "communication": "OBSERVED",
+        "commitment": "PENDING",
+        "payment": "UNVERIFIED"
+      },
+      "next_check": [
+        "VALID_CONTACT",
+        "CONCRETE_COMMITMENT"
+      ],
+      "status": "OBSERVATION"
+    },
+    {
+      "target_id": "TEST_CUSTOMER_001",
+      "requires_human_approval": true,
+      "current_status": "OBSERVATION",
+      "updated_at": "2026-07-29T00:40:10.380281+00:00"
+    },
+    {
+      "target_id": "TEST_CUSTOMER_001",
+      "requires_human_approval": true,
+      "current_status": "OBSERVATION",
+      "updated_at": "2026-07-29T01:28:09.639283+00:00"
+    },
+    {
+      "target_id": "TEST_CUSTOMER_001",
+      "requires_human_approval": true,
+      "current_status": "OBSERVATION",
+      "updated_at": "2026-07-29T01:28:27.238506+00:00"
+    },
+    {
+      "target_id": "TEST_CUSTOMER_001",
+      "requires_human_approval": true,
+      "current_status": "OBSERVATION",
+      "updated_at": "2026-07-29T01:28:52.697090+00:00"
+    }
+  ],
+  "blocked_actions": [
+    "assume_purchase_intent",
+    "assume_private_view",
+    "deliver_before_confirmation"
+  ]
+}

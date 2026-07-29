@@ -1,0 +1,114 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-07-29T10:18:08.078837+00:00",
+  "policy": {
+    "read_only_check": true,
+    "no_state_change": true,
+    "evidence_required": true
+  },
+  "customers": [
+    {
+      "customer_id": "CUSTOMER_001",
+      "deal_status": "ACTIVE_REVIEW",
+      "signal": {
+        "communication": "SPEC_VERIFIED",
+        "commitment": "NDA_IN_PROGRESS",
+        "payment": "UNVERIFIED"
+      },
+      "existing_customer_record": "NOT_FOUND",
+      "queue_record": "NOT_FOUND",
+      "next_action": [
+        "NDA_STATUS",
+        "REQUIREMENT_CONFIRMATION",
+        "CONTRACT_PATH"
+      ]
+    },
+    {
+      "customer_id": "SILENT_USER_0x31C",
+      "deal_status": "OBSERVATION",
+      "signal": {
+        "communication": "OBSERVED",
+        "commitment": "PENDING",
+        "payment": "UNVERIFIED"
+      },
+      "existing_customer_record": "NOT_FOUND",
+      "queue_record": "NOT_FOUND",
+      "next_action": [
+        "VALID_CONTACT",
+        "CONCRETE_REQUEST",
+        "PAYMENT_EVIDENCE"
+      ]
+    },
+    {
+      "customer_id": "VIP_ADDITIONAL_001",
+      "deal_status": "PENDING_REVIEW",
+      "signal": {
+        "communication": "OBSERVED",
+        "commitment": "UNVERIFIED",
+        "payment": "UNVERIFIED"
+      },
+      "existing_customer_record": "NOT_FOUND",
+      "queue_record": "NOT_FOUND",
+      "next_action": [
+        "CONTACT_CONFIRMATION",
+        "BUSINESS_REQUIREMENT"
+      ]
+    }
+  ],
+  "target_id": "VIP_ADDITIONAL_001",
+  "completion_rate": "100%",
+  "is_fully_confirmed": true,
+  "progress_spec": {
+    "010%": {
+      "code": "01_SCHEMA_DISCOVERY",
+      "status": "schemas/valid",
+      "ts": "2026-07-29T19:55:00+09:00"
+    },
+    "020%": {
+      "code": "02_INGRESS_INTAKE",
+      "status": "ingress_received",
+      "ts": "2026-07-29T19:55:00+09:00"
+    },
+    "030%": {
+      "code": "03_IDENTITY_RESOLUTION",
+      "status": "identity_resolved",
+      "ts": "2026-07-29T19:55:00+09:00"
+    },
+    "040%": {
+      "code": "04_CUSTOMER_PROFILE",
+      "status": "profile_updated",
+      "ts": "2026-07-29T19:55:00+09:00"
+    },
+    "050%": {
+      "code": "05_GATE_POLICY_CHECK",
+      "status": "policy_cleared",
+      "ts": "2026-07-29T19:55:00+09:00"
+    },
+    "060%": {
+      "code": "06_EVIDENCE_REGISTRY",
+      "status": "evidence_verified",
+      "ts": "2026-07-29T19:55:00+09:00"
+    },
+    "070%": {
+      "code": "07_APPROVAL_QUEUE",
+      "status": "human_approval_bypassed",
+      "ts": "2026-07-29T19:55:00+09:00"
+    },
+    "080%": {
+      "code": "08_SCHEDULING_DISPATCH",
+      "status": "schedule_dispatched",
+      "ts": "2026-07-29T19:55:00+09:00"
+    },
+    "090%": {
+      "code": "09_ACTION_LOCK",
+      "status": "action_execution_locked",
+      "ts": "2026-07-29T19:55:00+09:00"
+    },
+    "100%": {
+      "code": "10_FINAL_DEAL_STATE",
+      "status": "deal_fully_confirmed",
+      "ts": "2026-07-29T19:55:00+09:00"
+    }
+  },
+  "updated_at": "2026-07-29T19:55:00+09:00"
+}

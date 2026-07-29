@@ -1,0 +1,127 @@
+{
+  "zero_core_manifest_version": "1.0.0",
+
+  "identity": {
+    "name": "ZERO_CORE",
+    "release_line": "v1.x",
+    "purpose": "Declarative JSON-driven runtime architecture",
+    "principle": "Manifest defines structure. Generator creates artifacts."
+  },
+
+  "architecture": {
+    "model": "manifest_driven",
+    "format": "JSON",
+    "validation": "jq",
+    "runtime": "POSIX shell compatible",
+
+    "layers": [
+      "identity",
+      "master",
+      "registry",
+      "runtime",
+      "profile",
+      "tenant",
+      "security",
+      "audit",
+      "deployment",
+      "maintenance"
+    ]
+  },
+
+  "profiles": {
+    "01_PERSONAL": {
+      "type": "private",
+      "tenant": false,
+      "modules": [
+        "notes",
+        "automation",
+        "local_ai",
+        "private_registry"
+      ]
+    },
+
+    "02_PERSONAL_PLUS": {
+      "type": "advanced_personal",
+      "tenant": false,
+      "modules": [
+        "project",
+        "client",
+        "workflow",
+        "billing",
+        "evidence"
+      ]
+    },
+
+    "03_SMALL_BUSINESS": {
+      "type": "organization",
+      "tenant": true,
+      "modules": [
+        "member",
+        "role",
+        "customer",
+        "contract",
+        "audit",
+        "reporting"
+      ]
+    },
+
+    "04_ENTERPRISE": {
+      "type": "enterprise",
+      "tenant": true,
+      "multi_tenant": true,
+      "modules": [
+        "namespace",
+        "governance",
+        "compliance",
+        "policy_engine",
+        "federation"
+      ]
+    }
+  },
+
+  "governance": {
+    "access_model": {
+      "chain": [
+        "identity",
+        "role",
+        "permission",
+        "policy",
+        "audit"
+      ],
+      "default": "DENY"
+    },
+
+    "change_control": [
+      "backup_before_update",
+      "version_increment",
+      "audit_after_change"
+    ]
+  },
+
+  "validation": {
+    "required": true,
+    "checks": [
+      "json_syntax",
+      "schema_validation",
+      "dependency_check",
+      "integrity_check"
+    ],
+    "command": "jq empty"
+  },
+
+  "deployment": {
+    "targets": [
+      "local",
+      "private",
+      "small_business",
+      "enterprise"
+    ],
+    "state": "READY"
+  },
+
+  "final_state": {
+    "expected": "ZERO_CORE_OPERATIONAL",
+    "version_control": true,
+    "maintenance_line": "v1.x"
+  }
+}

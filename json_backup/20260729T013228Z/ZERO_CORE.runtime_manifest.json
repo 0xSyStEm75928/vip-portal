@@ -1,0 +1,49 @@
+{
+  "runtime_manifest_version": "1.0.0",
+  "generated_at": "2026-07-28T14:47:47Z",
+  "operation_profile": {
+    "operation_profile_version": "1.0.0",
+    "generated_at": "2026-07-28T14:47:47Z",
+    "mode": "OPERATIONAL",
+    "enabled_layers": [
+      "runtime",
+      "authority",
+      "profile",
+      "security",
+      "ai",
+      "plugin",
+      "validation"
+    ],
+    "state": "READY"
+  },
+  "deployment": {
+    "deployment_blueprint_version": "1.0.0",
+    "generated_at": "2026-07-28T14:47:47Z",
+    "targets": [
+      "personal",
+      "personal_plus",
+      "small_business",
+      "enterprise"
+    ],
+    "deployment_modes": [
+      "local",
+      "private",
+      "managed"
+    ],
+    "status": "READY"
+  },
+  "version_lock": {
+    "version_lock_version": "1.0.0",
+    "generated_at": "2026-07-28T14:47:47Z",
+    "core_version": "1.0.0",
+    "locked_components": [
+      "kernel",
+      "runtime",
+      "authority",
+      "security",
+      "release"
+    ],
+    "immutable": true
+  },
+  "status": "OPERATIONAL_READY"
+}

@@ -1,0 +1,11 @@
+{
+  "observability_version": "1.0.0",
+  "generated_at": "2026-07-28T15:04:14Z",
+  "layers": [
+    "runtime",
+    "performance",
+    "security",
+    "audit"
+  ],
+  "status": "READY"
+}

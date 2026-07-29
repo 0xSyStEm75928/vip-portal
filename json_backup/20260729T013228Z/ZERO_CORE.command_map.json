@@ -1,0 +1,12 @@
+{
+  "command_map_version": "1.0.0",
+  "generated_at": "2026-07-28T14:56:51Z",
+  "mappings": {
+    "sun status": "system status",
+    "sun health": "health check",
+    "sun audit": "audit report",
+    "sun profile": "profile manager",
+    "sun runtime": "runtime control",
+    "sun export": "artifact export"
+  }
+}

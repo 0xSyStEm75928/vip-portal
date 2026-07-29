@@ -1,0 +1,42 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-07-29T01:27:19.973841+00:00",
+  "policy": {
+    "read_only": true,
+    "schema_check": true,
+    "manual_review_required": true
+  },
+  "files": [
+    {
+      "file": "json_core/customer_real_deal_review.json",
+      "exists": true,
+      "valid_json": true
+    },
+    {
+      "file": "json_core/original_10_target_priority.json",
+      "exists": true,
+      "valid_json": true
+    },
+    {
+      "file": "json_core/merged_business_view.json",
+      "exists": true,
+      "valid_json": true
+    },
+    {
+      "file": "json_core/business_portfolio_status.json",
+      "exists": true,
+      "valid_json": true
+    },
+    {
+      "file": "json_core/business_execution_queue.json",
+      "exists": true,
+      "valid_json": true
+    },
+    {
+      "file": "json_core/today_business_focus.json",
+      "exists": true,
+      "valid_json": true
+    }
+  ],
+  "overall_status": "HEALTHY"
+}

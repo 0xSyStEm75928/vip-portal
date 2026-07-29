@@ -1,0 +1,40 @@
+{
+  "engine": "JSSH-RUNTIME-V3",
+  "mode": "STRICT_ZERO_CORE",
+  "max_memory_mb": 256,
+  "catalog_summary": {
+    "schemas": [],
+    "data": [
+      "./json_core/ZERO_CORE.30pack.json",
+      "./json_core/ZERO_CORE.bundle.json",
+      "./json_core/ZERO_CORE.catalog.json",
+      "./json_core/ZERO_CORE.dependencies.json",
+      "./json_core/ZERO_CORE.diff.json",
+      "./json_core/ZERO_CORE.export.json",
+      "./json_core/ZERO_CORE.governance.json",
+      "./json_core/ZERO_CORE.graph.json",
+      "./json_core/ZERO_CORE.hashes.json",
+      "./json_core/ZERO_CORE.ids.json",
+      "./json_core/ZERO_CORE.index.json",
+      "./json_core/ZERO_CORE.integrity.json",
+      "./json_core/ZERO_CORE.inventory.json",
+      "./json_core/ZERO_CORE.json",
+      "./json_core/ZERO_CORE.keys.json",
+      "./json_core/ZERO_CORE.manifest.json",
+      "./json_core/ZERO_CORE.master.json",
+      "./json_core/ZERO_CORE.pipeline.json",
+      "./json_core/ZERO_CORE.queue.json",
+      "./json_core/ZERO_CORE.registry.json",
+      "./json_core/ZERO_CORE.relationships.json",
+      "./json_core/ZERO_CORE.release.json",
+      "./json_core/ZERO_CORE.rewrite_plan.json",
+      "./json_core/ZERO_CORE.runtime.json",
+      "./json_core/ZERO_CORE.schema_map.json",
+      "./json_core/ZERO_CORE.schema_report.json",
+      "./json_core/ZERO_CORE.snapshot.json",
+      "./json_core/ZERO_CORE.stats.json",
+      "./json_core/ZERO_CORE.version_report.json",
+      "./json_core/ZERO_CORE.versions.json"
+    ]
+  }
+}

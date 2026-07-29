@@ -1,0 +1,130 @@
+{
+  "discovery_version": "1.0.0",
+  "generated_at": "2026-07-28T19:17:11.152540+00:00",
+  "search": {
+    "keyword": "cli",
+    "source": "github_public_repository"
+  },
+  "targets": [
+    {
+      "name": "trimstray/the-book-of-secret-knowledge",
+      "stars": 235573,
+      "language": null,
+      "description": "A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, cli/web tools and more.",
+      "url": "https://github.com/trimstray/the-book-of-secret-knowledge",
+      "signal": {
+        "communication": "UNKNOWN",
+        "commitment": "UNKNOWN",
+        "payment": "UNVERIFIED"
+      }
+    },
+    {
+      "name": "n8n-io/n8n",
+      "stars": 198412,
+      "language": "TypeScript",
+      "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
+      "url": "https://github.com/n8n-io/n8n",
+      "signal": {
+        "communication": "UNKNOWN",
+        "commitment": "UNKNOWN",
+        "payment": "UNVERIFIED"
+      }
+    },
+    {
+      "name": "ohmyzsh/ohmyzsh",
+      "stars": 188869,
+      "language": "Shell",
+      "description": "🙃   A delightful community-driven (with 2,500+ contributors) framework for managing your zsh configuration. Includes 300+ optional plugins (rails, git, macOS, hub, docker, homebrew, node, php, python, etc), 140+ themes to spice up your morning, and an auto-update tool that makes it easy to keep up with the latest updates from the community.",
+      "url": "https://github.com/ohmyzsh/ohmyzsh",
+      "signal": {
+        "communication": "UNKNOWN",
+        "commitment": "UNKNOWN",
+        "payment": "UNVERIFIED"
+      }
+    },
+    {
+      "name": "yt-dlp/yt-dlp",
+      "stars": 180726,
+      "language": "Python",
+      "description": "A feature-rich command-line audio/video downloader",
+      "url": "https://github.com/yt-dlp/yt-dlp",
+      "signal": {
+        "communication": "UNKNOWN",
+        "commitment": "UNKNOWN",
+        "payment": "UNVERIFIED"
+      }
+    },
+    {
+      "name": "google-gemini/gemini-cli",
+      "stars": 106220,
+      "language": "TypeScript",
+      "description": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
+      "url": "https://github.com/google-gemini/gemini-cli",
+      "signal": {
+        "communication": "UNKNOWN",
+        "commitment": "UNKNOWN",
+        "payment": "UNVERIFIED"
+      }
+    },
+    {
+      "name": "Graphify-Labs/graphify",
+      "stars": 97656,
+      "language": "Python",
+      "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
+      "url": "https://github.com/Graphify-Labs/graphify",
+      "signal": {
+        "communication": "UNKNOWN",
+        "commitment": "UNKNOWN",
+        "payment": "UNVERIFIED"
+      }
+    },
+    {
+      "name": "sherlock-project/sherlock",
+      "stars": 87254,
+      "language": "Python",
+      "description": "Hunt down social media accounts by username across social networks",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "signal": {
+        "communication": "UNKNOWN",
+        "commitment": "UNKNOWN",
+        "payment": "UNVERIFIED"
+      }
+    },
+    {
+      "name": "OpenHands/OpenHands",
+      "stars": 82414,
+      "language": "TypeScript",
+      "description": "🙌 OpenHands: AI-Driven Development",
+      "url": "https://github.com/OpenHands/OpenHands",
+      "signal": {
+        "communication": "UNKNOWN",
+        "commitment": "UNKNOWN",
+        "payment": "UNVERIFIED"
+      }
+    },
+    {
+      "name": "nexu-io/open-design",
+      "stars": 82227,
+      "language": "TypeScript",
+      "description": "🎨 The open-source Claude Design alternative. 🖥️ Local-first desktop app. 🖼️ Your coding agent becomes the design engine: prototypes, landing pages, dashboards, slides, images & video — real files, HTML/PDF/PPTX/MP4 export. 🤖 Claude Code / Codex / Cursor / Gemini / OpenCode / Qwen & 20+ CLIs via BYOK.",
+      "url": "https://github.com/nexu-io/open-design",
+      "signal": {
+        "communication": "UNKNOWN",
+        "commitment": "UNKNOWN",
+        "payment": "UNVERIFIED"
+      }
+    },
+    {
+      "name": "junegunn/fzf",
+      "stars": 82010,
+      "language": "Go",
+      "description": ":cherry_blossom: A command-line fuzzy finder",
+      "url": "https://github.com/junegunn/fzf",
+      "signal": {
+        "communication": "UNKNOWN",
+        "commitment": "UNKNOWN",
+        "payment": "UNVERIFIED"
+      }
+    }
+  ]
+}

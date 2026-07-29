@@ -1,0 +1,24 @@
+{
+  "$schema": "./schemas/customer.intake.schema.json",
+
+  "intake_version": "1.0.0",
+
+  "customer": {
+    "customer_id": "CUSTOMER_001",
+    "status": "ONBOARDING",
+    "plan": "small_business",
+    "tenant_required": true
+  },
+
+  "workflow": {
+    "contract": "PENDING",
+    "payment": "PENDING",
+    "workspace": "READY",
+    "service_queue": "CREATED"
+  },
+
+  "evidence": {
+    "created_at": "2026-07-29T00:00:00Z",
+    "execution_log": true
+  }
+}

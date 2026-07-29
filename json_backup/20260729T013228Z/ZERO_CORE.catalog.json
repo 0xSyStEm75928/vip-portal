@@ -1,0 +1,29 @@
+{
+  "catalog_version": "1.0.0",
+  "generated_at": "2026-07-28T14:45:52Z",
+  "plugin_registry": {
+    "plugin_registry_version": "1.0.0",
+    "generated_at": "2026-07-28T14:45:52Z",
+    "registry_type": "PLUGIN",
+    "plugins": [],
+    "status": "STAGE_READY"
+  },
+  "module_registry": {
+    "module_registry_version": "1.0.0",
+    "generated_at": "2026-07-28T14:45:52Z",
+    "modules": [
+      {
+        "name": "core",
+        "type": "system",
+        "enabled": true
+      }
+    ],
+    "lifecycle": [
+      "registered",
+      "validated",
+      "enabled",
+      "disabled"
+    ]
+  },
+  "searchable": true
+}

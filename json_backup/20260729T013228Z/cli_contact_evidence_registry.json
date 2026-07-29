@@ -1,0 +1,90 @@
+{
+  "$schema": "./schemas/contact.evidence.registry.schema.json",
+  "version": "1.0.0",
+  "purpose": "Public evidence based contact opportunity evaluation",
+
+  "policy": {
+    "public_data_only": true,
+    "no_hidden_view_assumption": true,
+    "manual_confirmation_required": true
+  },
+
+  "evidence_model": {
+    "project_presence": "UNVERIFIED",
+    "technical_overlap": "UNVERIFIED",
+    "business_overlap": "UNVERIFIED",
+    "contact_channel": "UNVERIFIED",
+    "engagement_signal": "UNVERIFIED"
+  },
+
+  "candidates": [
+    {
+      "target": "n8n-io/n8n",
+      "category": [
+        "workflow_automation",
+        "ai_agent",
+        "developer_platform"
+      ],
+      "evidence": {
+        "public_project": true,
+        "cli_relevance": true,
+        "ai_relevance": true,
+        "commercial_surface": "POSSIBLE"
+      },
+      "contact_route": {
+        "type": "PUBLIC_CHANNEL",
+        "status": "REVIEW_REQUIRED"
+      },
+      "business_status": "OBSERVATION"
+    },
+    {
+      "target": "Graphify-Labs/graphify",
+      "category": [
+        "knowledge_graph",
+        "code_analysis",
+        "ai_tooling"
+      ],
+      "evidence": {
+        "public_project": true,
+        "cli_relevance": true,
+        "architecture_overlap": "POSSIBLE",
+        "commercial_surface": "POSSIBLE"
+      },
+      "contact_route": {
+        "type": "PUBLIC_CHANNEL",
+        "status": "REVIEW_REQUIRED"
+      },
+      "business_status": "OBSERVATION"
+    },
+    {
+      "target": "OpenHands/OpenHands",
+      "category": [
+        "ai_agent",
+        "developer_productivity"
+      ],
+      "evidence": {
+        "public_project": true,
+        "ai_agent_overlap": true,
+        "developer_market_overlap": "POSSIBLE"
+      },
+      "contact_route": {
+        "type": "PUBLIC_CHANNEL",
+        "status": "REVIEW_REQUIRED"
+      },
+      "business_status": "OBSERVATION"
+    }
+  ],
+
+  "next_review": {
+    "required": [
+      "verify_contact_channel",
+      "verify_business_fit",
+      "prepare_human_message"
+    ],
+    "blocked": [
+      "claim_private_interest",
+      "claim_hidden_monitoring",
+      "auto_outreach"
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "service_manifest_version": "1.0.0",
+  "generated_at": "2026-07-28T15:10:40Z",
+  "binding": {
+    "service_profile_binding_version": "1.0.0",
+    "generated_at": "2026-07-28T15:10:40Z",
+    "profiles": {
+      "personal": {
+        "tier": "01_PERSONAL",
+        "mode": "private"
+      },
+      "personal_plus": {
+        "tier": "02_PERSONAL_PLUS",
+        "mode": "advanced"
+      },
+      "small_business": {
+        "tier": "03_SMALL_BUSINESS",
+        "mode": "organization"
+      },
+      "enterprise": {
+        "tier": "04_ENTERPRISE",
+        "mode": "multi_tenant"
+      }
+    },
+    "status": "BOUND"
+  },
+  "tiers": {
+    "business_tier_map_version": "1.0.0",
+    "generated_at": "2026-07-28T15:10:40Z",
+    "tiers": [
+      {
+        "id": "01_PERSONAL",
+        "users": "single"
+      },
+      {
+        "id": "02_PERSONAL_PLUS",
+        "users": "individual_operator"
+      },
+      {
+        "id": "03_SMALL_BUSINESS",
+        "users": "organization"
+      },
+      {
+        "id": "04_ENTERPRISE",
+        "users": "multi_tenant"
+      }
+    ],
+    "status": "READY"
+  },
+  "state": "SERVICE_READY"
+}

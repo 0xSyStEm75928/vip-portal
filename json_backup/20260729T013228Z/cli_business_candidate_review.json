@@ -1,0 +1,146 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-07-29T01:27:06.459230+00:00",
+  "policy": {
+    "public_data_only": true,
+    "no_hidden_interest_assumption": true,
+    "human_review_required": true
+  },
+  "summary": {
+    "total_targets": 10
+  },
+  "candidates": [
+    {
+      "name": "trimstray/the-book-of-secret-knowledge",
+      "url": "https://github.com/trimstray/the-book-of-secret-knowledge",
+      "stars": 235573,
+      "language": null,
+      "signals": [
+        "CLI",
+        "KNOWLEDGE_SYSTEM"
+      ],
+      "technical_match": "POSSIBLE",
+      "business_contact": "REQUIRES_REVIEW",
+      "private_interest": "UNVERIFIED",
+      "priority": "B"
+    },
+    {
+      "name": "n8n-io/n8n",
+      "url": "https://github.com/n8n-io/n8n",
+      "stars": 198412,
+      "language": "TypeScript",
+      "signals": [
+        "AI",
+        "AUTOMATION",
+        "AUTOMATION"
+      ],
+      "technical_match": "POSSIBLE",
+      "business_contact": "REQUIRES_REVIEW",
+      "private_interest": "UNVERIFIED",
+      "priority": "A"
+    },
+    {
+      "name": "ohmyzsh/ohmyzsh",
+      "url": "https://github.com/ohmyzsh/ohmyzsh",
+      "stars": 188869,
+      "language": "Shell",
+      "signals": [
+        "AI"
+      ],
+      "technical_match": "POSSIBLE",
+      "business_contact": "REQUIRES_REVIEW",
+      "private_interest": "UNVERIFIED",
+      "priority": "B"
+    },
+    {
+      "name": "yt-dlp/yt-dlp",
+      "url": "https://github.com/yt-dlp/yt-dlp",
+      "stars": 180726,
+      "language": "Python",
+      "signals": [],
+      "technical_match": "LOW",
+      "business_contact": "REQUIRES_REVIEW",
+      "private_interest": "UNVERIFIED",
+      "priority": "C"
+    },
+    {
+      "name": "google-gemini/gemini-cli",
+      "url": "https://github.com/google-gemini/gemini-cli",
+      "stars": 106220,
+      "language": "TypeScript",
+      "signals": [
+        "AI",
+        "AI_AGENT",
+        "CLI"
+      ],
+      "technical_match": "POSSIBLE",
+      "business_contact": "REQUIRES_REVIEW",
+      "private_interest": "UNVERIFIED",
+      "priority": "A"
+    },
+    {
+      "name": "Graphify-Labs/graphify",
+      "url": "https://github.com/Graphify-Labs/graphify",
+      "stars": 97656,
+      "language": "Python",
+      "signals": [
+        "AI",
+        "CLI",
+        "KNOWLEDGE_SYSTEM"
+      ],
+      "technical_match": "POSSIBLE",
+      "business_contact": "REQUIRES_REVIEW",
+      "private_interest": "UNVERIFIED",
+      "priority": "A"
+    },
+    {
+      "name": "sherlock-project/sherlock",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "stars": 87254,
+      "language": "Python",
+      "signals": [],
+      "technical_match": "LOW",
+      "business_contact": "REQUIRES_REVIEW",
+      "private_interest": "UNVERIFIED",
+      "priority": "C"
+    },
+    {
+      "name": "OpenHands/OpenHands",
+      "url": "https://github.com/OpenHands/OpenHands",
+      "stars": 82414,
+      "language": "TypeScript",
+      "signals": [
+        "AI"
+      ],
+      "technical_match": "POSSIBLE",
+      "business_contact": "REQUIRES_REVIEW",
+      "private_interest": "UNVERIFIED",
+      "priority": "B"
+    },
+    {
+      "name": "nexu-io/open-design",
+      "url": "https://github.com/nexu-io/open-design",
+      "stars": 82227,
+      "language": "TypeScript",
+      "signals": [
+        "AI_AGENT",
+        "CLI"
+      ],
+      "technical_match": "POSSIBLE",
+      "business_contact": "REQUIRES_REVIEW",
+      "private_interest": "UNVERIFIED",
+      "priority": "B"
+    },
+    {
+      "name": "junegunn/fzf",
+      "url": "https://github.com/junegunn/fzf",
+      "stars": 82010,
+      "language": "Go",
+      "signals": [],
+      "technical_match": "LOW",
+      "business_contact": "REQUIRES_REVIEW",
+      "private_interest": "UNVERIFIED",
+      "priority": "C"
+    }
+  ]
+}

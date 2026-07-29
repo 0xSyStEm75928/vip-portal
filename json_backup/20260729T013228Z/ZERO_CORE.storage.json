@@ -1,0 +1,10 @@
+{
+  "storage_version": "1.0.0",
+  "generated_at": "2026-07-28T14:41:17Z",
+  "drivers": [
+    "json",
+    "filesystem",
+    "database"
+  ],
+  "mode": "MODULAR"
+}

@@ -1,0 +1,49 @@
+{
+  "fastpass_protocol_version": "1.1.0-VIP-DIRECT",
+  "updated_at": "2026-07-28T17:37:33.637594+00:00",
+  "mode": "NONSTOP_AUTO_RELEASE",
+  "special_notice": "本日入金（SAME_DAY_DEPOSIT）対応可能なVIPのみ最優先で即時自動開放",
+  "vip_special_slots": {
+    "slot_type": "SAME_DAY_INSTANT_RELEASE",
+    "condition": "DEPOSIT_COMPLETED_WITHIN_TODAY",
+    "benefit": "BYPASS_ALL_QUEUES_AND_INSTANT_PROVISIONING",
+    "active_vip_targets": [
+      {
+        "target_id": "SILENT_USER_0x31C",
+        "deal_id": "DEAL_2026_MULTI_TARGET_ANONYMOUS",
+        "required_amount": "35,000 USDT",
+        "payout_address": "0xF7A353FAF6E6BD4732b0f234C656dBFDE53B0e91",
+        "vip_priority": "TIER_0_IMMEDIATE",
+        "bypass_manual_approval": true,
+        "auto_release_on_mempool": true,
+        "status": "RELEASED_VIA_BROADCAST_HASH",
+        "tx_hash": "0xYOUR_TX_HASH_HERE"
+      },
+      {
+        "target_id": "CUSTOMER_001",
+        "tenant_id": "TENANT_CUSTOMER_001",
+        "package_ref": "small_business",
+        "vip_priority": "TIER_0_IMMEDIATE",
+        "bypass_manual_approval": true,
+        "auto_release_on_mempool": true,
+        "status": "ARMED_FOR_SAME_DAY_INVOICE"
+      },
+      {
+        "target_id": "VIP_ADDITIONAL_001",
+        "package_ref": "small_business",
+        "vip_priority": "TIER_0_IMMEDIATE",
+        "bypass_manual_approval": true,
+        "auto_release_on_mempool": true,
+        "status": "ARMED_FOR_SAME_DAY_DEPOSIT"
+      }
+    ],
+    "open_vip_intake_slot": {
+      "slot_status": "OPEN_FOR_TODAY_ONLY",
+      "max_additional_vip_clients": 3,
+      "allowed_actions": [
+        "DIRECT_DEPOSIT_VERIFICATION",
+        "INSTANT_TENANT_ACTIVATION"
+      ]
+    }
+  }
+}

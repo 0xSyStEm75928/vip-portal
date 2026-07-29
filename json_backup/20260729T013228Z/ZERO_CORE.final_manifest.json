@@ -1,0 +1,36 @@
+{
+  "final_manifest_version": "1.0.0",
+  "generated_at": "2026-07-28T15:05:48Z",
+  "release": {
+    "release_candidate_version": "1.0.0",
+    "generated_at": "2026-07-28T15:05:48Z",
+    "release_line": "ZERO_CORE",
+    "included": [
+      "core",
+      "runtime",
+      "authority",
+      "profile",
+      "security",
+      "ai",
+      "plugin",
+      "validation",
+      "operation",
+      "distribution"
+    ],
+    "status": "CANDIDATE"
+  },
+  "version": {
+    "version_snapshot_version": "1.0.0",
+    "generated_at": "2026-07-28T15:05:48Z",
+    "core_version": "1.0.0",
+    "snapshot": [
+      "architecture",
+      "configuration",
+      "runtime",
+      "security",
+      "deployment"
+    ],
+    "immutable": true
+  },
+  "state": "RELEASE_CANDIDATE_READY"
+}

@@ -1,0 +1,131 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-07-29T01:27:13.825830+00:00",
+  "policy": {
+    "public_data_only": true,
+    "manual_review_required": true,
+    "no_private_interest_assumption": true
+  },
+  "targets": [
+    {
+      "name": "trimstray/the-book-of-secret-knowledge",
+      "url": "https://github.com/trimstray/the-book-of-secret-knowledge",
+      "group": "ORIGINAL_3",
+      "stars": 235573,
+      "priority": "A",
+      "review_stage": "EARLY_TARGET_REVIEW",
+      "business_state": "REVIEW_REQUIRED",
+      "contact_state": "NOT_STARTED",
+      "interest": "UNVERIFIED",
+      "next_action": "HUMAN_REVIEW"
+    },
+    {
+      "name": "n8n-io/n8n",
+      "url": "https://github.com/n8n-io/n8n",
+      "group": "ORIGINAL_3",
+      "stars": 198412,
+      "priority": "A",
+      "review_stage": "EARLY_TARGET_REVIEW",
+      "business_state": "REVIEW_REQUIRED",
+      "contact_state": "NOT_STARTED",
+      "interest": "UNVERIFIED",
+      "next_action": "HUMAN_REVIEW"
+    },
+    {
+      "name": "ohmyzsh/ohmyzsh",
+      "url": "https://github.com/ohmyzsh/ohmyzsh",
+      "group": "ORIGINAL_3",
+      "stars": 188869,
+      "priority": "A",
+      "review_stage": "EARLY_TARGET_REVIEW",
+      "business_state": "REVIEW_REQUIRED",
+      "contact_state": "NOT_STARTED",
+      "interest": "UNVERIFIED",
+      "next_action": "HUMAN_REVIEW"
+    },
+    {
+      "name": "yt-dlp/yt-dlp",
+      "url": "https://github.com/yt-dlp/yt-dlp",
+      "group": "DISCOVERY_7",
+      "stars": 180726,
+      "priority": "A",
+      "review_stage": "PUBLIC_DISCOVERY_REVIEW",
+      "business_state": "REVIEW_REQUIRED",
+      "contact_state": "NOT_STARTED",
+      "interest": "UNVERIFIED",
+      "next_action": "HUMAN_REVIEW"
+    },
+    {
+      "name": "google-gemini/gemini-cli",
+      "url": "https://github.com/google-gemini/gemini-cli",
+      "group": "DISCOVERY_7",
+      "stars": 106220,
+      "priority": "A",
+      "review_stage": "PUBLIC_DISCOVERY_REVIEW",
+      "business_state": "REVIEW_REQUIRED",
+      "contact_state": "NOT_STARTED",
+      "interest": "UNVERIFIED",
+      "next_action": "HUMAN_REVIEW"
+    },
+    {
+      "name": "Graphify-Labs/graphify",
+      "url": "https://github.com/Graphify-Labs/graphify",
+      "group": "DISCOVERY_7",
+      "stars": 97656,
+      "priority": "B",
+      "review_stage": "PUBLIC_DISCOVERY_REVIEW",
+      "business_state": "REVIEW_REQUIRED",
+      "contact_state": "NOT_STARTED",
+      "interest": "UNVERIFIED",
+      "next_action": "HUMAN_REVIEW"
+    },
+    {
+      "name": "sherlock-project/sherlock",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "group": "DISCOVERY_7",
+      "stars": 87254,
+      "priority": "B",
+      "review_stage": "PUBLIC_DISCOVERY_REVIEW",
+      "business_state": "REVIEW_REQUIRED",
+      "contact_state": "NOT_STARTED",
+      "interest": "UNVERIFIED",
+      "next_action": "HUMAN_REVIEW"
+    },
+    {
+      "name": "OpenHands/OpenHands",
+      "url": "https://github.com/OpenHands/OpenHands",
+      "group": "DISCOVERY_7",
+      "stars": 82414,
+      "priority": "B",
+      "review_stage": "PUBLIC_DISCOVERY_REVIEW",
+      "business_state": "REVIEW_REQUIRED",
+      "contact_state": "NOT_STARTED",
+      "interest": "UNVERIFIED",
+      "next_action": "HUMAN_REVIEW"
+    },
+    {
+      "name": "nexu-io/open-design",
+      "url": "https://github.com/nexu-io/open-design",
+      "group": "DISCOVERY_7",
+      "stars": 82227,
+      "priority": "B",
+      "review_stage": "PUBLIC_DISCOVERY_REVIEW",
+      "business_state": "REVIEW_REQUIRED",
+      "contact_state": "NOT_STARTED",
+      "interest": "UNVERIFIED",
+      "next_action": "HUMAN_REVIEW"
+    },
+    {
+      "name": "junegunn/fzf",
+      "url": "https://github.com/junegunn/fzf",
+      "group": "DISCOVERY_7",
+      "stars": 82010,
+      "priority": "B",
+      "review_stage": "PUBLIC_DISCOVERY_REVIEW",
+      "business_state": "REVIEW_REQUIRED",
+      "contact_state": "NOT_STARTED",
+      "interest": "UNVERIFIED",
+      "next_action": "HUMAN_REVIEW"
+    }
+  ]
+}

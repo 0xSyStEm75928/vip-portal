@@ -1,0 +1,23 @@
+{
+  "deployment_profile_version": "1.0.0",
+  "generated_at": "2026-07-28T14:54:14Z",
+  "profiles": [
+    {
+      "name": "01_PERSONAL",
+      "target": "individual"
+    },
+    {
+      "name": "02_PERSONAL_PLUS",
+      "target": "advanced_individual"
+    },
+    {
+      "name": "03_SMALL_BUSINESS",
+      "target": "organization"
+    },
+    {
+      "name": "04_ENTERPRISE",
+      "target": "enterprise"
+    }
+  ],
+  "status": "READY"
+}

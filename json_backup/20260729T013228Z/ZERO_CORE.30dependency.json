@@ -1,0 +1,122 @@
+[
+  {
+    "file": "./json_core/ZERO_CORE.30pack.json",
+    "dependencies": []
+  },
+  {
+    "file": "./json_core/ZERO_CORE.bundle.json",
+    "dependencies": []
+  },
+  {
+    "file": "./json_core/ZERO_CORE.catalog.json",
+    "dependencies": []
+  },
+  {
+    "file": "./json_core/ZERO_CORE.dependencies.json",
+    "dependencies": []
+  },
+  {
+    "file": "./json_core/ZERO_CORE.diff.json",
+    "dependencies": []
+  },
+  {
+    "file": "./json_core/ZERO_CORE.export.json",
+    "dependencies": []
+  },
+  {
+    "file": "./json_core/ZERO_CORE.governance.json",
+    "dependencies": []
+  },
+  {
+    "file": "./json_core/ZERO_CORE.graph.json",
+    "dependencies": []
+  },
+  {
+    "file": "./json_core/ZERO_CORE.hashes.json",
+    "dependencies": []
+  },
+  {
+    "file": "./json_core/ZERO_CORE.ids.json",
+    "dependencies": []
+  },
+  {
+    "file": "./json_core/ZERO_CORE.index.json",
+    "dependencies": []
+  },
+  {
+    "file": "./json_core/ZERO_CORE.integrity.json",
+    "dependencies": []
+  },
+  {
+    "file": "./json_core/ZERO_CORE.inventory.json",
+    "dependencies": []
+  },
+  {
+    "file": "./json_core/ZERO_CORE.json",
+    "dependencies": []
+  },
+  {
+    "file": "./json_core/ZERO_CORE.keys.json",
+    "dependencies": []
+  },
+  {
+    "file": "./json_core/ZERO_CORE.manifest.json",
+    "dependencies": []
+  },
+  {
+    "file": "./json_core/ZERO_CORE.master.json",
+    "dependencies": []
+  },
+  {
+    "file": "./json_core/ZERO_CORE.pipeline.json",
+    "dependencies": []
+  },
+  {
+    "file": "./json_core/ZERO_CORE.queue.json",
+    "dependencies": []
+  },
+  {
+    "file": "./json_core/ZERO_CORE.registry.json",
+    "dependencies": []
+  },
+  {
+    "file": "./json_core/ZERO_CORE.relationships.json",
+    "dependencies": []
+  },
+  {
+    "file": "./json_core/ZERO_CORE.release.json",
+    "dependencies": []
+  },
+  {
+    "file": "./json_core/ZERO_CORE.rewrite_plan.json",
+    "dependencies": []
+  },
+  {
+    "file": "./json_core/ZERO_CORE.runtime.json",
+    "dependencies": []
+  },
+  {
+    "file": "./json_core/ZERO_CORE.schema_map.json",
+    "dependencies": []
+  },
+  {
+    "file": "./json_core/ZERO_CORE.schema_report.json",
+    "dependencies": []
+  },
+  {
+    "file": "./json_core/ZERO_CORE.snapshot.json",
+    "dependencies": []
+  },
+  {
+    "file": "./json_core/ZERO_CORE.stats.json",
+    "dependencies": []
+  },
+  {
+    "file": "./json_core/ZERO_CORE.version_report.json",
+    "dependencies": []
+  },
+  {
+    "file": "./json_core/ZERO_CORE.versions.json",
+    "dependencies": []
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "extension_policy_version": "1.0.0",
+  "generated_at": "2026-07-28T14:45:52Z",
+  "rules": [
+    "signature_required",
+    "permission_required",
+    "audit_required"
+  ],
+  "default_action": "DENY"
+}

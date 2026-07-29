@@ -1,0 +1,21 @@
+{
+  "operational_status_version": "1.0.0",
+  "generated_at": "2026-07-28T15:08:48Z",
+  "validation": {
+    "validation_result_version": "1.0.0",
+    "generated_at": "2026-07-28T15:08:48Z",
+    "archive_check": {
+      "post_archive_check_version": "1.0.0",
+      "generated_at": "2026-07-28T15:08:48Z",
+      "checks": [
+        "archive_exists",
+        "manifest_exists",
+        "backup_exists",
+        "integrity_record_exists"
+      ],
+      "result": "PASS"
+    },
+    "validation": "PASSED"
+  },
+  "state": "OPERATION_READY"
+}

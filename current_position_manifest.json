@@ -1,0 +1,21 @@
+{
+  "$schema": "./schemas/position.manifest.schema.json",
+  "version": "1.0.0",
+  "purpose": "Human-AI shared position alignment & DAG execution manifest",
+  "archetype": "SACRED_EXECUTION_ANCHOR",
+  "current_task_anchor": {
+    "timestamp_jst": "2026-07-29T18:13:00+09:00",
+    "phase": "HYBRID_STORAGE_INTEGRATED",
+    "state": "ISH_REALTIME_SYNC_READY"
+  },
+  "dag_topology": {
+    "ingress_log": "storage/logs/append_only_ingress.jsonl",
+    "nodes": {
+      "INGRESS": "json_core/cli_contact_evidence_registry.json",
+      "GATE": "json_core/customer_lifecycle_gate.json",
+      "PERSISTENCE": "json_core/ZERO_CORE.customer.json",
+      "PLAN": "json_core/tomorrow_operation_plan.json",
+      "REVIEW": "json_core/customer_review_queue.json"
+    }
+  }
+}

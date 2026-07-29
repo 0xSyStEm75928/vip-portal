@@ -1,0 +1,66 @@
+{
+  "$schema": "./schemas/customer.lifecycle.gate.schema.json",
+  "version": "1.0.0",
+  "purpose": "Customer onboarding lifecycle control",
+  "customer_flow": [
+    {
+      "stage": "INTAKE",
+      "status": "READY",
+      "required": [
+        "customer_id",
+        "requirement"
+      ]
+    },
+    {
+      "stage": "VERIFICATION",
+      "status": "PENDING",
+      "required": [
+        "identity_confirmation",
+        "scope_confirmation"
+      ]
+    },
+    {
+      "stage": "CONTRACT",
+      "status": "PENDING",
+      "required": [
+        "agreement"
+      ]
+    },
+    {
+      "stage": "PAYMENT",
+      "status": "PENDING",
+      "required": [
+        "payment_confirmation"
+      ]
+    },
+    {
+      "stage": "WORKSPACE",
+      "status": "READY",
+      "required": [
+        "tenant_assignment"
+      ]
+    },
+    {
+      "stage": "DELIVERY",
+      "status": "LOCKED",
+      "required": [
+        "execution_authorization"
+      ]
+    }
+  ],
+  "current_customer": {
+    "customer_id": "TEST_CUSTOMER_001",
+    "updated_at": "2026-07-29T01:28:52.697090+00:00",
+    "verified": false,
+    "blocked_actions": [
+      "assume_purchase_intent",
+      "assume_private_view",
+      "deliver_before_confirmation"
+    ]
+  },
+  "rules": {
+    "no_delivery_before_confirmation": true,
+    "payment_gate_required": true,
+    "manual_review_required": true
+  }
+}
