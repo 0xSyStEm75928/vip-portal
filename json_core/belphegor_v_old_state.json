@@ -1,0 +1,8 @@
+{
+  "node": "BELPHEGOR_ROOT",
+  "raw_score": 1.0,
+  "ema_val": 51.5,
+  "sigmoid_prob": 0.5374,
+  "version": "v.old",
+  "status": "BELPHEGOR_DEPLOYED_STABLE"
+}
