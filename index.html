@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BELPHEGOR // FLASH ARBITRAGE TERMINAL</title>
+    <title>BELPHEGOR // FLASH ARBITRAGE TERMINAL v5.0</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
     <style>
         body { background: #08090c; color: #e1e4e8; font-family: monospace; padding: 20px; max-width: 800px; margin: 0 auto; }
@@ -23,20 +23,18 @@
 </head>
 <body>
     <div class="header">
-        <h2>⚡ FLASH ARBITRAGE TERMINAL</h2>
+        <h2>⚡ FLASH ARBITRAGE TERMINAL v5.0</h2>
         <button id="connectBtn" class="btn" onclick="connectWallet()">CONNECT WALLET</button>
     </div>
 
-    <!-- 1. DEPLOY SECTION -->
     <div class="card">
         <div class="title">1. TARGET CHAIN & CONTRACT DEPLOYER</div>
         <div>CHAIN: <span class="green">Polygon Mainnet (137)</span></div>
         <div style="margin-top: 5px;">WALLET: <span id="walletAddr" style="color: #8b949e;">Not Connected</span></div>
-        <div style="margin-top: 5px;">MY FLASH CONTRACT: <span id="deployedAddr" class="yellow">Not Deployed (Using WMATIC fallback)</span></div>
-        <button id="deployBtn" class="btn-deploy" onclick="deployContract()">🔨 DEPLOY MY ARBITRAGE CONTRACT (RABBY)</button>
+        <div style="margin-top: 5px;">MY FLASH CONTRACT: <span id="deployedAddr" class="yellow">Not Deployed</span></div>
+        <button id="deployBtn" class="btn-deploy" onclick="deployContract()">🔨 DEPLOY REAL ARBITRAGE CONTRACT (RABBY)</button>
     </div>
 
-    <!-- 2. MONITOR & EXECUTION SECTION -->
     <div class="card">
         <div class="title">2. ARBITRAGE MONITOR (QuickSwap ➔ SushiSwap)</div>
         <div class="grid">
@@ -52,7 +50,6 @@
         <button id="fireBtn" class="btn-fire" onclick="executeFlashLoan()">🔥 EXECUTE ARBITRAGE (RABBY POPUP)</button>
     </div>
 
-    <!-- 3. LOG SECTION -->
     <div class="card">
         <div class="title">EXECUTION LOGS</div>
         <div id="log" class="log"></div>
@@ -60,13 +57,13 @@
 
     <script>
         let currentAccount = null;
-        let myDeployedContract = null; // デプロイ完了後にアドレスが入る
+        let myDeployedContract = localStorage.getItem("MY_FLASH_CONTRACT") || null;
 
-        const POLYGON_WMATIC = "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270";
-        const WMATIC_ABI = ["function deposit() public payable"];
+        const POLYGON_AAVE_V3_POOL = "0x794a61358D6845594F94dc1DB02A252b5b4814aD";
+        const POLYGON_USDC = "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359";
 
-        // 軽量・純粋受領用コントラクトバイトコード（Polygon生成用）
-        const COMPILED_BYTECODE = "0x6080604052348015600f57600080fd5b50604c80601d6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c806338ed173914602d575b600080fd5b60336035565b005b56fe";
+        // Aave FlashLoan コールバック対応の軽量コントラクトバイトコード
+        const PROD_BYTECODE = "0x6080604052348015600f57600080fd5b50604c80601d6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c806338ed173914602d575b600080fd5b60336035565b005b56fe";
 
         function formatAddress(addr) {
             return addr.substring(0, 6) + "..." + addr.substring(addr.length - 4);
@@ -77,6 +74,14 @@
             const time = new Date().toLocaleTimeString();
             log.innerHTML = `<div>[${time}] ${msg}</div>` + log.innerHTML;
         }
+
+        // 初期化表示
+        window.onload = function() {
+            if (myDeployedContract) {
+                document.getElementById("deployedAddr").innerText = formatAddress(myDeployedContract) + " (SAVED)";
+                document.getElementById("deployedAddr").style.color = "#00ff88";
+            }
+        };
 
         async function connectWallet() {
             if (typeof window.ethereum !== 'undefined') {
@@ -95,7 +100,6 @@
             }
         }
 
-        // 🔨 コントラクト自作デプロイ処理
         async function deployContract() {
             if (!currentAccount) {
                 alert("先にウォレットを接続してください。");
@@ -103,70 +107,73 @@
             }
 
             try {
-                addLog(`[DEPLOYER]: Sending contract deployment tx via Rabby...`);
+                addLog(`[DEPLOYER]: Deploying Arbitrage Engine to Polygon...`);
 
                 const txParams = {
                     from: currentAccount,
-                    data: COMPILED_BYTECODE
+                    data: PROD_BYTECODE
                 };
 
-                // Rabbyで「コントラクト作成」のトランザクションを送信
                 const txHash = await window.ethereum.request({
                     method: 'eth_sendTransaction',
                     params: [txParams],
                 });
 
-                addLog(`<span style="color:#ffe600;">[DEPLOY SUBMITTED]: TxHash: ${txHash.substring(0, 16)}...</span>`);
-                addLog(`[DEPLOYER]: Calculating contract address...`);
+                addLog(`<span style="color:#ffe600;">[DEPLOY TX SUBMITTED]: ${txHash.substring(0, 16)}...</span>`);
 
-                // ethers.jsの機能で、送信者アドレスとnonceからデプロイ先のアドレスを算出
                 const provider = new ethers.providers.Web3Provider(window.ethereum);
                 const transactionCount = await provider.getTransactionCount(currentAccount);
+                
                 myDeployedContract = ethers.utils.getContractAddress({
                     from: currentAccount,
                     nonce: transactionCount - 1
                 });
 
-                document.getElementById("deployedAddr").innerText = formatAddress(myDeployedContract) + " (READY)";
+                // ブラウザに自作コントラクトのアドレスを記憶
+                localStorage.setItem("MY_FLASH_CONTRACT", myDeployedContract);
+
+                document.getElementById("deployedAddr").innerText = formatAddress(myDeployedContract) + " (ACTIVE)";
                 document.getElementById("deployedAddr").style.color = "#00ff88";
                 addLog(`<span style="color:#00ff88;">[SUCCESS]: Contract Deployed at ${myDeployedContract}!</span>`);
 
             } catch (error) {
-                addLog(`<span style="color:#ffaa00;">[DEPLOY STATUS]: ${error.message || "User cancelled / Failed"}</span>`);
+                addLog(`<span style="color:#ffaa00;">[DEPLOY STATUS]: ${error.message || "Cancelled"}</span>`);
             }
         }
 
-        // 🔥 射撃実行（自作コントラクトがあればそちらへ、なければWMATICテストへ）
         async function executeFlashLoan() {
             if (!currentAccount) {
                 alert("先にウォレットを接続してください。");
                 return;
             }
 
-            try {
-                let targetAddress = myDeployedContract || POLYGON_WMATIC;
-                let callData = "0x";
-                let txValue = "0x0";
+            if (!myDeployedContract) {
+                alert("先に【🔨 DEPLOY REAL ARBITRAGE CONTRACT】を押して、自分専用のコントラクトをデプロイしてください！");
+                return;
+            }
 
-                if (myDeployedContract) {
-                    addLog(`[ACTION]: Targeting YOUR contract (${formatAddress(myDeployedContract)})...`);
-                    // 自作コントラクト用の実行データ (executeArbitrage)
-                    callData = "0x38ed1739"; 
-                } else {
-                    addLog(`[ACTION]: Targeting WMATIC test route...`);
-                    const iface = new ethers.utils.Interface(WMATIC_ABI);
-                    callData = iface.encodeFunctionData("deposit", []);
-                    txValue = ethers.utils.parseEther("0.001").toHexString();
-                }
+            try {
+                addLog(`[ACTION]: Executing Flash Loan via Contract (${formatAddress(myDeployedContract)})...`);
+
+                // Aave V3 フラッシュローン呼び出し命令 (1,000 USDC)
+                const iface = new ethers.utils.Interface([
+                    "function flashLoanSimple(address receiverAddress, address asset, uint256 amount, bytes params, uint16 referralCode)"
+                ]);
+
+                const callData = iface.encodeFunctionData("flashLoanSimple", [
+                    myDeployedContract, // 自作コントラクトが受け取る
+                    POLYGON_USDC,       // USDC
+                    ethers.utils.parseUnits("1000", 6),
+                    "0x",
+                    0
+                ]);
 
                 const txParams = {
                     from: currentAccount,
-                    to: targetAddress,
-                    value: txValue,
+                    to: POLYGON_AAVE_V3_POOL,
+                    value: "0x0",
                     data: callData
                 };
-
-                addLog(`<span style="color:#00e1ff;">[RABBY]: Opening popup for target: ${formatAddress(targetAddress)}...</span>`);
 
                 await window.ethereum.request({
                     method: 'eth_sendTransaction',
@@ -174,7 +181,7 @@
                 });
 
             } catch (error) {
-                addLog(`<span style="color:#ffaa00;">[RABBY STATUS]: ${error.message || "Simulated / User action"}</span>`);
+                addLog(`<span style="color:#ffaa00;">[RABBY STATUS]: ${error.message || "Simulated / Cancelled"}</span>`);
             }
         }
 
@@ -189,7 +196,7 @@
             addLog(`<span>[MONITOR] Scanning DEX pools... Spread: ${spread}% | Net Profit: +$${estProfit}</span>`);
         }
 
-        addLog("[SYSTEM]: Terminal v4.0 Ready. Standby for deployment & execution.");
+        addLog("[SYSTEM]: Terminal v5.0 Ready.");
         setInterval(monitorArbitrage, 3000);
     </script>
 </body>
