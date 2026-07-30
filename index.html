@@ -8,7 +8,9 @@
         .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #2a2d3d; padding-bottom: 15px; }
         .card { background: #161821; border: 1px solid #2a2d3d; border-radius: 8px; padding: 15px; margin-top: 15px; }
         .green { color: #00ff88; font-size: 2rem; font-weight: bold; }
+        .red { color: #ff4a4a; font-size: 1.2rem; }
         .btn { background: #00ff88; color: #0d0e12; border: none; padding: 10px 18px; font-weight: bold; font-family: monospace; border-radius: 4px; cursor: pointer; }
+        .btn-fire { background: #ff4a4a; color: #fff; width: 100%; padding: 15px; font-size: 1.2rem; margin-top: 10px; display: none; }
         .btn:hover { background: #00cc6a; }
         .log { background: #050508; border: 1px solid #1f2230; padding: 10px; height: 180px; overflow-y: auto; margin-top: 10px; }
     </style>
@@ -16,17 +18,18 @@
 <body>
     <div class="header">
         <h1>⚡ BELPHEGOR MEV ENGINE</h1>
-        <button id="connectBtn" class="btn" onclick="connectWallet()">CONNECT WALLET</button>
+        <button id="connectBtn" class="btn" onclick="connectWallet()">CONNECT RABBY / WEB3</button>
     </div>
 
     <div class="card">
-        <h2>CONNECTED ADDRESS</h2>
+        <h2>CONNECTED WALLET</h2>
         <div id="walletAddr" style="color: #8b949e;">Not Connected</div>
     </div>
 
     <div class="card">
         <h2>GHOST SPREAD (REALTIME)</h2>
         <div id="sp" class="green">0.000%</div>
+        <button id="fireBtn" class="btn btn-fire" onclick="executeFlashLoan()">🔥 READY TO FIRE (RABBY POPUP)</button>
     </div>
 
     <div class="card">
@@ -36,8 +39,8 @@
 
     <script>
         let currentAccount = null;
+        let lastTargetData = null;
 
-        // アドレス表示の省略フォーマット (0x1234...abcd)
         function formatAddress(addr) {
             return addr.substring(0, 6) + "..." + addr.substring(addr.length - 4);
         }
@@ -49,31 +52,46 @@
                     currentAccount = accounts[0];
                     document.getElementById("walletAddr").innerText = formatAddress(currentAccount);
                     document.getElementById("walletAddr").style.color = "#00ff88";
-                    document.getElementById("connectBtn").innerText = "CONNECTED";
+                    document.getElementById("connectBtn").innerText = "RABBY CONNECTED";
                 } catch (err) {
                     alert("接続が拒否されました");
                 }
             } else {
-                alert("MetaMask等のWeb3ウォレットが見つかりません。");
+                alert("Rabbyウォレットが検出されません。プラグインを確認してください。");
             }
         }
 
-        // ページ読み込み時に接続済みかチェック
-        window.addEventListener('load', async () => {
-            if (typeof window.ethereum !== 'undefined') {
-                const accounts = await window.ethereum.request({ method: 'eth_accounts' });
-                if (accounts.length > 0) {
-                    currentAccount = accounts[0];
-                    document.getElementById("walletAddr").innerText = formatAddress(currentAccount);
-                    document.getElementById("walletAddr").style.color = "#00ff88";
-                    document.getElementById("connectBtn").innerText = "CONNECTED";
-                }
+        // 🔥 初弾射撃（Rabbyのポップアップを起動）
+        async function executeFlashLoan() {
+            if (!currentAccount) {
+                alert("先にRabbyウォレットを接続してください。");
+                return;
             }
-        });
+
+            // フラッシュローン実行コントラクトのアドレス（例）
+            const FLASH_ARBITRAGE_CONTRACT = "0x0000000000000000000000000000000000000000"; // ★本番はここに展開したSmartContractアドレス
+
+            try {
+                // Rabbyポップアップを強制トリガー
+                const txHash = await window.ethereum.request({
+                    method: 'eth_sendTransaction',
+                    params: [{
+                        from: currentAccount,
+                        to: FLASH_ARBITRAGE_CONTRACT,
+                        value: '0x0', // 0 ETH (ローンで借りるため)
+                        data: '0x', // ★コントラクトに渡す実行引数 (to/from/amountのハッシュ)
+                        gas: '0x7A120', // 500,000 Gas (余裕を持たせる)
+                    }],
+                });
+                console.log("射撃完了! TxHash:", txHash);
+            } catch (error) {
+                console.log("ユーザーキャンセルまたはエラー:", error);
+            }
+        }
 
         async function checkMev() {
             const a = (1.000 + Math.random() * 0.002).toFixed(4);
-            const b = (1.002 + Math.random() * 0.005).toFixed(4);
+            const b = (1.002 + Math.random() * 0.006).toFixed(4);
             try {
                 const res = await fetch("/api/mev-bundle", {
                     method: "POST",
@@ -84,10 +102,17 @@
                 document.getElementById("sp").innerText = data.spread_pct + "%";
                 const log = document.getElementById("log");
                 const time = new Date().toLocaleTimeString();
+                const fireBtn = document.getElementById("fireBtn");
+
                 if (data.is_ghost_spread) {
-                    log.innerHTML = `<div>[${time}] <span style="color:#00ff88">⚡ [GHOST SPREAD] Private Bundle Broadcasted! (${data.spread_pct}%)</span></div>` + log.innerHTML;
+                    log.innerHTML = `<div>[${time}] <span style="color:#00ff88">⚡ [GHOST SPREAD] Opportunity Detected! (${data.spread_pct}%)</span></div>` + log.innerHTML;
+                    fireBtn.style.display = "block"; // 射撃ボタン出現
+                    
+                    // ※自動ポップアップを起動したい場合は以下のコメントアウトを解除
+                    // executeFlashLoan(); 
                 } else {
                     log.innerHTML = `<div>[${time}] 💤 Normal noise (${data.spread_pct}%). Monitoring...</div>` + log.innerHTML;
+                    fireBtn.style.display = "none";
                 }
             } catch (e) {}
         }
