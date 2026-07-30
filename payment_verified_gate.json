@@ -1,14 +1,8 @@
 {
-  "$schema": "./schemas/payment.verified.gate.schema.json",
-  "deal_id": "DEAL_2026_MULTI_TARGET_ANONYMOUS",
-  "target_prospect": "SILENT_USER_0x31C",
-  "required_amount": "35,000 USDT",
-  "payout_address": "0xF7A353FAF6E6BD4732b0f234C656dBFDE53B0e91",
-  "deposit_verification": {
-    "status": "AWAITING_DEPOSIT_OR_SIGNATURE",
-    "mempool_detection": "ENABLED",
-    "external_proof": "PENDING_ONCHAIN_TX",
-    "auto_release_unlocked": false
-  },
-  "audit_reference": "4321dd4_VERIFICATION_ANCHOR"
+  "repo": "BELPHEGOR_v.old",
+  "status": "STANDARD_ARBITRAGE_OPERATIONAL",
+  "updated_at": "2026-07-30T02:35:00.000000+00:00",
+  "active_protocol": "SIMPLE_FLASH_LOAN_ARBITRAGE",
+  "isolation_level": "strict_tenant_sandbox",
+  "mode": "ADDRESS_VERIFIED_CHECK"
 }
