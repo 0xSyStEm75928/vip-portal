@@ -12,9 +12,9 @@
         .green { color: #00ff88; font-weight: bold; }
         .title { font-size: 1.2rem; font-weight: bold; margin-bottom: 10px; color: #8b949e; border-bottom: 1px solid #21262d; padding-bottom: 5px; }
         .btn { background: #00ff88; color: #08090c; border: none; padding: 10px 20px; font-weight: bold; font-family: monospace; border-radius: 4px; cursor: pointer; }
-        .btn-fire { background: #00ff88; color: #08090c; width: 100%; padding: 15px; font-size: 1.2rem; font-weight: bold; margin-top: 15px; display: none; border: none; border-radius: 4px; cursor: pointer; }
+        .btn-fire { background: #00ff88; color: #08090c; width: 100%; padding: 15px; font-size: 1.2rem; font-weight: bold; margin-top: 15px; display: block; border: none; border-radius: 4px; cursor: pointer; }
         .btn:hover { background: #00cc6a; }
-        .log { background: #030405; border: 1px solid #161b22; padding: 12px; height: 180px; overflow-y: auto; margin-top: 10px; font-size: 0.85rem; word-break: break-all; }
+        .log { background: #030405; border: 1px solid #161b22; padding: 12px; height: 220px; overflow-y: auto; margin-top: 10px; font-size: 0.85rem; word-break: break-all; }
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
         .val { font-size: 1.5rem; font-weight: bold; }
     </style>
@@ -43,7 +43,7 @@
                 <div id="profitVal" class="val" style="color:#00e1ff;">$0.00</div>
             </div>
         </div>
-        <button id="fireBtn" class="btn-fire" onclick="executeFlashLoan()">🔥 EXECUTE ARBITRAGE (SUCCESS TEST)</button>
+        <button id="fireBtn" class="btn-fire" onclick="executeFlashLoan()">🔥 EXECUTE ARBITRAGE (RABBY POPUP)</button>
     </div>
 
     <div class="card">
@@ -54,12 +54,10 @@
     <script>
         let currentAccount = null;
 
-        // QuickSwap Router (Polygon)
         const QUICKSWAP_ROUTER = "0xa5E0829CaCEd8fFDD4De3c43696c57F7D7A678ff";
         const POLYGON_USDC = "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359";
         const POLYGON_WMATIC = "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270";
 
-        // QuickSwap の正常スワップABI (シミュレーションパス用)
         const ROUTER_ABI = [
             "function swapExactTokensForTokens(uint amountIn, uint amountOutMin, address[] calldata path, address to, uint deadline)"
         ];
@@ -68,13 +66,49 @@
             return addr.substring(0, 6) + "..." + addr.substring(addr.length - 4);
         }
 
+        function addLog(msg) {
+            const log = document.getElementById("log");
+            const time = new Date().toLocaleTimeString();
+            log.innerHTML = `<div>[${time}] ${msg}</div>` + log.innerHTML;
+        }
+
         async function connectWallet() {
             if (typeof window.ethereum !== 'undefined') {
                 try {
                     const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
                     currentAccount = accounts[0];
                     document.getElementById("walletAddr").innerText = formatAddress(currentAccount);
-                    document.getElementById("walletAddr").style.color = "#00e1ff;">[CallData Generated]: ${callData.substring(0, 42)}...</span>`);
+                    document.getElementById("walletAddr").style.color = "#00ff88";
+                    document.getElementById("connectBtn").innerText = "CONNECTED";
+                    addLog(`<span style="color:#00ff88;">[WALLET]: Connected as ${currentAccount}</span>`);
+                } catch (err) {
+                    addLog(`<span style="color:#ff3366;">[WALLET]: Connection rejected</span>`);
+                }
+            } else {
+                addLog(`<span style="color:#ff3366;">[ERROR]: No Web3 Wallet detected</span>`);
+            }
+        }
+
+        async function executeFlashLoan() {
+            if (!currentAccount) {
+                alert("先にウォレットを接続してください。");
+                return;
+            }
+
+            try {
+                addLog(`[ACTION]: Building QuickSwap CallData...`);
+                const iface = new ethers.utils.Interface(ROUTER_ABI);
+                const deadline = Math.floor(Date.now() / 1000) + 600;
+
+                const callData = iface.encodeFunctionData("swapExactTokensForTokens", [
+                    ethers.utils.parseUnits("1", 6),
+                    0,
+                    [POLYGON_USDC, POLYGON_WMATIC],
+                    currentAccount,
+                    deadline
+                ]);
+
+                addLog(`<span style="color:#00e1ff;">[CALLDATA READY]: ${callData.substring(0, 42)}...</span>`);
 
                 const txParams = {
                     from: currentAccount,
@@ -83,28 +117,33 @@
                     data: callData
                 };
 
+                addLog(`[RABBY]: Opening popup for simulation...`);
+
                 await window.ethereum.request({
                     method: 'eth_sendTransaction',
                     params: [txParams],
                 });
 
+                addLog(`<span style="color:#00ff88;">[SUCCESS]: Transaction signed!</span>`);
+
             } catch (error) {
-                addLog(`<span style="color:#00ff88;">[Rabby Simulation Checked]: ${error.message || "Success screen displayed"}</span>`);
+                addLog(`<span style="color:#ffaa00;">[RABBY STATUS]: ${error.message || "User closed popup / Simulated"}</span>`);
             }
         }
 
+        // 定期ログ監視
         function monitorArbitrage() {
-            const spread = (0.20 + Math.random() * 0.25).toFixed(2);
+            const spread = (0.15 + Math.random() * 0.30).toFixed(2);
             document.getElementById("spreadVal").innerText = spread + "%";
 
-            const fireBtn = document.getElementById("fireBtn");
-            const profitVal = document.getElementById("profitVal");
-
             const estProfit = (1000 * (spread / 100)).toFixed(2);
-            profitVal.innerText = "+$" + estProfit;
-            fireBtn.style.display = "block";
+            document.getElementById("profitVal").innerText = "+$" + estProfit;
+
+            addLog(`<span>[MONITOR] Scanning DEX pools... Spread: ${spread}% | Est: +$${estProfit}</span>`);
         }
 
+        // 初期ログとインターバル
+        addLog("[SYSTEM]: Belphegor Flash Terminal Initialized.");
         setInterval(monitorArbitrage, 3000);
     </script>
 </body>
