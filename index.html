@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BELPHEGOR MEV ENGINE</title>
     <style>
         body { background: #0d0e12; color: #d1d5db; font-family: monospace; padding: 20px; }
@@ -12,76 +13,113 @@
         .btn-fire { background: #ff4a4a; color: #fff; width: 100%; padding: 15px; font-size: 1.2rem; margin-top: 10px; display: none; }
         .btn:hover { background: #00cc6a; }
         .log { background: #050508; border: 1px solid #1f2230; padding: 10px; height: 180px; overflow-y: auto; margin-top: 10px; }
+        .status-badge { font-size: 0.8rem; padding: 3px 8px; border-radius: 4px; background: #2a2d3d; }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>⚡ BELPHEGOR MEV ENGINE</h1>
+        <h1>⚡ BELPHEGOR MEV (BASE MAINNET)</h1>
         <button id="connectBtn" class="btn" onclick="connectWallet()">CONNECT RABBY</button>
     </div>
 
     <div class="card">
-        <h2>CONNECTED WALLET</h2>
-        <div id="walletAddr" style="color: #8b949e;">Not Connected</div>
+        <h2>NETWORK & WALLET STATUS</h2>
+        <div>Wallet: <span id="walletAddr" style="color: #8b949e;">Not Connected</span></div>
+        <div style="margin-top: 5px;">Chain: <span id="chainStatus" class="status-badge">Unknown</span></div>
     </div>
 
     <div class="card">
-        <h2>GHOST SPREAD (REALTIME)</h2>
+        <h2>REALTIME SPREAD MONITOR</h2>
         <div id="sp" class="green">0.000%</div>
-        <button id="fireBtn" class="btn btn-fire" onclick="executeFlashLoan()">🔥 READY TO FIRE (BASE NET)</button>
+        <button id="fireBtn" class="btn btn-fire" onclick="executeFlashLoan()">🔥 FIRE BUNDLE (BASE: 0xA238...)</button>
     </div>
 
     <div class="card">
-        <h2>MEV PRIVATE MEMPOOL MONITOR</h2>
+        <h2>EXECUTION LOGS</h2>
         <div id="log" class="log"></div>
     </div>
 
     <script>
         let currentAccount = null;
+        // Base Mainnet (8453 / 0x2105)
+        const BASE_CHAIN_ID_HEX = "0x2105"; 
+        const BASE_AAVE_V3_POOL = "0xA238Dd80C259a72e81d7e4664a9801593F98d1c5";
 
         function formatAddress(addr) {
             return addr.substring(0, 6) + "..." + addr.substring(addr.length - 4);
         }
 
         async function connectWallet() {
-            if (typeof window.ethereum !== 'undefined') {
-                try {
-                    const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
-                    currentAccount = accounts[0];
-                    document.getElementById("walletAddr").innerText = formatAddress(currentAccount);
-                    document.getElementById("walletAddr").style.color = "#00ff88";
-                    document.getElementById("connectBtn").innerText = "RABBY CONNECTED";
-                } catch (err) {
-                    alert("接続が拒否されました");
-                }
-            } else {
+            if (typeof window.ethereum === 'undefined') {
                 alert("Rabbyウォレットが検出されません。");
+                return;
+            }
+
+            try {
+                // 1. ウォレット接続
+                const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+                currentAccount = accounts[0];
+                document.getElementById("walletAddr").innerText = formatAddress(currentAccount);
+                document.getElementById("walletAddr").style.color = "#00ff88";
+
+                // 2. チェーンを Base (8453) に自動強制同期！
+                await enforceBaseNetwork();
+
+                document.getElementById("connectBtn").innerText = "CONNECTED";
+            } catch (err) {
+                console.error("接続エラー:", err);
             }
         }
 
-        // 🔥 Baseチェーン本番用 Aave V3 Pool アドレスへ書き換え
+        async function enforceBaseNetwork() {
+            const chainId = await window.ethereum.request({ method: 'eth_chainId' });
+            const chainBadge = document.getElementById("chainStatus");
+
+            if (chainId === BASE_CHAIN_ID_HEX) {
+                chainBadge.innerText = "Base (8453) - OK";
+                chainBadge.style.background = "#0052ff";
+                chainBadge.style.color = "#fff";
+            } else {
+                chainBadge.innerText = "Wrong Network! Switching...";
+                chainBadge.style.background = "#ff4a4a";
+                try {
+                    // Baseへ自動切替要求
+                    await window.ethereum.request({
+                        method: 'wallet_switchEthereumChain',
+                     params: [{ chainId: BASE_CHAIN_ID_HEX }],
+                    });
+                    chainBadge.innerText = "Base (8453) - OK";
+                    chainBadge.style.background = "#0052ff";
+                } catch (switchError) {
+                    alert("Rabbyで Base ネットワークを選択してください。");
+                }
+            }
+        }
+
         async function executeFlashLoan() {
             if (!currentAccount) {
                 alert("先にRabbyウォレットを接続してください。");
                 return;
             }
 
-            // ★ Base メインネット (ChainId: 8453) の Aave V3 Pool アドレス
-            const BASE_AAVE_V3_POOL = "0xA238Dd80C259a72e81d7e4664a9801593F98d1c5";
+            await enforceBaseNetwork();
 
             try {
+                // アプリ側で Base本番用の正確なパラメーターを生成してRabbyに渡す
+                const txParams = {
+                    from: currentAccount,
+                    to: BASE_AAVE_V3_POOL, // Base上のAave V3 Pool正規アドレス
+                    value: '0x0',
+                    data: '0x', // ※本番用コントラクト完成後はここにエンコード済みのCallDataが入ります
+                };
+
                 const txHash = await window.ethereum.request({
                     method: 'eth_sendTransaction',
-                    params: [{
-                        from: currentAccount,
-                        to: BASE_AAVE_V3_POOL,
-                        value: '0x0',
-                        data: '0x', // このテストでは接続疎通のみ確認
-                    }],
+                    params: [txParams],
                 });
                 console.log("TxHash:", txHash);
             } catch (error) {
-                console.log("キャンセルまたはシミュレーション表示確認:", error);
+                console.log("シミュレーション確認またはユーザーキャンセル:", error);
             }
         }
 
@@ -91,7 +129,7 @@
             try {
                 const res = await fetch("/api/mev-bundle", {
                     method: "POST",
-            headers: { "Content-Type": "application/json" },
+                    headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ dex_a_price: a, dex_b_price: b, account: currentAccount })
                 });
                 const data = await res.json();
@@ -101,14 +139,15 @@
                 const fireBtn = document.getElementById("fireBtn");
 
                 if (data.is_ghost_spread) {
-                    log.innerHTML = `<div>[${time}] <span style="color:#00ff88">⚡ [GHOST SPREAD] Opportunity Detected! (${data.spread_pct}%)</span></div>` + log.innerHTML;
+                    log.innerHTML = `<div>[${time}] <span style="color:#00ff88">⚡ [OPPORTUNITY FOUND] Base Spread: ${data.spread_pct}%</span></div>` + log.innerHTML;
                     fireBtn.style.display = "block";
                 } else {
-                    log.innerHTML = `<div>[${time}] 💤 Normal noise (${data.spread_pct}%). Monitoring...</div>` + log.innerHTML;
+                    log.innerHTML = `<div>[${time}] 💤 Low noise (${data.spread_pct}%). Monitoring Base...</div>` + log.innerHTML;
                     fireBtn.style.display = "none";
                 }
             } catch (e) {}
         }
+
         setInterval(checkMev, 3000);
     </script>
 </body>
