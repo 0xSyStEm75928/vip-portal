@@ -11,12 +11,12 @@
         .btn { background: #00ff88; color: #0d0e12; border: none; padding: 10px 18px; font-weight: bold; font-family: monospace; border-radius: 4px; cursor: pointer; }
         .btn-fire { background: #ff4a4a; color: #fff; width: 100%; padding: 15px; font-size: 1.2rem; margin-top: 10px; display: none; }
         .btn:hover { background: #00cc6a; }
-        .log { background: #050508; border: 1px solid #1f2230; padding: 10px; height: 180px; overflow-y: auto; margin-top: 10px; }
+        .log { background: #050508; border: 1px solid #1f2230; padding: 10px; height: 180px; overflow-y: auto; margin-top: 10px; font-size: 0.8rem; word-break: break-all; }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>⚡ BELPHEGOR MEV ENGINE (POLYGON)</h1>
+        <h1>⚡ BELPHEGOR MEV ENGINE v2.1</h1>
         <button id="connectBtn" class="btn" onclick="connectWallet()">CONNECT RABBY</button>
     </div>
 
@@ -28,18 +28,18 @@
     <div class="card">
         <h2>GHOST SPREAD (REALTIME)</h2>
         <div id="sp" class="green">0.000%</div>
-        <button id="fireBtn" class="btn btn-fire" onclick="executeFlashLoan()">🔥 SIMULATE FLASH LOAN (AAVE V3)</button>
+        <button id="fireBtn" class="btn btn-fire" onclick="executeFlashLoan()">🔥 SIMULATE FLASH LOAN</button>
     </div>
 
     <div class="card">
-        <h2>MEV EXECUTION LOGS</h2>
+        <h2>CALLDATA & EXECUTION LOGS</h2>
         <div id="log" class="log"></div>
     </div>
 
     <script>
         let currentAccount = null;
         const POLYGON_AAVE_V3_POOL = "0x794a61358D6845594F94dc1DB02A252b5b4814aD";
-        const POLYGON_USDC = "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359"; // USDC.e on Polygon
+        const POLYGON_USDC = "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359";
 
         function formatAddress(addr) {
             return addr.substring(0, 6) + "..." + addr.substring(addr.length - 4);
@@ -61,25 +61,15 @@
             }
         }
 
-        // 🔥 Aave V3 flashLoanSimple の CallData（命令文字列）を構築する関数
         function buildFlashLoanCalldata(receiverAddress, assetAddress, amountUsdc) {
-            // flashLoanSimple(address receiverAddress, address asset, uint256 amount, bytes params, uint16 referralCode)
-            // selector: 0xab926b22
             const selector = "ab926b22";
-            
-            // パラメータを32バイト(64文字)にパディング
             const cleanReceiver = receiverAddress.replace("0x", "").padStart(64, "0");
             const cleanAsset = assetAddress.replace("0x", "").padStart(64, "0");
-            
-            // 1,000 USDC (6 decimals) -> 1,000,000,000 = 0x3B9ACA00
             const hexAmount = (amountUsdc * 1e6).toString(16).padStart(64, "0");
-            
-            // params (空バイト配列へのオフセット: 0x00000000000000000000000000000000000000000000000000000000000000a0 + length 0)
             const paramsOffset = "00000000000000000000000000000000000000000000000000000000000000a0";
             const referralCode = "0000000000000000000000000000000000000000000000000000000000000000";
-            const paramsLength = "0000000000000000000000000000000000000000000000000000000000000000";
 
-            return "0x" + selector + cleanReceiver + cleanAsset + hexAmount + paramsOffset + referralCode + paramsLength;
+            return "0x" + selector + cleanReceiver + cleanAsset + hexAmount + paramsOffset + referralCode;
         }
 
         async function executeFlashLoan() {
@@ -88,47 +78,10 @@
                 return;
             }
 
-            // 1000 USDCのフラッシュローン命令 CallData を動的作成
             const callData = buildFlashLoanCalldata(currentAccount, POLYGON_USDC, 1000);
-
-            try {
-                const txParams = {
-                    from: currentAccount,
-                    to: POLYGON_AAVE_V3_POOL,
-                    value: '0x0',
-                    data: callData // ★ ここに作られた命令（Calldata）が入る！
-                };
-
-                const txHash = await window.ethereum.request({
-                    method: 'eth_sendTransaction',
-                    params: [txParams],
-                });
-                console.log("TxHash:", txHash);
-            } catch (error) {
-                console.log("Rabbyシミュレーション結果画面を確認:", error);
-            }
-        }
-
-        async function checkMev() {
-            const a = (1.000 + Math.random() * 0.002).toFixed(4);
-            const b = (1.002 + Math.random() * 0.006).toFixed(4);
-            try {
-                const res = await fetch("/api/mev-bundle", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ dex_a_price: a, dex_b_price: b, account: currentAccount })
-                });
-                const data = await res.json();
-                document.getElementById("sp").innerText = data.spread_pct + "%";
-                const log = document.getElementById("log");
-                const time = new Date().toLocaleTimeString();
-                const fireBtn = document.getElementById("fireBtn");
-
-                if (data.is_ghost_spread) {
-                    log.innerHTML = `<div>[${time}] <span style="color:#00ff88">⚡ [GHOST SPREAD] Opportunity Detected! (${data.spread_pct}%)</span></div>` + log.innerHTML;
-                    fireBtn.style.display = "block";
-                } else {
-                    log.innerHTML = `<div>[${time}] 💤 Normal noise (${data.spread_pct}%). Monitoring...</div>` + log.innerHTML;
+            
+            const log = document.getElementById("log");
+            log.innerHTML = `<div style="color:#00e1ff;">[GENERATED CALLDATA]: ${callData.substring(0, 34)}...</div>` + log.innerHTML = `<div>[${time}] 💤 Normal noise (${data.spread_pct}%). Monitoring...</div>` + log.innerHTML;
                     fireBtn.style.display = "none";
                 }
             } catch (e) {}
