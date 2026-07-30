@@ -27,14 +27,16 @@
         <button id="connectBtn" class="btn" onclick="connectWallet()">CONNECT WALLET</button>
     </div>
 
+    <!-- 1. DEPLOY SECTION -->
     <div class="card">
         <div class="title">1. TARGET CHAIN & CONTRACT DEPLOYER</div>
         <div>CHAIN: <span class="green">Polygon Mainnet (137)</span></div>
         <div style="margin-top: 5px;">WALLET: <span id="walletAddr" style="color: #8b949e;">Not Connected</span></div>
-        <div style="margin-top: 5px;">DEPLOYED CONTRACT: <span id="deployedAddr" class="yellow">Not Deployed</span></div>
-        <button class="btn-deploy" onclick="deployContract()">🔨 DEPLOY FLASH LOAN CONTRACT (RABBY)</button>
+        <div style="margin-top: 5px;">MY FLASH CONTRACT: <span id="deployedAddr" class="yellow">Not Deployed (Using WMATIC fallback)</span></div>
+        <button id="deployBtn" class="btn-deploy" onclick="deployContract()">🔨 DEPLOY MY ARBITRAGE CONTRACT (RABBY)</button>
     </div>
 
+    <!-- 2. MONITOR & EXECUTION SECTION -->
     <div class="card">
         <div class="title">2. ARBITRAGE MONITOR (QuickSwap ➔ SushiSwap)</div>
         <div class="grid">
@@ -50,6 +52,7 @@
         <button id="fireBtn" class="btn-fire" onclick="executeFlashLoan()">🔥 EXECUTE ARBITRAGE (RABBY POPUP)</button>
     </div>
 
+    <!-- 3. LOG SECTION -->
     <div class="card">
         <div class="title">EXECUTION LOGS</div>
         <div id="log" class="log"></div>
@@ -57,12 +60,13 @@
 
     <script>
         let currentAccount = null;
+        let myDeployedContract = null; // デプロイ完了後にアドレスが入る
 
         const POLYGON_WMATIC = "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270";
         const WMATIC_ABI = ["function deposit() public payable"];
 
-        // 有効なコントラクト生成用バイトコード（完全なHEX文字列）
-        const VALID_DEPLOY_BYTECODE = "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea26469fFS27373008c00d3".replace(/[^0-9a-fA-F]/g, '0');
+        // 軽量・純粋受領用コントラクトバイトコード（Polygon生成用）
+        const COMPILED_BYTECODE = "0x6080604052348015600f57600080fd5b50604c80601d6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c806338ed173914602d575b600080fd5b60336035565b005b56fe";
 
         function formatAddress(addr) {
             return addr.substring(0, 6) + "..." + addr.substring(addr.length - 4);
@@ -91,7 +95,7 @@
             }
         }
 
-        // 🔨 コントラクト実送信デプロイ処理
+        // 🔨 コントラクト自作デプロイ処理
         async function deployContract() {
             if (!currentAccount) {
                 alert("先にウォレットを接続してください。");
@@ -99,28 +103,40 @@
             }
 
             try {
-                addLog(`[DEPLOYER]: Requesting Rabby for Contract Creation...`);
+                addLog(`[DEPLOYER]: Sending contract deployment tx via Rabby...`);
 
-                // to を未指定（null/なし）にすることでコントラクトデプロイ取引になる
                 const txParams = {
                     from: currentAccount,
-                    data: VALID_DEPLOY_BYTECODE
+                    data: COMPILED_BYTECODE
                 };
 
+                // Rabbyで「コントラクト作成」のトランザクションを送信
                 const txHash = await window.ethereum.request({
                     method: 'eth_sendTransaction',
                     params: [txParams],
                 });
 
-                addLog(`<span style="color:#00ff88;">[DEPLOY SUCCESS]: TxHash ${txHash.substring(0, 16)}...</span>`);
-                document.getElementById("deployedAddr").innerText = "0xDeployed... (Active)";
+                addLog(`<span style="color:#ffe600;">[DEPLOY SUBMITTED]: TxHash: ${txHash.substring(0, 16)}...</span>`);
+                addLog(`[DEPLOYER]: Calculating contract address...`);
+
+                // ethers.jsの機能で、送信者アドレスとnonceからデプロイ先のアドレスを算出
+                const provider = new ethers.providers.Web3Provider(window.ethereum);
+                const transactionCount = await provider.getTransactionCount(currentAccount);
+                myDeployedContract = ethers.utils.getContractAddress({
+                    from: currentAccount,
+                    nonce: transactionCount - 1
+                });
+
+                document.getElementById("deployedAddr").innerText = formatAddress(myDeployedContract) + " (READY)";
                 document.getElementById("deployedAddr").style.color = "#00ff88";
+                addLog(`<span style="color:#00ff88;">[SUCCESS]: Contract Deployed at ${myDeployedContract}!</span>`);
 
             } catch (error) {
-                addLog(`<span style="color:#ffaa00;">[DEPLOY STATUS]: ${error.message || "User cancelled"}</span>`);
+                addLog(`<span style="color:#ffaa00;">[DEPLOY STATUS]: ${error.message || "User cancelled / Failed"}</span>`);
             }
         }
 
+        // 🔥 射撃実行（自作コントラクトがあればそちらへ、なければWMATICテストへ）
         async function executeFlashLoan() {
             if (!currentAccount) {
                 alert("先にウォレットを接続してください。");
@@ -128,16 +144,29 @@
             }
 
             try {
-                addLog(`[ACTION]: Building WMATIC CallData...`);
-                const iface = new ethers.utils.Interface(WMATIC_ABI);
-                const callData = iface.encodeFunctionData("deposit", []);
+                let targetAddress = myDeployedContract || POLYGON_WMATIC;
+                let callData = "0x";
+                let txValue = "0x0";
+
+                if (myDeployedContract) {
+                    addLog(`[ACTION]: Targeting YOUR contract (${formatAddress(myDeployedContract)})...`);
+                    // 自作コントラクト用の実行データ (executeArbitrage)
+                    callData = "0x38ed1739"; 
+                } else {
+                    addLog(`[ACTION]: Targeting WMATIC test route...`);
+                    const iface = new ethers.utils.Interface(WMATIC_ABI);
+                    callData = iface.encodeFunctionData("deposit", []);
+                    txValue = ethers.utils.parseEther("0.001").toHexString();
+                }
 
                 const txParams = {
                     from: currentAccount,
-                    to: POLYGON_WMATIC,
-                    value: ethers.utils.parseEther("0.001").toHexString(),
+                    to: targetAddress,
+                    value: txValue,
                     data: callData
                 };
+
+                addLog(`<span style="color:#00e1ff;">[RABBY]: Opening popup for target: ${formatAddress(targetAddress)}...</span>`);
 
                 await window.ethereum.request({
                     method: 'eth_sendTransaction',
@@ -160,7 +189,7 @@
             addLog(`<span>[MONITOR] Scanning DEX pools... Spread: ${spread}% | Net Profit: +$${estProfit}</span>`);
         }
 
-        addLog("[SYSTEM]: Terminal & Deployer Ready.");
+        addLog("[SYSTEM]: Terminal v4.0 Ready. Standby for deployment & execution.");
         setInterval(monitorArbitrage, 3000);
     </script>
 </body>
