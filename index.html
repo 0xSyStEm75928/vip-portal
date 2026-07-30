@@ -2,7 +2,6 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BELPHEGOR MEV ENGINE</title>
     <style>
         body { background: #0d0e12; color: #d1d5db; font-family: monospace; padding: 20px; }
@@ -13,87 +12,74 @@
         .btn-fire { background: #ff4a4a; color: #fff; width: 100%; padding: 15px; font-size: 1.2rem; margin-top: 10px; display: none; }
         .btn:hover { background: #00cc6a; }
         .log { background: #050508; border: 1px solid #1f2230; padding: 10px; height: 180px; overflow-y: auto; margin-top: 10px; }
-        .status-badge { font-size: 0.8rem; padding: 3px 8px; border-radius: 4px; background: #2a2d3d; }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>⚡ BELPHEGOR MEV (BASE MAINNET)</h1>
+        <h1>⚡ BELPHEGOR MEV ENGINE (POLYGON)</h1>
         <button id="connectBtn" class="btn" onclick="connectWallet()">CONNECT RABBY</button>
     </div>
 
     <div class="card">
-        <h2>NETWORK & WALLET STATUS</h2>
-        <div>Wallet: <span id="walletAddr" style="color: #8b949e;">Not Connected</span></div>
-        <div style="margin-top: 5px;">Chain: <span id="chainStatus" class="status-badge">Unknown</span></div>
+        <h2>CONNECTED WALLET</h2>
+        <div id="walletAddr" style="color: #8b949e;">Not Connected</div>
     </div>
 
     <div class="card">
-        <h2>REALTIME SPREAD MONITOR</h2>
+        <h2>GHOST SPREAD (REALTIME)</h2>
         <div id="sp" class="green">0.000%</div>
-        <button id="fireBtn" class="btn btn-fire" onclick="executeFlashLoan()">🔥 FIRE BUNDLE (BASE: 0xA238...)</button>
+        <button id="fireBtn" class="btn btn-fire" onclick="executeFlashLoan()">🔥 SIMULATE FLASH LOAN (AAVE V3)</button>
     </div>
 
     <div class="card">
-        <h2>EXECUTION LOGS</h2>
+        <h2>MEV EXECUTION LOGS</h2>
         <div id="log" class="log"></div>
     </div>
 
     <script>
         let currentAccount = null;
-        // Base Mainnet (8453 / 0x2105)
-        const BASE_CHAIN_ID_HEX = "0x2105"; 
-        const BASE_AAVE_V3_POOL = "0xA238Dd80C259a72e81d7e4664a9801593F98d1c5";
+        const POLYGON_AAVE_V3_POOL = "0x794a61358D6845594F94dc1DB02A252b5b4814aD";
+        const POLYGON_USDC = "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359"; // USDC.e on Polygon
 
         function formatAddress(addr) {
             return addr.substring(0, 6) + "..." + addr.substring(addr.length - 4);
         }
 
         async function connectWallet() {
-            if (typeof window.ethereum === 'undefined') {
+            if (typeof window.ethereum !== 'undefined') {
+                try {
+                    const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+                    currentAccount = accounts[0];
+                    document.getElementById("walletAddr").innerText = formatAddress(currentAccount);
+                    document.getElementById("walletAddr").style.color = "#00ff88";
+                    document.getElementById("connectBtn").innerText = "CONNECTED";
+                } catch (err) {
+                    alert("接続が拒否されました");
+                }
+            } else {
                 alert("Rabbyウォレットが検出されません。");
-                return;
-            }
-
-            try {
-                // 1. ウォレット接続
-                const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
-                currentAccount = accounts[0];
-                document.getElementById("walletAddr").innerText = formatAddress(currentAccount);
-                document.getElementById("walletAddr").style.color = "#00ff88";
-
-                // 2. チェーンを Base (8453) に自動強制同期！
-                await enforceBaseNetwork();
-
-                document.getElementById("connectBtn").innerText = "CONNECTED";
-            } catch (err) {
-                console.error("接続エラー:", err);
             }
         }
 
-        async function enforceBaseNetwork() {
-            const chainId = await window.ethereum.request({ method: 'eth_chainId' });
-            const chainBadge = document.getElementById("chainStatus");
+        // 🔥 Aave V3 flashLoanSimple の CallData（命令文字列）を構築する関数
+        function buildFlashLoanCalldata(receiverAddress, assetAddress, amountUsdc) {
+            // flashLoanSimple(address receiverAddress, address asset, uint256 amount, bytes params, uint16 referralCode)
+            // selector: 0xab926b22
+            const selector = "ab926b22";
+            
+            // パラメータを32バイト(64文字)にパディング
+            const cleanReceiver = receiverAddress.replace("0x", "").padStart(64, "0");
+            const cleanAsset = assetAddress.replace("0x", "").padStart(64, "0");
+            
+            // 1,000 USDC (6 decimals) -> 1,000,000,000 = 0x3B9ACA00
+            const hexAmount = (amountUsdc * 1e6).toString(16).padStart(64, "0");
+            
+            // params (空バイト配列へのオフセット: 0x00000000000000000000000000000000000000000000000000000000000000a0 + length 0)
+            const paramsOffset = "00000000000000000000000000000000000000000000000000000000000000a0";
+            const referralCode = "0000000000000000000000000000000000000000000000000000000000000000";
+            const paramsLength = "0000000000000000000000000000000000000000000000000000000000000000";
 
-            if (chainId === BASE_CHAIN_ID_HEX) {
-                chainBadge.innerText = "Base (8453) - OK";
-                chainBadge.style.background = "#0052ff";
-                chainBadge.style.color = "#fff";
-            } else {
-                chainBadge.innerText = "Wrong Network! Switching...";
-                chainBadge.style.background = "#ff4a4a";
-                try {
-                    // Baseへ自動切替要求
-                    await window.ethereum.request({
-                        method: 'wallet_switchEthereumChain',
-                     params: [{ chainId: BASE_CHAIN_ID_HEX }],
-                    });
-                    chainBadge.innerText = "Base (8453) - OK";
-                    chainBadge.style.background = "#0052ff";
-                } catch (switchError) {
-                    alert("Rabbyで Base ネットワークを選択してください。");
-                }
-            }
+            return "0x" + selector + cleanReceiver + cleanAsset + hexAmount + paramsOffset + referralCode + paramsLength;
         }
 
         async function executeFlashLoan() {
@@ -102,15 +88,15 @@
                 return;
             }
 
-            await enforceBaseNetwork();
+            // 1000 USDCのフラッシュローン命令 CallData を動的作成
+            const callData = buildFlashLoanCalldata(currentAccount, POLYGON_USDC, 1000);
 
             try {
-                // アプリ側で Base本番用の正確なパラメーターを生成してRabbyに渡す
                 const txParams = {
                     from: currentAccount,
-                    to: BASE_AAVE_V3_POOL, // Base上のAave V3 Pool正規アドレス
+                    to: POLYGON_AAVE_V3_POOL,
                     value: '0x0',
-                    data: '0x', // ※本番用コントラクト完成後はここにエンコード済みのCallDataが入ります
+                    data: callData // ★ ここに作られた命令（Calldata）が入る！
                 };
 
                 const txHash = await window.ethereum.request({
@@ -119,7 +105,7 @@
                 });
                 console.log("TxHash:", txHash);
             } catch (error) {
-                console.log("シミュレーション確認またはユーザーキャンセル:", error);
+                console.log("Rabbyシミュレーション結果画面を確認:", error);
             }
         }
 
@@ -139,15 +125,14 @@
                 const fireBtn = document.getElementById("fireBtn");
 
                 if (data.is_ghost_spread) {
-                    log.innerHTML = `<div>[${time}] <span style="color:#00ff88">⚡ [OPPORTUNITY FOUND] Base Spread: ${data.spread_pct}%</span></div>` + log.innerHTML;
+                    log.innerHTML = `<div>[${time}] <span style="color:#00ff88">⚡ [GHOST SPREAD] Opportunity Detected! (${data.spread_pct}%)</span></div>` + log.innerHTML;
                     fireBtn.style.display = "block";
                 } else {
-                    log.innerHTML = `<div>[${time}] 💤 Low noise (${data.spread_pct}%). Monitoring Base...</div>` + log.innerHTML;
+                    log.innerHTML = `<div>[${time}] 💤 Normal noise (${data.spread_pct}%). Monitoring...</div>` + log.innerHTML;
                     fireBtn.style.display = "none";
                 }
             } catch (e) {}
         }
-
         setInterval(checkMev, 3000);
     </script>
 </body>
