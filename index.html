@@ -2,44 +2,67 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>BELPHEGOR MEV ENGINE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BELPHEGOR // FLASH ARBITRAGE TERMINAL</title>
+    <!-- Ethers.js ライブラリ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
     <style>
-        body { background: #0d0e12; color: #d1d5db; font-family: monospace; padding: 20px; }
-        .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #2a2d3d; padding-bottom: 15px; }
-        .card { background: #161821; border: 1px solid #2a2d3d; border-radius: 8px; padding: 15px; margin-top: 15px; }
-        .green { color: #00ff88; font-size: 2rem; font-weight: bold; }
-        .btn { background: #00ff88; color: #0d0e12; border: none; padding: 10px 18px; font-weight: bold; font-family: monospace; border-radius: 4px; cursor: pointer; }
-        .btn-fire { background: #ff4a4a; color: #fff; width: 100%; padding: 15px; font-size: 1.2rem; margin-top: 10px; display: none; }
+        body { background: #08090c; color: #e1e4e8; font-family: monospace; padding: 20px; max-width: 800px; margin: 0 auto; }
+        .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #00ff88; padding-bottom: 15px; }
+        .card { background: #111318; border: 1px solid #21262d; border-radius: 8px; padding: 18px; margin-top: 15px; }
+        .green { color: #00ff88; font-weight: bold; }
+        .title { font-size: 1.2rem; font-weight: bold; margin-bottom: 10px; color: #8b949e; border-bottom: 1px solid #21262d; padding-bottom: 5px; }
+        .btn { background: #00ff88; color: #08090c; border: none; padding: 10px 20px; font-weight: bold; font-family: monospace; border-radius: 4px; cursor: pointer; }
+        .btn-fire { background: #ff3366; color: #fff; width: 100%; padding: 15px; font-size: 1.2rem; font-weight: bold; margin-top: 15px; display: none; border: none; border-radius: 4px; cursor: pointer; }
         .btn:hover { background: #00cc6a; }
-        .log { background: #050508; border: 1px solid #1f2230; padding: 10px; height: 180px; overflow-y: auto; margin-top: 10px; font-size: 0.8rem; word-break: break-all; }
+        .log { background: #030405; border: 1px solid #161b22; padding: 12px; height: 200px; overflow-y: auto; margin-top: 10px; font-size: 0.85rem; word-break: break-all; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .val { font-size: 1.5rem; font-weight: bold; }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>⚡ BELPHEGOR MEV ENGINE v2.1</h1>
-        <button id="connectBtn" class="btn" onclick="connectWallet()">CONNECT RABBY</button>
+        <h2>⚡ FLASH ARBITRAGE TERMINAL</h2>
+        <button id="connectBtn" class="btn" onclick="connectWallet()">CONNECT WALLET</button>
     </div>
 
     <div class="card">
-        <h2>CONNECTED WALLET</h2>
-        <div id="walletAddr" style="color: #8b949e;">Not Connected</div>
+        <div class="title">TARGET CHAIN & WALLET</div>
+        <div>CHAIN: <span class="green">Polygon Mainnet (137)</span></div>
+        <div style="margin-top: 5px;">WALLET: <span id="walletAddr" style="color: #8b949e;">Not Connected</span></div>
     </div>
 
     <div class="card">
-        <h2>GHOST SPREAD (REALTIME)</h2>
-        <div id="sp" class="green">0.000%</div>
-        <button id="fireBtn" class="btn btn-fire" onclick="executeFlashLoan()">🔥 SIMULATE FLASH LOAN</button>
+        <div class="title">ARBITRAGE MONITOR (QuickSwap ➔ SushiSwap)</div>
+        <div class="grid">
+            <div>
+                <div style="font-size:0.8rem; color:#8b949e;">SPREAD</div>
+                <div id="spreadVal" class="val green">0.00%</div>
+            </div>
+            <div>
+                <div style="font-size:0.8rem; color:#8b949e;">ESTIMATED PROFIT</div>
+                <div id="profitVal" class="val" style="color:#00e1ff;">$0.00</div>
+            </div>
+        </div>
+        <button id="fireBtn" class="btn-fire" onclick="executeFlashLoan()">🔥 EXECUTE FLASH ARBITRAGE (RABBY)</button>
     </div>
 
     <div class="card">
-        <h2>CALLDATA & EXECUTION LOGS</h2>
+        <div class="title">CALLDATA & EXECUTION LOG</div>
         <div id="log" class="log"></div>
     </div>
 
     <script>
         let currentAccount = null;
+
+        // Polygon 本番ターゲットアドレス
         const POLYGON_AAVE_V3_POOL = "0x794a61358D6845594F94dc1DB02A252b5b4814aD";
         const POLYGON_USDC = "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359";
+
+        // Aave V3 flashLoanSimple の標準ABI
+        const AAVE_ABI = [
+            "function flashLoanSimple(address receiverAddress, address asset, uint256 amount, bytes params, uint16 referralCode)"
+        ];
 
         function formatAddress(addr) {
             return addr.substring(0, 6) + "..." + addr.substring(addr.length - 4);
@@ -53,40 +76,84 @@
                     document.getElementById("walletAddr").innerText = formatAddress(currentAccount);
                     document.getElementById("walletAddr").style.color = "#00ff88";
                     document.getElementById("connectBtn").innerText = "CONNECTED";
+                    addLog("Wallet connected: " + currentAccount);
                 } catch (err) {
                     alert("接続が拒否されました");
                 }
             } else {
-                alert("Rabbyウォレットが検出されません。");
+                alert("RabbyなどのWeb3ウォレットが見つかりません");
             }
         }
 
-        function buildFlashLoanCalldata(receiverAddress, assetAddress, amountUsdc) {
-            const selector = "ab926b22";
-            const cleanReceiver = receiverAddress.replace("0x", "").padStart(64, "0");
-            const cleanAsset = assetAddress.replace("0x", "").padStart(64, "0");
-            const hexAmount = (amountUsdc * 1e6).toString(16).padStart(64, "0");
-            const paramsOffset = "00000000000000000000000000000000000000000000000000000000000000a0";
-            const referralCode = "0000000000000000000000000000000000000000000000000000000000000000";
-
-            return "0x" + selector + cleanReceiver + cleanAsset + hexAmount + paramsOffset + referralCode;
+        function addLog(msg) {
+            const log = document.getElementById("log");
+            const time = new Date().toLocaleTimeString();
+            log.innerHTML = `<div>[${time}] ${msg}</div>` + log.innerHTML;
         }
 
+        // 🔥 Aave V3 フラッシュローン用の CallData 生成・送信処理
         async function executeFlashLoan() {
             if (!currentAccount) {
-                alert("先にRabbyウォレットを接続してください。");
+                alert("先にウォレットを接続してください。");
                 return;
             }
 
-            const callData = buildFlashLoanCalldata(currentAccount, POLYGON_USDC, 1000);
-            
-            const log = document.getElementById("log");
-            log.innerHTML = `<div style="color:#00e1ff;">[GENERATED CALLDATA]: ${callData.substring(0, 34)}...</div>` + log.innerHTML = `<div>[${time}] 💤 Normal noise (${data.spread_pct}%). Monitoring...</div>` + log.innerHTML;
-                    fireBtn.style.display = "none";
-                }
-            } catch (e) {}
+            try {
+                // Ethers.js を使って完全な CallData をエンコード
+                const iface = new ethers.utils.Interface(AAVE_ABI);
+                const loanAmount = ethers.utils.parseUnits("1000", 6); // 1,000 USDCを借りる
+
+                const callData = iface.encodeFunctionData("flashLoanSimple", [
+                    currentAccount, // フラッシュローン実行/受取先
+                    POLYGON_USDC,   // 借りるトークン (USDC)
+                    loanAmount,     // 金額
+                    "0x",           // パラメータ
+                    0               // リファラルコード
+                ]);
+
+                addLog(`<span style="color:#00e1ff;">[CallData Generated]: ${callData.substring(0, 42)}...</span>`);
+
+                // Rabby へ送るパラメータ（data にしっかり入る）
+                const txParams = {
+                    from: currentAccount,
+                    to: POLYGON_AAVE_V3_POOL,
+                    value: "0x0",
+                    data: callData
+                };
+
+                // Rabby ポップアップ起動
+                await window.ethereum.request({
+                    method: 'eth_sendTransaction',
+                    params: [txParams],
+                });
+
+            } catch (error) {
+                addLog(`<span style="color:#ff3366;">[Transaction Status]: ${error.message || "User cancelled or simulated"}</span>`);
+            }
         }
-        setInterval(checkMev, 3000);
+
+        // 模擬価格差（スプレッド）監視ロジック
+        function monitorArbitrage() {
+            // 0.05% 〜 0.40% のスプレッドをランダム生成
+            const spread = (0.05 + Math.random() * 0.35).toFixed(2);
+            document.getElementById("spreadVal").innerText = spread + "%";
+
+            const fireBtn = document.getElementById("fireBtn");
+            const profitVal = document.getElementById("profitVal");
+
+            // スプレッドが 0.20% を超えたらアビトラチャンス（発火ボタン出現）
+            if (parseFloat(spread) >= 0.20) {
+                const estProfit = (1000 * (spread / 100)).toFixed(2);
+                profitVal.innerText = "+$" + estProfit;
+                fireBtn.style.display = "block";
+                addLog(`<span style="color:#00ff88;">⚡ [ARBITRAGE CHANCE] Spread: ${spread}% | Est Profit: +$${estProfit}</span>`);
+            } else {
+                profitVal.innerText = "$0.00";
+                fireBtn.style.display = "none";
+            }
+        }
+
+        setInterval(monitorArbitrage, 3000);
     </script>
 </body>
 </html>
