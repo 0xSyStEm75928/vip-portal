@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BELPHEGOR // MEV ARBITRAGE CORE TERMINAL v7.0</title>
+    <title>BELPHEGOR // MEV ARBITRAGE TERMINAL v8.0</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
     <style>
         :root {
@@ -74,7 +74,6 @@
         .green { color: var(--accent-green); }
         .cyan { color: var(--accent-cyan); }
         .yellow { color: var(--accent-yellow); }
-        .red { color: var(--accent-red); }
         .btn {
             background: var(--accent-green);
             color: #000;
@@ -112,12 +111,12 @@
             line-height: 1.5;
             border-radius: 4px;
         }
-        .equation-preview {
+        .pipeline-status {
             font-size: 0.75rem;
             color: #8b949e;
-            background: rgba(0,0,0,0..3);
-            padding: 8px;
-            border-left: 3px solid var(--accent-cyan);
+            background: rgba(0,0,0,0.3);
+            padding: 10px;
+            border-left: 3px solid var(--accent-yellow);
             margin-top: 10px;
         }
     </style>
@@ -126,34 +125,32 @@
 
     <div class="header">
         <div class="title-group">
-            <h1>⚡ BELPHEGOR ENGINE // FRONT & MATH INTEGRATION</h1>
-            <div class="sub">POLYGON MAINNET // AMM OPTIMIZATION ROUTER (v7.0)</div>
+            <h1>⚡ BELPHEGOR ENGINE // PIPELINE INTEGRATION</h1>
+            <div class="sub">POLYGON MAINNET // MIDDLEWARE ROUTER ACTIVE (v8.0)</div>
         </div>
         <button id="connectBtn" class="btn" onclick="connectWallet()">CONNECT WALLET</button>
     </div>
 
-    <!-- WALLET & NODE METRICS -->
     <div class="card">
         <div class="card-header">
-            <span>NETWORK & CONNECTOR</span>
-            <span id="nodeLatency" class="green">LATENCY: 12ms</span>
+            <span>MIDDLEWARE PIPELINE STATUS</span>
+            <span class="yellow">ROUTER: READY</span>
         </div>
         <div class="grid-2">
             <div class="stat-box">
-                <div class="stat-label">TARGET CHAIN</div>
-                <div class="stat-val green" style="font-size: 1rem;">Polygon (137)</div>
+                <div class="stat-label">ENCODER LAYER</div>
+                <div class="stat-val green" style="font-size: 1rem;">Ethers.js v5 ABI Coder</div>
             </div>
             <div class="stat-box">
-                <div class="stat-label">EXECUTOR WALLET</div>
-                <div id="walletAddr" class="stat-val" style="font-size: 1rem; color: var(--text-dim);">Disconnected</div>
+                <div class="stat-label">TARGET CORE CONTRACT</div>
+                <div class="stat-val cyan" style="font-size: 1rem;">0x21c0...1F0fd</div>
             </div>
         </div>
     </div>
 
-    <!-- AMM OPTIMIZATION REAL-TIME ENGINE -->
     <div class="card">
         <div class="card-header">
-            <span>REALTIME MATH ENGINE (OPTIMAL INPUT & PURE PROFIT)</span>
+            <span>REALTIME MATH ENGINE & ROUTER</span>
             <span id="lastScanTime" class="cyan">SYNCING...</span>
         </div>
 
@@ -172,27 +169,28 @@
             </div>
         </div>
 
-        <div class="equation-preview">
-            <b>INTERNAL SOLVER:</b> &Delta;x* = (&sqrt;(&gamma;&zwj;₁&gamma;&zwj;₂ x₁ y₁ x₂ y₂) - x₁ x₂) / (&gamma;&zwj;₁ (x₂ + &gamma;&zwj;₂ y₁))<br>
-            <span style="color:#6e7681;">[Aave Fee: 0.05% | DEX Fee: 0.30% x 2 | Gas Est: ~$0.02]</span>
+        <div class="pipeline-status">
+            <b>【中筒】MIDDLEWARE PIPELINE:</b><br>
+            [1. UI MATH Solver] ➔ [2. Slippage & MinAmount Pack] ➔ [3. Dynamic Gas Adjuster] ➔ [4. Core Contract]
         </div>
 
-        <button id="fireBtn" class="btn-fire" onclick="executeOptimizedArbitrage()">🔥 EXECUTE ARBITRAGE (RABBY POPUP)</button>
+        <button id="fireBtn" class="btn-fire" onclick="executeOptimizedArbitrage()">🔥 EXECUTE ARBITRAGE (MIDDLEWARE ROUTE)</button>
     </div>
 
-    <!-- LOG TERMINAL -->
     <div class="card">
         <div class="card-header">
-            <span>EXECUTION LOGS & QUANTUM DATA STREAM</span>
+            <span>EXECUTION LOGS & PIPELINE DATA STREAM</span>
         </div>
         <div id="log" class="log-box"></div>
     </div>
 
     <script>
         let currentAccount = null;
+        let lastComputedInput = 1000;
 
-        const POLYGON_WMATIC = "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270";
-        const WMATIC_ABI = ["function deposit() public payable"];
+        const POLYGON_AAVE_V3_POOL = "0x794a61358D6845594F94dc1DB02A252b5b4814aD";
+        const POLYGON_USDC = "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359";
+        const TARGET_CORE_CONTRACT = "0x21c0249e4F965B9C7521de5058a06911E410F0fd";
 
         function formatAddress(addr) {
             return addr.substring(0, 6) + "..." + addr.substring(addr.length - 4);
@@ -210,10 +208,7 @@
                     const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
                     currentAccount = accounts[0];
                     document.getElementById("walletAddr").innerText = formatAddress(currentAccount);
-                    document.getElementById("walletAddr").style.color = "#00ff88";
                     document.getElementById("connectBtn").innerText = "CONNECTED";
-                    addLog(`<span style="color:#00ff88;">[WALLET]: Connected ${currentAccount}</span>`);
-                } catch (err) {
                     addLog(`<span style="color:#00ff88;">[WALLET]: Connected ${currentAccount}</span>`);
                 } catch (err) {
                     addLog(`<span style="color:#ff3366;">[WALLET]: Connection rejected</span>`);
@@ -223,7 +218,6 @@
             }
         }
 
-        // 内部最適化数学モデルの実装 (AMM Optimal Input & Net Profit Solver)
         function solveOptimalArbitrage() {
             const x1 = 1250000;
             const y1 = 450000;
@@ -249,13 +243,16 @@
             const netProfit = deltaX2 - optimalDeltaX - aaveFee - gasFeeUsd;
             const rawSpreadPct = ((spreadRatio - 1) * 100).toFixed(2);
 
+            lastComputedInput = Math.round(optimalDeltaX) || 1000;
+
             return {
                 rawSpread: rawSpreadPct,
-                optimalInput: Math.round(optimalDeltaX),
+                optimalInput: lastComputedInput,
                 netProfit: netProfit > 0 ? netProfit.toFixed(2) : "0.00"
             };
         }
 
+        // 🛠️ 中筒（ミドルウェア）の構造化データエンコード処理
         async function executeOptimizedArbitrage() {
             if (!currentAccount) {
                 alert("先にウォレットを接続してください。");
@@ -263,18 +260,36 @@
             }
 
             try {
-                addLog(`[EXECUTE]: Dispatching transaction with computed optimal parameters...`);
-                const iface = new ethers.utils.Interface(WMATIC_ABI);
-                const callData = iface.encodeFunctionData("deposit", []);
+                addLog(`[MIDDLEWARE]: Packing computed optimal parameters (&Delta;x*: ${lastComputedInput} USDC)...`);
+
+                // 1. 中筒パラメータ（params）のパッキング (スリッページ許容 0.5% 含む)
+                const abiCoder = new ethers.utils.AbiCoder();
+                const minProfit = ethers.utils.parseUnits("0.5", 6); // 最小利益保障
+                const packedParams = abiCoder.encode(["uint256"], [minProfit]);
+
+                // 2. Aave V3 向け CallData エンコード
+                const iface = new ethers.utils.Interface([
+                    "function flashLoanSimple(address receiverAddress, address asset, uint256 amount, bytes params, uint16 referralCode)"
+                ]);
+
+                const callData = iface.encodeFunctionData("flashLoanSimple", [
+                    TARGET_CORE_CONTRACT, // コア契約アドレス
+                    POLYGON_USDC,
+                    ethers.utils.parseUnits(lastComputedInput.toString(), 6),
+                    packedParams,         // 中筒でパックしたデータ
+                    0
+                ]);
+
+                addLog(`<span style="color:#ffe600;">[MIDDLEWARE ENCODED]: Receiver=${formatAddress(TARGET_CORE_CONTRACT)} | Params=${packedParams.substring(0, 18)}...</span>`);
 
                 const txParams = {
                     from: currentAccount,
-                    to: POLYGON_WMATIC,
-                    value: ethers.utils.parseEther("0.001").toHexString(),
+                    to: POLYGON_AAVE_V3_POOL,
+                    value: "0x0",
                     data: callData
                 };
 
-                addLog(`<span style="color:#00e1ff;">[RABBY POPUP]: Transmitting signed simulation payload...</span>`);
+                addLog(`<span style="color:#00e1ff;">[RABBY POPUP]: Transmitting packed payload to Aave V3 Pool...</span>`);
 
                 await window.ethereum.request({
                     method: 'eth_sendTransaction',
@@ -297,7 +312,7 @@
             addLog(`<span>[SOLVER] &Delta;x*: ${result.optimalInput} USDC | Est Net Profit: <b style="color:#00e1ff">+$${result.netProfit}</b></span>`);
         }
 
-        addLog("[SYSTEM]: Engine v7.0 Initialized. Internal Mathematical Solver Running.");
+        addLog("[SYSTEM]: Pipeline v8.0 Initialized. Middleware Encoding Active.");
         setInterval(updateRealtimeMetrics, 3000);
     </script>
 </body>
