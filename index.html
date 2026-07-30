@@ -5,22 +5,72 @@
     <title>BELPHEGOR MEV ENGINE</title>
     <style>
         body { background: #0d0e12; color: #d1d5db; font-family: monospace; padding: 20px; }
+        .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #2a2d3d; padding-bottom: 15px; }
         .card { background: #161821; border: 1px solid #2a2d3d; border-radius: 8px; padding: 15px; margin-top: 15px; }
         .green { color: #00ff88; font-size: 2rem; font-weight: bold; }
+        .btn { background: #00ff88; color: #0d0e12; border: none; padding: 10px 18px; font-weight: bold; font-family: monospace; border-radius: 4px; cursor: pointer; }
+        .btn:hover { background: #00cc6a; }
         .log { background: #050508; border: 1px solid #1f2230; padding: 10px; height: 180px; overflow-y: auto; margin-top: 10px; }
     </style>
 </head>
 <body>
-    <h1>⚡ BELPHEGOR MEV ENGINE</h1>
+    <div class="header">
+        <h1>⚡ BELPHEGOR MEV ENGINE</h1>
+        <button id="connectBtn" class="btn" onclick="connectWallet()">CONNECT WALLET</button>
+    </div>
+
+    <div class="card">
+        <h2>CONNECTED ADDRESS</h2>
+        <div id="walletAddr" style="color: #8b949e;">Not Connected</div>
+    </div>
+
     <div class="card">
         <h2>GHOST SPREAD (REALTIME)</h2>
         <div id="sp" class="green">0.000%</div>
     </div>
+
     <div class="card">
         <h2>MEV PRIVATE MEMPOOL MONITOR</h2>
         <div id="log" class="log"></div>
     </div>
+
     <script>
+        let currentAccount = null;
+
+        // アドレス表示の省略フォーマット (0x1234...abcd)
+        function formatAddress(addr) {
+            return addr.substring(0, 6) + "..." + addr.substring(addr.length - 4);
+        }
+
+        async function connectWallet() {
+            if (typeof window.ethereum !== 'undefined') {
+                try {
+                    const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+                    currentAccount = accounts[0];
+                    document.getElementById("walletAddr").innerText = formatAddress(currentAccount);
+                    document.getElementById("walletAddr").style.color = "#00ff88";
+                    document.getElementById("connectBtn").innerText = "CONNECTED";
+                } catch (err) {
+                    alert("接続が拒否されました");
+                }
+            } else {
+                alert("MetaMask等のWeb3ウォレットが見つかりません。");
+            }
+        }
+
+        // ページ読み込み時に接続済みかチェック
+        window.addEventListener('load', async () => {
+            if (typeof window.ethereum !== 'undefined') {
+                const accounts = await window.ethereum.request({ method: 'eth_accounts' });
+                if (accounts.length > 0) {
+                    currentAccount = accounts[0];
+                    document.getElementById("walletAddr").innerText = formatAddress(currentAccount);
+                    document.getElementById("walletAddr").style.color = "#00ff88";
+                    document.getElementById("connectBtn").innerText = "CONNECTED";
+                }
+            }
+        });
+
         async function checkMev() {
             const a = (1.000 + Math.random() * 0.002).toFixed(4);
             const b = (1.002 + Math.random() * 0.005).toFixed(4);
@@ -28,7 +78,7 @@
                 const res = await fetch("/api/mev-bundle", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ dex_a_price: a, dex_b_price: b })
+                    body: JSON.stringify({ dex_a_price: a, dex_b_price: b, account: currentAccount })
                 });
                 const data = await res.json();
                 document.getElementById("sp").innerText = data.spread_pct + "%";
