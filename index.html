@@ -16,7 +16,7 @@
 </head>
 <body>
     <div class="header">
-        <h1>⚡ BELPHEGOR MEV ENGINE (POLYGON)</h1>
+        <h1>⚡ BELPHEGOR MEV ENGINE</h1>
         <button id="connectBtn" class="btn" onclick="connectWallet()">CONNECT RABBY</button>
     </div>
 
@@ -28,7 +28,7 @@
     <div class="card">
         <h2>GHOST SPREAD (REALTIME)</h2>
         <div id="sp" class="green">0.000%</div>
-        <button id="fireBtn" class="btn btn-fire" onclick="executeFlashLoan()">🔥 READY TO FIRE (POLYGON)</button>
+        <button id="fireBtn" class="btn btn-fire" onclick="executeFlashLoan()">🔥 READY TO FIRE (BASE NET)</button>
     </div>
 
     <div class="card">
@@ -59,29 +59,29 @@
             }
         }
 
-        // 🔥 Polygon上のAave V3 Pool本番アドレスへ修正
+        // 🔥 Baseチェーン本番用 Aave V3 Pool アドレスへ書き換え
         async function executeFlashLoan() {
             if (!currentAccount) {
                 alert("先にRabbyウォレットを接続してください。");
                 return;
             }
 
-            // ★ Polygon メインネットの Aave V3 Pool アドレス
-            const POLYGON_AAVE_V3_POOL = "0x794a61358D6845594F94dc1DB02A252b5b4814aD";
+            // ★ Base メインネット (ChainId: 8453) の Aave V3 Pool アドレス
+            const BASE_AAVE_V3_POOL = "0xA238Dd80C259a72e81d7e4664a9801593F98d1c5";
 
             try {
                 const txHash = await window.ethereum.request({
                     method: 'eth_sendTransaction',
                     params: [{
                         from: currentAccount,
-                        to: POLYGON_AAVE_V3_POOL,
+                        to: BASE_AAVE_V3_POOL,
                         value: '0x0',
-                        data: '0x', // データ空でテスト
+                        data: '0x', // このテストでは接続疎通のみ確認
                     }],
                 });
                 console.log("TxHash:", txHash);
             } catch (error) {
-                console.log("キャンセルまたはシミュレーション結果確認:", error);
+                console.log("キャンセルまたはシミュレーション表示確認:", error);
             }
         }
 
@@ -91,7 +91,7 @@
             try {
                 const res = await fetch("/api/mev-bundle", {
                     method: "POST",
-                    headers: { "Content-Type":"application/json" },
+            headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ dex_a_price: a, dex_b_price: b, account: currentAccount })
                 });
                 const data = await res.json();
