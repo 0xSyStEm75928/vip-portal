@@ -161,7 +161,7 @@
             </div>
             <div class="stat-box">
                 <div class="stat-label">OPTIMAL INPUT (&Delta;x*)</div>
-                <div id="optimalInputVal" class="stat-val yellow">0 USDC</div>
+                <div id="optimalInputVal" class="stat-val yellow">0 WETH</div>
             </div>
             <div class="stat-box">
                 <div class="stat-label">ESTIMATED NET PROFIT</div>
@@ -189,7 +189,7 @@
         let lastComputedInput = 1000;
 
         const POLYGON_AAVE_V3_POOL = "0x794a61358D6845594F94dc1DB02A252b5b4814aD";
-        const POLYGON_USDC = "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359";
+        const POLYGON_WETH = "0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619";
         const TARGET_CORE_CONTRACT = "0x21c0249e4F965B9C7521de5058a06911E410F0fd";
 
         function formatAddress(addr) {
@@ -260,7 +260,7 @@
             }
 
             try {
-                addLog(`[MIDDLEWARE]: Packing computed optimal parameters (&Delta;x*: ${lastComputedInput} USDC)...`);
+                addLog(`[MIDDLEWARE]: Packing computed optimal parameters (&Delta;x*: ${lastComputedInput} WETH)...`);
 
                 // 1. 中筒パラメータ（params）のパッキング (スリッページ許容 0.5% 含む)
                 const abiCoder = new ethers.utils.AbiCoder();
@@ -274,7 +274,7 @@
 
                 const callData = iface.encodeFunctionData("flashLoanSimple", [
                     TARGET_CORE_CONTRACT, // コア契約アドレス
-                    POLYGON_USDC,
+                    POLYGON_WETH,
                     ethers.utils.parseUnits(lastComputedInput.toString(), 6),
                     packedParams,         // 中筒でパックしたデータ
                     0
@@ -305,11 +305,11 @@
             const result = solveOptimalArbitrage();
 
             document.getElementById("spreadVal").innerText = result.rawSpread + "%";
-            document.getElementById("optimalInputVal").innerText = result.optimalInput.toLocaleString() + " USDC";
+            document.getElementById("optimalInputVal").innerText = result.optimalInput.toLocaleString() + " WETH";
             document.getElementById("profitVal").innerText = "+$" + result.netProfit;
             document.getElementById("lastScanTime").innerText = "SYNC: " + new Date().toLocaleTimeString();
 
-            addLog(`<span>[SOLVER] &Delta;x*: ${result.optimalInput} USDC | Est Net Profit: <b style="color:#00e1ff">+$${result.netProfit}</b></span>`);
+            addLog(`<span>[SOLVER] &Delta;x*: ${result.optimalInput} WETH | Est Net Profit: <b style="color:#00e1ff">+$${result.netProfit}</b></span>`);
         }
 
         addLog("[SYSTEM]: Pipeline v8.0 Initialized. Middleware Encoding Active.");
