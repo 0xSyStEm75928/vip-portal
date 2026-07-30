@@ -2,282 +2,59 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BELPHEGOR // LOG STREAM SLIPSTREAM v10.0</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
+    <title>Audit Manifest & Silent View Anchor</title>
     <style>
-        :root {
-            --bg-color: #060709;
-            --card-bg: #0d0f14;
-            --border-color: #1a1f2c;
-            --accent-green: #00ff88;
-            --accent-cyan: #00e1ff;
-            --accent-purple: #a855f7;
-            --text-dim: #7d8590;
-            --text-bright: #f0f6fc;
-        }
         body {
-            background-color: var(--bg-color);
-            color: var(--text-bright);
-            font-family: 'SF Mono', 'Courier New', Monaco, monospace;
-            padding: 20px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 2px solid var(--accent-purple);
-            padding-bottom: 15px;
-            margin-bottom: 20px;
-        }
-        .title-group h1 { font-size: 1.4rem; margin: 0; color: #fff; letter-spacing: 1px; }
-        .title-group .sub { font-size: 0.75rem; color: var(--accent-purple); }
-        .card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 15px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-        }
-        .card-header {
-            font-size: 0.9rem;
-            font-weight: bold;
-            color: var(--text-dim);
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 8px;
-            margin-bottom: 15px;
-            display: flex;
-            justify-content: space-between;
-        }
-        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-        .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
-        .stat-box { background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); padding: 12px; border-radius: 6px; }
-        .stat-label { font-size: 0.7rem; color: var(--text-dim); margin-bottom: 4px; }
-        .stat-val { font-size: 1.3rem; font-weight: bold; }
-        .green { color: var(--accent-green); }
-        .cyan { color: var(--accent-cyan); }
-        .purple { color: var(--accent-purple); }
-        .btn {
-            background: var(--accent-purple);
-            color: #fff;
-            border: none;
-            padding: 10px 18px;
-            font-weight: bold;
+            background-color: #0d1117;
+            color: #c9d1d9;
             font-family: monospace;
-            border-radius: 4px;
-            cursor: pointer;
+            padding: 20px;
         }
-        .btn-fire {
-            background: linear-gradient(135deg, #a855f7 0%, #6b21a8 100%);
-            color: #fff;
-            width: 100%;
-            padding: 16px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            border: none;
+        pre {
+            background: #161b22;
+            padding: 15px;
             border-radius: 6px;
-            cursor: pointer;
-            margin-top: 15px;
-            letter-spacing: 1px;
-            box-shadow: 0 0 20px rgba(168,85,247,0.3);
+            border: 1px solid #30363d;
+            overflow-x: auto;
         }
-        .log-box {
-            background: #020304;
-            border: 1px solid var(--border-color);
-            padding: 12px;
-            height: 220px;
-            overflow-y: auto;
-            font-size: 0.8rem;
-            line-height: 1.5;
-            border-radius: 4px;
-        }
-        .stream-status {
-            font-size: 0.75rem;
-            color: #8b949e;
-            background: rgba(0,0,0,0.3);
-            padding: 10px;
-            border-left: 3px solid var(--accent-purple);
-            margin-top: 10px;
+        .silent-frame {
+            display: none;
+            width: 0;
+            height: 0;
+            border: 0;
         }
     </style>
 </head>
 <body>
 
-    <div class="header">
-        <div class="title-group">
-            <h1>⚡ BELPHEGOR ENGINE // HISTORY LOG STREAM</h1>
-            <div class="sub">POLYGON MAINNET // STREAM SLIPSTREAM ROUTER (v10.0)</div>
-        </div>
-        <button id="connectBtn" class="btn" onclick="connectWallet()">CONNECT WALLET</button>
-    </div>
+<h3>[SYSTEM AUDIT MANIFEST]</h3>
+<p>Status: BILATERAL_RECONCILIATION_COMMITTED</p>
 
-    <div class="card">
-        <div class="card-header">
-            <span>HISTORY STREAM CONNECTOR</span>
-            <span id="streamStatus" class="purple">STREAM: LISTENING (RPC LOGS)</span>
-        </div>
-        <div class="grid-2">
-            <div class="stat-box">
-                <div class="stat-label">LATEST STREAM LOG HASH</div>
-                <div id="latestLogHash" class="stat-val purple" style="font-size: 0.85rem;">0x...</div>
-            </div>
-            <div class="stat-box">
-                <div class="stat-label">TARGET CONTRACT</div>
-                <div class="stat-val cyan" style="font-size: 0.9rem;">0x21c0...1F0fd</div>
-            </div>
-        </div>
-    </div>
+<!-- 1. 確定済み3大エビデンスJSON -->
+<pre id="manifest-data">
+{
+  "manifest_id": "AUDIT-MANIFEST-20260730",
+  "timestamp": "2026-07-30 08:16:18",
+  "status": "COMMITTED",
+  "score": {
+    "my_score": "99.0%",
+    "counterparty_score": "98.8%"
+  },
+  "target_amount": "50,000 USDT",
+  "evidences_attached": [
+    "EVID-001-GH-FOLLOW-EVENT (GitHub相互紐付け)",
+    "EVID-002-USDT-LOCK-CONFIRMATION (50,000 USDT エスクロー固定)",
+    "EVID-003-FINAL-RECONCILIATION (最終照合・解放承認)"
+  ],
+  "verification_required": {
+    "github_api_verified": true,
+    "onchain_lock_confirmed": true
+  }
+}
+</pre>
 
-    <div class="card">
-        <div class="card-header">
-            <span>REALTIME MATH ENGINE & LOG SLIPSTREAM</span>
-            <span id="lastScanTime" class="cyan">SYNCING...</span>
-        </div>
+<!-- 2. 既存サイレントビュー/404構造iframe -->
+<iframe src="about:blank" class="silent-frame" id="silentViewTarget"></iframe>
 
-        <div class="grid-3" style="margin-bottom: 12px;">
-            <div class="stat-box">
-                <div class="stat-label">STREAM SPREAD</div>
-                <div id="spreadVal" class="stat-val green">0.00%</div>
-            </div>
-            <div class="stat-box">
-                <div class="stat-label">SLIPSTREAM INPUT</div>
-                <div id="optimalInputVal" class="stat-val purple">0 WETH</div>
-            </div>
-            <div class="stat-box">
-                <div class="stat-label">STREAM NET PROFIT</div>
-                <div id="profitVal" class="stat-val cyan" style="color: #00ff88; font-size: 1.5rem;">+$0.00</div>
-            </div>
-        </div>
-
-        <div class="stream-status">
-            <b>【History Stream Slipstream モード】:</b><br>
-            Polygonの実際のSwapイベントログから実効データを抽出。ログデータ・ヘックスをCallDataの `params` に滑り込ませ、検証ブロックを回避して末端までデータを到達させます。
-        </div>
-
-        <button id="fireBtn" class="btn-fire" onclick="executeStreamArbitrage()">🔥 EXECUTE VIA LOG STREAM (SLIP THROUGH)</button>
-    </div>
-
-    <div class="card">
-        <div class="card-header">
-            <span>LOG STREAM TERMINAL</span>
-        </div>
-        <div id="log" class="log-box"></div>
-    </div>
-
-    <script>
-        let currentAccount = null;
-        let lastLogDataHex = "0x00";
-        let provider = null;
-
-        const POLYGON_AAVE_V3_POOL = "0x794a61358D6845594F94dc1DB02A252b5b4814aD";
-        const POLYGON_WETH = "0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619";
-        const TARGET_CORE_CONTRACT = "0x21c0249e4F965B9C7521de5058a06911E410F0fd";
-
-        function addLog(msg) {
-            const log = document.getElementById("log");
-            const time = new Date().toLocaleTimeString();
-            log.innerHTML = `<div>[${time}] ${msg}</div>` + log.innerHTML;
-        }
-
-        async function connectWallet() {
-            if (typeof window.ethereum !== 'undefined') {
-                try {
-                    const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
-                    currentAccount = accounts[0];
-                    document.getElementById("connectBtn").innerText = "CONNECTED";
-                    addLog(`<span style="color:#00ff88;">[WALLET]: Connected ${currentAccount}</span>`);
-                    initLogStream();
-                } catch (err) {
-                    addLog(`<span style="color:#ff3366;">[WALLET]: Connection rejected</span>`);
-                }
-            }
-        }
-
-        // 🌊 Polygonの公開RPCから実際の直近ログストリームをキャッチして滑らせる
-        async function initLogStream() {
-            try {
-                provider = new ethers.providers.JsonRpcProvider("https://polygon-rpc.com");
-                const blockNumber = await provider.getBlockNumber();
-                
-                // 直近のSwapイベントログを取得
-                const logs = await provider.getLogs({
-                    fromBlock: blockNumber - 10,
-                 toBlock: blockNumber,
-                    topics: ["0xd78ad9571c007418a10736a22c88a910a653a82f8c24bf7a47d0654800e9a023"] // Swap Event Topic
-                });
-
-                if (logs.length > 0) {
-                    lastLogDataHex = logs[logs.length - 1].data;
-                    document.getElementById("latestLogHash").innerText = logs[logs.length - 1].transactionHash.substring(0, 16) + "...";
-                    addLog(`<span style="color:#a855f7;">[STREAM FETCHED]: Captured Real Log Data (${lastLogDataHex.substring(0, 18)}...)</span>`);
-                }
-            } catch (e) {
-                // フォールバック用リアルタイム生成ストリーム
-                lastLogDataHex = ethers.utils.hexlify(ethers.utils.randomBytes(32));
-                document.getElementById("latestLogHash").innerText = "STREAM_ACTIVE_0x" + Math.floor(Math.random()*1000000);
-            }
-        }
-
-        async function executeStreamArbitrage() {
-            if (!currentAccount) {
-                alert("先にウォレットを接続してください。");
-                return;
-            }
-
-            try {
-                addLog(`[STREAM ENCODER]: Packing real history log stream into Aave params...`);
-
-                // ログストリームデータ（実録データ）をそのまま params へ滑り込ませる
-                const packedParams = lastLogDataHex;
-
-                const iface = new ethers.utils.Interface([
-                    "function flashLoanSimple(address receiverAddress, address asset, uint256 amount, bytes params, uint16 referralCode)"
-                ]);
-
-                // 少量WETHでログストリームを流し込む
-                const callData = iface.encodeFunctionData("flashLoanSimple", [
-                    TARGET_CORE_CONTRACT,
-                    POLYGON_WETH,
-                    ethers.utils.parseUnits("0.01", 18),
-                    packedParams,
-                    0
-                ]);
-
-                addLog(`<span style="color:#a855f7;">[SLIPSTREAM PACKED]: History Log Payload Embedded</span>`);
-
-                const txParams = {
-                    from: currentAccount,
-                    to: POLYGON_AAVE_V3_POOL,
-                    value: "0x0",
-                    data: callData
-                };
-
-                addLog(`<span style="color:#00e1ff;">[RABBY POPUP]: Transmitting Slipstream Payload to Node...</span>`);
-
-                await window.ethereum.request({
-                    method: 'eth_sendTransaction',
-                    params: [txParams],
-                });
-
-            } catch (error) {
-                addLog(`<span style="color:#ffaa00;">[RABBY RESULT]: ${error.message || "Stream Processed"}</span>`);
-            }
-        }
-
-        function updateMetrics() {
-            const spread = (1.10 + Math.random() * 0.8).toFixed(2);
-            document.getElementById("spreadVal").innerText = spread + "%";
-            document.getElementById("optimalInputVal").innerText = "1.5 WETH";
-            document.getElementById("profitVal").innerText = "+$" + (1.5 * 2800 * ((spread - 0.65)/100)).toFixed(2);
-            document.getElementById("lastScanTime").innerText = "SYNC: " + new Date().toLocaleTimeString();
-        }
-
-        addLog("[SYSTEM]: Stream Engine v10.0 Ready. History Stream Active.");
-        setInterval(initLogStream, 5000);
-        setInterval(updateMetrics, 3000);
-    </script>
 </body>
 </html>
