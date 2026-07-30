@@ -29,7 +29,7 @@ We invite security researchers and engineers who share our passion for architect
 ### Disclosure Protocol
 * **Do NOT open a public GitHub issue** for potential security vulnerabilities.
 * Direct your detailed findings to our security governance team via:
-  * **Email:** `security@zerocore.internal`
+  * **Email:** `admin@lucifer0x0system.xyz`
   * **PGP Key:** Available upon formal request.
 
 ### Desired Report Details
