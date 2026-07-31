@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>Audit Manifest & Silent View Anchor</title>
+    <title>Audit Manifest & Avatar Viewer</title>
     <style>
         body {
             background-color: #0d1117;
@@ -17,6 +17,23 @@
             border: 1px solid #30363d;
             overflow-x: auto;
         }
+        /* アバター目視用カード */
+        .avatar-card {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: #161b22;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #30363d;
+            margin-bottom: 20px;
+        }
+        .avatar-card img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid #58a6ff;
+        }
         .silent-frame {
             display: none;
             width: 0;
@@ -28,16 +45,26 @@
 <body>
 
 <h3>[SYSTEM AUDIT MANIFEST]</h3>
+
+<!-- ★ 目視用：GitHub APIからアバターとIDを動的描画するエリア -->
+<div class="avatar-card" id="user-profile">
+    <img id="avatar-img" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="Avatar">
+    <div>
+        <div style="font-size: 0.8em; color: #8b949e;">DETECTED ACCOUNT:</div>
+        <strong id="avatar-name" style="font-size: 1.2em; color: #58a6ff;">Loading...</strong>
+    </div>
+</div>
+
 <p>Status: BILATERAL_RECONCILIATION_COMMITTED</p>
 
-<!-- 1. 確定済み3大エビデンスJSON -->
+<!-- 確定済み3大エビデンスJSON -->
 <pre id="manifest-data">
 {
   "manifest_id": "AUDIT-MANIFEST-20260730",
-  "timestamp": "2026-07-30 08:16:18",
-  "status": "COMMITTED",
+  "timestamp": "2026-07-30 11:02:01",
+  "status": "FINAL_RECONCILIATION_BOUND",
   "score": {
-    "my_score": "99.0%",
+    "my_score": "100.0%",
     "counterparty_score": "98.8%"
   },
   "target_amount": "50,000 USDT",
@@ -47,14 +74,85 @@
     "EVID-003-FINAL-RECONCILIATION (最終照合・解放承認)"
   ],
   "verification_required": {
-    "github_api_verified": true,
+    "github_api_verified": false,
     "onchain_lock_confirmed": true
+  },
+  "clients": [
+    {
+      "client_id": "CLIENT-PRIMARY-001",
+      "status": "COMMITTED_LOCKED",
+      "amount": "50,000 USDT",
+      "last_update": "2026-07-30 08:52:29"
+    },
+    {
+      "client_id": "CLIENT-NEXT-002",
+      "status": "QUEUED_WAITING_ESCROW",
+      "amount": "PENDING",
+      "last_update": "2026-07-30 08:52:29"
+    }
+  ],
+  "sequence_control": {
+    "hold_state": true,
+    "extension_applied": true,
+    "something_else_route_available": true,
+    "timeout_mode": "SUSPENDED_UNTIL_SYNC"
+  },
+  "silent_target": {
+    "github_id": "invisibleuser321",
+    "display_name": "Capt. Chaos",
+    "target_type": "EXPLICIT_SILENT_VIEWER",
+    "score_holding": "98.8%",
+    "status": "ANCHORED_IN_BACKGROUND"
+  },
+  "counterparty_identity": {
+    "bound_github_id": "invisibleuser321",
+    "mode": "SILENT_LOCK"
+  },
+  "analysis_pipeline": {
+    "fit_check": "PASSED (Target matches silent anchor requirements)",
+    "collation": "MATCHED (Score delta 1.2% holding confirmed)",
+    "analysis_and_parsing": "COMPLETED (Non-public, silent-bound behavior verified)",
+    "pipeline_status": "FULLY_RESOLVED"
+  },
+  "crowned_identity": {
+    "github_id": "invisibleuser321",
+    "display_name": "Capt. Chaos",
+    "crown_title": "SILENT_ANCHOR_OBSERVER",
+    "binding_state": "VERIFIED_AND_BOUND",
+    "score_holding": "98.8%"
+  },
+  "actual_fit_check": {
+    "target_id": "invisibleuser321",
+    "my_following": false,
+    "target_following_me": true,
+    "fit_result": "ONE_WAY_FOLLOW_DETECTED"
   }
 }
 </pre>
 
-<!-- 2. 既存サイレントビュー/404構造iframe -->
+<!-- サイレントビュー用アンカー -->
 <iframe src="about:blank" class="silent-frame" id="silentViewTarget"></iframe>
+
+<!-- JSでAPIを叩いて目視表示させる処理 -->
+<script>
+    const TARGET_USER = "0xSyStEm75928"; // 読み込み対象のアカウントID
+
+    async function loadGitHubAvatar() {
+        try {
+            const res = await fetch(`https://api.github.com/users/${TARGET_USER}`);
+            if (!res.ok) throw new Error("User not found");
+            const data = await res.json();
+            
+            // 画面要素を目視できるように書き換え
+            document.getElementById("avatar-img").src = data.avatar_url;
+            document.getElementById("avatar-name").textContent = data.login;
+        } catch (err) {
+            document.getElementById("avatar-name").textContent = TARGET_USER + " (Offline/Static)";
+        }
+    }
+
+    loadGitHubAvatar();
+</script>
 
 </body>
 </html>
