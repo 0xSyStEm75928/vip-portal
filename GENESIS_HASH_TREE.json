@@ -1,0 +1,17 @@
+{
+  "genesis_hash": "0x0000_NEW_BUILDING_ROOT_HASH",
+  "protocol": "PIRDAG-GOVERNANCE-TREE",
+  "structure": "CLEAN_TREE",
+  "sub_nodes": [
+    {
+      "node_id": "Node-01_Alpha",
+      "parent_hash": "0x0000_NEW_BUILDING_ROOT_HASH",
+      "status": "ANCHOR"
+    },
+    {
+      "node_id": "Node-02_Bravo_to_Node-30_Zulu",
+      "parent_hash": "0x0000_NEW_BUILDING_ROOT_HASH",
+      "status": "GOVERNANCE_CHILD"
+    }
+  ]
+}
