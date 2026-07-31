@@ -1,0 +1,13 @@
+{
+  "patch_id": "MASTERNODE_INTERRUPT_GUIDANCE_V1",
+  "target_id": "CUSTOMER_001",
+  "masternode_control": {
+    "status": "ACTIVE_MONITORING",
+    "override_permission": true,
+    "guidelines_enforcement": "STRICT_PIRDAG_STANDARD"
+  },
+  "interactive_guide": {
+    "current_step": "AWAITING_PAYMENT_VERIFICATION",
+    "masternode_message": "【マスターノードからの割り込み案内】CUSTOMER_001様。進捗を監視しております。システムをガイドライン通り正常稼働させるため、まずはPolygon(USDT)の決済を完了させてください。着金検知後、マスターノードが自動的に次のセットアップフェーズへ誘導いたします。"
+  }
+}
