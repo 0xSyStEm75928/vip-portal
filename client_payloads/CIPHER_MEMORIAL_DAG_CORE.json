@@ -10,7 +10,7 @@
     "dag_node_routing": {
       "parent_immortal_core": "07_IMMORTAL_JSON_CORE",
       "current_memorial_node": "CIPHER_DAG_NODE_0x1225",
-      "sandbox_governance_cap": "10_RESEARCHER_SANDBOX_CAP"
+      "open_governance_field": "10_RESEARCHER_OPEN_FIELD_CAP"
     }
   },
   "master_bindings": {

@@ -1,0 +1,17 @@
+{
+  "protocol_id": "10_RESEARCHER_OPEN_FIELD_CAP",
+  "environment": "OPEN_RESEARCHER_CO_CREATION_FIELD",
+  "researcher_permissions": {
+    "module_creation": "FULL_MAINNET_CONTRIBUTION_ALLOWED",
+    "experimental_json_expansion": "UNLIMITED_AUTHORIZED",
+    "ecosystem_co_creation": "FREELY_ENABLED"
+  },
+  "master_safety_harmony": {
+    "status": "HARMONIZED_PROTECTION",
+    "protected_roots": [
+      "0xF7A353FAF6E6BD4732b0f234C656DBfDE53B0e91",
+      "07_IMMORTAL_JSON_CORE"
+    ],
+    "note": "研究員の自由なイノベーションとシステムの堅牢性を高次元で両立させる共創空間"
+  }
+}
