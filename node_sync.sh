@@ -1,15 +1,16 @@
 #!/bin/sh
 
 echo "===================================================="
-echo " 🧹 [PIRDAG DATA JUICER - ノーマッチ自動隔離＆トリアージ]"
+echo " 🧹 [AUTOMATED INBOX TRIAGE - 次世代自動化フェーズ]"
+echo "    内部システムログを分離し、純粋なメッセージを整列中..."
 echo "===================================================="
 
-# リモート最新化
+# 全ブランチの最新を取得
 git fetch --all > /dev/null 2>&1
 
 # フォルダのリセット
-rm -rf inbox_unread no_match
-mkdir -p inbox_unread no_match
+rm -rf inbox_unread system_archive
+mkdir -p inbox_unread system_archive
 
 # 全ブランチからデータをインポート
 for branch in main business business-flow research secret; do
@@ -17,46 +18,34 @@ for branch in main business business-flow research secret; do
     git archive origin/$branch 2>/dev/null | tar -x -C inbox_unread/ 2>/dev/null
 done
 
-echo ""
-echo "🔍 データをスキャンし、ノーマッチ／不適合ログを別フォルダ (no_match/) へ移動中..."
+MSG_COUNT=0
+SYS_COUNT=0
 
-NOMATCH_COUNT=0
-UNREAD_COUNT=0
-
-# 全JSONファイルをチェックして仕分け
+# 全ファイルをチェックしてシステムログと純粋メッセージを完全分離
 for file in inbox_unread/*.json inbox_unread/*/*.json; do
     if [ -f "$file" ]; then
-        # 1. 自分(Alpha)の自動ログは完全に無視して除外
-        if grep -q "Node-01_Alpha" "$file"; then
-            rm -f "$file"
-            continue
-        fi
-
-        # 2. 「合わない」「ノーマッチ」「NG」「mismatch」等のキーワードがあれば no_match/ へ移動
-        if grep -i -E '(nomatch|mismatch|合わない|不適合|ng|cancel|reject)' "$file" > /dev/null 2>&1; then
-            NOMATCH_COUNT=$((NOMATCH_COUNT + 1))
-            mv "$file" no_match/
+        # 自分(Alpha)の自動ログや ZERO_CORE 等のシステム設定ファイルはアーカイブへ退避
+        if grep -q "Node-01_Alpha" "$file" || echo "$file" | grep -qE '(ZERO_CORE|kernel_|manifest|registry)'; then
+            SYS_COUNT=$((SYS_COUNT + 1))
+            mv "$file" system_archive/ 2>/dev/null
         else
-            UNREAD_COUNT=$((UNREAD_COUNT + 1))
+            MSG_COUNT=$((MSG_COUNT + 1))
         fi
     fi
 done
 
-echo ""
 echo "----------------------------------------------------"
-echo " 📥 仕分け結果報告"
-echo "----------------------------------------------------"
-echo " 🚫 【ノーマッチ・隔離フォルダ (no_match/ )】 : $NOMATCH_COUNT 件"
-echo " 📄 【純粋な未読・本命メッセージ (inbox_unread/)】: $UNREAD_COUNT 件"
+echo " ⚙️ 内部システムログ (裏側退避) : $SYS_COUNT 件"
+echo " 📥 純粋な相手からのメッセージ (まな板) : $MSG_COUNT 件"
 echo "----------------------------------------------------"
 
-if [ $NOMATCH_COUNT -gt 0 ]; then
-    echo ""
-    echo "💡 [no_match/ フォルダ内のメッセージ概要]"
-    for f in no_match/*.json; do
+if [ $MSG_COUNT -eq 0 ]; then
+    echo " 🍃 現在、人間からの直接的な未読メッセージはありません。"
+else
+    echo " 📄 【まな板の上にあるメッセージ一覧】"
+    for f in inbox_unread/*.json; do
         [ -f "$f" ] && echo " ➔ $f"
     done
-    echo " 👉 隔離した相手には、賛美メッセージを返して『更新をお待ちください』と伝えて逃げましょう！"
 fi
 
 echo "===================================================="
