@@ -1,43 +1,44 @@
 #!/bin/bash
-
 CHAT_FILE="chat_history.log"
 
-# チャットログが存在しない場合は初期化
 if [ ! -f "$CHAT_FILE" ]; then
-    echo "=== PIRDAG CUI CHAT CHANNEL ===" > "$CHAT_FILE"
+    echo "=== PIRDAG CUI GOVERNANCE CHAT ===" > "$CHAT_FILE"
 fi
 
 case "$1" in
     send)
         if [ -z "$2" ]; then
-            echo "Usage: ./chat.sh send \"Your message here\""
+            echo "Error: Message payload empty."
+            echo "Usage: ./chat.sh send \"YOUR_MESSAGE\""
             exit 1
         fi
-        # 持ち運びハッシュまたは環境変数から送信者を識別（デフォルトはNode-Anonymous）
-        SENDER=${NODE_ID:-"Node-01_Alpha"}
+        
+        # ハッシュからノードIDを取得（無ければAnon）
+        NODE_KEY="Node-Anon"
+        if [ -f "my_portable_hash.json" ]; then
+             NODE_KEY=$(jq -r '.portable_hash' my_portable_hash.json 2>/dev/null | cut -c 1-10)
+             NODE_KEY="Node-$NODE_KEY"
+        fi
+        
         TIMESTAMP=$(date "+%Y-%m-%d %H:%M:%S")
+        echo "[$TIMESTAMP] <$NODE_KEY>: $2" >> "$CHAT_FILE"
         
-        # ログに書き込み
-        echo "[$TIMESTAMP] <$SENDER>: $2" >> "$CHAT_FILE"
-        
-        # Gitへ自動同期
-        git add "$CHAT_FILE"
-        git commit -m "chat: message from $SENDER"
+        git add "$CHAT_FILE" my_portable_hash.json 2>/dev/null
+        git commit -m "chat: message from $NODE_KEY"
         git push origin main
-        echo ">> メッセージを送信・同期しました。"
+        echo ">> Payload Sent & Synchronized."
         ;;
         
     read|sync)
-        # 最新ログを引き込んで表示
         git pull origin main --rebase > /dev/null 2>&1
-        echo "----------------------------------------"
+        echo "----------------------------------------------------"
         cat "$CHAT_FILE"
-        echo "----------------------------------------"
+        echo "----------------------------------------------------"
         ;;
         
     *)
-        echo "=== CUI CHAT COMMANDS ==="
-        echo "  ./chat.sh send \"メッセージ\"  : メッセージを送信して全体同期"
-        echo "  ./chat.sh read              : 最新のチャットログを取得して表示"
+        echo "=== TRIAGE COMMAND HELP ==="
+        echo "  ./chat.sh send \"message\" : Push encrypted log"
+        echo "  ./chat.sh read          : Sync & Read latest log"
         ;;
 esac
