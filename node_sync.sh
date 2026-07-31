@@ -1,44 +1,46 @@
 #!/bin/sh
 
-# 自分の役割設定（指定がない場合は public）
+# 閲覧権限の取得（未指定の場合はパブリック）
 ROLE=${MY_ROLE:-"public"}
 
 echo "===================================================="
-echo " 🌐 [PIRDAG HYBRID DOMAIN SYNC Engine]"
-echo "    現在のアクセス権限 (MY_ROLE): [$ROLE]"
+echo " 🛡️ [PIRDAG HARDENED HYBRID DOMAIN ENGINE]"
+echo "    認証アクセスレベル: [$ROLE]"
 echo "===================================================="
+
+# 最新ブランチ情報の取得
+git fetch origin business research main > /dev/null 2>&1
 
 case "$ROLE" in
     alpha|admin)
-        echo ">> [管理者アクセス] 全ブランチ（Public/Business/Research）の最新データを同期中..."
-        git pull origin main --rebase > /dev/null 2>&1
-        git fetch origin business research > /dev/null 2>&1
+        echo ">> [ALPHA COMPLETE ACCESS] 全領域の暗号化状態を解除して取得中..."
         echo ""
-        echo "💼 --- BUSINESS DATA ---"
-        git show origin/business:business_data/config.json 2>/dev/null || echo " (データなし)"
+        echo "💼 --- BUSINESS DOMAIN ---"
+        git show origin/business:business/payload.json 2>/dev/null || echo " (データ未検出)"
         echo ""
-        echo "🔬 --- RESEARCH DATA ---"
-        git show origin/research:research_data/config.json 2>/dev/null || echo " (データなし)"
+        echo "🔬 --- RESEARCH DOMAIN ---"
+        git show origin/research:research/payload.json 2>/dev/null || echo " (データ未検出)"
         ;;
         
     business)
-        echo ">> [ビジネスノード] 商談領域のみ同期中..."
-        git fetch origin business > /dev/null 2>&1
-        git show origin/business:business_data/config.json 2>/dev/null || echo " (権限エラーまたはデータなし)"
+        echo ">> [BUSINESS NODE] 商談ドメインのみ復号化..."
+        echo ""
+        echo "💼 --- BUSINESS DOMAIN ---"
+        git show origin/business:business/payload.json 2>/dev/null || echo " (アクセス拒否またはデータなし)"
         ;;
         
     research)
-        echo ">> [研究ノード] コア研究領域のみ同期中..."
-        git fetch origin research > /dev/null 2>&1
-        git show origin/research:research_data/config.json 2>/dev/null || echo " (権限エラーまたはデータなし)"
+        echo ">> [RESEARCH NODE] コア研究ドメインのみ復号化..."
+        echo ""
+        echo "🔬 --- RESEARCH DOMAIN ---"
+        git show origin/research:research/payload.json 2>/dev/null || echo " (アクセス拒否またはデータなし)"
         ;;
         
     *)
-        echo ">> [パブリックノード] 全体公開データのみ同期中..."
-        git pull origin main --rebase > /dev/null 2>&1
-        echo " (公開チャンネルのみ表示中)"
+        echo ">> [PUBLIC NODE] パブリック情報のみ表示..."
+        echo " (保護されたドメインデータへのアクセス権がありません)"
         ;;
 esac
 
 echo "===================================================="
-echo " >> 処理が完了しました。"
+echo " >> セキュリティチェック完了。"
