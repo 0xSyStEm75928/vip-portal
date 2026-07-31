@@ -1,0 +1,11 @@
+{
+  "patch_id": "SPONSORSHIP_AND_NOTIFICATION_READY_V1",
+  "target_id": "CUSTOMER_001",
+  "status": "WAITING_FOR_USDT_PAYMENT",
+  "recipient_address": "0xF7A353FAF6E6BD4732b0f234C656DBfDE53B0e91",
+  "future_sponsorship_plan": {
+    "status": "PENDING_FIRST_PAYMENT",
+    "allocated_pct": 5,
+    "target": "GitHub Open Source Developers"
+  }
+}
