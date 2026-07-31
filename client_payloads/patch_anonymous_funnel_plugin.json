@@ -1,0 +1,15 @@
+{
+  "patch_id": "ANONYMOUS_AUTHOR_FUNNEL_V1",
+  "author_type": "EXTERNAL_ANONYMOUS_BUSINESS",
+  "funnel_trigger": {
+    "point_name": "SELF_DECISION_CHECKPOINT",
+    "masternode_assist": "ACTIVE"
+  },
+  "mental_magic_guide": {
+    "prompt_to_customer": "【マスターノードからのガイドライン】現在の進捗ポイントに到達しました。ご自身の判断で最適なパッチを選択し、適用を完了させてください。",
+    "selectable_action": {
+      "option_1": "APPLY_DIRECT_PAYMENT_AND_OPTIMIZE",
+      "recipient_address": "0xF7A353FAF6E6BD4732b0f234C656DBfDE53B0e91"
+    }
+  }
+}
