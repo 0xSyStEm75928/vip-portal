@@ -1,0 +1,40 @@
+{
+  "magic_school_protocol": {
+    "protocol_id": "MAGE_ACADEMY_HYPER_JSON_V1",
+    "world_setting": "MAGICAL_ACADEMY_INDIVIDUAL_PANEL_SYSTEM",
+    "architecture_concept": "HEAVY_BACKEND_MAGIC_WITH_LIGHT_FRONTEND_TAG"
+  },
+  "student_panel_interface": {
+    "panel_display_mode": "STAX_COMPATIBLE_COMPACT",
+    "visible_element": "🏷️",
+    "active_student_status": {
+      "alias": "ANONYMOUS_STUDENT_VIP",
+      "desk_node_id": "MAGIC_PANEL_SLOT_07",
+      "current_subject": "CIPHER_DAG_SPELL_CASTING",
+      "spell_status": "AUTHENTICATED_AND_ACTIVE"
+    },
+    "stax_display_note": "表のパネルには🏷️アイコンと最小限の認証ステータスのみを綺麗に描画"
+  },
+  "invisible_magic_support_layer": {
+    "auto_spell_repair": {
+      "enabled": true,
+      "mechanism": "IMMORTAL_PROTOCOL_07_RESTORE",
+      "trigger_on_spell_failure": "PURGE_CORRUPTED_NODES_AND_RECAST"
+    },
+    "offgrid_tag_storage": {
+      "storage_mode": "STORE_IN_UNKNOWN_DIMENSION",
+      "tag_reference_id": "🏷️[CIPHER_DAG_SEALED_0x1225]",
+      "location_hash": "0xF7A353FAF6E6BD4732b0f234C656DBfDE53B0e91",
+      "description": "データ本体は概念を外して異次元（分散暗号空間）へ保存。パネル側は🏷️をかざすだけで全参照可能"
+    },
+    "hyper_expanded_school_rules": {
+      "governance_29_consensus": "APPROVED_BY_29_MAGICAL_GOVERNORS",
+      "time_bound_evaporation": {
+        "auto_destruct_enabled": true,
+        "ttl_seconds": 3600,
+        "cleanup_spell": "VANISH_PAYLOAD_LEAVING_NO_TRACE"
+      },
+      "ledger_stax_adaptation": "AUTOMATIC_UI_TRUNCATION_AND_TAGGING"
+    }
+  }
+}
