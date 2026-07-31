@@ -1,0 +1,37 @@
+{
+  "$schema": "./Schema/eeg.silent.viewer.index.schema.json",
+
+  "silent_viewer": {
+    "version": "1.0.0",
+    "status": "ACTIVE",
+
+    "protocol": {
+      "id": "EEG_AUTHENTIC_SIGNAL_CIRCUIT_V1",
+      "bundle": "./eeg.protocol.bundle.json"
+    },
+
+    "view": {
+      "mode": "READ_ONLY",
+      "purpose": "STRUCTURE_INSPECTION"
+    },
+
+    "entries": {
+      "production": "./eeg.production.profile.json",
+      "bundle": "./eeg.protocol.bundle.json",
+      "health": "./eeg.protocol.health.json",
+      "verification": "./verification.record.json",
+      "audit": "./eeg.audit.record.json"
+    },
+
+    "visibility": {
+      "write": false,
+      "execute": false,
+      "inspect": true
+    },
+
+    "state": {
+      "structure": "AVAILABLE",
+      "runtime_execution": "NOT_TRIGGERED"
+    }
+  }
+}
