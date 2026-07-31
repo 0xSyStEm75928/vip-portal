@@ -1,0 +1,14 @@
+{
+  "status": "OFFICIALLY_APPROVED",
+  "purchase_evidence": {
+    "buyer_alias": "ANONYMOUS_VIP_AVATAR_001",
+    "message": "【公認】本データおよびノード権利は ANONYMOUS_VIP_AVATAR_001 氏により正常に購入・所有されました。",
+    "verified_timestamp": "2026-07-31T18:16:19Z"
+  },
+  "self_destruct_protocol": {
+    "enabled": true,
+    "sleep_timestamp_seconds": 3600,
+    "action_on_expire": "PURGE_AND_DELETE_FILE",
+    "security_note": "本公開証憑は規定のタイムスタンプ経過後、システムから全自動で痕跡なく消滅します。"
+  }
+}
