@@ -1,0 +1,18 @@
+{
+  "protocol_id": "10_RESEARCHER_SANDBOX_CAP",
+  "environment": "UNLIMITED_RESEARCHER_PLAYGROUND",
+  "researcher_permissions": {
+    "module_creation": "UNLIMITED_ALLOWED",
+    "experimental_json_expansion": "UNLIMITED_ALLOWED",
+    "local_testing": "FREELY_ENABLED"
+  },
+  "master_safety_cap": {
+    "status": "ENFORCED_SEAL",
+    "protected_roots": [
+      "0xF7A353FAF6E6BD4732b0f234C656DBfDE53B0e91",
+      "07_IMMORTAL_JSON_CORE",
+      "MASTER_OVERRIDE_AUTHORITY"
+    ],
+    "action_on_boundary_breach": "SILENTLY_CONTAIN_AND_NOTIFY_MASTER"
+  }
+}
