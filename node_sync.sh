@@ -1,59 +1,45 @@
 #!/bin/bash
 
 # =================================================================
-# PIRDAG JSON-TREE MESSAGE RECOVERY ENGINE
+# PIRDAG ROBUST JSON RECOVERY ENGINE
 # =================================================================
 
 case "$1" in
     read|sync)
-        echo ">> ネットワーク（Git）から最新のJSONツリーを引き込み中..."
-        git pull origin main --rebase > /dev/null 2>&1
+        echo ">> ネットワーク（Git）から最新データを取得中..."
+        # エラー発生時も止まらないように安全にpull
+        git pull origin main --rebase > /dev/null 2>&1 || git pull origin main > /dev/null 2>&1
         
         echo ""
         echo "===================================================="
-        echo " 📥 [JSON GOVERNANCE NODE MESSAGES - 全受信ログ]"
+        echo " 📥 [GOVERNANCE MESSAGES - 受信ログ]"
         echo "===================================================="
         
         COUNT=0
         
-        # 1. JSONファイル群（GENESIS, PIRDAG, ポータブルハッシュ等）からメッセージを抽出
+        # JSONファイル群から"message"または"payload"の行を直接抽出 (Python等に依存しないgrep/sed方式)
         for file in *.json; do
             if [ -f "$file" ]; then
-                # jqコマンド等を使ってJSON内のmessageやpayload項目を自動で探索
-                # (Pythonワンライナーで環境問わず確実にパース)
-                MSG=$(python3 -c "
-import json, sys
-try:
-    with open('$file') as f:
-        data = json.load(f)
-        # JSON内のメッセージになり得るキーを探索
-        msg = data.get('message') or data.get('state_payload', {}).get('message') or data.get('payload')
-        node = data.get('node_id') or data.get('portable_identity') or '$file'
-        if msg:
-            print(f'[{node}] ({file}): {msg}')
-except Exception:
-    pass
-" 2>/dev/null)
-                
-                if [ -n "$MSG" ]; then
-                    echo " $MSG"
+                # JSON内の "message": "..." や "payload": "..." を直接抽出
+                MATCHES=$(grep -E '"(message|payload|state_payload)"' "$file" 2>/dev/null | sed -E 's/.*"([^"]+)": *"([^"]+)".*/\1: \2/')
+                if [ -n "$MATCHES" ]; then
+                    echo " [$file]"
+                    echo "   $MATCHES"
                     COUNT=$((COUNT + 1))
                 fi
             fi
         done
         
-        # 2. 既存のログファイルが存在する場合も統合表示
+        # 通常のログファイルがあればそれも表示
         if [ -f "encrypted_chat.log" ]; then
-            while IFS= read -r line; do
-                if [ -n "$line" ]; then
-                     echo " [LOG]: $line"
-                     COUNT=$((COUNT + 1))
-                fi
-            done < "encrypted_chat.log"
+            echo ""
+            echo " [encrypted_chat.log]"
+            cat "encrypted_chat.log"
+            COUNT=$((COUNT + 1))
         fi
 
         echo "===================================================="
-        echo " >> 整合性確認完了: 計 $COUNT 件のメッセージ（JSON要素）を受信しました。"
+        echo " >> 処理完了: 計 $COUNT 件のデータリソースを確認しました。"
         echo ""
         ;;
 
