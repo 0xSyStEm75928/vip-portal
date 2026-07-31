@@ -1,0 +1,62 @@
+{
+  "protocol": "EEG_EVERYTHING_BUNDLE_DAG_V1",
+  "chain": [
+    "IDENTITY",
+    "THREE_FACE_MODEL",
+    "EEG_PATTERN_ANALYSIS",
+    "DAG_VERIFICATION",
+    "EVIDENCE_RECORD"
+  ],
+  "artifacts": [
+    {
+      "file": "eeg.protocol.bundle.json",
+      "exists": true
+    },
+    {
+      "file": "eeg.audit.record.json",
+      "exists": true
+    },
+    {
+      "file": "verification.record.json",
+      "exists": true
+    },
+    {
+      "file": "eeg.research.interface.json",
+      "exists": true
+    },
+    {
+      "file": "eeg.change.control.json",
+      "exists": true
+    },
+    {
+      "file": "eeg.production.profile.json",
+      "exists": true
+    },
+    {
+      "file": "eeg.silent.viewer.index.json",
+      "exists": true
+    },
+    {
+      "file": "three.face.identity.evidence.json",
+      "exists": true
+    },
+    {
+      "file": "identity.claim.evidence.json",
+      "exists": true
+    }
+  ],
+  "analysis": {
+    "eeg_feature_layer": "INCLUDED",
+    "three_face_layer": "INCLUDED",
+    "verification_layer": "INCLUDED"
+  },
+  "execution": {
+    "mode": "VERIFY_BEFORE_USE",
+    "status": "READY"
+  },
+  "timestamp": 1785499454,
+  "integrity": {
+    "algorithm": "SHA256",
+    "hash": "45dbe3b0e5094be6b2fedf0328876197fc03becd688fe53fca2ecc0f1236ee7b"
+  }
+}
