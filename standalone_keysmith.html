@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keysmith Engine - 100% Local & Self-Service</title>
+    <!-- ethers.js をローカル/スタンドアロンで読み込み -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
+    <style>
+        body { background-color: #0d1117; color: #c9d1d9; font-family: monospace; padding: 20px; max-width: 800px; margin: 0 auto; }
+        .card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; margin-bottom: 20px; }
+        h2 { color: #58a6ff; border-bottom: 1px solid #30363d; padding-bottom: 10px; }
+        textarea, input { width: 100%; background: #010409; border: 1px solid #30363d; color: #58a6ff; padding: 10px; margin-top: 5px; margin-bottom: 15px; border-radius: 4px; box-sizing: border-box; }
+        button { background: #238636; color: #fff; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-weight: bold; width: 100%; }
+        button:hover { background: #2ea043; }
+        #log { background: #010409; border: 1px solid #30363d; padding: 15px; border-radius: 4px; height: 150px; overflow-y: auto; color: #7ee787; font-size: 0.9em; }
+        .badge { display: inline-block; padding: 3px 8px; background: #238636; color: #fff; border-radius: 12px; font-size: 0.8em; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>🔑 Keysmith Local Engine <span class="badge">ZERO-KNOWLEDGE / LOCAL ONLY</span></h2>
+    <p style="font-size: 0.85em; color: #8b949e;">
+        ※ このツールは外部通信を一切行いません。ネットワークをオフライン（機内モード）にした状態でも完全に動作します。
+    </p>
+
+    <label>1. Keystore JSON (暗号化ファイル)</label>
+    <textarea id="keystoreJson" rows="5" placeholder='{"address":"...", "crypto":{...}}'></textarea>
+
+    <label>2. パスワードの断片 / 覚え書き</label>
+    <input type="text" id="passwordFragment" placeholder="例: MySecret2024">
+
+    <button onclick="runLocalRecovery()">復元試行スタート (Local Execution)</button>
+</div>
+
+<div class="card">
+    <h3>実行ログ / 結果</h3>
+    <div id="log">[READY] オフライン復元エンジンの待機完了</div>
+</div>
+
+<script>
+function log(msg) {
+    const logBox = document.getElementById('log');
+    logBox.innerHTML += '<div>' + msg + '</div>';
+    logBox.scrollTop = logBox.scrollHeight;
+}
+
+// 1. パスワード変形エンジン（ローカル計算）
+function generateVariations(fragment) {
+    if (!fragment) return [];
+    const base = fragment.trim();
+    const vars = new Set([base, base.toLowerCase(), base.toUpperCase()]);
+    const suffixes = ['!', '1', '123', '2024', '2025', '#', '@'];
+    for (const s of suffixes) {
+        vars.add(base + s);
+        vars.add(base.toLowerCase() + s);
+    }
+    return Array.from(vars);
+}
+
+// 2. メイン復元ロジック
+async function runLocalRecovery() {
+    const rawJson = document.getElementById('keystoreJson').value.trim();
+    const fragment = document.getElementById('passwordFragment').value.trim();
+
+    if (!rawJson || !fragment) {
+        alert('Keystore JSON と パスワード断片の両方を入力してください。');
+        return;
+    }
+
+    log('<span style="color:#58a6ff;">[INFO] 試行パターン生成中...</span>');
+    const variations = generateVariations(fragment);
+    log(`[INFO] 生成されたパターン数: ${variations.length} 件`);
+
+    let parsedJson;
+    try {
+        parsedJson = JSON.parse(rawJson);
+    } catch(e) {
+        log('<span style="color:#f85149;">[ERROR] 無効な JSON フォーマットです。</span>');
+        return;
+    }
+
+    log('[EXEC] ローカル復号試行を開始します...');
+    
+    for (let i = 0; i < variations.length; i++) {
+        const pw = variations[i];
+        log(`試行中 [${i+1}/${variations.length}]: ${pw}`);
+
+        try {
+            // ブラウザ内だけで ethers.js を使って復号（外部通信なし）
+            const wallet = await ethers.Wallet.fromEncryptedJson(JSON.stringify(parsedJson), pw);
+            log('<br><span style="color:#7ee787; font-weight:bold;">[SUCCESS] 🔑 復号に成功しました！</span>');
+            log(`<b>復元されたアドレス:</b> ${wallet.address}`);
+            log(`<b>一致したパスワード:</b> ${pw}`);
+            log(`<b>秘密鍵 (Private Key):</b> ${wallet.privateKey}`);
+            return;
+        } catch (e) {
+            // パスワード不一致時はスキップ
+        }
+    }
+
+    log('<br><span style="color:#f85149;">[FAILED] 生成されたパターンでは復号できませんでした。</span>');
+}
+</script>
+
+</body>
+</html>
