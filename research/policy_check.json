@@ -1,0 +1,13 @@
+{
+  "sender": "Node-01_Alpha",
+  "recipient": "Research_Nodes",
+  "type": "POLICY_VERIFICATION",
+  "timestamp": "$(date '+%Y-%m-%d %H:%M:%S')",
+  "policy": {
+    "protocol_version": "PIRDAG_v1.0",
+    "access_control": "HYBRID_DOMAIN_A_B",
+    "encryption_type": "AES-256-CBC",
+    "governance_mode": "PULL_NOTIFICATION_ONLY"
+  },
+  "action_required": "Please review the policy and return your hash approval JSON."
+}
