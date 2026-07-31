@@ -1,0 +1,19 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'link' ]
+2 info using npm@6.14.18
+3 info using node@v14.21.3
+4 verbose config Skipping project config: /root/.npmrc. (matches userconfig)
+5 verbose linkPkg /root
+6 verbose stack Error: ENOENT: no such file or directory, open '/root/package.json'
+7 verbose cwd /root
+8 verbose Linux 4.20.69-ish
+9 verbose argv "/usr/bin/node" "/usr/bin/npm" "link"
+10 verbose node v14.21.3
+11 verbose npm  v6.14.18
+12 error code ENOENT
+13 error syscall open
+14 error path /root/package.json
+15 error errno -2
+16 error enoent ENOENT: no such file or directory, open '/root/package.json'
+17 error enoent This is related to npm not being able to find a file.
+18 verbose exit [ -2, true ]

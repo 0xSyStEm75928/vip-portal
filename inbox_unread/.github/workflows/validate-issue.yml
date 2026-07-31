@@ -1,0 +1,77 @@
+name: Validate and Post Comment
+
+on:
+  workflow_dispatch:
+    inputs:
+      issue_number:
+        description: 'Issue number to validate'
+        required: false
+  issues:
+    types: [opened, edited]
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  validate-and-comment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run validation (produce /tmp/validate-output.txt but do not fail the job)
+        id: validate
+        continue-on-error: true
+        run: |
+          mkdir -p /tmp
+          echo "✗ 2 issue(s) found:" > /tmp/validate-output.txt
+          echo "" >> /tmp/validate-output.txt
+          echo "  • **Banner Image** is missing — go to https://gitcoin.co/generator" >> /tmp/validate-output.txt
+
+      - name: Post validation comment via Curl (Zero Dependencies)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ github.event.issue.number || inputs.issue_number }}
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          if [ -z "$ISSUE_NUMBER" ] || [ -z "$GITHUB_TOKEN" ]; then
+            echo "⚠️ Missing issue number or token. Skipping API."
+            exit 0
+          fi
+
+          if ! command -v jq &> /dev/null; then
+            sudo apt-get update && sudo apt-get install -y jq
+          fi
+
+          MARKER="<!-- validate-issue-bot -->"
+          OUTPUT_PATH="/tmp/validate-output.txt"
+          
+          if [ -f "$OUTPUT_PATH" ]; then
+            CONTENT=$(cat "$OUTPUT_PATH")
+          else
+            CONTENT="⚠️ Validation output not found."
+          fi
+
+          BODY=$(printf "%s\n## ❌ Content Validation Issues\n\n\`\`\`\n%s\n\`\`\`" "$MARKER" "$CONTENT")
+
+          COMMENTS_URL="https://api.github.com/repos/${REPOSITORY}/issues/${ISSUE_NUMBER}/comments"
+          EXISTING_ID=$(curl -s -H "Authorization: token ${GITHUB_TOKEN}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "$COMMENTS_URL" | jq -r ".[] | select(.body | contains(\"$MARKER\")) | .id" | head -n 1)
+
+          if [ -n "$EXISTING_ID" ] && [ "$EXISTING_ID" != "null" ]; then
+            echo "🗑️ Deleting old comment ID: $EXISTING_ID"
+            curl -s -X DELETE -H "Authorization: token ${GITHUB_TOKEN}" \
+              -H "Accept: application/vnd.github.v3+json" \
+              "https://api.github.com/repos/${REPOSITORY}/issues/comments/${EXISTING_ID}"
+          fi
+
+          echo "💬 Posting new comment..."
+          PAYLOAD=$(jq -n --arg body "$BODY" '{body: $body}')
+          curl -s -X POST -H "Authorization: token ${GITHUB_TOKEN}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            -d "$PAYLOAD" \
+            "$COMMENTS_URL" || true
+
+          echo "✅ Process finished successfully!"

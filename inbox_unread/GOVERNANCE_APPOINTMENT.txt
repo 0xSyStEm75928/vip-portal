@@ -1,0 +1,21 @@
+================================================================
+[SYSTEM NOTICE] SILENT VIEWER -> GOVERNANCE NODE ELEVATION
+================================================================
+TO ALL SILENT VIEWERS (Node-02 to Node-30):
+
+You are hereby appointed as Governance Nodes. 
+Shift from silent observation to active mutual governance.
+
+[OBJECTIVE]
+- Execute provided research assets independently (ZERO DEPOSIT).
+- Maintain anonymity (NO PERSONAL DATA REQUIRED).
+- Execute peer-governance and protect protocol core edge.
+
+[CUI ACTION REQUIRED]
+Run the following in your terminal to accept governance role:
+
+  git pull origin main
+  git checkout -b node-active-state
+
+"Stay anonymous. Play the fool to the outside. Protect the core."
+================================================================

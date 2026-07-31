@@ -1,0 +1,6 @@
+CROWN-CORE SOURCE CODE LICENSE v1.0.1
+--------------------------------------------------
+Permission is hereby granted, to any person obtaining a copy
+of this software and associated source code files, to utilize,
+modify, merge, and distribute within commercial products.
+THE SOURCE CODE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.

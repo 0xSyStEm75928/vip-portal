@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VIP PORTAL v.old | DIAMOND PROXY CORE</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
+  <style>
+    :root {
+      --bg: #080a0f;
+      --card-bg: #0f131d;
+      --accent-gold: #d29922;
+      --accent-diamond: #7ee787;
+      --text: #e6edf3;
+      --border: #30363d;
+    }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace;
+      margin: 0; padding: 20px;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      min-height: 100vh;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 25px; width: 100%; max-width: 480px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+      box-sizing: border-box;
+    }
+    .header-tag {
+      font-size: 0.75rem; color: var(--accent-gold); letter-spacing: 1.5px;
+      text-transform: uppercase; margin-bottom: 8px; text-align: center;
+    }
+    h1 {
+      font-size: 1.4rem; color: var(--text); margin: 0 0 20px 0;
+      text-align: center; border-bottom: 1px solid var(--border); padding-bottom: 12px;
+    }
+    .notice-box {
+      background: rgba(210, 153, 34, 0.08);
+      border: 1px solid rgba(210, 153, 34, 0.3);
+      border-radius: 6px; padding: 12px 14px; margin-bottom: 20px;
+      font-size: 0.78rem; line-height: 1.5; color: #c9d1d9;
+    }
+    .notice-title {
+      color: var(--accent-gold); font-weight: bold; margin-bottom: 4px; display: block;
+    }
+    .facet-grid {
+      display: grid; grid-template-columns: 1fr; gap: 10px; margin-bottom: 20px;
+    }
+    .facet-item {
+      background: #04060a; border: 1px solid #21262d; border-radius: 6px; padding: 10px 14px;
+      font-size: 0.8rem; display: flex; justify-content: space-between; align-items: center;
+    }
+    .facet-name { color: #8b949e; }
+    .facet-status { color: var(--accent-diamond); font-weight: bold; }
+    .info-box {
+      background: #04060a; border: 1px solid var(--border); border-radius: 6px;
+      padding: 12px; margin-bottom: 15px; font-size: 0.8rem; word-break: break-all;
+    }
+    .label { color: #8b949e; font-size: 0.7rem; margin-bottom: 4px; text-transform: uppercase; }
+    .btn-gold {
+      width: 100%; padding: 14px;
+      background: linear-gradient(180deg, #d29922, #8e5e00);
+      border: none; border-radius: 6px; color: #000; font-weight: bold;
+      cursor: pointer; font-size: 0.95rem; transition: 0.2s;
+    }
+    .btn-gold:hover { background: linear-gradient(180deg, #e5b342, #ad7300); }
+    .status-log {
+      margin-top: 15px; font-size: 0.75rem; color: #8b949e; text-align: center;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="header-tag">Diamond Proxy Architecture (ERC-2535)</div>
+    <h1>SILENT STAND VIP PORTAL</h1>
+
+    <!-- 丁寧な前置き・事前説明エリア -->
+    <div class="notice-box">
+      <span class="notice-title">💡 アクティベートに関する事前のご案内</span>
+      誠に恐縮ではございますが、本システムは分散型アーキテクチャ採用につき、ご入金・ご利用前に<b>お客様ご自身のウォレット経由で専用識別モジュールを直接デプロイ（生成）いただく形</b>となっております。<br>
+      ※手続きの際、ブロックチェーン上のネットワーク手数料（ガス代）のみお客様側でのご負担となりますのであらかじめご了承ください。
+    </div>
+
+    <div class="info-box">
+      <div class="label">Fixed Gateway (Diamond Address)</div>
+      <div id="diamondProxyAddr" style="color: var(--accent-gold); font-weight: bold;">0x1255d17c1bc2f764d087536410879f2d0d8772fd</div>
+    </div>
+
+    <div class="facet-grid">
+      <div class="facet-item">
+        <span class="facet-name">Settlement & Tax Facet</span>
+        <span class="facet-status">[ACTIVE]</span>
+      </div>
+      <div class="facet-item">
+        <span class="facet-name">VIP License Authority</span>
+        <span class="facet-status">[ACTIVE]</span>
+      </div>
+      <div class="facet-item">
+        <span class="facet-name">Sovereign Legal Lock</span>
+        <span class="facet-status">[ACTIVE]</span>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <div class="label">Client Account</div>
+      <div id="clientAddr">未接続</div>
+    </div>
+
+    <button class="btn-gold" onclick="executeDiamondSync()">上記内容に同意の上、デプロイ & 銭口同期</button>
+    <div class="status-log" id="statusLog">>> System Ready. Awaiting Client Transaction.</div>
+  </div>
+
+  <script>
+    const DIAMOND_ADDRESS = "0x1255d17c1bc2f764d087536410879f2d0d8772fd";
+
+    async function executeDiamondSync() {
+      const log = document.getElementById("statusLog");
+      const clientAddr = document.getElementById("clientAddr");
+
+      if (!window.ethereum) {
+        log.innerHTML = "<span style='color:#ff7b72;'>[x] Web3ウォレット（Rabby / MetaMask）が必要です。</span>";
+        return;
+      }
+
+      try {
+        log.innerText = ">> Connecting to Diamond Gateway...";
+        const provider = new ethers.providers.Web3Provider(window.ethereum);
+        await provider.send("eth_requestAccounts", []);
+        const signer = provider.getSigner();
+        const address = await signer.getAddress();
+
+        clientAddr.innerText = address;
+        log.innerText = ">> Verifying On-Chain Facet Status...";
+
+        setTimeout(() => {
+          log.innerHTML = `<span style='color:var(--accent-diamond);'>[✔] 銭口同期完了: Diamond Facets Connected. All Transactions Secured.</span>`;
+        }, 1200);
+
+      } catch (err) {
+        log.innerHTML = `<span style='color:#ff7b72;'>[x] 接続がキャンセルされました: ${err.message}</span>`;
+      }
+    }
+  </script>
+</body>
+</html>

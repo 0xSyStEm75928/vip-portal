@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keysmith Self-Deploy Activation</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
+    <style>
+        body { background-color: #0d1117; color: #c9d1d9; font-family: monospace; padding: 20px; }
+        .container { max-width: 600px; margin: 0 auto; }
+        .box { border: 1px solid #30363d; background: #161b22; padding: 20px; border-radius: 8px; }
+        .legal { border: 1px solid #da3633; background: #210c0d; padding: 10px; border-radius: 4px; font-size: 0.85em; margin-bottom: 15px; }
+        button { background: #238636; color: white; border: none; padding: 12px 24px; border-radius: 6px; cursor: pointer; font-weight: bold; width: 100%; font-size: 1em; }
+        button:hover { background: #2ea043; }
+        #status { margin-top: 15px; word-break: break-all; color: #58a6ff; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>Keysmith Autonomous Activation</h2>
+            
+            <div class="legal">
+                <strong>【法的即時効力特約】</strong><br>
+                本ボタンの押下およびオンチェーン処理の実行をもって、利用者はライセンス利用規約および対価支払義務に不可逆的に同意したものとみなされます。
+            </div>
+
+            <p>ご自身のウォレット（POL残高が必要）を接続し、自前でコントラクトをセットアップしてアクティベートしてください。</p>
+
+            <button id="deployBtn" onclick="selfDeploy()">ウォレットを接続してセルフデプロイ実行</button>
+
+            <div id="status"></div>
+        </div>
+    </div>
+
+    <script>
+        // デプロイ用のバイトコード
+        const BYTECODE = "0x608060405234801561001057600080fd5b336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff02191646179055506102aa806100436000396000f3fe608060405234801561001057600080fd5b600080fdfe";
+
+        async function selfDeploy() {
+            const status = document.getElementById("status");
+            if (!window.ethereum) {
+                alert("Rabby Wallet や MetaMask などのWeb3ウォレットが必要です。");
+                return;
+            }
+
+            try {
+                status.innerText = "ウォレット接続中...";
+                const provider = new ethers.providers.Web3Provider(window.ethereum);
+                await provider.send("eth_requestAccounts", []);
+                const signer = provider.getSigner();
+
+                status.innerText = "ブロックチェーンへデプロイを送信中...（ウォレットで承認してください）";
+                
+                // 宛先(To)なし＝新規デプロイのTxを顧客のウォレットから発行
+                const tx = await signer.sendTransaction({
+                    data: BYTECODE
+                });
+
+                status.innerText = `デプロイ処理中...\nTx Hash: ${tx.hash}`;
+                await tx.wait();
+
+                status.innerHTML = `<span style="color: #3fb950;">[SUCCESS] アクティベート完了！<br>セルフデプロイが正常に終了しました。</span>`;
+            } catch (err) {
+                status.innerText = `[ERROR] ${err.message}`;
+            }
+        }
+    </script>
+</body>
+</html>

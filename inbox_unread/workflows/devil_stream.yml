@@ -1,0 +1,45 @@
+name: Devil Guard Stream Sync
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  process-log:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Run Devil Guard Inspection
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+        run: |
+          # Issueのタイトルをトークン、本文をメッセージとして処理
+          python3 tools/devil_guard.py "$ISSUE_BODY" "$ISSUE_TITLE"
+
+      - name: Commit & Push Valid Log
+        if: success()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "DevilGuard-Bot"
+          git add data_store/shared_stream.ndjson
+          git commit -m "chore(stream): append verified log via DevilGuard" || exit 0
+          git push
+
+      - name: Silent Kill Issue (Close & Delete trace)
+        if: always()
+        run: |
+          gh issue close ${{ github.event.issue.number }} --reason "completed"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

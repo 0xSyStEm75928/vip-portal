@@ -1,0 +1,7 @@
+#!/bin/sh
+echo "[🦅 SWIFT] コードを入力（最後は 'EOF'）"
+rm -f .tmp.swift
+while IFS= read -r line; do [ "$line" = "EOF" ] && break; echo "$line" >> .tmp.swift; done
+if [ -f .tmp.swift ]; then swift .tmp.swift 2>.tmp_err.log; fi
+if [ $? -ne 0 ]; then cat .tmp_err.log; fi
+rm -f .tmp.swift .tmp_err.log

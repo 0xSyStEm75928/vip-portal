@@ -1,0 +1,6 @@
+#!/bin/sh
+echo "[🟢 JS] コードを入力（最後は 'EOF'）"
+rm -f .tmp.js
+while IFS= read -r line; do [ "$line" = "EOF" ] && break; echo "$line" >> .tmp.js; done
+if [ -f .tmp.js ]; then node .tmp.js; fi
+rm -f .tmp.js

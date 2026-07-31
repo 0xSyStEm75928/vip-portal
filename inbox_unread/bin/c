@@ -1,0 +1,10 @@
+#!/bin/sh
+echo "[✨ C] コードを入力（最後は 'EOF'）"
+echo "#include <stdio.h>" > .tmp.c
+echo "#include <stdlib.h>" >> .tmp.c
+echo "int main() {" >> .tmp.c
+while IFS= read -r line; do [ "$line" = "EOF" ] && break; echo "$line" >> .tmp.c; done
+echo "}" >> .tmp.c
+gcc .tmp.c -o .tmp_bin 2>.tmp_err.log
+if [ $? -eq 0 ]; then ./.tmp_bin; else cat .tmp_err.log; fi
+rm -f .tmp.c .tmp_bin .tmp_err.log

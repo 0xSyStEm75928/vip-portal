@@ -1,0 +1,11 @@
+================================================================
+📋 JSSH SECURITY INTEGRITY AUDIT REPORT (DETAILED)
+================================================================
+Target Archive: 
+Threat Level  : 0% [CRITICAL RISK]
+Audit Status  : FAILED (Malicious signature detected)
+
+[EXPOSED PAYLOAD ARCHITECTURE]
+* Found unauthorized shortcut extension (.lnk / .exe) masked inside package.
+* Package script triggers background execution to attempt environment key harvesting.
+================================================================

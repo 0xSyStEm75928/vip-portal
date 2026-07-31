@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# =====================================================================
+#  CROWN-CORE PRODUCT EDITION: PYTHON3 ENGINE (BASH/ZSH COMPATIBLE)
+# =====================================================================
+
+echo -e "\n[🐍 PYTHON-MODE ACTIVE] コードを入力してください。最後に 'EOF' で実行します。"
+echo "------------------------------------------------------------------"
+
+# 他人の環境なら100%動く、Bashの高度な配列・ヒアドキュメント制御の生データ
+cat << 'PY_CORE' > .tmp_crown.py
+import sys
+# 製品版としてあらかじめ組み込んでおく標準・拡張コアデータ
+import math
+import json
+PY_CORE
+
+# ユーザーからの入力をリアルタイムに流し込む
+while IFS= read -r line; do
+    if [[ "$line" == "EOF" ]]; then
+        break
+    fi
+    echo "$line" >> .tmp_crown.py
+done
+
+# 執行
+python3 .tmp_crown.py
+rm -f .tmp_crown.py

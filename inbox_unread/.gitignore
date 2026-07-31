@@ -1,0 +1,17 @@
+# Python キャッシュ・バイナリ
+__pycache__/
+*.pyc
+*.pyo
+
+# ツール・Pip キャッシュ
+.cache/
+.ash_history
+
+# データ・ログファイル
+data_store/
+*.ndjson
+*.json
+
+# 環境変数・秘密鍵 (絶対コミット禁止)
+.env
+.env.local

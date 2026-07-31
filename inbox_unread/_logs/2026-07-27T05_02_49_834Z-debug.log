@@ -1,0 +1,33 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'audit', 'fix', '--force' ]
+2 info using npm@6.14.18
+3 info using node@v14.21.3
+4 verbose config Skipping project config: /root/.npmrc. (matches userconfig)
+5 warn using --force I sure hope you know what you are doing.
+6 verbose npm-session a9eb4221bb88c237
+7 verbose stack Error: Neither npm-shrinkwrap.json nor package-lock.json found: Cannot audit a project without a lockfile
+7 verbose stack     at /usr/lib/node_modules/npm/lib/audit.js:169:19
+7 verbose stack     at tryCatcher (/usr/lib/node_modules/npm/node_modules/bluebird/js/release/util.js:16:23)
+7 verbose stack     at Promise._settlePromiseFromHandler (/usr/lib/node_modules/npm/node_modules/bluebird/js/release/promise.js:544:35)
+7 verbose stack     at Promise._settlePromise (/usr/lib/node_modules/npm/node_modules/bluebird/js/release/promise.js:604:18)
+7 verbose stack     at Promise._settlePromise0 (/usr/lib/node_modules/npm/node_modules/bluebird/js/release/promise.js:649:10)
+7 verbose stack     at Promise._settlePromises (/usr/lib/node_modules/npm/node_modules/bluebird/js/release/promise.js:729:18)
+7 verbose stack     at Promise._fulfill (/usr/lib/node_modules/npm/node_modules/bluebird/js/release/promise.js:673:18)
+7 verbose stack     at PromiseArray._resolve (/usr/lib/node_modules/npm/node_modules/bluebird/js/release/promise_array.js:127:19)
+7 verbose stack     at PromiseArray._promiseFulfilled (/usr/lib/node_modules/npm/node_modules/bluebird/js/release/promise_array.js:145:14)
+7 verbose stack     at PromiseArray._iterate (/usr/lib/node_modules/npm/node_modules/bluebird/js/release/promise_array.js:115:31)
+7 verbose stack     at PromiseArray.init [as _init] (/usr/lib/node_modules/npm/node_modules/bluebird/js/release/promise_array.js:79:10)
+7 verbose stack     at Promise._settlePromise (/usr/lib/node_modules/npm/node_modules/bluebird/js/release/promise.js:601:21)
+7 verbose stack     at Promise._settlePromise0 (/usr/lib/node_modules/npm/node_modules/bluebird/js/release/promise.js:649:10)
+7 verbose stack     at Promise._settlePromises (/usr/lib/node_modules/npm/node_modules/bluebird/js/release/promise.js:729:18)
+7 verbose stack     at Promise._fulfill (/usr/lib/node_modules/npm/node_modules/bluebird/js/release/promise.js:673:18)
+7 verbose stack     at PromiseArray._resolve (/usr/lib/node_modules/npm/node_modules/bluebird/js/release/promise_array.js:127:19)
+8 verbose cwd /root
+9 verbose Linux 4.20.69-ish
+10 verbose argv "/usr/bin/node" "/usr/bin/npm" "audit" "fix" "--force"
+11 verbose node v14.21.3
+12 verbose npm  v6.14.18
+13 error code EAUDITNOLOCK
+14 error audit Neither npm-shrinkwrap.json nor package-lock.json found: Cannot audit a project without a lockfile
+15 error audit Try creating one first with: npm i --package-lock-only
+16 verbose exit [ 1, true ]

@@ -1,0 +1,37 @@
+This is a revocation certificate for the OpenPGP key:
+
+pub   rsa4096 2026-07-10 [SCEA]
+      F294BD23CDCA069EEDBF76D27F335E92A9663E68
+uid          Namito Murakata <admin@lucifer0x0system.xyz>
+
+A revocation certificate is a kind of "kill switch" to publicly
+declare that a key shall not anymore be used.  It is not possible
+to retract such a revocation certificate once it has been published.
+
+Use it to revoke this key in case of a compromise or loss of
+the secret key.  However, if the secret key is still accessible,
+it is better to generate a new revocation certificate and give
+a reason for the revocation.  For details see the description of
+of the gpg command "--generate-revocation" in the GnuPG manual.
+
+To avoid an accidental use of this file, a colon has been inserted
+before the 5 dashes below.  Remove this colon with a text editor
+before importing and publishing this revocation certificate.
+
+:-----BEGIN PGP PUBLIC KEY BLOCK-----
+Comment: This is a revocation certificate
+
+iQI2BCABCAAgFiEE8pS9I83KBp7tv3bSfzNekqlmPmgFAmpQdAsCHQAACgkQfzNe
+kqlmPmgsdRAAvIpr1NRg6npvdOo2NzrES/Cbq6Thns8PXlu+Y9rZEsAtu/u599by
+yhTYiQGcLdmaAnd2KHCKbd1c8E6Nblow2V6QsL9yxZ7nOMh0R7TJfehZPQS5/n6d
+6kmqFwLIOAzoLim59ipX1G1fTlgfYQe3uz/uESEoDEO7YI7I1iH5lp0oUf1QMKOt
+hsyKTEiXcQXPDNa3XdCkck5B9UcMShZBTp0ZUa2k0Cp8MiuVOQGgJKCeLSiLEoVw
+40Gb/J49tdtyWGJnAXQt9ZyvW3x0qn97vc6gUH+YzWGNNVMIMy5AKsQmrteVud6b
+LjRr4FmKairY+pH6HakdGJeXMxRuteReV0h3u6sDEBug1e4HS544PLSwM1uKwMVu
+8xPCJ6gVV7JwTv3sbxjkezFSiBvLBq7LUySJb2OxBXTKU2QnWt24zsBR9TK3q7KT
+pAp7ryaxoEW7d1I8QfnFEzEOMiASIwIsa5cnhpgj7XCNibDC+3T9og3Ukn/GlIIj
+0RfM+xji2km9ChTh7ygkMmw9UEPCDIpSd3R8pDahrReQXkKuJ7wFaRoGq0BeSPuQ
+Z4aEh7vov4E+MmOR9HFyCggYRBypFpHbS7enrWmY96sRPldtB9A751u9sxm/RCGe
+sMTgIE4hQ6ntlzqEBmcpZ4TUCQ2uyGBVslzRlSfCWRA1eeOpQFBWxUc=
+=Y3KL
+-----END PGP PUBLIC KEY BLOCK-----

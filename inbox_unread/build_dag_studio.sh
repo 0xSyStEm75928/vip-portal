@@ -1,0 +1,260 @@
+#!/bin/bash
+
+echo "[*] Generating Pandemonium MEV - DAG JSON Schema..."
+
+cat << 'JSON_EOF' > dag_schema.json
+{
+  "graph_id": "PANDEMONIUM_MEV_DAG_CORE",
+  "version": "3.1.0-DAG-FIXED",
+  "nodes": [
+    {
+      "id": "node_pool_pand",
+      "type": "RESOURCE",
+      "label": "PAND Reserve",
+      "value": 1000000,
+      "unit": "PAND"
+    },
+    {
+      "id": "node_pool_usdc",
+      "type": "RESOURCE",
+      "label": "USDC Reserve",
+      "value": 500000,
+      "unit": "USDC"
+    },
+    {
+      "id": "node_amm_engine",
+      "type": "TRANSFORM_MATH",
+      "formula": "CONSTANT_PRODUCT_K",
+      "inputs": ["node_pool_pand", "node_pool_usdc"]
+    },
+    {
+      "id": "node_dominance_power",
+      "type": "STATE",
+      "label": "Dominance Power",
+      "value": 99.8,
+      "unit": "%"
+    }
+  ],
+  "edges": [
+    {"from": "node_pool_pand", "to": "node_amm_engine"},
+    {"from": "node_pool_usdc", "to": "node_amm_engine"},
+    {"from": "node_amm_engine", "to": "node_dominance_power"}
+  ],
+  "actions": [
+    {
+      "id": "act_sandwich",
+      "name": "⚔️ SANDWICH ATTACK",
+      "type": "DOMINANCE_EXEC",
+      "cost_type": "GWEI",
+      "effect": "HARVEST_SLIPPAGE"
+    },
+    {
+      "id": "act_override",
+      "name": "🔥 GWEI OVERRIDE",
+      "type": "PRIORITY_BUMP",
+      "cost_type": "GAS_BOOST",
+      "effect": "CRUSH_RIVAL"
+    },
+    {
+      "id": "act_rage",
+      "name": "💀 PANDEMONIUM RAGE",
+      "type": "CHAOS_CASCADE",
+      "cost_type": "ALL_OUT",
+      "effect": "MASS_HARVEST"
+    }
+  ]
+}
+JSON_EOF
+
+echo "[+] JSON Schema created! Now compiling into Reactive DAG HTML..."
+
+cat << 'HTML_EOF' > pandemonium_dag_studio.html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>😈 PANDEMONIUM MEV - DAG ENGINE</title>
+  <style>
+    :root {
+      --bg-dark: #05070a;
+      --panel-bg: #0d111a;
+      --border-color: #1e293b;
+      --demon-red: #ff0055;
+      --demon-purple: #9d00ff;
+      --gold: #ffd700;
+      --text: #f1f5f9;
+      --text-dim: #64748b;
+      --green: #00ff88;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: monospace; }
+    body { background: var(--bg-dark); color: var(--text); padding: 12px; display: flex; flex-direction: column; gap: 12px; min-height: 100dvh; }
+    
+    /* Header */
+    header { background: #130018; border: 1px solid var(--demon-red); border-radius: 8px; padding: 12px; display: flex; justify-content: space-between; align-items: center; }
+    .title h1 { color: var(--demon-red); font-size: 1.1rem; }
+    .title p { color: var(--text-dim); font-size: 0.65rem; }
+    .dom-val { color: var(--gold); font-size: 1.2rem; font-weight: bold; }
+
+    /* Grid Layout */
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px; }
+    .card { background: var(--panel-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 12px; display: flex; flex-direction: column; gap: 8px; }
+    .card-h { color: var(--gold); font-size: 0.8rem; border-bottom: 1px solid var(--border-color); padding-bottom: 4px; }
+
+    /* DAG Graph Visualizer Panel */
+    .dag-nodes { display: flex; flex-direction: column; gap: 6px; font-size: 0.75rem; }
+    .dag-node-item { background: #030508; border-left: 3px solid var(--demon-purple); padding: 6px; border-radius: 4px; display: flex; justify-content: space-between; }
+
+    /* Mempool */
+    .mempool { height: 180px; overflow-y: auto; display: flex; flex-direction: column; gap: 6px; }
+    .tx-card { background: #030508; border-left: 3px solid var(--demon-red); padding: 6px; font-size: 0.75rem; border-radius: 4px; }
+    .btn { background: var(--demon-red); color: white; border: none; padding: 6px 10px; border-radius: 4px; font-weight: bold; cursor: pointer; margin-top: 4px; width: 100%; }
+    .btn-purple { background: var(--demon-purple); }
+
+    /* Control Scale */
+    input[type="range"] { width: 100%; accent-color: var(--demon-red); }
+
+    /* Bottom Big Rage */
+    .btn-rage { width: 100%; padding: 14px; background: linear-gradient(90deg, var(--demon-red), var(--demon-purple)); color: white; font-weight: 900; border: none; border-radius: 8px; cursor: pointer; letter-spacing: 2px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="title">
+      <h1>😈 PANDEMONIUM DAG ENGINE</h1>
+      <p id="dagId">GRAPH_ID: INITIALIZING...</p>
+    </div>
+    <div>
+      <div style="font-size: 0.6rem; color: var(--text-dim);">DAG STABILITY</div>
+      <div class="dom-val" id="dagStability">100.0%</div>
+    </div>
+  </header>
+
+  <div class="grid">
+    <!-- DAG State Inspector -->
+    <div class="card">
+      <div class="card-h">⚡ FIXED DAG STATE (GENERATION ENGINE)</div>
+      <div class="dag-nodes" id="dagNodeContainer">
+        <!-- Dynamically Hydrated from JSON -->
+      </div>
+    </div>
+
+    <!-- AMM Evaluator -->
+    <div class="card">
+      <div class="card-h">📊 EVALUATE (x * y = k)</div>
+      <div style="font-size:0.75rem;">
+        <div>Loan Scale (USDC Input): <span id="scaleLabel" style="color:var(--gold);">10,000</span></div>
+        <input type="range" id="dagSlider" min="500" max="500000" step="500" value="10000" oninput="evalDag()">
+      </div>
+      <div style="background:#030508; padding:8px; border-radius:4px; font-size:0.75rem; display:flex; flex-direction:column; gap:4px; margin-top:4px;">
+        <div>K Constant: <span id="kVal" style="color:var(--green);">0</span></div>
+        <div>Price Impact: <span id="impactVal" style="color:var(--demon-red);">0%</span></div>
+        <div>Yield Output: <span id="yieldVal" style="color:var(--gold);">+0 PAND</span></div>
+      </div>
+    </div>
+
+    <!-- Mempool Execution -->
+    <div class="card">
+      <div class="card-h">⚔️ MEMPOOL (TARGET HARVEST)</div>
+      <div class="mempool" id="mempoolContainer"></div>
+    </div>
+  </div>
+
+  <div style="margin-top: auto;">
+    <button class="btn-rage" onclick="triggerDagCascade()">💀 PANDEMONIUM RAGE (DAG CASCADE)</button>
+  </div>
+
+  <script>
+    // --- 1. Load JSON Schema Data into DAG Engine ---
+    const dagSchema = {
+      "graph_id": "PANDEMONIUM_MEV_DAG_CORE",
+      "version": "3.1.0-DAG-FIXED",
+      "nodes": {
+        "pool_pand": 1000000,
+        "pool_usdc": 500000
+      }
+    };
+
+    document.getElementById('dagId').innerText = `ID: ${dagSchema.graph_id} v${dagSchema.version}`;
+
+    // --- 2. Render State Graph ---
+    function renderDagNodes() {
+      const c = document.getElementById('dagNodeContainer');
+      c.innerHTML = `
+        <div class="dag-node-item">
+          <span>Node [Pool_PAND]:</span>
+          <strong style="color:var(--green);">${dagSchema.nodes.pool_pand.toLocaleString()} PAND</strong>
+        </div>
+        <div class="dag-node-item">
+          <span>Node [Pool_USDC]:</span>
+          <strong style="color:var(--green);">${dagSchema.nodes.pool_usdc.toLocaleString()} USDC</strong>
+        </div>
+        <div class="dag-node-item">
+          <span>Node [Graph_Cycle]:</span>
+          <strong style="color:var(--gold);">ACYCLIC (NO LOOPS)</strong>
+        </div>
+      `;
+    }
+
+    // --- 3. Pure DAG Evaluation (x * y = k) ---
+    function evalDag() {
+      const inputLoan = parseFloat(document.getElementById('dagSlider').value);
+      document.getElementById('scaleLabel').innerText = inputLoan.toLocaleString() + " USDC";
+
+      const x = dagSchema.nodes.pool_pand;
+      const y = dagSchema.nodes.pool_usdc;
+      const k = x * y;
+
+      const newY = y + inputLoan;
+      const newX = k / newY;
+      const pandYield = x - newX;
+
+      const spotPrice = y / x;
+      const execPrice = inputLoan / pandYield;
+      const impact = ((execPrice - spotPrice) / spotPrice) * 100;
+
+      document.getElementById('kVal').innerText = (k / 1e9).toFixed(2) + "B";
+      document.getElementById('impactVal').innerText = impact.toFixed(2) + "%";
+      document.getElementById('yieldVal').innerText = "+" + (pandYield * 0.03).toFixed(1) + " PAND";
+    }
+
+    // --- 4. Spawn Cascade Events ---
+    function spawnTarget() {
+      const mc = document.getElementById('mempoolContainer');
+      const isRival = Math.random() > 0.5;
+      const id = "0x" + Math.random().toString(16).substr(2, 5);
+      
+      const div = document.createElement('div');
+      div.className = "tx-card";
+      if (isRival) {
+        div.style.borderColor = "var(--demon-purple)";
+        div.innerHTML = `
+          <div>🥷 Rival Bot (${id}) -> Priority: 90 Gwei</div>
+          <button class="btn btn-purple" onclick="alert('🔥 Rival Bot crushed via Gas Override!')">🔥 OVERRIDE GWEI</button>
+        `;
+      } else {
+        div.innerHTML = `
+          <div>👤 Human Target (${id}) -> Swap 25,000 USDC</div>
+          <button class="btn" onclick="alert('⚔️ Sandwich Executed! Harvested: +875 PAND')">⚔️ SANDWICH HARVEST</button>
+        `;
+      }
+      mc.prepend(div);
+      if (mc.children.length > 5) mc.removeChild(mc.lastChild);
+    }
+
+    function triggerDagCascade() {
+      alert("💀 [DAG CASCADE ACTIVATED]\nData graph triggered parallel execution across all nodes!");
+      for(let i=0; i<4; i++) setTimeout(spawnTarget, i * 150);
+    }
+
+    // Init Engine
+    renderDagNodes();
+    evalDag();
+    setInterval(spawnTarget, 2500);
+  </script>
+</body>
+</html>
+HTML_EOF
+
+echo "[SUCCESS] pandemonium_dag_studio.html generated successfully!"

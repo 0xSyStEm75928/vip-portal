@@ -1,0 +1,8 @@
+#!/bin/sh
+echo "[🦀 RUST] コードを入力（最後は 'EOF'）"
+echo "fn main() {" > .tmp.rs
+while IFS= read -r line; do [ "$line" = "EOF" ] && break; echo "$line" >> .tmp.rs; done
+echo "}" >> .tmp.rs
+rustc .tmp.rs -o .tmp_bin 2>.tmp_err.log
+if [ $? -eq 0 ]; then ./.tmp_bin; else cat .tmp_err.log; fi
+rm -f .tmp.rs .tmp_bin .tmp_err.log

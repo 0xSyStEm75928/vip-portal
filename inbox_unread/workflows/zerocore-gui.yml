@@ -1,0 +1,52 @@
+name: 🧩 ZeroCore Sovereign GUI Control
+on:
+  workflow_dispatch:
+    inputs:
+      command_type:
+        description: '【指令選択】ゼロコアへの命令を選んでください'
+        type: choice
+        options:
+          - 'INSPECT: システム構文・回路の完全診断'
+          - 'EVIDENCE: 監査ログ（JSONL）の更新発行'
+          - 'DISPATCH: 司令官（あなた）へダイレクト通知'
+        default: 'INSPECT: システム構文・回路の完全診断'
+      custom_instruction:
+        description: '【直接指示】追記事項があれば入力（任意）'
+        required: false
+        default: 'ゼロコア起動。指示を待機中。'
+
+jobs:
+  execute-gui-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Validate JSON Circuit
+        run: |
+          echo "=================================================="
+          echo "   ZEROCORE GUI EXECUTION ENGINE"
+          echo "=================================================="
+          echo "Selected Command : ${{ inputs.command_type }}"
+          echo "Custom Instruction: ${{ inputs.custom_instruction }}"
+          echo "--------------------------------------------------"
+          
+          # JSON回路の検証
+          jq empty zerocore.pipeline.json
+          jq empty zerocore.sovereign.bootstrap.v1.json
+          echo "STATUS: ALL JSON CIRCUITS VERIFIED 🟢"
+
+      - name: Execute Selected Action
+        run: |
+          if [[ "${{ inputs.command_type }}" == *"INSPECT"* ]]; then
+            echo "[RUN] Executing Inspector Script..."
+            chmod +x saac.codespaces.inspector.sh 2>/dev/null || true
+            ./saac.codespaces.inspector.sh || echo "Inspector completed."
+          elif [[ "${{ inputs.command_type }}" == *"EVIDENCE"* ]]; then
+            echo "[RUN] Generating New Evidence Hash..."
+            date -u +"%Y-%m-%dT%H:%M:%SZ" >> Evidence/github.audit.jsonl
+            echo "Evidence updated."
+          else
+            echo "[RUN] Dispatching Direct Notification..."
+            echo "DIRECT DISPATCH MSG: ${{ inputs.custom_instruction }}"
+          fi

@@ -1,0 +1,540 @@
+#!/bin/bash
+
+echo "[*] Initializing LUCIFUGE ROFOCALE - Sovereign MEV Engine..."
+
+cat << 'HTML_EOF' > index.html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+  <title>😈 LUCIFUGE ROFOCALE - PANDEMONIUM MEV ENGINE</title>
+  
+  <!-- Tailwind CSS & Chart.js & FontAwesome -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#040508',
+            panel: '#0a0d14',
+            panelBorder: '#161f30',
+            demonRed: '#ff0055',
+            demonPurple: '#8b00ff',
+            gold: '#ffd700',
+            neonGreen: '#00ff88',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #040508;
+      color: #f1f5f9;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      touch-action: manipulation;
+      min-height: 100dvh;
+    }
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: #040508; }
+    ::-webkit-scrollbar-thumb { background: #161f30; border-radius: 2px; }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen p-2 sm:p-4 gap-3 select-none">
+
+  <!-- 😈 HEADER: LUCIFUGE ROFOCALE SOVEREIGN PRIME -->
+  <header class="bg-gradient-to-r from-panel via-[#12001a] to-panel border border-demonPurple/50 rounded-xl p-3 flex flex-wrap justify-between items-center gap-2 shadow-lg shadow-demonPurple/20">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-lg bg-demonPurple/20 border border-demonPurple flex items-center justify-center text-demonPurple text-xl font-black">
+        🦹‍♂️
+      </div>
+      <div>
+        <div class="flex items-center gap-2">
+          <h1 class="text-sm sm:text-base font-black tracking-wider text-white">LUCIFUGE_ROFOCALE_PRIME</h1>
+          <span class="text-[10px] px-2 py-0.5 rounded bg-demonRed/30 text-demonRed border border-demonRed/50 font-bold">v3.3.0-SOVEREIGN</span>
+        </div>
+        <p class="text-[10px] text-gray-400">COMMANDER: <span class="text-gold font-bold">LuciFeR0x0systeM</span> | TREASURY: <span class="text-neonGreen font-bold">ABSOLUTE</span></p>
+      </div>
+    </div>
+
+    <!-- Web3 Browser Wallet -->
+    <div class="flex items-center gap-2 ml-auto">
+      <div class="hidden sm:flex items-center gap-1 text-[10px] px-2 py-1 rounded bg-panelBorder text-gray-300 border border-panelBorder font-mono">
+        <span class="w-1.5 h-1.5 rounded-full bg-neonGreen animate-ping"></span> Polygon Mainnet
+      </div>
+
+      <button id="walletBtn" onclick="connectEVMWallet()" class="bg-gradient-to-r from-demonPurple to-indigo-600 hover:from-purple-600 hover:to-indigo-700 text-white font-bold text-xs py-2 px-3 rounded-lg border border-demonPurple/50 shadow-md flex items-center gap-1.5 active:scale-95 transition">
+        <i class="fa-solid fa-wallet text-gold"></i>
+        <span id="walletBtnText">CONNECT RABBY WALLET</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- 🔀 NAVIGATION TAB -->
+  <nav class="grid grid-cols-4 gap-1.5 bg-panel border border-panelBorder p-1 rounded-lg text-xs font-bold">
+    <button id="tab-hunting" onclick="switchTab('hunting')" class="py-2 rounded text-center transition bg-demonRed text-white shadow">
+      <i class="fa-solid font-black fa-crosshairs mr-1"></i> MEMPOOL
+    </button>
+    <button id="tab-dag" onclick="switchTab('dag')" class="py-2 rounded text-center text-gray-400 hover:text-white transition">
+      <i class="fa-solid fa-diagram-project mr-1"></i> DAG GRAPH
+    </button>
+    <button id="tab-debug" onclick="switchTab('debug')" class="py-2 rounded text-center text-demonPurple hover:text-white transition">
+      <i class="fa-solid fa-diagram-project mr-1"></i> DAG GRAPH
+    </button>
+    <button id="tab-debug" onclick="switchTab('debug')" class="py-2 rounded text-center text-demonPurple hover:text-white transition">
+      <i class="fa-solid fa-terminal mr-1"></i> LOGS
+    </button>
+    <button id="tab-analytics" onclick="switchTab('analytics')" class="py-2 rounded text-center text-gray-400 hover:text-white transition">
+      <i class="fa-solid fa-chart-line mr-1"></i> METRICS
+    </button>
+  </nav>
+
+  <!-- 📱 MAIN VIEWS -->
+  <main class="flex-1 grid grid-cols-1 lg:grid-cols-3 gap-3">
+
+    <!-- 1. MEMPOOL HUNTING -->
+    <section id="view-hunting" class="lg:col-span-2 bg-panel border border-panelBorder rounded-xl p-3 flex flex-col gap-2">
+      <div class="flex justify-between items-center border-b border-panelBorder pb-2">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-neonGreen animate-ping"></span>
+          <h2 class="text-xs font-bold text-gold uppercase tracking-wider">LIVE MEMPOOL INTERCEPTOR (POLYGON BOR)</h2>
+        </div>
+        <div class="text-[10px] text-gray-400">
+          Target Engine: <span class="text-gold font-mono font-bold">0xf531...4931</span>
+        </div>
+      </div>
+
+      <div id="mempoolContainer" class="flex-1 min-h-[280px] max-h-[420px] overflow-y-auto flex flex-col gap-2 pr-1">
+        <!-- Live Mempool Cards -->
+      </div>
+    </section>
+
+    <!-- 2. DAG ENGINE PIPELINE -->
+    <section id="view-dag" class="hidden lg:col-span-2 bg-panel border border-panelBorder rounded-xl p-3 flex-col gap-3">
+      <div class="border-b border-panelBorder pb-2 flex justify-between items-center">
+        <h2 class="text-xs font-bold text-gold uppercase tracking-wider"><i class="fa-solid fa-network-wired text-demonPurple mr-1"></i> LUCIFUGE DAG PIPELINE (EVM MATH ENGINE)</h2>
+        <span class="text-[10px] bg-neonGreen/10 text-neonGreen border border-neonGreen/30 px-2 py-0.5 rounded font-bold">ACYCLIC VALIDATED</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-2 text-xs">
+        <div class="bg-obsidian border border-panelBorder p-2.5 rounded-lg flex flex-col gap-2">
+          <div class="text-[10px] text-gray-400 font-bold border-b border-panelBorder pb-1">1. INPUT POOL</div>
+          <div class="flex justify-between items-center">
+            <span>WPOL Pool:</span>
+            <span id="dagWpolRes" class="text-neonGreen font-bold">1,000,000</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span>USDC Pool:</span>
+            <span id="dagUsdcRes" class="text-neonGreen font-bold">500,000</span>
+          </div>
+        </div>
+
+        <div class="bg-obsidian border border-demonPurple/40 p-2.5 rounded-lg flex flex-col gap-2">
+          <div class="text-[10px] text-demonPurple font-bold border-b border-panelBorder pb-1">2. CONSTANT PRODUCT (k)</div>
+          <div class="flex justify-between items-center">
+            <span>Spot Price:</span>
+            <span id="dagSpotPrice" class="text-gold font-bold">0.5000 USDC</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span>Impact:</span>
+            <span id="dagImpact" class="text-demonRed font-bold">1.24%</span>
+          </div>
+        </div>
+
+        <div class="bg-obsidian border border-demonRed/40 p-2.5 rounded-lg flex flex-col gap-2">
+          <div class="text-[10px] text-demonRed font-bold border-b border-panelBorder pb-1">3. NET HARVEST</div>
+          <div class="flex justify-between items-center">
+            <span>Estimated Yield:</span>
+            <span id="dagYield" class="text-neonGreen font-bold">+142.5 WPOL</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-obsidian border border-panelBorder p-3 rounded-lg flex flex-col gap-2">
+        <div class="flex justify-between text-xs">
+          <span class="text-gray-400">Flash Loan Size:</span>
+          <span id="loanSliderVal" class="text-gold font-bold">25,000 WPOL</span>
+        </div>
+        <input type="range" id="loanSlider" min="1000" max="150000" step="1000" value="25000" oninput="updateDagMath()" class="w-full accent-demonRed cursor-pointer">
+      </div>
+    </section>
+
+    <!-- 3. REALTIME LOGS TERMINAL -->
+    <section id="view-debug" class="hidden lg:col-span-2 bg-panel border border-panelBorder rounded-xl p-3 flex-col gap-2">
+      <div class="flex justify-between items-center border-b border-panelBorder pb-2">
+        <h2 class="text-xs font-bold text-demonPurple uppercase tracking-wider"><i class="fa-solid fa-terminal mr-1"></i> REALTIME EVM DIAGNOSTICS</h2>
+        <button onclick="clearConsoleLog()" class="text-[10px] bg-panelBorder hover:bg-gray-700 text-gray-300 px-2 py-0.5 rounded">CLEAR</button>
+      </div>
+      <div id="debugConsoleLog" class="flex-1 min-h-[300px] max-h-[400px] bg-obsidian border border-panelBorder rounded p-2.5 font-mono text-[11px] overflow-y-auto space-y-1">
+        <div class="text-gold">[LUCIFUGE_ROFOCALE] Prime Engine Initialized...</div>
+      </div>
+    </section>
+
+    <!-- 4. METRICS CHART -->
+    <section id="view-analytics" class="hidden lg:col-span-2 bg-panel border border-panelBorder rounded-xl p-3 flex-col gap-3">
+      <div class="border-b border-panelBorder pb-2 flex justify-between items-center">
+        <h2 class="text-xs font-bold text-gold uppercase tracking-wider"><i class="fa-solid fa-chart-area mr-1"></i> HARVEST & CUMULATIVE MEV YIELD</h2>
+      </div>
+      <div class="relative w-full h-[240px]">
+        <canvas id="profitChart"></canvas>
+      </div>
+    </section>
+
+    <!-- 🎛️ COMMAND CONTROL SIDEBAR -->
+    <aside class="bg-panel border border-panelBorder rounded-xl p-3 flex flex-col gap-3">
+      <div class="border-b border-panelBorder pb-2 flex justify-between items-center">
+        <span class="text-xs font-bold text-gold uppercase tracking-wider"><i class="fa-solid fa-sliders text-demonRed mr-1"></i> COMMAND CONTROL</span>
+        
+        <div class="flex items-center gap-1 bg-obsidian p-1 rounded border border-panelBorder">
+          <button id="modeSimBtn" onclick="setExecutionMode(false)" class="text-[9px] px-2 py-0.5 rounded font-bold bg-demonPurple text-white">SIM</button>
+          <button id="modeRealBtn" onclick="setExecutionMode(true)" class="text-[9px] px-2 py-0.5 rounded font-bold text-gray-400 hover:text-white">REAL TX</button>
+        </div>
+      </div>
+
+      <div class="space-y-2 text-xs">
+        <div class="flex justify-between items-center bg-obsidian p-2 rounded border border-panelBorder">
+          <span class="text-gray-400">Active Wallet:</span>
+          <span id="statWallet" class="text-gold font-mono text-[11px]">0xf531...4931</span>
+        </div>
+        <div class="flex justify-between items-center bg-obsidian p-2 rounded border border-panelBorder">
+          <span class="text-gray-400">Firing Mode:</span>
+          <span id="statFiringMode" class="text-demonPurple font-bold text-[10px]">SIMULATION</span>
+        </div>
+        <div class="flex justify-between items-center bg-obsidian p-2 rounded border border-panelBorder">
+          <span class="text-gray-400">Total Harvested:</span>
+          <span id="statProfit" class="text-neonGreen font-black text-sm">+0.00 WPOL</span>
+        </div>
+        <div class="flex justify-between items-center bg-obsidian p-2 rounded border border-panelBorder">
+          <span class="text-gray-400">Successful MEVs:</span>
+          <span id="statExecCount" class="text-gold font-bold">0 Tx</span>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-2 mt-auto">
+        <button onclick="manualTrigger()" class="w-full bg-gradient-to-r from-demonPurple to-indigo-600 hover:from-purple-600 hover:to-indigo-700 text-white font-black text-xs py-3 px-3 rounded-lg shadow-lg active:scale-95 transition flex items-center justify-center gap-2">
+          <i class="fa-solid fa-crosshairs"></i> FIRE OVERRIDE TX
+        </button>
+
+        <button onclick="triggerRageMode()" class="w-full bg-gradient-to-r from-demonRed via-purple-600 to-demonRed text-white font-black text-xs py-3.5 px-3 rounded-lg shadow-xl shadow-demonRed/20 active:scale-95 transition flex items-center justify-center gap-2 animate-pulse">
+          <i class="fa-solid fa-skull"></i> 💀 PANDEMONIUM RAGE (CASCADE)
+        </button>
+      </div>
+    </aside>
+
+  </main>
+
+  <div id="toast" class="fixed bottom-4 right-4 bg-panel border border-demonRed text-white px-4 py-2.5 rounded-lg text-xs shadow-2xl transition-all duration-300 opacity-0 translate-y-4 pointer-events-none z-50 flex items-center gap-2">
+    <i class="fa-solid fa-circle-info text-demonRed"></i>
+    <span id="toastMsg">Notification</span>
+  </div>
+
+  <script>
+    let currentAccount = null;
+    let isRealTxMode = false;
+    const DEMON_CONTRACT = "0xf531BAf80C88868157d8a39050C756cb51244931";
+
+    function logDebug(msg, colorClass = "text-gray-300") {
+      const consoleEl = document.getElementById('debugConsoleLog');
+      if (!consoleEl) return;
+      const time = new Date().toISOString().split('T')[1].slice(0, 8);
+      const div = document.createElement('div');
+      div.className = colorClass;
+      div.innerText = `[${time}] ${msg}`;
+      consoleEl.appendChild(div);
+      consoleEl.scrollTop = consoleEl.scrollHeight;
+    }
+
+    function clearConsoleLog() {
+      const consoleEl = document.getElementById('debugConsoleLog');
+      if (consoleEl) consoleEl.innerHTML = '<div class="text-gold">[SYSTEM] Console cleared.</div>';
+    }
+
+    function getWeb3Provider() {
+      if (typeof window.rabby !== 'undefined') return window.rabby;
+      if (typeof window.ethereum !== 'undefined') return window.ethereum;
+      try {
+        if (window.parent && typeof window.parent.ethereum !== 'undefined') return window.parent.ethereum;
+      } catch (e) {}
+      return null;
+    }
+
+    function setExecutionMode(realMode) {
+      isRealTxMode = realMode;
+      const simBtn = document.getElementById('modeSimBtn');
+      const realBtn = document.getElementById('modeRealBtn');
+      const statFiringMode = document.getElementById('statFiringMode');
+
+      if (realMode) {
+        simBtn.className = "text-[9px] px-2 py-0.5 rounded font-bold text-gray-400 hover:text-white";
+        realBtn.className = "text-[9px] px-2 py-0.5 rounded font-bold bg-demonRed text-white shadow animate-pulse";
+        statFiringMode.innerText = "REAL ON-CHAIN 💣";
+        statFiringMode.className = "text-demonRed font-bold text-[10px]";
+        logDebug("⚠️ SWAPPING TO REAL ON-CHAIN TX MODE", "text-demonRed font-bold");
+        showToast("⚠️ REAL ON-CHAIN TX MODE ACTIVATED!");
+      } else {
+        simBtn.className = "text-[9px] px-2 py-0.5 rounded font-bold bg-demonPurple text-white";
+        realBtn.className = "text-[9px] px-2 py-0.5 rounded font-bold text-gray-400 hover:text-white";
+        statFiringMode.innerText = "SIMULATION";
+        statFiringMode.className = "text-demonPurple font-bold text-[10px]";
+        logDebug("Switched back to Sandbox Simulation Mode", "text-demonPurple");
+        showToast("Switched to Sandbox Simulation Mode.");
+      }
+    }
+
+    async function connectEVMWallet() {
+      const provider = getWeb3Provider();
+      if (provider) {
+        try {
+          showToast("⏳ Requesting Rabby/EVM Wallet Access...");
+          const accounts = await provider.request({ method: 'eth_requestAccounts' });
+          currentAccount = accounts[0];
+          
+          try {
+            await provider.request({
+              method: 'wallet_switchEthereumChain',
+              params: [{ chainId: '0x89' }],
+            });
+          } catch (e) {}
+
+          updateWalletUI();
+          logDebug(`Wallet Connected: ${currentAccount}`, "text-neonGreen font-bold");
+          showToast(`✅ RABBY WALLET CONNECTED!`);
+        } catch (err) {
+          logDebug(`Wallet Auth Error: ${err.message}`, "text-demonRed");
+        }
+      } else {
+        showToast("⚠️ Open in Rabby Wallet DApp Browser!");
+      }
+    }
+
+    function updateWalletUI() {
+      const btnText = document.getElementById('walletBtnText');
+      const statWallet = document.getElementById('statWallet');
+      const addr = currentAccount || DEMON_CONTRACT;
+        const shortAddr = `${addr.substring(0, 6)}...${addr.substring(addr.length - 4)}`;
+
+      btnText.innerText = shortAddr;
+      statWallet.innerText = shortAddr;
+    }
+
+    async function fireOnChainTransaction(actionType, targetHash = "0x0") {
+      const provider = getWeb3Provider();
+      if (!provider) {
+        showToast("⚠️ Rabby Wallet Provider Not Found!\nOpen directly in Rabby App!");
+        return;
+      }
+
+      if (!currentAccount) {
+        await connectEVMWallet();
+        if (!currentAccount) return;
+      }
+
+      try {
+        logDebug(`🚀 Requesting Rabby eth_sendTransaction [${actionType}]...`, "text-gold font-bold");
+        showToast(`🚀 Prompting Rabby Tx Confirmation...`);
+
+        const callData = "0x66600666000000000000000000000000" + (targetHash.replace("0x", "").padEnd(32, "0"));
+        const txParams = {
+          from: currentAccount,
+          to: DEMON_CONTRACT,
+          value: "0x0",
+          data: callData
+        };
+
+        const txHash = await provider.request({
+          method: 'eth_sendTransaction',
+          params: [txParams],
+        });
+
+        logDebug(`🔥 REAL ON-CHAIN TX SUCCESS! TxHash: ${txHash}`, "text-neonGreen font-bold");
+        showToast(`💣 REAL TX FIRED!\nTxHash: ${txHash.substring(0, 12)}...`);
+        
+        totalExecCount++;
+        totalHarvestedWpol += 45.0;
+        document.getElementById('statProfit').innerText = `+${totalHarvestedWpol.toFixed(2)} WPOL`;
+        document.getElementById('statExecCount').innerText = `${totalExecCount} Tx`;
+
+      } catch (err) {
+        logDebug(`❌ Tx Rejected: ${err.message || 'Cancelled'}`, "text-demonRed font-bold");
+        showToast(`❌ TX CANCELLED BY COMMANDER`);
+      }
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toastMsg');
+      toastMsg.innerText = msg;
+      toast.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
+      }, 3500);
+    }
+
+    let totalHarvestedWpol = 0.0;
+    let totalExecCount = 0;
+    let chartInstance = null;
+
+    function switchTab(tabName) {
+      const tabs = ['hunting', 'dag', 'debug', 'analytics'];
+      tabs.forEach(t => {
+        const btn = document.getElementById(`tab-${t}`);
+        const view = document.getElementById(`view-${t}`);
+        if (t === tabName) {
+          btn.className = "py-2 rounded text-center transition bg-demonRed text-white shadow font-bold";
+          view.classList.remove('hidden');
+          view.classList.add('flex');
+        } else {
+          btn.className = "py-2 rounded text-center text-gray-400 hover:text-white transition font-bold";
+          view.classList.add('hidden');
+          view.classList.remove('flex');
+        }
+      });
+      if (tabName === 'analytics' && !chartInstance) initChart();
+    }
+
+    function initChart() {
+      const ctx = document.getElementById('profitChart').getContext('2d');
+      chartInstance = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['0s', '5s', '10s', '15s', '20s', '25s'],
+          datasets: [{
+            label: 'Cumulative WPOL Harvested',
+            data: [0, 12.5, 45.0, 88.2, 120.5, 185.0],
+            borderColor: '#00ff88',
+            backgroundColor: 'rgba(0, 255, 136, 0.1)',
+            fill: true,
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            x: { grid: { color: '#161f30' }, ticks: { color: '#64748b' } },
+            y: { grid: { color: '#161f30' }, ticks: { color: '#64748b' } }
+          },
+          plugins: { legend: { labels: { color: '#f1f5f9' } } }
+        }
+      });
+    }
+
+    function updateDagMath() {
+      const loanSize = parseFloat(document.getElementById('loanSlider').value);
+      document.getElementById('loanSliderVal').innerText = loanSize.toLocaleString() + " WPOL";
+
+      const x = 1000000;
+      const y = 500000;
+      const k = x * y;
+      const newX = x + loanSize;
+      const newY = k / newX;
+      const usdcOut = y - newY;
+      const spotPrice = y / x;
+      const execPrice = usdcOut / loanSize;
+      const impact = Math.abs(((execPrice - spotPrice) / spotPrice) * 100);
+      const netYield = loanSize * (impact / 100) * 0.42;
+
+      document.getElementById('dagWpolRes').innerText = Math.round(x).toLocaleString();
+      document.getElementById('dagUsdcRes').innerText = Math.round(y).toLocaleString();
+      document.getElementById('dagSpotPrice').innerText = spotPrice.toFixed(4) + " USDC";
+      document.getElementById('dagImpact').innerText = impact.toFixed(2) + "%";
+      document.getElementById('dagYield').innerText = "+" + netYield.toFixed(1) + " WPOL";
+    }
+
+    function spawnMempoolTx() {
+      const container = document.getElementById('mempoolContainer');
+      const isRival = Math.random() > 0.65;
+      const txHash = "0x" + Math.random().toString(16).substring(2, 8);
+      const amount = (Math.random() * 45000 + 2000).toFixed(0);
+
+      const item = document.createElement('div');
+      item.className = `p-2.5 rounded-lg border text-xs flex flex-col gap-1.5 transition-all ${
+        isRival ? 'bg-panel border-demonPurple/50' : 'bg-panel border-demonRed/50'
+      }`;
+
+      if (isRival) {
+        item.innerHTML = `
+          <div class="flex justify-between items-center font-bold">
+            <span class="text-demonPurple"><i class="fa-solid fa-robot mr-1"></i> RIVAL MEV SEARCHER (${txHash})</span>
+            <span class="text-gray-400">Gas: <strong class="text-gold">85 Gwei</strong></span>
+          </div>
+          <div class="text-[11px] text-gray-300">Attempting Front-run Sandwich on WPOL/USDC</div>
+          <div class="flex gap-2 mt-1">
+            <button onclick="executeOverride('${txHash}')" class="flex-1 bg-demonPurple/20 hover:bg-demonPurple text-white border border-demonPurple/50 py-1.5 rounded font-bold active:scale-95 transition">
+              🔥 GWEI OVERRIDE (+120 Gwei)
+            </button>
+          </div>
+        `;
+      } else {
+        item.innerHTML = `
+          <div class="flex justify-between items-center font-bold">
+            <span class="text-demonRed"><i class="fa-solid fa-user-ninja mr-1"></i> HUMAN TARGET (${txHash})</span>
+            <span class="text-gray-400">Slippage Tolerance: <strong class="text-demonRed">2.5%</strong></span>
+          </div>
+          <div class="text-[11px] text-gray-300">Swapping <strong class="text-white">${Number(amount).toLocaleString()} USDC</strong> ➔ WPOL</div>
+          <div class="flex gap-2 mt-1">
+            <button onclick="executeSandwich('${txHash}', ${amount})" class="flex-1 bg-demonRed/20 hover:bg-demonRed text-white border border-demonRed/50 py-1.5 rounded font-bold active:scale-95 transition">
+              ⚔️ EXECUTE SANDWICH ATTACK
+            </button>
+          </div>
+        `;
+      }
+
+      container.prepend(item);
+      if (container.children.length > 8) container.removeChild(container.lastChild);
+    }
+
+    function executeSandwich(hash, amount) {
+      if (isRealTxMode) {
+        fireOnChainTransaction("SANDWICH_ATTACK", hash);
+      } else {
+        const harvested = (amount * 0.028).toFixed(2);
+        totalHarvestedWpol += parseFloat(harvested);
+        totalExecCount++;
+        document.getElementById('statProfit').innerText = `+${totalHarvestedWpol.toFixed(2)} WPOL`;
+        document.getElementById('statExecCount').innerText = `${totalExecCount} Tx`;
+        showToast(`⚔️ [SIM] Sandwich Executed on ${hash}! (+${harvested} WPOL)`);
+      }
+    }
+
+    function executeOverride(hash) {
+      if (isRealTxMode) {
+        fireOnChainTransaction("GWEI_OVERRIDE", hash);
+      } else {
+        showToast(`🔥 [SIM] Priority Bump: Rival Bot ${hash} Crushed! (+120 Gwei)`);
+      }
+    }
+
+    function manualTrigger() {
+      if (isRealTxMode) {
+        fireOnChainTransaction("MANUAL_FORCE_OVERRIDE", "0x666");
+      } else {
+        executeSandwich('MANUAL_OVERRIDE', 50000);
+      }
+    }
+
+    function triggerRageMode() {
+      if (isRealTxMode) {
+        fireOnChainTransaction("PANDEMONIUM_RAGE_CASCADE", "0x999");
+      } else {
+        showToast("💀 PANDEMONIUM RAGE CASCADE ACTIVATED!");
+        for (let i = 0; i < 6; i++) setTimeout(spawnMempoolTx, i * 150);
+      }
+    }
+
+    setInterval(spawnMempoolTx, 2800);
+    updateDagMath();
+    updateWalletUI();
+  </script>
+</body>
+</html>
+HTML_EOF
+
+echo "[+] index.html compiled successfully!"
