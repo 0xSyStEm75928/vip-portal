@@ -1,0 +1,15 @@
+{
+  "$schema": "./schemas/reproduction.schema.json",
+  "reproduction": {
+    "status": "NOT_COMPLETED",
+    "steps": [
+      "Prepare clean environment",
+      "Execute proof-of-concept",
+      "Collect terminal output",
+      "Compare expected and actual behavior",
+      "Repeat on independent environment"
+    ],
+    "reproducible": false,
+    "independent_validation": false
+  }
+}

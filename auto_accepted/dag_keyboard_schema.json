@@ -1,0 +1,27 @@
+{
+  "root": "KEYBOARD_ROOT",
+  "nodes": {
+    "KEYBOARD_ROOT": {
+      "flick_map": {
+        "LEFT": "ACTION_JSSH_INGRESS",
+        "TOP": "ACTION_SHOW_SUMMARY",
+        "RIGHT": "ACTION_RUN_ANATOMY"
+      }
+    },
+    "ACTION_JSSH_INGRESS": {
+      "type": "ACTION",
+      "command": "jssh CUSTOMER_001 N1_INGRESS",
+      "next_suggest": "ACTION_SHOW_SUMMARY"
+    },
+    "ACTION_SHOW_SUMMARY": {
+      "type": "ACTION",
+      "command": "jq .chain_status json_core/view_deal_sync_summary.json",
+      "next_suggest": "ACTION_JSSH_INGRESS"
+    },
+    "ACTION_RUN_ANATOMY": {
+      "type": "ACTION",
+      "command": "python3 anatomy_history.py",
+      "next_suggest": "ACTION_JSSH_INGRESS"
+    }
+  }
+}

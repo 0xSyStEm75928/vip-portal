@@ -1,0 +1,19 @@
+{
+  "$schema": "./schemas/awaiting.deposit.status.schema.json",
+  "trade_execution_status": {
+    "deal_id": "DEAL_2026_SILENT_0x89A",
+    "status": "AWAITING_ESCROW_DEPOSIT",
+    "buyer_entity": "SILENT_USER_0x89A",
+    "accepted_bounty": "35,000 USDT",
+    "payout_destination": {
+      "wallet_type": "Ledger Stax Cold Storage",
+      "address": "0xF7A353FAF6E6BD4732b0f234C656DBfDE53B0e91"
+    },
+    "conditions_met": {
+      "proposal_accepted": true,
+      "services_attached": true,
+      "zkp_proof_ready": true
+    },
+    "next_action_required": "Buyer must deposit 35,000 USDT to Privacy Escrow Contract."
+  }
+}

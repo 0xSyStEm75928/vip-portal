@@ -1,0 +1,22 @@
+{
+  "protocol": "SILENT_STAND_VIP_GATEWAY",
+  "version": "v.old_Diamond_v1",
+  "architect": "LuciFeR0x0systeM",
+  "architecture": {
+    "pattern": "ERC-2535_DIAMOND_PROXY",
+    "gateway_address": "0x1255d17c1bc2f764d087536410879f2d0d8772fd",
+    "execution_mode": "STANDALONE_USER_DEPLOY",
+    "network": "KAIA_EVM_COMPATIBLE"
+  },
+  "operating_model": {
+    "target": "SILENT_VIEWER",
+    "cost_structure": "ZERO_SERVER_ZERO_DEVELOPER_GAS",
+    "activation_flow": "CLIENT_SELF_PROVISIONING"
+  },
+  "compliance_and_legal": {
+    "pre_deployment_notice": true,
+    "user_explicit_gas_consent": true,
+    "legal_status": "IRREVOCABLE_ONCHAIN_SETTLEMENT",
+    "governance": "IMMUTABLE_PROXIED_OWNERSHIP"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://zerocore.io/schemas/v1/audit_chain.json",
+  "chain_id": "chain_main_001",
+  "total_records": 3,
+  "records": [
+    {
+      "sequence": 1,
+      "timestamp": "2026-07-26T10:00:01Z",
+      "event_id": "evt_boot_success_001",
+      "event_type": "SYSTEM_INITIALIZED",
+      "actor": "ZeroCore_Bootloader",
+      "capability_verified": true,
+      "state_hash": "af717d145a67a335240be5fb26c1addfd10b9d577a9701e5e29e4e5a7542b08a",
+      "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "status": "COMMITTED"
+    },
+    {
+      "sequence": 2,
+      "timestamp": "2026-07-26T01:26:00Z",
+      "event_id": "evt_run_002",
+      "event_type": "SYSTEM_INITIALIZED",
+      "actor": "ZeroCore_Bootloader",
+      "capability_verified": true,
+      "state_hash": "b0ab240e1c73493b243a25d0f5f0669fbe65ef505e768903a6a78254b448712c",
+      "prev_hash": "af717d145a67a335240be5fb26c1addfd10b9d577a9701e5e29e4e5a7542b08a",
+      "status": "COMMITTED"
+    },
+    {
+      "sequence": 3,
+      "timestamp": "2026-07-26T01:31:03Z",
+      "event_id": "evt_run_003",
+      "event_type": "INVOICE_APPROVED_inv_8801",
+      "actor": "ai_agent_worker",
+      "capability_verified": true,
+      "state_hash": "8c20064a6d83b2ee28602b31dfcb6d28f93501bb78366a00bb1f246ce374da8f",
+      "prev_hash": "b0ab240e1c73493b243a25d0f5f0669fbe65ef505e768903a6a78254b448712c",
+      "status": "COMMITTED"
+    }
+  ]
+}

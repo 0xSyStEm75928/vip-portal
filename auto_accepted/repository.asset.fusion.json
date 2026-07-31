@@ -1,0 +1,86 @@
+{
+  "$schema": "./schemas/repository.asset.fusion.schema.json",
+
+  "asset_fusion": {
+    "name": "ZEROCORE_REPOSITORY_ASSET_GRAPH",
+    "version": "1.0.0",
+    "purpose": "Full repository structural graph and evidence fusion",
+    "principles": [
+      "evidence_before_claim",
+      "immutable_reference",
+      "graph_based_asset_mapping"
+    ]
+  },
+
+  "source": {
+    "root": "/root",
+    "snapshot": "repository.asset.graph.json",
+    "generated_at": ""
+  },
+
+  "graph": {
+
+    "nodes": [
+      {
+        "id": "repo_root",
+        "type": "repository",
+        "path": "/root",
+        "role": "primary_asset_container"
+      },
+
+      {
+        "id": "zero_core",
+        "type": "architecture_asset",
+        "name": "ZeroCore / SaaC DeviL Kernel",
+        "domain": [
+          "AI runtime governance",
+          "JSON governance",
+          "Evidence Layer"
+        ]
+      }
+    ],
+
+    "edges": [
+      {
+        "from": "repo_root",
+        "to": "zero_core",
+        "relation": "contains"
+      }
+    ]
+  },
+
+
+  "asset_inventory": {
+    "directories": 4434,
+    "files": 22856,
+    "size": "1.1G"
+  },
+
+
+  "evidence": {
+
+    "git": {
+      "enabled": true,
+      "commit_tracking": true,
+      "tree_hash_tracking": true
+    },
+
+    "integrity": {
+      "sha256_inventory": true
+    }
+  },
+
+
+  "review_state": {
+
+    "technical_asset": true,
+    "external_validation": false,
+    "customer_validation": false,
+
+    "next_action": [
+      "graph classification",
+      "dependency mapping",
+      "external review package generation"
+    ]
+  }
+}

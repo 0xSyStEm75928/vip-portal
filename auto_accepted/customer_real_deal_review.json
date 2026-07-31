@@ -1,0 +1,88 @@
+{
+  "$schema": "./schemas/customer.real.deal.review.schema.json",
+
+  "version": "1.0.0",
+
+  "purpose": "Real customer candidate review layer",
+
+  "policy": {
+    "evidence_required": true,
+    "no_assumption": true,
+    "manual_confirmation_required": true
+  },
+
+  "deal_stages": {
+    "communication": "UNVERIFIED",
+    "requirement": "UNVERIFIED",
+    "contract": "UNVERIFIED",
+    "payment": "UNVERIFIED",
+    "delivery": "LOCKED"
+  },
+
+  "customers": [
+    {
+      "customer_id": "CUSTOMER_001",
+
+      "signal": {
+        "communication": "SPEC_VERIFIED",
+        "commitment": "NDA_IN_PROGRESS",
+        "payment": "UNVERIFIED"
+      },
+
+      "review": {
+        "next_check": [
+          "NDA_STATUS",
+          "REQUIREMENT_CONFIRMATION",
+          "CONTRACT_PATH"
+        ],
+
+        "execution_ready": false
+      },
+
+      "status": "ACTIVE_REVIEW"
+    },
+
+    {
+      "customer_id": "SILENT_USER_0x31C",
+
+      "signal": {
+        "communication": "OBSERVED",
+        "commitment": "PENDING",
+        "payment": "UNVERIFIED"
+      },
+
+      "review": {
+        "next_check": [
+          "VALID_CONTACT",
+          "CONCRETE_REQUEST",
+          "PAYMENT_EVIDENCE"
+        ],
+
+        "execution_ready": false
+      },
+
+      "status": "OBSERVATION"
+    },
+
+    {
+      "customer_id": "VIP_ADDITIONAL_001",
+
+      "signal": {
+        "communication": "OBSERVED",
+        "commitment": "UNVERIFIED",
+        "payment": "UNVERIFIED"
+      },
+
+      "review": {
+        "next_check": [
+          "CONTACT_CONFIRMATION",
+          "BUSINESS_REQUIREMENT"
+        ],
+
+        "execution_ready": false
+      },
+
+      "status": "PENDING_REVIEW"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-07-29T07:59:54.184807+00:00",
+  "policy": {
+    "evidence_required": true,
+    "manual_review_required": true
+  },
+  "negotiation": [
+    {
+      "customer_id": "CUSTOMER_001",
+      "stage": "NEGOTIATION",
+      "commitment": "NDA_IN_PROGRESS",
+      "status": "ACTIVE_REVIEW",
+      "payment": "UNVERIFIED"
+    },
+    {
+      "customer_id": "SILENT_USER_0x31C",
+      "stage": "NOT_IN_NEGOTIATION",
+      "commitment": "PENDING",
+      "status": "OBSERVATION",
+      "payment": "UNVERIFIED"
+    },
+    {
+      "customer_id": "VIP_ADDITIONAL_001",
+      "stage": "NOT_IN_NEGOTIATION",
+      "commitment": "UNVERIFIED",
+      "status": "PENDING_REVIEW",
+      "payment": "UNVERIFIED"
+    }
+  ]
+}

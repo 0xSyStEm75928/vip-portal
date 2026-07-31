@@ -1,0 +1,30 @@
+{
+  "$schema": "./schemas/lifecycle.gate.schema.json",
+  "version": "1.0.0",
+  "updated_at": "2026-07-29T19:50:00+09:00",
+  "active_gates": [
+    {
+      "target_id": "TARGET_INIT_001",
+      "gate_status": "PASS",
+      "verified_rules": [
+        "evidence_required",
+        "no_delivery_before_payment"
+      ],
+      "checked_at": "2026-07-29T19:05:43.509572+09:00"
+    },
+    {
+      "target_id": "TEST_CUSTOMER_001",
+      "gate_status": "PASS",
+      "verified_rules": [
+        "evidence_required",
+        "no_delivery_before_payment"
+      ],
+      "checked_at": "2026-07-29T19:11:12.442370+09:00"
+    }
+  ],
+  "current_customer": {
+    "id": "VIP_ADDITIONAL_001",
+    "gate_status": "PASSED",
+    "pct": 50
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-07-29T10:10:33.309552+00:00",
+  "source": "json_core/system_alignment_healthcheck.json",
+  "gate": {
+    "status": "OPEN",
+    "reason": "SYSTEM_ALIGNMENT_VALIDATED"
+  },
+  "execution_policy": {
+    "continue_existing_pipeline": true,
+    "new_architecture_creation": false,
+    "automatic_business_action": false,
+    "human_confirmation_required": true
+  }
+}

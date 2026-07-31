@@ -1,0 +1,55 @@
+{
+  "$schema": "./schemas/final.evidence.bundle.schema.json",
+
+  "final_evidence_bundle": {
+    "version": "1.0.0",
+    "status": "READY_FOR_REVIEW",
+
+    "purpose": "Root registry for the complete evidence package.",
+
+    "bundle": {
+      "bundle_id": null,
+      "title": null,
+      "prepared_at": null,
+      "prepared_by": null,
+      "classification": "EVIDENCE_PACKAGE"
+    },
+
+    "root_registry": {
+      "submission_manifest": "review_submission_manifest.json",
+      "environment_manifest": "environment_manifest.json",
+      "reproduction_protocol": "reproduction_protocol.json",
+      "timeline": "timeline_of_events.json",
+      "hash_registry": "evidence_hash_registry.json",
+      "vendor_tracker": "vendor_response_tracker.json"
+    },
+
+    "supporting_documents": {
+      "reports": [],
+      "logs": [],
+      "screenshots": [],
+      "videos": [],
+      "source_code": [],
+      "hashes": []
+    },
+
+    "verification": {
+      "schema_validation": false,
+      "hash_validation": false,
+      "reproduction_confirmed": false,
+      "independent_review": false
+    },
+
+    "release": {
+      "publishable": false,
+      "disclosure_state": "PRIVATE",
+      "vendor_notified": false
+    },
+
+    "integrity": {
+      "bundle_hash": null,
+      "generated_at": null,
+      "verified": false
+    }
+  }
+}

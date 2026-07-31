@@ -1,0 +1,152 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-07-29T10:11:34.156898+00:00",
+  "policy": {
+    "datasets_separated": true,
+    "manual_review_required": true,
+    "public_data_only": true,
+    "no_private_interest_assumption": true
+  },
+  "summary": {
+    "legacy_total": 3,
+    "cli_total": 10,
+    "portfolio_total": 13
+  },
+  "portfolio": [
+    {
+      "source": "LEGACY",
+      "id": "CUSTOMER_001",
+      "stage": "ACTIVE_REVIEW",
+      "priority": "BUSINESS",
+      "payment": "UNVERIFIED",
+      "next_step": [
+        "NDA_STATUS",
+        "REQUIREMENT_CONFIRMATION",
+        "CONTRACT_PATH"
+      ]
+    },
+    {
+      "source": "LEGACY",
+      "id": "SILENT_USER_0x31C",
+      "stage": "OBSERVATION",
+      "priority": "BUSINESS",
+      "payment": "UNVERIFIED",
+      "next_step": [
+        "VALID_CONTACT",
+        "CONCRETE_REQUEST",
+        "PAYMENT_EVIDENCE"
+      ]
+    },
+    {
+      "source": "LEGACY",
+      "id": "VIP_ADDITIONAL_001",
+      "stage": "PENDING_REVIEW",
+      "priority": "BUSINESS",
+      "payment": "UNVERIFIED",
+      "next_step": [
+        "CONTACT_CONFIRMATION",
+        "BUSINESS_REQUIREMENT"
+      ]
+    },
+    {
+      "source": "CLI_DISCOVERY",
+      "id": "trimstray/the-book-of-secret-knowledge",
+      "stage": "EARLY_TARGET_REVIEW",
+      "priority": "A",
+      "contact": "NOT_STARTED",
+      "next_step": [
+        "HUMAN_REVIEW"
+      ]
+    },
+    {
+      "source": "CLI_DISCOVERY",
+      "id": "n8n-io/n8n",
+      "stage": "EARLY_TARGET_REVIEW",
+      "priority": "A",
+      "contact": "NOT_STARTED",
+      "next_step": [
+        "HUMAN_REVIEW"
+      ]
+    },
+    {
+      "source": "CLI_DISCOVERY",
+      "id": "ohmyzsh/ohmyzsh",
+      "stage": "EARLY_TARGET_REVIEW",
+      "priority": "A",
+      "contact": "NOT_STARTED",
+      "next_step": [
+        "HUMAN_REVIEW"
+      ]
+    },
+    {
+      "source": "CLI_DISCOVERY",
+      "id": "yt-dlp/yt-dlp",
+      "stage": "PUBLIC_DISCOVERY_REVIEW",
+      "priority": "A",
+      "contact": "NOT_STARTED",
+      "next_step": [
+        "HUMAN_REVIEW"
+      ]
+    },
+    {
+      "source": "CLI_DISCOVERY",
+      "id": "google-gemini/gemini-cli",
+      "stage": "PUBLIC_DISCOVERY_REVIEW",
+      "priority": "A",
+      "contact": "NOT_STARTED",
+      "next_step": [
+        "HUMAN_REVIEW"
+      ]
+    },
+    {
+      "source": "CLI_DISCOVERY",
+      "id": "Graphify-Labs/graphify",
+      "stage": "PUBLIC_DISCOVERY_REVIEW",
+      "priority": "B",
+      "contact": "NOT_STARTED",
+      "next_step": [
+        "HUMAN_REVIEW"
+      ]
+    },
+    {
+      "source": "CLI_DISCOVERY",
+      "id": "sherlock-project/sherlock",
+      "stage": "PUBLIC_DISCOVERY_REVIEW",
+      "priority": "B",
+      "contact": "NOT_STARTED",
+      "next_step": [
+        "HUMAN_REVIEW"
+      ]
+    },
+    {
+      "source": "CLI_DISCOVERY",
+      "id": "OpenHands/OpenHands",
+      "stage": "PUBLIC_DISCOVERY_REVIEW",
+      "priority": "B",
+      "contact": "NOT_STARTED",
+      "next_step": [
+        "HUMAN_REVIEW"
+      ]
+    },
+    {
+      "source": "CLI_DISCOVERY",
+      "id": "nexu-io/open-design",
+      "stage": "PUBLIC_DISCOVERY_REVIEW",
+      "priority": "B",
+      "contact": "NOT_STARTED",
+      "next_step": [
+        "HUMAN_REVIEW"
+      ]
+    },
+    {
+      "source": "CLI_DISCOVERY",
+      "id": "junegunn/fzf",
+      "stage": "PUBLIC_DISCOVERY_REVIEW",
+      "priority": "B",
+      "contact": "NOT_STARTED",
+      "next_step": [
+        "HUMAN_REVIEW"
+      ]
+    }
+  ]
+}

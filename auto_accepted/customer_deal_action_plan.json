@@ -1,0 +1,46 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-07-29T01:27:10.169091+00:00",
+  "policy": {
+    "evidence_based": true,
+    "no_assumption": true,
+    "manual_execution": true
+  },
+  "tomorrow_actions": [
+    {
+      "customer_id": "CUSTOMER_001",
+      "current_status": "ACTIVE_REVIEW",
+      "priority": "A",
+      "recommended_action": "NDA_AND_REQUIREMENT_CONFIRMATION",
+      "required_checks": [
+        "NDA_STATUS",
+        "REQUIREMENT_CONFIRMATION",
+        "CONTRACT_PATH"
+      ],
+      "payment_state": "UNVERIFIED"
+    },
+    {
+      "customer_id": "SILENT_USER_0x31C",
+      "current_status": "OBSERVATION",
+      "priority": "B",
+      "recommended_action": "VALIDATE_CONTACT_AND_REQUEST",
+      "required_checks": [
+        "VALID_CONTACT",
+        "CONCRETE_REQUEST",
+        "PAYMENT_EVIDENCE"
+      ],
+      "payment_state": "UNVERIFIED"
+    },
+    {
+      "customer_id": "VIP_ADDITIONAL_001",
+      "current_status": "PENDING_REVIEW",
+      "priority": "B",
+      "recommended_action": "VALIDATE_CONTACT_AND_REQUEST",
+      "required_checks": [
+        "CONTACT_CONFIRMATION",
+        "BUSINESS_REQUIREMENT"
+      ],
+      "payment_state": "UNVERIFIED"
+    }
+  ]
+}

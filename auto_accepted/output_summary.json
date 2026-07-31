@@ -1,0 +1,31 @@
+{
+  "total_records": 4,
+  "passed_steps": [
+    {
+      "id": 101,
+      "step": "normalization",
+      "status": "PASS",
+      "delay_ms": 12
+    },
+    {
+      "id": 102,
+      "step": "tokenization",
+      "status": "PASS",
+      "delay_ms": 45
+    },
+    {
+      "id": 104,
+      "step": "execution",
+      "status": "PASS",
+      "delay_ms": 8
+    }
+  ],
+  "flagged_steps": [
+    {
+      "id": 103,
+      "step": "validation",
+      "status": "FLAGGED",
+      "delay_ms": 300
+    }
+  ]
+}

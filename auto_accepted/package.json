@@ -1,0 +1,14 @@
+{
+  "name": "@0xsystem75928/zerocore-graph",
+  "version": "1.0.0",
+  "description": "ZeroCore Sovereign Graph Spec Manifest Package",
+  "main": "config/zerocore.graph.manifest.json",
+  "files": [
+    "config/"
+  ],
+  "scripts": {
+    "validate": "jq empty config/zerocore.graph.manifest.json"
+  },
+  "author": "Namito Murakata (LuciFeR0x0systeM)",
+  "license": "MIT"
+}

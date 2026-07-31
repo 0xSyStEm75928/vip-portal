@@ -1,0 +1,52 @@
+{
+  "$schema": "./schemas/json.process.table.schema.json",
+
+  "json_process_table": {
+    "version": "1.0.0",
+    "status": "ACTIVE",
+
+    "purpose": "Registry-native process table for ZeroCore.",
+
+    "processes": [
+      {
+        "pid": 1,
+        "name": "kernel_boot",
+        "state": "READY",
+        "priority": 100,
+        "owner": "kernel",
+        "registry": "kernel_boot_record.json",
+        "created_at": null
+      },
+      {
+        "pid": 2,
+        "name": "event_bus",
+        "state": "READY",
+        "priority": 90,
+        "owner": "runtime",
+        "registry": "event_bus.json",
+        "created_at": null
+      },
+      {
+        "pid": 3,
+        "name": "audit_chain",
+        "state": "READY",
+        "priority": 80,
+        "owner": "audit",
+        "registry": "audit_chain.json",
+        "created_at": null
+      }
+    ],
+
+    "runtime": {
+      "running": 0,
+      "sleeping": 0,
+      "stopped": 0,
+      "failed": 0
+    },
+
+    "integrity": {
+      "table_hash": null,
+      "validated": false
+    }
+  }
+}

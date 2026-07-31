@@ -1,0 +1,44 @@
+{
+  "$schema": "./schemas/payment.verified.gate.schema.json",
+  "version": "4.1.0-PRODUCTION",
+
+  "environment": "PRODUCTION",
+
+  "deal_metadata": {
+    "deal_id": "DEAL_2026_ANONYMOUS_VERIFICATION_GATE",
+    "target_scope": "PUBLIC_ANONYMOUS_CLIENTS",
+    "privacy_protocol": "STRICT_ANONYMOUS_ZERO_KNOWLEDGE",
+    "status": "AWAITING_VERIFICATION"
+  },
+
+  "verification": {
+    "required": true,
+    "accepted_methods": [
+      "NDA",
+      "CRYPTO_SIGNATURE"
+    ],
+    "verified": false
+  },
+
+  "client": {
+    "anonymous": true
+  },
+
+  "payment": {
+    "required": false,
+    "status": "NOT_REQUESTED",
+    "payout_address": null,
+    "transaction_hash": null
+  },
+
+  "value_anchor": {
+    "sovereign_kernel_hash": "0x8F_SOVEREIGN_KERNEL_LOCKED",
+    "dag_circuit_hash": "0x3A_DAG_CIRCUIT_LOCKED",
+    "release_policy": "UNLOCK_AFTER_VERIFICATION"
+  },
+
+  "governance": {
+    "change_control": "MANUAL",
+    "immutable_records": true
+  }
+}

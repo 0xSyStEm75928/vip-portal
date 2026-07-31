@@ -1,0 +1,54 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-07-29T10:11:26.393257+00:00",
+  "policy": {
+    "public_data_only": true,
+    "no_hidden_interest_claim": true,
+    "no_auto_contact": true,
+    "human_decision_required": true
+  },
+  "dashboard": [
+    {
+      "customer_id": "CUSTOMER_001",
+      "priority": "A",
+      "execution_state": "LOCKED",
+      "business_stage": "HIGH_PRIORITY_PENDING",
+      "contact_permission": "NOT_GRANTED",
+      "purchase_intent": "UNVERIFIED",
+      "next_step": [
+        "human_confirmation",
+        "verify_requirement",
+        "verify_contract",
+        "verify_payment"
+      ]
+    },
+    {
+      "customer_id": "SILENT_USER_0x31C",
+      "priority": "B",
+      "execution_state": "LOCKED",
+      "business_stage": "OBSERVATION",
+      "contact_permission": "NOT_GRANTED",
+      "purchase_intent": "UNVERIFIED",
+      "next_step": [
+        "human_confirmation",
+        "verify_requirement",
+        "verify_contract",
+        "verify_payment"
+      ]
+    },
+    {
+      "customer_id": "VIP_ADDITIONAL_001",
+      "priority": "B",
+      "execution_state": "LOCKED",
+      "business_stage": "OBSERVATION",
+      "contact_permission": "NOT_GRANTED",
+      "purchase_intent": "UNVERIFIED",
+      "next_step": [
+        "human_confirmation",
+        "verify_requirement",
+        "verify_contract",
+        "verify_payment"
+      ]
+    }
+  ]
+}

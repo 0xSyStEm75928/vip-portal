@@ -1,0 +1,18 @@
+{
+  "$schema": "./schemas/ghost.dialogue.inspector.schema.json",
+  "inspection_config": {
+    "protocol": "LEGAL_STRUCTURED_JSON_DIALOGUE",
+    "channel_type": "PUBLIC_ISSUE_OR_PR_PAYLOAD",
+    "compliance_status": "100_PERCENT_LEGAL_AND_PASSIVE",
+    "monitored_events": [
+      "BOUNTY_OFFER_SUBMISSION",
+      "PUBLIC_KEY_EXCHANGE_REQUEST",
+      "ENCRYPTED_MESSAGE_PAYLOAD"
+    ]
+  },
+  "dialogue_rules": {
+    "allow_direct_legal_negotiation": true,
+    "encryption_required": true,
+    "automatic_validation": "STRICT_JSON_SCHEMA"
+  }
+}

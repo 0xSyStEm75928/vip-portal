@@ -1,0 +1,54 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-07-29T19:06:48.586537+09:00",
+  "mode": "READ_ONLY",
+  "nodes": {
+    "INGRESS": {
+      "path": "json_core/cli_contact_evidence_registry.json",
+      "exists": true,
+      "valid_json": true
+    },
+    "GATE": {
+      "path": "json_core/customer_lifecycle_gate.json",
+      "exists": true,
+      "valid_json": true
+    },
+    "PERSISTENCE": {
+      "path": "json_core/ZERO_CORE.customer.json",
+      "exists": true,
+      "valid_json": true
+    },
+    "PLAN": {
+      "path": "json_core/tomorrow_operation_plan.json",
+      "exists": true,
+      "valid_json": true
+    },
+    "REVIEW": {
+      "path": "json_core/customer_review_queue.json",
+      "exists": true,
+      "valid_json": true
+    }
+  },
+  "dag": {
+    "acyclic": true,
+    "edges": [
+      [
+        "INGRESS",
+        "GATE"
+      ],
+      [
+        "GATE",
+        "PERSISTENCE"
+      ],
+      [
+        "PERSISTENCE",
+        "PLAN"
+      ],
+      [
+        "PLAN",
+        "REVIEW"
+      ]
+    ]
+  },
+  "status": "HEALTHY"
+}
