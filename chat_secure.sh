@@ -1,10 +1,9 @@
 #!/bin/bash
 
 # =================================================================
-# PIRDAG SECURE CUI ENGINE (AES-256 ENCRYPTED)
+# PIRDAG PERFECT CUI ENGINE (PULL-BASED)
 # =================================================================
 
-# 共有の秘密鍵（ノード間で共有するパスワード）
 SECRET_KEY="PIRDAG_GOVERNANCE_SECRET_KEY_ALPHA_30"
 CHAT_FILE="encrypted_chat.log"
 
@@ -20,7 +19,7 @@ case "$1" in
             exit 1
         fi
         
-        # 自身のノードID取得
+        # ノードIDの取得
         NODE_KEY="Node-Anon"
         if [ -f "my_portable_hash.json" ]; then
              NODE_KEY=$(jq -r '.portable_hash' my_portable_hash.json 2>/dev/null | cut -c 1-10)
@@ -30,54 +29,46 @@ case "$1" in
         TIMESTAMP=$(date "+%Y-%m-%d %H:%M:%S")
         RAW_PAYLOAD="[$TIMESTAMP] <$NODE_KEY>: $2"
         
-        # OpenSSLでAES-256暗号化してBase64化した1行を出力
+        # 暗号化してログ追加
         ENCRYPTED_LINE=$(echo "$RAW_PAYLOAD" | openssl enc -aes-256-cbc -a -salt -pbkdf2 -pass pass:"$SECRET_KEY" 2>/dev/null)
-        
         echo "$ENCRYPTED_LINE" >> "$CHAT_FILE"
         
-        # Gitへコミット＆プッシュ（暗号文のみが流れる）
-        git add "$CHAT_FILE"
-        git commit -m "sec(chat): encrypted payload from $NODE_KEY"
-        git push origin main
-        echo ">> Encrypted Payload Sent & Synchronized."
+        # Gitへ同期
+        git add "$CHAT_FILE" > /dev/null 2>&1
+        git commit -m "sec(chat): payload from $NODE_KEY" > /dev/null 2>&1
+        git push origin main > /dev/null 2>&1
+        echo ">> [SUCCESS] メッセージを暗号化して同期しました。"
         ;;
         
     read|sync)
-        echo ">> Fetching latest network logs..."
+        echo ">> ネットワークから最新ログを引き込んでいます..."
         git pull origin main --rebase > /dev/null 2>&1
+        
+        echo ""
         echo "===================================================="
-        echo " [DECRYPTED GOVERNANCE LOGS]"
+        echo " 📥 [CUI GOVERNANCE CHAT LOGS - 全メッセージ一括表示]"
         echo "===================================================="
         
-        # 暗号化されたログを1行ずつ復号して画面に表示
+        # 全ログを一気に復号してまとめて表示
+        COUNT=0
         while IFS= read -r line; do
             if [ -n "$line" ]; then
                 DECRYPTED=$(echo "$line" | openssl enc -d -aes-256-cbc -a -pbkdf2 -pass pass:"$SECRET_KEY" 2>/dev/null)
                 if [ $? -eq 0 ]; then
-                    echo "$DECRYPTED"
-                else
-                    echo "[DECRYPTION FAILED / INVALID KEY]"
+                    echo " $DECRYPTED"
+                    COUNT=$((COUNT + 1))
                 fi
             fi
         done < "$CHAT_FILE"
-        echo "===================================================="
-        ;;
         
-    set-p2p)
-        # GitHub以外のバックアップリモート（自前サーバーなど）を追加するコマンド
-        if [ -z "$2" ]; then
-            echo "Usage: ./chat_secure.sh set-p2p \"git@your-private-server.com:repo.git\""
-            exit 1
-        fi
-        git remote add backup "$2"
-        echo ">> Backup remote added: $2"
-        echo ">> Now you can push to backup via 'git push backup main'"
+        echo "===================================================="
+        echo " >> 合計 $COUNT 件のメッセージを取得しました。"
+        echo ""
         ;;
 
     *)
-        echo "=== SECURE CUI COMMANDS ==="
-        echo "  ./chat_secure.sh send \"message\" : Encrypt and push message"
-        echo "  ./chat_secure.sh read          : Sync and decrypt messages"
-        echo "  ./chat_secure.sh set-p2p <URL>  : Add backup non-GitHub remote"
+        echo "=== CUI GOVERNANCE COMMANDS ==="
+        echo "  ./chat_secure.sh send \"メッセージ\"  : 送信＆自動同期"
+        echo "  ./chat_secure.sh read              : 叩いて最新全メッセージを一括閲覧"
         ;;
 esac
