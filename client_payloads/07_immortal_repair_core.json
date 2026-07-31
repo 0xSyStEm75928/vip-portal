@@ -1,0 +1,15 @@
+{
+  "protocol_id": "07_IMMORTAL_JSON_CORE",
+  "system_type": "SELF_HEALING_BASE_FRAMEWORK",
+  "immortal_rules": {
+    "core_address_lock": "0xF7A353FAF6E6BD4732b0f234C656DBfDE53B0e91",
+    "strict_rule": "NO_DELIVERY_BEFORE_PAYMENT",
+    "status": "UNBREAKABLE"
+  },
+  "planned_breakdown_and_repair": {
+    "auto_break_on_corruption": true,
+    "max_error_threshold": 3,
+    "repair_action": "PURGE_AND_RESTORE_TO_IMMORTAL_STATE",
+    "masternode_override": "ENABLED"
+  }
+}
