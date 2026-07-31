@@ -1,0 +1,10 @@
+{
+  "target_id": "CUSTOMER_001",
+  "status": "PAYMENT_REQUESTED_VIP_HYBRID",
+  "payment_info": {
+    "network": "Polygon",
+    "asset": "USDT",
+    "recipient_address": "0xF7A353FAF6E6BD4732b0f234C656DBfDE53B0e91"
+  },
+  "message": "【PIRDAG Node-01 最終案内】USDT着金確認後、即時有効化＋VIP個別最適化を適用します。"
+}
