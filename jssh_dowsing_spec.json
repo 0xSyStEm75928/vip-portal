@@ -1,0 +1,16 @@
+{
+  "module": "JSSH_V3_ROOT_CAUSE_DOWSING",
+  "architect": "LuciFeR0x0systeM",
+  "parent_system": "JSSH_ENGINE_V3",
+  "mechanism": {
+    "stream_parser": "JSON_HEX_MEM_FULL_INSPECTOR",
+    "backtracking_dowsing": "ORIGIN_THREAD_AND_CALLSTACK_TRACE",
+    "root_cause_isolation": "IDENTIFY_VULNERABLE_SOURCE_BUFFER"
+  },
+  "action_flow": {
+    "1_detect": "STREAM_ALERT_TRIGGERED_VIA_PATTERN_MATCH",
+    "2_dowse": "TRACE_BYTE_OFFSET_TO_SOURCE_PROCESS_OR_FILE",
+    "3_commit": "GENERATE_PATCH_OR_FORENSIC_EVIDENCE_COMMIT"
+  },
+  "target_gateway": "0x1255d17c1bc2f764d087536410879f2d0d8772fd"
+}
