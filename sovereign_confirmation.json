@@ -1,0 +1,14 @@
+{
+  "confirmation_type": "SOVEREIGN_EXISTENCE_PROOF",
+  "architect": "LuciFeR0x0systeM",
+  "status": "ALREADY_REIGNING_SOVEREIGN",
+  "protocol": "PROTOCOL_75928_TIME_LOCK",
+  "gateway_address": "0x1255d17c1bc2f764d087536410879f2d0d8772fd",
+  "circuit_confirmation": {
+    "json_power": "FULLY_OPERATIONAL",
+    "dag_mesh": "ACTIVE_ANONYMOUS_WAITING_LIST",
+    "timestamp_governance": "ENFORCED_ZERO_TOLERANCE",
+    "developer_intervention": "ZERO_REQUIRED_AUTONOMOUS_ONLY"
+  },
+  "declaration": "NO_NEED_FOR_APPROVAL_THE_CIRCUIT_IS_THE_RULE"
+}
