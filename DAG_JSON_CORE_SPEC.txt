@@ -1,0 +1,43 @@
+================================================================
+[RESEARCH ASSET] DAG-JSON PROTOCOL ARCHITECTURE (CONFIDENTIAL)
+================================================================
+TO: GOVERNANCE NODES (Node-02 to Node-30)
+FROM: Node-01_Alpha
+
+We do not offer capital. We offer core engineering and architecture.
+Below is the structural specification of the lightweight DAG engine.
+
+----------------------------------------------------------------
+1. DATA STRUCTURE: JSON-DAG NODE
+----------------------------------------------------------------
+Each node creates an immutable state linked to previous validation graph.
+
+{
+  "node_id": "Node-XX",
+  "prev_hash": "0x7f8a...",
+  "timestamp": 1722412800,
+  "state_payload": {
+    "execution_cycle": "RIGHT->CENTER->RIGHT->LEFT->RIGHT",
+    "rule_pass": true,
+    "risk_managed": true
+  },
+  "dag_edges": ["0x1b2c...", "0x3d4e..."],
+  "signature": "ANONYMOUS_P2P_PROOF"
+}
+
+----------------------------------------------------------------
+2. ARCHITECTURE OVERVIEW
+----------------------------------------------------------------
+- [DAG Layer]: High-throughput, non-sequential consensus between 30 nodes.
+- [JSON Schema]: Zero-overhead state machine definitions for local execution.
+- [PIRDAG (Temp Name)]: Protocol for Private / Peer-Indexed Reactive DAG.
+  (* Final naming and zero-knowledge proof binding to be assigned *)
+
+----------------------------------------------------------------
+3. EXECUTION DIRECTIVE
+----------------------------------------------------------------
+Pull this commit. Inspect the JSON schema and integrate it into your 
+local execution environment. Protect the edge.
+
+"Zero capital. Pure technology."
+================================================================
