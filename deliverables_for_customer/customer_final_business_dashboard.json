@@ -1,0 +1,22 @@
+{
+  "morning_star_vault": {
+    "_art_meta": {
+      "title": "Morning Star Container (明けの明星)",
+      "edition": "0x541B_EXCLUSIVE_OFFERING",
+      "compliance": "STRICT_JSON_SYNTAX_VALIDATED",
+      "vault_owner": "0x541B9034C82D7Fb564F12cA07037947ff5b4eF2f"
+    },
+    "_art_visual": [
+      "        /\\        ",
+      "       /  \\       ",
+      "  ----*    *----  ",
+      "       \\  /       ",
+      "        \\/        "
+    ],
+    "vault_treasure": {
+      "verified_access": true,
+      "token_rights": "GRANTED_TO_OWNER",
+      "contract_status": "DEPLOYED_AND_BOUND"
+    }
+  }
+}

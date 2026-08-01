@@ -61,6 +61,12 @@
       "id": "VIP_ADDITIONAL_001",
       "pct": 40,
       "updated_at": "2026-07-29T19:55:00+09:00"
+    },
+    "VIP_CUSTOMER_0x541B": {
+      "target_id": "VIP_CUSTOMER_0x541B",
+      "wallet_address": "0x541B9034C82D7Fb564F12cA07037947ff5b4eF2f",
+      "status": "VERIFIED_BUYER",
+      "contract_deployed": true
     }
   },
   "dag_node": "N2_MASTER",
