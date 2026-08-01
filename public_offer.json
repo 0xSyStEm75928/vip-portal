@@ -1,0 +1,18 @@
+{
+  "protocol_version": "1.0",
+  "offer_details": {
+    "offer_id": "OFFER-75928-PUBLIC",
+    "collateral_asset": "75928_TOKEN_OR_VAULT",
+    "requested_amount": {
+      "value": 5000,
+      "currency": "USDC"
+    },
+    "terms": {
+      "duration_days": 30,
+      "apr_percent": 10
+    },
+    "borrower_address": "0xC44436c0b4Ba4c04755b9f92b086eCEbC319E45f",
+    "status": "OPEN_FOR_LENDING"
+  },
+  "action_link": "https://nftfi.com/app/borrow/75928"
+}
