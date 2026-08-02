@@ -3,8 +3,8 @@
 [http]
 	postBuffer = 1572864000
 [user]
-	name = 0xSyStEm75928
-	email = your_real_email@example.com
+	name = Pandemonium-ZeroCore
+	email = username@users.noreply.github.com
 	signingkey = /root/.ssh/id_ed25519.pub
 [ssh]
 	postBuffer = 1572864000
