@@ -56,5 +56,42 @@
     "zoneType": "EPHEMERAL_GRID",
     "updatedAt": "2026-08-03T06:23:09.505Z",
     "isVerified": true
+  },
+  "activeQualityControl": {
+    "enabled": true,
+    "strictMode": true,
+    "enforcedPrinciples": [
+      "evidence_before_claim",
+      "reproducibility_first",
+      "schema_first",
+      "registry_first",
+      "append_only_audit",
+      "independent_verification",
+      "coordinated_disclosure",
+      "clear_scope_definition"
+    ],
+    "gates": [
+      {
+        "name": "Evidence",
+        "required": true,
+        "description": "Claims are supported by collected evidence."
+      },
+      {
+        "name": "Reproduction",
+        "required": true,
+        "description": "Another reviewer can reproduce the reported behavior."
+      },
+      {
+        "name": "Environment",
+        "required": true,
+        "description": "Execution environment is documented."
+      },
+      {
+        "name": "Audit",
+        "required": true,
+        "description": "Evidence chain is complete and traceable."
+      }
+    ],
+    "autoRejectRule": "IF evidence == FALSE OR reproduction == FALSE THEN REJECT"
   }
 }
