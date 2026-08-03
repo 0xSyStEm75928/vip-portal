@@ -91,7 +91,7 @@ class PandemoniumBaseCore {
 
 // === 基礎動作テスト ===
 const core = new PandemoniumBaseCore();
-const masterHash = "process.env.MASTER_BIO_HASH || "YOUR_BIO_HASH_HERE"";
+const masterHash = "9adacb8013823fe1226e37c6f4df1cf09805e4dfdd9904f296a7b1939bbd500d814e17b8fc20d474a0a6effa089543ea054f07efd834bf4190c228e45fea82c5";
 
 console.log("=== 1. 初期化とChrono-Lock（本番運用開始） ===");
 console.log(core.initHandshake(masterHash));
