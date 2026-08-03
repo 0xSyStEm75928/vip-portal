@@ -1,12 +1,9 @@
 {
   "$schema": "./schemas/zerocore.disclosure.framework.schema.json",
-
   "zerocore_disclosure_framework": {
     "version": "1.0.0",
     "status": "ACTIVE",
-
     "purpose": "Framework for preparing reproducible and evidence-based technical disclosures.",
-
     "principles": [
       "evidence_before_claim",
       "reproducibility_first",
@@ -17,7 +14,6 @@
       "coordinated_disclosure",
       "clear_scope_definition"
     ],
-
     "quality_gates": [
       {
         "name": "Evidence",
@@ -40,17 +36,25 @@
         "description": "Evidence chain is complete and traceable."
       }
     ],
-
     "expected_outputs": {
       "review_package": "review_submission_manifest.json",
       "evidence_bundle": "final_evidence_bundle.json",
       "timeline": "timeline_of_events.json"
     },
-
     "disclaimer": {
       "no_guarantee_of_acceptance": true,
       "final_assessment_by_vendor": true,
       "requires_independent_validation": true
     }
+  },
+  "status": "ACTIVE",
+  "state": "RUNNING",
+  "frozen": false,
+  "locationProtocol": {
+    "status": "ATTACHED",
+    "presenceProof": "0xc3714dc254fdc933",
+    "zoneType": "EPHEMERAL_GRID",
+    "updatedAt": "2026-08-03T06:23:09.505Z",
+    "isVerified": true
   }
 }
