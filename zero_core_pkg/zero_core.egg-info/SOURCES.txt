@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+zero_core/__init__.py
+zero_core/chat.py
+zero_core/panel.py
+zero_core.egg-info/PKG-INFO
+zero_core.egg-info/SOURCES.txt
+zero_core.egg-info/dependency_links.txt
+zero_core.egg-info/entry_points.txt
+zero_core.egg-info/top_level.txt

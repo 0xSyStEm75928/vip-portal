@@ -1,0 +1,3 @@
+[console_scripts]
+zero-chat = zero_core.chat:main
+zero-panel = zero_core.panel:main

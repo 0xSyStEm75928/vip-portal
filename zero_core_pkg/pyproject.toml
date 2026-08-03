@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zero-core"
+version = "0.2.0"
+description = "ANONYMOUS OS // REAL VOLTAGE PANEL & BIZ-CHAT MECHANICS"
+authors = [{ name = "Anonymous OS Team" }]
+readme = "README.md"
+requires-python = ">=3.8"
+
+[project.scripts]
+zero-panel = "zero_core.panel:main"
+zero-chat  = "zero_core.chat:main"

@@ -8,15 +8,31 @@
   },
   "tree_nodes": {
     ".github": {
-      "ISSUE_TEMPLATE": ["bug_report.md", "feature_request.md"],
+      "ISSUE_TEMPLATE": [
+        "bug_report.md",
+        "feature_request.md"
+      ],
       "PULL_REQUEST_TEMPLATE.md": "PR Audit Rules",
-      "workflows": ["zerocore.yml"]
+      "workflows": [
+        "zerocore.yml"
+      ]
     },
-    ".saac_devil_runtime": ["jssh_bridge.sh"],
-    "Engine": ["zerocore_dialectic_builder.sh"],
-    "Evidence": ["gas_history.log", "github.audit.jsonl"],
-    "schemas": ["zerocore.sovereign.bootstrap.schema.json"],
-    "Validator": ["zerocore_validate.sh"]
+    ".saac_devil_runtime": [
+      "jssh_bridge.sh"
+    ],
+    "Engine": [
+      "zerocore_dialectic_builder.sh"
+    ],
+    "Evidence": [
+      "gas_history.log",
+      "github.audit.jsonl"
+    ],
+    "schemas": [
+      "zerocore.sovereign.bootstrap.schema.json"
+    ],
+    "Validator": [
+      "zerocore_validate.sh"
+    ]
   },
   "dag_circuit": {
     "circuit_id": "zerocore.dag.dialectic.v2",
@@ -26,5 +42,11 @@
       "insulate_secrets": "Claude-Safety-Guard",
       "execute_proof": "Copilot-Runtime-Bridge"
     }
+  },
+  "protocolLimits": {
+    "maxCommunicationsCapacity": 1000,
+    "maxOfferBuffer": 100,
+    "isExpanded": true,
+    "expandedAt": "2026-08-03T06:38:11.805Z"
   }
 }

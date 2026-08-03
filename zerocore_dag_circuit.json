@@ -48,5 +48,11 @@
     "node_02_logic_validation",
     "node_03_security_insulation",
     "node_04_execution_and_evidence"
-  ]
+  ],
+  "protocolLimits": {
+    "maxCommunicationsCapacity": 1000,
+    "maxOfferBuffer": 100,
+    "isExpanded": true,
+    "expandedAt": "2026-08-03T06:38:11.810Z"
+  }
 }
