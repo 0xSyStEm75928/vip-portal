@@ -1,0 +1,9 @@
+{
+  "protocol": "ZeroCore",
+  "action": "payout_claim",
+  "target_avatar": "Avatar_Alpha",
+  "claim_amount": 18000,
+  "currency": "USDT",
+  "status": "COMPLETED",
+  "remaining_board_amount": 0
+}
